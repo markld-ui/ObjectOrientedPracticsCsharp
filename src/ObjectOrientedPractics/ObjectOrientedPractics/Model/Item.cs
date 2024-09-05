@@ -8,6 +8,12 @@ using ObjectOrientedPractics.Services;
 
 namespace ObjectOrientedPractics.Model
 {
+    /// <summary>
+    /// Благодаря данному классу, можно добавлять/удалять предмет для продажи из БД
+    /// Взаимодействие происходит благодаря использованию свойств в конструкторе класса, 
+    /// передав в него необходимые параметры.
+    /// Поле ID является сквозным.
+    /// </summary>    
     internal class Item
     {
         private readonly int _ID;
@@ -45,13 +51,13 @@ namespace ObjectOrientedPractics.Model
             {
                 try
                 {
-                    if (value?.Length <= 1000) { _info = value; }
-                    else { throw new ArgumentOutOfRangeException("Длина данных превосходит 1000 символов"); }
+                    ValueValidator.AssertStringOnLength(value, 1000, nameof(Name));
+                    _info = value;
                 }
                 catch (Exception)
                 {
 
-                    throw new Exception("Неверные данные или данные пусты");
+                    throw new Exception($"Неверные данные для {nameof(Info)}");
                 }
             }
 
@@ -81,6 +87,9 @@ namespace ObjectOrientedPractics.Model
 
         }
 
+        /// <param name="name">Параметр "name" строкового типа, с которым можно взаимодейсвтовть при помощи свойства <see cref="Name"/> в параметризированном конструкторе класса<param/>
+        /// <param name="info">Параметр "info" строкового типа, с которым можно взаимодейсвтовть при помощи свойства <see cref="Info"/> в параметризированном конструкторе класса<param/>
+        /// <param name="cost">Параметр "cost" даблвского типа, с которым можно взаимодейсвтовть при помощи свойства <see cref="Cost"/> в параметризированном конструкторе класса<param/>
         public Item (string? name, string? info, double cost)
         {
             _ID = IdGenerator.GetNextId();

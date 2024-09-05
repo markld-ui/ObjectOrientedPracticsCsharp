@@ -8,6 +8,12 @@ using ObjectOrientedPractics.Services;
 
 namespace ObjectOrientedPractics.Model
 {
+    /// <summary>
+    /// Благодаря данному классу, можно добавлять/удалять предмет для продажи из БД
+    /// Взаимодействие происходит благодаря использованию свойств в конструкторе класса, 
+    /// передав в него необходимые параметры.
+    /// Поле ID является сквозным.
+    /// </summary> 
     internal class Customer
     {
         private readonly int _ID;
@@ -58,6 +64,8 @@ namespace ObjectOrientedPractics.Model
             }
         }
 
+        /// <param name="fullname">Параметр "fullname" строкового типа, с которым можно взаимодейсвтовть при помощи свойства <see cref="FullName"/> в параметризированном конструкторе класса<param/>
+        /// <param name="address">Параметр "address" строкового типа, с которым можно взаимодейсвтовть при помощи свойства <see cref="Address"/> в параметризированном конструкторе класса<param/>
         public Customer(string? fullname, string? address)
         {
             _ID = IdGenerator.GetNextId();
