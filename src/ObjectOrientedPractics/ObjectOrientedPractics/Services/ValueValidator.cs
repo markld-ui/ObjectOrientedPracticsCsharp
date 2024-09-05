@@ -8,17 +8,19 @@ using ObjectOrientedPractics.Exceptions;
 namespace ObjectOrientedPractics.Services
 {
     /// <summary>
-    /// Статический класс валидаций
+    /// Статический класс, предоставляющий методы для валидации данных.
     /// </summary>
     internal static class ValueValidator
     {
         /// <summary>
-        /// Статический метод обрабатывающий длину вводимых данных.
+        /// Проверяет строку на соответствие установленной максимальной длине.
         /// </summary>
-        /// <param name="value">Передаваемые данные строкового типа</param>
-        /// <param name="maxLength">Максимальная длина данных, установленная для определенного оля ввода</param>
-        /// <param name="propertyName">Название свойства, передачи в выброс исключения, при его необходимости</param>
-        /// <exception cref="StringLengthException"></exception>
+        /// <param name="value">Строка, подлежащая проверке.</param>
+        /// <param name="maxLength">Максимально допустимая длина строки.</param>
+        /// <param name="propertyName">Имя свойства, используемое в сообщении об ошибке.</param>
+        /// <exception cref="StringLengthException">
+        /// Выбрасывается, если длина строки превышает допустимую или строка пуста.
+        /// </exception>
         public static void AssertStringOnLength(string? value, int maxLength, string propertyName)
         {
             if (string.IsNullOrEmpty(value) || value.Length > maxLength)

@@ -9,17 +9,18 @@ using ObjectOrientedPractics.Services;
 namespace ObjectOrientedPractics.Model
 {
     /// <summary>
-    /// Благодаря данному классу, можно добавлять/удалять предмет для продажи из БД
-    /// Взаимодействие происходит благодаря использованию свойств в конструкторе класса, 
-    /// передав в него необходимые параметры.
-    /// Поле ID является сквозным.
+    /// Класс для представления клиента, который может добавляться в базу данных.
+    /// Взаимодействие с объектом осуществляется через свойства. Поле ID является уникальным и автоматически генерируется.
     /// </summary> 
-    internal class Customer
+    internal class Customer: IModel
     {
         private readonly int _ID;
         private string? _fullname;
         private string? _address;
 
+        /// <summary>
+        /// Уникальный идентификатор клиента.
+        /// </summary>
         public int ID
         {
             get
@@ -28,6 +29,12 @@ namespace ObjectOrientedPractics.Model
             }
         }
 
+        /// <summary>
+        /// Полное имя клиента.
+        /// </summary>
+        /// <exception cref="Exception">
+        /// Выбрасывается, если строка <paramref name="FullName"/> пуста или превышает допустимую длину.
+        /// </exception>
         public string? FullName
         { 
             get {return _fullname;}
@@ -46,6 +53,12 @@ namespace ObjectOrientedPractics.Model
             }
         }
 
+        /// <summary>
+        /// Адрес клиента.
+        /// </summary>
+        /// <exception cref="Exception">
+        /// Выбрасывается, если строка <paramref name="Address"/> пуста или превышает допустимую длину.
+        /// </exception>
         public string? Address
         {
             get {return _address;}
@@ -64,8 +77,11 @@ namespace ObjectOrientedPractics.Model
             }
         }
 
-        /// <param name="fullname">Параметр "fullname" строкового типа, с которым можно взаимодейсвтовть при помощи свойства <see cref="FullName"/> в параметризированном конструкторе класса<param/>
-        /// <param name="address">Параметр "address" строкового типа, с которым можно взаимодейсвтовть при помощи свойства <see cref="Address"/> в параметризированном конструкторе класса<param/>
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="Customer"/> с заданными параметрами.
+        /// </summary>
+        /// <param name="fullname">Полное имя клиента. Передается в свойство <see cref="FullName"/>.</param>
+        /// <param name="address">Адрес клиента. Передается в свойство <see cref="Address"/>.</param>
         public Customer(string? fullname, string? address)
         {
             _ID = IdGenerator.GetNextId();
