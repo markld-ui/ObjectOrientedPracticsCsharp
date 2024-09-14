@@ -49,12 +49,14 @@ namespace ObjectOrientedPractics.View.Tabs
                 if (!double.TryParse(textBox_cost_items.Text, out double cost))
                 {
                     MessageBox.Show("Неверный формат стоимости. Введите корректное число.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox_cost_items.BackColor = Color.Red;
                     textBox_cost_items.Clear();
                     return;
                 }
                 if (cost < 0)
                 {
-                    MessageBox.Show("Неверный формат стоимости. Введите корректное число.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Цена не может быть отрицательной. Введите корректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox_cost_items.BackColor = Color.Red;
                     textBox_cost_items.Clear();
                     return;
                 }
@@ -67,6 +69,10 @@ namespace ObjectOrientedPractics.View.Tabs
                 _items.Add(item);
                 listBox_items.Items.Add($"{item.Name} - {item.Cost}");
 
+                textBox_cost_items.BackColor = Color.White;
+                textBox_descr_items.BackColor = Color.White;
+                textBox_name_items.BackColor = Color.White;
+
                 textBox_cost_items.Clear();
                 textBox_descr_items.Clear();
                 textBox_id_items.Clear();
@@ -76,6 +82,10 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (StringMaxLengthException)
             {
                 MessageBox.Show("Длина поля превышает допустимое значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_cost_items.BackColor = Color.Red;
+                textBox_descr_items.BackColor = Color.Red;
+                textBox_name_items.BackColor = Color.Red;
+
                 textBox_cost_items.Clear();
                 textBox_descr_items.Clear();
                 textBox_id_items.Clear();
@@ -84,6 +94,10 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (StringMinLengthException)
             {
                 MessageBox.Show("Длина поля меньше допустимого значения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_cost_items.BackColor = Color.Red;
+                textBox_descr_items.BackColor = Color.Red;
+                textBox_name_items.BackColor = Color.Red;
+
                 textBox_cost_items.Clear();
                 textBox_descr_items.Clear();
                 textBox_id_items.Clear();
@@ -92,6 +106,7 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (ArgumentOutOfRangeException)
             {
                 MessageBox.Show("Цена слишком высока", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_cost_items.BackColor = Color.Red;
                 textBox_cost_items.Clear();
             }
         }

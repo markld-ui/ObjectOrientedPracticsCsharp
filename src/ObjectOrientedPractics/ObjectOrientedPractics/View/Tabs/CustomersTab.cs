@@ -50,7 +50,10 @@ namespace ObjectOrientedPractics.View.Tabs
 
                 Customer customer = new(fullName, addr);
                 _customer.Add(customer);
-                listBox_customers.Items.Add(customer);
+                listBox_customers.Items.Add($"{customer.FullName} - {customer.Address}");
+
+                textBox_adrs_customers.BackColor = Color.White;
+                textBox_fn_customers.BackColor = Color.White;
 
                 textBox_adrs_customers.Clear();
                 textBox_fn_customers.Clear();
@@ -59,6 +62,9 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (StringMaxLengthException)
             {
                 MessageBox.Show("Длина поля превышает допустимое значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_adrs_customers.BackColor = Color.Red;
+                textBox_fn_customers.BackColor = Color.Red;
+
                 textBox_adrs_customers.Clear();
                 textBox_fn_customers.Clear();
                 textBox_id_customers.Clear();
@@ -66,6 +72,9 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (StringMinLengthException)
             {
                 MessageBox.Show("Длина поля меньше допустимого значения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_adrs_customers.BackColor = Color.Red;
+                textBox_fn_customers.BackColor = Color.Red;
+
                 textBox_adrs_customers.Clear();
                 textBox_fn_customers.Clear();
                 textBox_id_customers.Clear();
