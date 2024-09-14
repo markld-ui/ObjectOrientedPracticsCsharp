@@ -12,20 +12,40 @@ namespace ObjectOrientedPractics.Services
     /// </summary>
     internal static class ValueValidator
     {
+
+        private static bool IsNumberCont(string? value)
+        {
+            foreach (char c in value)
+            {
+                if (Char.IsLetter(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         /// <summary>
         /// Проверяет строку на соответствие установленной максимальной длине.
         /// </summary>
         /// <param name="value">Строка, подлежащая проверке.</param>
         /// <param name="maxLength">Максимально допустимая длина строки.</param>
         /// <param name="propertyName">Имя свойства, используемое в сообщении об ошибке.</param>
-        /// <exception cref="StringLengthException">
+        /// <exception cref="StringMaxLengthException">
         /// Выбрасывается, если длина строки превышает допустимую или строка пуста.
         /// </exception>
-        public static void AssertStringOnLength(string? value, int maxLength, string propertyName)
+        /// <exception cref="StringMinLengthException">
+        /// Выбрасывается, если длина строки меньше допустимой или строка пуста.
+        /// </exception>
+        public static void AssertStringOnLength(string? value, int maxLength, int minLenght, string propertyName)
         {
             if (string.IsNullOrEmpty(value) || value.Length > maxLength)
             {
-                throw new StringLengthException(propertyName, maxLength);
+                throw new StringMaxLengthException(propertyName, maxLength);
+            }
+            if (string.IsNullOrEmpty(value) || value.Length <= minLenght)
+            {
+                throw new StringMinLengthException(propertyName, minLenght);
             }
         }
     }

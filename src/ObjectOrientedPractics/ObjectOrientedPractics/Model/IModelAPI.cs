@@ -10,7 +10,8 @@ namespace ObjectOrientedPractics.Model
     /// Этот интерфейс будет предназначен для общего контракта
     /// того, как должен быть реалезованы модели данных при общих методах.
     /// </summary>
-    interface IModel
+    interface IModelAPI
     {
+
     }
 }

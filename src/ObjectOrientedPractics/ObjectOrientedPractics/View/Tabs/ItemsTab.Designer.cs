@@ -28,80 +28,280 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
-            button1 = new Button();
-            button2 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            splitter1 = new Splitter();
+            splitContainer1 = new SplitContainer();
+            panel1 = new Panel();
+            panel4 = new Panel();
+            listBox_items = new ListBox();
+            panel3 = new Panel();
+            label1 = new Label();
+            panel2 = new Panel();
+            remove_btn_items = new Button();
+            add_btn_items = new Button();
+            panel5 = new Panel();
+            textBox_descr_items = new TextBox();
+            label6 = new Label();
+            textBox_name_items = new TextBox();
+            textBox_cost_items = new TextBox();
+            textBox_id_items = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             label2 = new Label();
-            flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            panel1.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
-            // listBox1
+            // splitter1
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(3, 3);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(361, 444);
-            listBox1.TabIndex = 0;
+            splitter1.Location = new Point(0, 0);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(4, 682);
+            splitter1.TabIndex = 0;
+            splitter1.TabStop = false;
             // 
-            // button1
+            // splitContainer1
             // 
-            button1.Location = new Point(3, 505);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(4, 0);
+            splitContainer1.Name = "splitContainer1";
             // 
-            // button2
+            // splitContainer1.Panel1
             // 
-            button2.Location = new Point(113, 505);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "Remove";
-            button2.UseVisualStyleBackColor = true;
+            splitContainer1.Panel1.Controls.Add(panel1);
             // 
-            // flowLayoutPanel1
+            // splitContainer1.Panel2
             // 
-            flowLayoutPanel1.Controls.Add(listBox1);
-            flowLayoutPanel1.Location = new Point(0, 35);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(364, 454);
-            flowLayoutPanel1.TabIndex = 3;
+            splitContainer1.Panel2.Controls.Add(panel5);
+            splitContainer1.Size = new Size(1100, 682);
+            splitContainer1.SplitterDistance = 481;
+            splitContainer1.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(panel4);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(panel2);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(481, 682);
+            panel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(listBox_items);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(0, 42);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(481, 566);
+            panel4.TabIndex = 4;
+            // 
+            // listBox_items
+            // 
+            listBox_items.Dock = DockStyle.Fill;
+            listBox_items.FormattingEnabled = true;
+            listBox_items.Location = new Point(0, 0);
+            listBox_items.Name = "listBox_items";
+            listBox_items.Size = new Size(481, 566);
+            listBox_items.TabIndex = 0;
+            listBox_items.MouseClick += listBox_items_MouseClick;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(label1);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(481, 42);
+            panel3.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 38);
+            label1.TabIndex = 0;
+            label1.Text = "Items";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(remove_btn_items);
+            panel2.Controls.Add(add_btn_items);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 608);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(481, 74);
+            panel2.TabIndex = 2;
+            // 
+            // remove_btn_items
+            // 
+            remove_btn_items.Dock = DockStyle.Left;
+            remove_btn_items.Location = new Point(130, 0);
+            remove_btn_items.Name = "remove_btn_items";
+            remove_btn_items.Size = new Size(130, 74);
+            remove_btn_items.TabIndex = 1;
+            remove_btn_items.Text = "Remove";
+            remove_btn_items.UseVisualStyleBackColor = true;
+            remove_btn_items.MouseClick += remove_btn_items_MouseClick;
+            // 
+            // add_btn_items
+            // 
+            add_btn_items.Dock = DockStyle.Left;
+            add_btn_items.Location = new Point(0, 0);
+            add_btn_items.Name = "add_btn_items";
+            add_btn_items.Size = new Size(130, 74);
+            add_btn_items.TabIndex = 0;
+            add_btn_items.Text = "Add";
+            add_btn_items.UseVisualStyleBackColor = true;
+            add_btn_items.MouseClick += add_btn_items_MouseClick;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(textBox_descr_items);
+            panel5.Controls.Add(label6);
+            panel5.Controls.Add(textBox_name_items);
+            panel5.Controls.Add(textBox_cost_items);
+            panel5.Controls.Add(textBox_id_items);
+            panel5.Controls.Add(label5);
+            panel5.Controls.Add(label4);
+            panel5.Controls.Add(label3);
+            panel5.Controls.Add(label2);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(615, 682);
+            panel5.TabIndex = 0;
+            // 
+            // textBox_descr_items
+            // 
+            textBox_descr_items.Location = new Point(12, 395);
+            textBox_descr_items.Multiline = true;
+            textBox_descr_items.Name = "textBox_descr_items";
+            textBox_descr_items.Size = new Size(600, 263);
+            textBox_descr_items.TabIndex = 8;
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Segoe UI", 10F);
+            label6.Location = new Point(3, 365);
+            label6.Name = "label6";
+            label6.Size = new Size(106, 27);
+            label6.TabIndex = 7;
+            label6.Text = "Description:";
+            // 
+            // textBox_name_items
+            // 
+            textBox_name_items.Location = new Point(12, 166);
+            textBox_name_items.Multiline = true;
+            textBox_name_items.Name = "textBox_name_items";
+            textBox_name_items.Size = new Size(600, 180);
+            textBox_name_items.TabIndex = 6;
+            // 
+            // textBox_cost_items
+            // 
+            textBox_cost_items.Location = new Point(80, 93);
+            textBox_cost_items.Name = "textBox_cost_items";
+            textBox_cost_items.Size = new Size(153, 27);
+            textBox_cost_items.TabIndex = 5;
+            // 
+            // textBox_id_items
+            // 
+            textBox_id_items.Location = new Point(80, 52);
+            textBox_id_items.Name = "textBox_id_items";
+            textBox_id_items.Size = new Size(153, 27);
+            textBox_id_items.TabIndex = 4;
+            // 
+            // label5
+            // 
+            label5.Font = new Font("Segoe UI", 10F);
+            label5.Location = new Point(3, 136);
+            label5.Name = "label5";
+            label5.Size = new Size(62, 27);
+            label5.TabIndex = 3;
+            label5.Text = "Name:";
+            // 
+            // label4
+            // 
+            label4.Font = new Font("Segoe UI", 10F);
+            label4.Location = new Point(3, 93);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 27);
+            label4.TabIndex = 2;
+            label4.Text = "Cost:";
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe UI", 10F);
+            label3.Location = new Point(3, 53);
+            label3.Name = "label3";
+            label3.Size = new Size(34, 27);
+            label3.TabIndex = 1;
+            label3.Text = "ID:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F);
-            label2.Location = new Point(0, 0);
+            label2.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label2.Location = new Point(3, 0);
             label2.Name = "label2";
-            label2.Size = new Size(72, 32);
-            label2.TabIndex = 4;
-            label2.Text = "Items";
+            label2.Size = new Size(185, 38);
+            label2.TabIndex = 0;
+            label2.Text = "Selected Item";
             // 
             // ItemsTab
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label2);
-            Controls.Add(flowLayoutPanel1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(splitContainer1);
+            Controls.Add(splitter1);
             Name = "ItemsTab";
-            Size = new Size(364, 551);
-            flowLayoutPanel1.ResumeLayout(false);
+            Size = new Size(1104, 682);
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private ListBox listBox1;
-        private Button button1;
-        private Button button2;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Splitter splitter1;
+        private SplitContainer splitContainer1;
+        private Panel panel1;
+        private Panel panel2;
         private Label label1;
+        private Panel panel3;
+        private Button remove_btn_items;
+        private Button add_btn_items;
+        private Panel panel4;
+        private ListBox listBox_items;
+        private Panel panel5;
+        private TextBox textBox_descr_items;
+        private Label label6;
+        private TextBox textBox_name_items;
+        private TextBox textBox_cost_items;
+        private TextBox textBox_id_items;
+        private Label label5;
+        private Label label4;
+        private Label label3;
         private Label label2;
     }
 }

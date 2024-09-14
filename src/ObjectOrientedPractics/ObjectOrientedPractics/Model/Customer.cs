@@ -12,7 +12,7 @@ namespace ObjectOrientedPractics.Model
     /// Класс для представления клиента, который может добавляться в базу данных.
     /// Взаимодействие с объектом осуществляется через свойства. Поле ID является уникальным и автоматически генерируется.
     /// </summary> 
-    internal class Customer: IModel
+    internal class Customer
     {
         private readonly int _ID;
         private string? _fullname;
@@ -42,7 +42,7 @@ namespace ObjectOrientedPractics.Model
             {
                 try
                 {
-                    ValueValidator.AssertStringOnLength(value, 200, nameof(FullName));
+                    ValueValidator.AssertStringOnLength(value, 200, 0, nameof(FullName));
                     _fullname = value;
                 }
                 catch (Exception)
@@ -66,7 +66,7 @@ namespace ObjectOrientedPractics.Model
             {
                 try
                 {
-                    ValueValidator.AssertStringOnLength(value, 1000, nameof(Address));
+                    ValueValidator.AssertStringOnLength(value, 1000, 0, nameof(Address));
                     _address = value;
                 }
                 catch (Exception)

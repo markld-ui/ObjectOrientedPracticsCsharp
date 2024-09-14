@@ -13,7 +13,7 @@ namespace ObjectOrientedPractics.Model
     /// Взаимодействие с объектами осуществляется через свойства. Поле ID является уникальным
     /// и автоматически генерируется.
     /// </summary>    
-    internal class Item: IModel
+    internal class Item
     {
         private readonly int _ID;
         private string? _name;
@@ -41,7 +41,7 @@ namespace ObjectOrientedPractics.Model
             {
                 try
                 {
-                    ValueValidator.AssertStringOnLength(value, 200, nameof(Name));
+                    ValueValidator.AssertStringOnLength(value, 200, 0, nameof(Name));
                     _name = value;
                 }
                 
@@ -67,7 +67,7 @@ namespace ObjectOrientedPractics.Model
             {
                 try
                 {
-                    ValueValidator.AssertStringOnLength(value, 1000, nameof(Name));
+                    ValueValidator.AssertStringOnLength(value, 1000, 0, nameof(Name));
                     _info = value;
                 }
                 catch (Exception)
@@ -90,25 +90,15 @@ namespace ObjectOrientedPractics.Model
             get { return _cost;}
             private set
             {
-                try
-                {
-                    if (0.0 <= value || value >= 100_000.0) 
+                if (0.0 == value || value >= 100000.0) 
                     { 
                         throw new ArgumentOutOfRangeException("Цена превосходит или меньше допустимой величины");
                     }
-                    else 
-                    {
-                        _cost = value; 
-                    }
-                }
-                catch (Exception)
-                {
-
-                    throw new Exception("Неверные данные или данные пусты");
-                }
+                _cost = value; 
             }
 
         }
+
 
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Item"/> с заданными параметрами.
