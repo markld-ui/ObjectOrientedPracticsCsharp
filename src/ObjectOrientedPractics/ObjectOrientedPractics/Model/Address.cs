@@ -8,5 +8,11 @@ namespace ObjectOrientedPractics.Model
 {
     internal class Address
     {
+        private int _index;
+        private string _country;
+        private string _city;
+        private string _street;
+        private string _building;
+        private string _apartament;
     }
 }

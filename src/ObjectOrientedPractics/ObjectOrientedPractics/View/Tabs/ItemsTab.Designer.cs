@@ -241,6 +241,7 @@
             // 
             textBox_id_items.Location = new Point(118, 53);
             textBox_id_items.Name = "textBox_id_items";
+            textBox_id_items.ReadOnly = true;
             textBox_id_items.Size = new Size(153, 27);
             textBox_id_items.TabIndex = 4;
             // 

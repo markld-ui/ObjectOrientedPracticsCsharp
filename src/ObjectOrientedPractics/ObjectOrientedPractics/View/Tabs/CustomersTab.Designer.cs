@@ -179,6 +179,7 @@
             // 
             textBox_id_customers.Location = new Point(115, 73);
             textBox_id_customers.Name = "textBox_id_customers";
+            textBox_id_customers.ReadOnly = true;
             textBox_id_customers.Size = new Size(237, 27);
             textBox_id_customers.TabIndex = 4;
             // 

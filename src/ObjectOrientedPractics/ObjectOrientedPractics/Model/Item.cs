@@ -15,7 +15,7 @@ namespace ObjectOrientedPractics.Model
     /// </summary>    
     internal class Item
     {
-        private readonly int _ID;
+        private readonly int _id;
         private string? _name;
         private string? _info;
         private double _cost;
@@ -25,7 +25,7 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         public int ID 
         {
-            get {return _ID;}
+            get {return _id;}
         }
 
         /// <summary>
