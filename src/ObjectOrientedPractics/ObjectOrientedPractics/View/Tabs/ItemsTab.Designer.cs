@@ -39,6 +39,8 @@
             remove_btn_items = new Button();
             add_btn_items = new Button();
             panel5 = new Panel();
+            label_category = new Label();
+            comboBox_category_items = new ComboBox();
             textBox_descr_items = new TextBox();
             label6 = new Label();
             textBox_name_items = new TextBox();
@@ -168,6 +170,8 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(label_category);
+            panel5.Controls.Add(comboBox_category_items);
             panel5.Controls.Add(textBox_descr_items);
             panel5.Controls.Add(label6);
             panel5.Controls.Add(textBox_name_items);
@@ -183,18 +187,36 @@
             panel5.Size = new Size(615, 682);
             panel5.TabIndex = 0;
             // 
+            // label_category
+            // 
+            label_category.Font = new Font("Segoe UI", 10F);
+            label_category.Location = new Point(3, 144);
+            label_category.Name = "label_category";
+            label_category.Size = new Size(94, 28);
+            label_category.TabIndex = 10;
+            label_category.Text = "Category:";
+            // 
+            // comboBox_category_items
+            // 
+            comboBox_category_items.FormattingEnabled = true;
+            comboBox_category_items.Location = new Point(118, 144);
+            comboBox_category_items.Name = "comboBox_category_items";
+            comboBox_category_items.Size = new Size(153, 28);
+            comboBox_category_items.TabIndex = 9;
+            comboBox_category_items.SelectedIndexChanged += comboBox_category_items_SelectedIndexChanged;
+            // 
             // textBox_descr_items
             // 
-            textBox_descr_items.Location = new Point(12, 395);
+            textBox_descr_items.Location = new Point(15, 466);
             textBox_descr_items.Multiline = true;
             textBox_descr_items.Name = "textBox_descr_items";
-            textBox_descr_items.Size = new Size(600, 263);
+            textBox_descr_items.Size = new Size(582, 167);
             textBox_descr_items.TabIndex = 8;
             // 
             // label6
             // 
             label6.Font = new Font("Segoe UI", 10F);
-            label6.Location = new Point(3, 365);
+            label6.Location = new Point(6, 419);
             label6.Name = "label6";
             label6.Size = new Size(106, 27);
             label6.TabIndex = 7;
@@ -202,22 +224,22 @@
             // 
             // textBox_name_items
             // 
-            textBox_name_items.Location = new Point(12, 166);
+            textBox_name_items.Location = new Point(15, 236);
             textBox_name_items.Multiline = true;
             textBox_name_items.Name = "textBox_name_items";
-            textBox_name_items.Size = new Size(600, 180);
+            textBox_name_items.Size = new Size(582, 180);
             textBox_name_items.TabIndex = 6;
             // 
             // textBox_cost_items
             // 
-            textBox_cost_items.Location = new Point(80, 93);
+            textBox_cost_items.Location = new Point(118, 93);
             textBox_cost_items.Name = "textBox_cost_items";
             textBox_cost_items.Size = new Size(153, 27);
             textBox_cost_items.TabIndex = 5;
             // 
             // textBox_id_items
             // 
-            textBox_id_items.Location = new Point(80, 52);
+            textBox_id_items.Location = new Point(118, 53);
             textBox_id_items.Name = "textBox_id_items";
             textBox_id_items.Size = new Size(153, 27);
             textBox_id_items.TabIndex = 4;
@@ -225,7 +247,7 @@
             // label5
             // 
             label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(3, 136);
+            label5.Location = new Point(6, 206);
             label5.Name = "label5";
             label5.Size = new Size(62, 27);
             label5.TabIndex = 3;
@@ -303,5 +325,7 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private Label label_category;
+        private ComboBox comboBox_category_items;
     }
 }
