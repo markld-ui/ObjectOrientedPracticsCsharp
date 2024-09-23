@@ -14,6 +14,7 @@ namespace ObjectOrientedPractics.Model
     /// </summary> 
     internal class Customer
     {
+        // TODO: Rename
         private readonly int _ID;
         private string? _fullname;
         private string? _address;
