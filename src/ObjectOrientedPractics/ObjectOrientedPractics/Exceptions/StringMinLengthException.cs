@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjectOrientedPractics.Exceptions
+namespace ObjectOrientedPractices.Exceptions
 {
     /// <summary>
     /// Исключение, возникающее при некорректной длине строки (она равна нулю или меньше).
     /// </summary>
-    internal class StringMinLengthException : Exception
+    public class StringMinLengthException : Exception
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="StringMinLengthException"/> с сообщением об ошибке.

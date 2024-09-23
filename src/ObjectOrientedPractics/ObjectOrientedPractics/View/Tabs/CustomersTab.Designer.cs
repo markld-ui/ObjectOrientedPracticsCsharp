@@ -1,4 +1,4 @@
-﻿namespace ObjectOrientedPractics.View.Tabs
+﻿namespace ObjectOrientedPractices.View.Tabs
 {
     partial class CustomersTab
     {
@@ -90,7 +90,7 @@
             listBox_customers.Name = "listBox_customers";
             listBox_customers.Size = new Size(381, 563);
             listBox_customers.TabIndex = 0;
-            listBox_customers.MouseClick += listBox_customers_MouseClick;
+            listBox_customers.MouseClick += listBoxCustomersMouseClick;
             // 
             // panel3
             // 
@@ -111,7 +111,7 @@
             remove_btn_customers.TabIndex = 1;
             remove_btn_customers.Text = "Remove";
             remove_btn_customers.UseVisualStyleBackColor = true;
-            remove_btn_customers.MouseClick += remove_btn_customers_MouseClick;
+            remove_btn_customers.MouseClick += removeBtnCustomersMouseClick;
             // 
             // add_btn_customers
             // 
@@ -122,7 +122,7 @@
             add_btn_customers.TabIndex = 0;
             add_btn_customers.Text = "Add";
             add_btn_customers.UseVisualStyleBackColor = true;
-            add_btn_customers.MouseClick += add_btn_customers_MouseClick;
+            add_btn_customers.MouseClick += addBtnCustomersMouseClick;
             // 
             // panel1
             // 
@@ -179,6 +179,7 @@
             // 
             textBox_id_customers.Location = new Point(115, 73);
             textBox_id_customers.Name = "textBox_id_customers";
+            textBox_id_customers.ReadOnly = true;
             textBox_id_customers.Size = new Size(237, 27);
             textBox_id_customers.TabIndex = 4;
             // 

@@ -4,29 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using ObjectOrientedPractics.Services;
+using ObjectOrientedPractices.Services;
 
-namespace ObjectOrientedPractics.Model
+namespace ObjectOrientedPractices.Model
 {
     /// <summary>
     /// Класс для представления клиента, который может добавляться в базу данных.
     /// Взаимодействие с объектом осуществляется через свойства. Поле ID является уникальным и автоматически генерируется.
     /// </summary> 
-    internal class Customer
+    public class Customer
     {
         // TODO: Rename
-        private readonly int _ID;
+        private readonly int _id;
         private string? _fullname;
         private string? _address;
 
         /// <summary>
         /// Уникальный идентификатор клиента.
         /// </summary>
-        public int ID
+        public int Id
         {
             get
             {
-                return _ID;
+                return _id;
             }
         }
 
@@ -85,7 +85,7 @@ namespace ObjectOrientedPractics.Model
         /// <param name="address">Адрес клиента. Передается в свойство <see cref="Address"/>.</param>
         public Customer(string? fullname, string? address)
         {
-            _ID = IdGenerator.GetNextId();
+            _id = IdGenerator.GetNextId();
             FullName = fullname;
             Address = address;
 

@@ -1,6 +1,6 @@
-using ObjectOrientedPractics.View.Tabs;
+using ObjectOrientedPractices.View.Tabs;
 
-namespace ObjectOrientedPractics
+namespace ObjectOrientedPractices
 {
     public partial class MainWindow : Form
     {

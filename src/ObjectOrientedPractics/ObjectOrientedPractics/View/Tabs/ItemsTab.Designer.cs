@@ -1,4 +1,4 @@
-﻿namespace ObjectOrientedPractics.View.Tabs
+﻿namespace ObjectOrientedPractices.View.Tabs
 {
     partial class ItemsTab
     {
@@ -112,7 +112,7 @@
             listBox_items.Name = "listBox_items";
             listBox_items.Size = new Size(481, 566);
             listBox_items.TabIndex = 0;
-            listBox_items.MouseClick += listBox_items_MouseClick;
+            listBox_items.MouseClick += listBoxItemsMouseClick;
             // 
             // panel3
             // 
@@ -153,7 +153,7 @@
             remove_btn_items.TabIndex = 1;
             remove_btn_items.Text = "Remove";
             remove_btn_items.UseVisualStyleBackColor = true;
-            remove_btn_items.MouseClick += remove_btn_items_MouseClick;
+            remove_btn_items.MouseClick += removeBtnItemsMouseClick;
             // 
             // add_btn_items
             // 
@@ -164,7 +164,7 @@
             add_btn_items.TabIndex = 0;
             add_btn_items.Text = "Add";
             add_btn_items.UseVisualStyleBackColor = true;
-            add_btn_items.MouseClick += add_btn_items_MouseClick;
+            add_btn_items.MouseClick += addBtnItemsMouseClick;
             // 
             // panel5
             // 
@@ -219,6 +219,7 @@
             // 
             textBox_id_items.Location = new Point(80, 52);
             textBox_id_items.Name = "textBox_id_items";
+            textBox_id_items.ReadOnly = true;
             textBox_id_items.Size = new Size(153, 27);
             textBox_id_items.TabIndex = 4;
             // 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjectOrientedPractics.Exceptions
+namespace ObjectOrientedPractices.Exceptions
 {
     /// <summary>
     /// Исключение, возникающее при некорректной длине строки.

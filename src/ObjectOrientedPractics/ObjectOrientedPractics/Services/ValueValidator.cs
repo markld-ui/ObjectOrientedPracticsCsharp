@@ -3,27 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ObjectOrientedPractics.Exceptions;
+using ObjectOrientedPractices.Exceptions;
 
-namespace ObjectOrientedPractics.Services
+namespace ObjectOrientedPractices.Services
 {
     /// <summary>
     /// Статический класс, предоставляющий методы для валидации данных.
     /// </summary>
-    internal static class ValueValidator
+    public static class ValueValidator
     {
-
-        private static bool IsNumberCont(string? value)
-        {
-            foreach (char c in value)
-            {
-                if (Char.IsLetter(c))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
 
         /// <summary>
         /// Проверяет строку на соответствие установленной максимальной длине.

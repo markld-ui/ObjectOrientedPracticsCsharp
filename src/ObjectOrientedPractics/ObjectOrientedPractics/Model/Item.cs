@@ -4,18 +4,18 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using ObjectOrientedPractics.Services;
+using ObjectOrientedPractices.Services;
 
-namespace ObjectOrientedPractics.Model
+namespace ObjectOrientedPractices.Model
 {
     /// <summary>
     /// Класс для представления предмета, который можно добавить или удалить из базы данных.
     /// Взаимодействие с объектами осуществляется через свойства. Поле ID является уникальным
     /// и автоматически генерируется.
     /// </summary>    
-    internal class Item
+    public class Item
     {
-        private readonly int _ID;
+        private readonly int _id;
         private string? _name;
         private string? _info;
         private double _cost;
@@ -23,9 +23,9 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Уникальный идентификатор предмета.
         /// </summary>
-        public int ID 
+        public int Id 
         {
-            get {return _ID;}
+            get {return _id; }
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace ObjectOrientedPractics.Model
         /// <param name="cost">Стоимость предмета. Передается в свойство <see cref="Cost"/>.</param>
         public Item (string? name, string? info, double cost)
         {
-            _ID = IdGenerator.GetNextId();
+            _id = IdGenerator.GetNextId();
             Name = name;
             Info = info;
             Cost = cost;

@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ObjectOrientedPractics.Model;
-using ObjectOrientedPractics.Services;
-using ObjectOrientedPractics.Exceptions;
+using ObjectOrientedPractices.Model;
+using ObjectOrientedPractices.Services;
+using ObjectOrientedPractices.Exceptions;
 
-namespace ObjectOrientedPractics.View.Tabs
+namespace ObjectOrientedPractices.View.Tabs
 {
     /// <summary>
     /// Вкладка управления элементами, содержит логику для добавления, 
@@ -38,7 +38,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void add_btn_items_MouseClick(object sender, MouseEventArgs e)
+        private void addBtnItemsMouseClick(object sender, MouseEventArgs e)
         {
 
             try
@@ -61,10 +61,7 @@ namespace ObjectOrientedPractics.View.Tabs
                     return;
                 }
 
-                string name = textBox_name_items.Text;
-                string info = textBox_descr_items.Text;
-
-                Item item = new(name, info, cost);
+                Item item = new(textBox_name_items.Text, textBox_descr_items.Text, cost);
 
                 _items.Add(item);
                 listBox_items.Items.Add($"{item.Name} - {item.Cost}");
@@ -82,9 +79,9 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (StringMaxLengthException)
             {
                 MessageBox.Show("Длина поля превышает допустимое значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_cost_items.BackColor = Color.Red;
-                textBox_descr_items.BackColor = Color.Red;
-                textBox_name_items.BackColor = Color.Red;
+                textBox_cost_items.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBox_descr_items.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBox_name_items.BackColor = ColorTranslator.FromHtml("#DC143C");
 
                 textBox_cost_items.Clear();
                 textBox_descr_items.Clear();
@@ -94,9 +91,9 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (StringMinLengthException)
             {
                 MessageBox.Show("Длина поля меньше допустимого значения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_cost_items.BackColor = Color.Red;
-                textBox_descr_items.BackColor = Color.Red;
-                textBox_name_items.BackColor = Color.Red;
+                textBox_cost_items.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBox_descr_items.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBox_name_items.BackColor = ColorTranslator.FromHtml("#DC143C");
 
                 textBox_cost_items.Clear();
                 textBox_descr_items.Clear();
@@ -106,18 +103,18 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (ArgumentOutOfRangeException)
             {
                 MessageBox.Show("Цена слишком высока", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_cost_items.BackColor = Color.Red;
+                textBox_cost_items.BackColor = ColorTranslator.FromHtml("#DC143C");
                 textBox_cost_items.Clear();
             }
         }
-
+       
         /// <summary>
         /// Обрабатывает событие клика по кнопке "Удалить". Удаляет выбранный элемент
         /// из списка и обновляет интерфейс.
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void remove_btn_items_MouseClick(object sender, MouseEventArgs e)
+        private void removeBtnItemsMouseClick(object sender, MouseEventArgs e)
         {
             if (listBox_items.SelectedIndex != -1)
             {
@@ -142,7 +139,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void listBox_items_MouseClick(object sender, MouseEventArgs e)
+        private void listBoxItemsMouseClick(object sender, MouseEventArgs e)
         {
             if (listBox_items.SelectedIndex != -1)
             {
@@ -152,7 +149,7 @@ namespace ObjectOrientedPractics.View.Tabs
                 textBox_name_items.Text = selectedItem.Name;
                 textBox_descr_items.Text = selectedItem.Info;
                 textBox_cost_items.Text = selectedItem.Cost.ToString();
-                textBox_id_items.Text = selectedItem.ID.ToString();
+                textBox_id_items.Text = selectedItem.Id.ToString();
             }
         }
     }

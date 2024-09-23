@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjectOrientedPractics.Services
+namespace ObjectOrientedPractices.Services
 {
     /// <summary>
     /// Статический класс, предназначенный для генерации уникальных ID.

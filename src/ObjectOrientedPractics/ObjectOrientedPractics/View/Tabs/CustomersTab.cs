@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ObjectOrientedPractics.Model;
-using ObjectOrientedPractics.Services;
-using ObjectOrientedPractics.Exceptions;
+using ObjectOrientedPractices.Model;
+using ObjectOrientedPractices.Services;
+using ObjectOrientedPractices.Exceptions;
 
-namespace ObjectOrientedPractics.View.Tabs
+namespace ObjectOrientedPractices.View.Tabs
 {
     /// <summary>
     /// Вкладка управления клиентами, содержит функционал для добавления, 
@@ -22,7 +22,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <summary>
         /// Список всех добавленных клиентов.
         /// </summary>
-        private List<Customer> _customer = new();
+        private List<Customer> _customers = new();
 
         /// <summary>
         /// Конструктор по умолчанию, инициализирующий вкладку CustomersTab.
@@ -38,18 +38,15 @@ namespace ObjectOrientedPractics.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void add_btn_customers_MouseClick(object sender, MouseEventArgs e)
+        private void addBtnCustomersMouseClick(object sender, MouseEventArgs e)
         {
             try
             {
                 ValueValidator.AssertStringOnLength(textBox_fn_customers.Text, 200, 0, "Full Name");
                 ValueValidator.AssertStringOnLength(textBox_adrs_customers.Text, 500, 0, "Address");
 
-                string addr = textBox_adrs_customers.Text;
-                string fullName = textBox_fn_customers.Text;
-
-                Customer customer = new(fullName, addr);
-                _customer.Add(customer);
+                Customer customer = new(textBox_fn_customers.Text, textBox_adrs_customers.Text);
+                _customers.Add(customer);
                 listBox_customers.Items.Add($"{customer.FullName} - {customer.Address}");
 
                 textBox_adrs_customers.BackColor = Color.White;
@@ -62,8 +59,8 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (StringMaxLengthException)
             {
                 MessageBox.Show("Длина поля превышает допустимое значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_adrs_customers.BackColor = Color.Red;
-                textBox_fn_customers.BackColor = Color.Red;
+                textBox_adrs_customers.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBox_fn_customers.BackColor = ColorTranslator.FromHtml("#DC143C");
 
                 textBox_adrs_customers.Clear();
                 textBox_fn_customers.Clear();
@@ -72,8 +69,8 @@ namespace ObjectOrientedPractics.View.Tabs
             catch (StringMinLengthException)
             {
                 MessageBox.Show("Длина поля меньше допустимого значения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_adrs_customers.BackColor = Color.Red;
-                textBox_fn_customers.BackColor = Color.Red;
+                textBox_adrs_customers.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBox_fn_customers.BackColor = ColorTranslator.FromHtml("#DC143C");
 
                 textBox_adrs_customers.Clear();
                 textBox_fn_customers.Clear();
@@ -87,12 +84,12 @@ namespace ObjectOrientedPractics.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void remove_btn_customers_MouseClick(object sender, MouseEventArgs e)
+        private void removeBtnCustomersMouseClick(object sender, MouseEventArgs e)
         {
             if (listBox_customers.SelectedIndex != -1)
             {
                 int index = listBox_customers.SelectedIndex;
-                _customer.RemoveAt(index);
+                _customers.RemoveAt(index);
                 listBox_customers.Items.RemoveAt(index);
                 MessageBox.Show("Элемент успешно удален", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox_adrs_customers.Clear();
@@ -111,16 +108,16 @@ namespace ObjectOrientedPractics.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void listBox_customers_MouseClick(object sender, MouseEventArgs e)
+        private void listBoxCustomersMouseClick(object sender, MouseEventArgs e)
         {
             if (listBox_customers.SelectedIndex != -1)
             {
                 int index = listBox_customers.SelectedIndex;
-                Customer selectedItem = _customer[index];
+                Customer selectedItem = _customers[index];
 
                 textBox_adrs_customers.Text = selectedItem.Address;
                 textBox_fn_customers.Text = selectedItem.FullName;
-                textBox_id_customers.Text = selectedItem.ID.ToString();
+                textBox_id_customers.Text = selectedItem.Id.ToString();
             }
         }
     }

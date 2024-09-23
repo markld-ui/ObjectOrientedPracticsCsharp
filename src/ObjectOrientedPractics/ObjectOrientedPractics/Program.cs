@@ -1,4 +1,4 @@
-namespace ObjectOrientedPractics
+namespace ObjectOrientedPractices
 {
     internal static class Program
     {
