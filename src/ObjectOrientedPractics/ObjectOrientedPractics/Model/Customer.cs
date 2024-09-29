@@ -14,7 +14,7 @@ namespace ObjectOrientedPractics.Model
     /// </summary> 
     internal class Customer
     {
-        private readonly int _ID;
+        private readonly int _id
         private string? _fullname;
         private string? _address;
 
@@ -25,7 +25,7 @@ namespace ObjectOrientedPractics.Model
         {
             get
             {
-                return _ID;
+                return _id;
             }
         }
 
@@ -84,7 +84,7 @@ namespace ObjectOrientedPractics.Model
         /// <param name="address">Адрес клиента. Передается в свойство <see cref="Address"/>.</param>
         public Customer(string? fullname, string? address)
         {
-            _ID = IdGenerator.GetNextId();
+            _id = IdGenerator.GetNextId();
             FullName = fullname;
             Address = address;
 

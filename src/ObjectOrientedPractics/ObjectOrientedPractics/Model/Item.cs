@@ -114,7 +114,7 @@ namespace ObjectOrientedPractics.Model
         /// <param name="category">Категория товара.</param>
         public Item (string? name, string? info, double cost, Category category)
         {
-            _ID = IdGenerator.GetNextId();
+            _id = IdGenerator.GetNextId();
             Category = category;
             Name = name;
             Info = info;
