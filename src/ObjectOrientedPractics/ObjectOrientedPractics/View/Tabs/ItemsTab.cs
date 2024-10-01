@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ObjectOrientedPractices.Model;
 using ObjectOrientedPractices.Services;
 using ObjectOrientedPractices.Exceptions;
+using ObjectOrientedPractics.Model;
 
 namespace ObjectOrientedPractices.View.Tabs
 {
@@ -30,6 +31,7 @@ namespace ObjectOrientedPractices.View.Tabs
         public ItemsTab()
         {
             InitializeComponent();
+            comboBox_category_items.DataSource = Enum.GetValues(typeof(Category));
         }
 
         /// <summary>
@@ -61,7 +63,9 @@ namespace ObjectOrientedPractices.View.Tabs
                     return;
                 }
 
-                Item item = new(textBox_name_items.Text, textBox_descr_items.Text, cost);
+                Category category = (Category)comboBox_category_items.SelectedItem;
+
+                Item item = new(textBox_name_items.Text, textBox_descr_items.Text, cost, category);
 
                 _items.Add(item);
                 listBox_items.Items.Add($"{item.Name} - {item.Cost}");
@@ -74,6 +78,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBox_descr_items.Clear();
                 textBox_id_items.Clear();
                 textBox_name_items.Clear();
+                comboBox_category_items.SelectedItem = Category.Unknown;
 
             }
             catch (StringMaxLengthException)
@@ -126,6 +131,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBox_descr_items.Clear();
                 textBox_id_items.Clear();
                 textBox_name_items.Clear();
+                comboBox_category_items.SelectedItem = Category.Unknown;
             }
             else
             {
@@ -149,7 +155,38 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBox_name_items.Text = selectedItem.Name;
                 textBox_descr_items.Text = selectedItem.Info;
                 textBox_cost_items.Text = selectedItem.Cost.ToString();
-                textBox_id_items.Text = selectedItem.Id.ToString();
+                textBox_id_items.Text = selectedItem.ID.ToString();
+                comboBox_category_items.SelectedItem = selectedItem.Category;
+            }
+            else
+            {
+                ClearFields();
+            }
+        }
+
+        /// <summary>
+        /// Очищает все поля ввода.
+        /// </summary>
+        private void ClearFields()
+        {
+            textBox_name_items.Clear();
+            textBox_descr_items.Clear();
+            textBox_cost_items.Clear();
+            textBox_id_items.Clear();
+            comboBox_category_items.SelectedItem = Category.Unknown;
+        }
+
+        /// <summary>
+        /// Обрабатывает событие изменения выбранного элемента в комбобоксе.
+        /// </summary>
+        private void comboBox_category_items_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox_items.SelectedIndex != -1)
+            {
+                int index = listBox_items.SelectedIndex;
+                Item selectedItem = _items[index];
+
+                selectedItem.Category = (Category)comboBox_category_items.SelectedItem;
             }
         }
     }

@@ -25,7 +25,7 @@ namespace ObjectOrientedPractices.Model
         /// </summary>
         public int Id 
         {
-            get {return _id; }
+            get {return _id;}
         }
 
         /// <summary>
@@ -99,6 +99,11 @@ namespace ObjectOrientedPractices.Model
 
         }
 
+        /// <summary>
+        /// Категория предмета
+        /// </summary>
+        public Category Category { get; set; }
+
 
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Item"/> с заданными параметрами.
@@ -106,7 +111,8 @@ namespace ObjectOrientedPractices.Model
         /// <param name="name">Название предмета. Передается в свойство <see cref="Name"/>.</param>
         /// <param name="info">Описание предмета. Передается в свойство <see cref="Info"/>.</param>
         /// <param name="cost">Стоимость предмета. Передается в свойство <see cref="Cost"/>.</param>
-        public Item (string? name, string? info, double cost)
+        /// <param name="category">Категория товара.</param>
+        public Item (string? name, string? info, double cost, Category category)
         {
             _id = IdGenerator.GetNextId();
             Name = name;
