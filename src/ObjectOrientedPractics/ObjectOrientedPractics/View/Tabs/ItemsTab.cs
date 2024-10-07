@@ -155,7 +155,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBox_name_items.Text = selectedItem.Name;
                 textBox_descr_items.Text = selectedItem.Info;
                 textBox_cost_items.Text = selectedItem.Cost.ToString();
-                textBox_id_items.Text = selectedItem.ID.ToString();
+                textBox_id_items.Text = selectedItem.Id.ToString();
                 comboBox_category_items.SelectedItem = selectedItem.Category;
             }
             else

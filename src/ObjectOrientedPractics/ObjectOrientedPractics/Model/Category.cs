@@ -9,7 +9,7 @@ namespace ObjectOrientedPractics.Model
     /// <summary>
     /// Перечисление категории продукции
     /// </summary>
-    enum Category
+    public enum Category
     {
         /// <summary>Неизвестная продукция</summary>
         Unknown,

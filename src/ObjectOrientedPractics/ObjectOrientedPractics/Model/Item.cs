@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using ObjectOrientedPractices.Services;
+using ObjectOrientedPractics.Model;
 
 namespace ObjectOrientedPractices.Model
 {
@@ -19,6 +20,7 @@ namespace ObjectOrientedPractices.Model
         private string? _name;
         private string? _info;
         private double _cost;
+        private Category _category;
 
         /// <summary>
         /// Уникальный идентификатор предмета.
@@ -102,7 +104,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Категория предмета
         /// </summary>
-        public Category Category { get; set; }
+        public Category Category { get => _category; set => _category = value; }
 
 
         /// <summary>
@@ -112,12 +114,13 @@ namespace ObjectOrientedPractices.Model
         /// <param name="info">Описание предмета. Передается в свойство <see cref="Info"/>.</param>
         /// <param name="cost">Стоимость предмета. Передается в свойство <see cref="Cost"/>.</param>
         /// <param name="category">Категория товара.</param>
-        public Item (string? name, string? info, double cost, Category category)
+        public Item(string? name, string? info, double cost, Category category)
         {
             _id = IdGenerator.GetNextId();
             Name = name;
             Info = info;
             Cost = cost;
+            Category = category;
         }
     }
 }
