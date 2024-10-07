@@ -11,6 +11,10 @@ using ObjectOrientedPractices.Model;
 
 namespace ObjectOrientedPractics.View.Controls
 {
+    /// <summary>
+    /// Контрол для работы с данными адреса. Позволяет задавать и получать
+    /// информацию об индексе, стране, городе, улице, доме и квартире.
+    /// </summary>
     public partial class AddressControl : UserControl
     {
         public AddressControl()
@@ -18,42 +22,99 @@ namespace ObjectOrientedPractics.View.Controls
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Возвращает или задает почтовый индекс.
+        /// </summary>
         public string PostIndex
         {
-            get { return textBoxPostIndex.Text; }
-            set { textBoxPostIndex.Text = value; }
+            get 
+            { 
+                return textBoxPostIndex.Text; 
+            }
+            set 
+            { 
+                textBoxPostIndex.Text = value; 
+            }
         }
 
+        /// <summary>
+        /// Возвращает или задает страну.
+        /// </summary>
         public string Country
         {
-            get { return textBoxCountry.Text; }
-            set { textBoxCountry.Text = value; }
+            get 
+            { 
+                return textBoxCountry.Text; 
+            }
+            set
+            { 
+                textBoxCountry.Text = value;
+            }
         }
 
+        /// <summary>
+        /// Возвращает или задает город.
+        /// </summary>
         public string City
         {
-            get { return textBoxCity.Text; }
-            set { textBoxCity.Text = value; }
+            get 
+            { 
+                return textBoxCity.Text;
+            }
+            set 
+            { 
+                textBoxCity.Text = value;
+            }
         }
 
+        /// <summary>
+        /// Возвращает или задает улицу.
+        /// </summary>
         public string Street
         {
-            get { return textBoxStreet.Text; }
-            set { textBoxStreet.Text = value; }
+            get 
+            { 
+                return textBoxStreet.Text; 
+            }
+            set 
+            { 
+                textBoxStreet.Text = value; 
+            }
         }
 
+        /// <summary>
+        /// Возвращает или задает номер дома.
+        /// </summary>
         public string Building
         {
-            get { return textBoxBuilding.Text; }
-            set { textBoxBuilding.Text = value; }
+            get 
+            {
+                return textBoxBuilding.Text; 
+            }
+            set 
+            { 
+                textBoxBuilding.Text = value; 
+            }
         }
 
+        /// <summary>
+        /// Возвращает или задает номер квартиры.
+        /// </summary>
         public string Apartament
         {
-            get { return textBoxApartament.Text; }
-            set { textBoxApartament.Text = value; }
+            get 
+            { 
+                return textBoxApartament.Text; 
+            }
+            set 
+            { 
+                textBoxApartament.Text = value; 
+            }
         }
 
+        /// <summary>
+        /// Очищает все поля адреса.
+        /// </summary>
         public void ClearAddressFields()
         {
             PostIndex = string.Empty;
@@ -64,6 +125,10 @@ namespace ObjectOrientedPractics.View.Controls
             Apartament = string.Empty;
         }
 
+        /// <summary>
+        /// Заполняет поля адреса на основании переданного объекта <see cref="Address"/>.
+        /// </summary>
+        /// <param name="address">Объект адреса для заполнения полей.</param>
         public void FillAddressFields(Address address)
         {
             PostIndex = address.Index.ToString();

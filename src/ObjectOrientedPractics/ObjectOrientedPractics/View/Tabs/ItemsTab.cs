@@ -34,6 +34,34 @@ namespace ObjectOrientedPractices.View.Tabs
         }
 
         /// <summary>
+        /// Возвращает или задает список элементов, отображаемых на вкладке Items.
+        /// </summary>
+        public List<Item> Items
+        {
+            get
+            { 
+                return _items; 
+            }
+            set
+            {
+                _items = value;
+                UpdateItemsListBox();
+            }
+        }
+
+        /// <summary>
+        /// Метод обновновления списка предметов
+        /// </summary>
+        private void UpdateItemsListBox()
+        {
+            listBox_items.Items.Clear();
+            foreach (var item in _items)
+            {
+                listBox_items.Items.Add(item.Name);
+            }
+        }
+
+        /// <summary>
         /// Обрабатывает событие клика по кнопке "Добавить". Выполняет проверку 
         /// введённых данных, создаёт новый элемент и добавляет его в список.
         /// </summary>

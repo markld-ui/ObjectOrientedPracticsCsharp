@@ -33,6 +33,34 @@ namespace ObjectOrientedPractices.View.Tabs
         }
 
         /// <summary>
+        /// Возвращает или задает список элементов, отображаемых на вкладке Customers.
+        /// </summary>
+        public List<Customer> Customers
+        {
+            get
+            {
+                return _customers;
+            }
+            set
+            {
+                _customers = value;
+                UpdateCustomersListBox();
+            }
+        }
+
+        /// <summary>
+        /// Метод обновновления списка пользователей
+        /// </summary>
+        private void UpdateCustomersListBox()
+        {
+            listBox_customers.Items.Clear();
+            foreach (var customer in _customers)
+            {
+                listBox_customers.Items.Add($"{customer.FullName} - {customer.Address.Country}, {customer.Address.City}, {customer.Address.Street}");
+            }
+        }
+
+        /// <summary>
         /// Обрабатывает событие клика по кнопке "Добавить". Выполняет проверку 
         /// введённых данных, создаёт нового клиента и добавляет его в список.
         /// </summary>
