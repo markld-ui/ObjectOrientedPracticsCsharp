@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using ObjectOrientedPractices.Model;
 using ObjectOrientedPractices.Services;
 using ObjectOrientedPractices.Exceptions;
-using ObjectOrientedPractics.Model;
 
 namespace ObjectOrientedPractices.View.Tabs
 {

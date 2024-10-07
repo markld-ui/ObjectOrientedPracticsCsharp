@@ -16,7 +16,7 @@ namespace ObjectOrientedPractices.Model
     {
         private readonly int _id;
         private string? _fullname;
-        private string? _address;
+        private Address? _address;
 
         /// <summary>
         /// Уникальный идентификатор клиента.
@@ -59,21 +59,12 @@ namespace ObjectOrientedPractices.Model
         /// <exception cref="Exception">
         /// Выбрасывается, если строка <paramref name="Address"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? Address
+        public Address Address
         {
-            get {return _address;}
+            get { return _address; }
             private set
             {
-                try
-                {
-                    ValueValidator.AssertStringOnLength(value, 1000, 0, nameof(Address));
-                    _address = value;
-                }
-                catch (Exception)
-                {
-
-                    throw new Exception($"Неверные данные для {nameof(Address)}");
-                }
+                _address = value ?? throw new ArgumentNullException(nameof(Address), "Адресс не может быть null");
             }
         }
 
@@ -82,7 +73,7 @@ namespace ObjectOrientedPractices.Model
         /// </summary>
         /// <param name="fullname">Полное имя клиента. Передается в свойство <see cref="FullName"/>.</param>
         /// <param name="address">Адрес клиента. Передается в свойство <see cref="Address"/>.</param>
-        public Customer(string? fullname, string? address)
+        public Customer(string? fullname, Address address)
         {
             _id = IdGenerator.GetNextId();
             FullName = fullname;

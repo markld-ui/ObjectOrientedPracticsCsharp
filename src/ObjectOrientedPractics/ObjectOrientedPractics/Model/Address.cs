@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ObjectOrientedPractices.Services;
 
-namespace ObjectOrientedPractics.Model
+namespace ObjectOrientedPractices.Model
 {
     /// <summary>
     /// Класс, представляющий адрес.
@@ -185,7 +185,7 @@ namespace ObjectOrientedPractics.Model
         /// <param name="city">Город адреса.</param>
         /// <param name="street">Улица адреса.</param>
         /// <param name="building">Здание адреса.</param>
-        /// <param name="apartment">Квартира адреса.</param>
+        /// <param name="apartament">Квартира адреса.</param>
         public Address(int index, string? country, string? city, string? street, string? building, string? apartament) 
         {
             Index = index;

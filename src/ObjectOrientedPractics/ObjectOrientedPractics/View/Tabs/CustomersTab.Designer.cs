@@ -37,10 +37,9 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            textBox_adrs_customers = new TextBox();
+            addressControl = new ObjectOrientedPractics.View.Controls.AddressControl();
             textBox_fn_customers = new TextBox();
             textBox_id_customers = new TextBox();
-            label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -146,10 +145,9 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(textBox_adrs_customers);
+            panel2.Controls.Add(addressControl);
             panel2.Controls.Add(textBox_fn_customers);
             panel2.Controls.Add(textBox_id_customers);
-            panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
@@ -159,43 +157,38 @@
             panel2.Size = new Size(719, 682);
             panel2.TabIndex = 2;
             // 
-            // textBox_adrs_customers
+            // addressControl
             // 
-            textBox_adrs_customers.BackColor = SystemColors.Window;
-            textBox_adrs_customers.Location = new Point(115, 176);
-            textBox_adrs_customers.Multiline = true;
-            textBox_adrs_customers.Name = "textBox_adrs_customers";
-            textBox_adrs_customers.Size = new Size(601, 174);
-            textBox_adrs_customers.TabIndex = 6;
+            addressControl.Apartament = "";
+            addressControl.Building = "";
+            addressControl.City = "";
+            addressControl.Country = "";
+            addressControl.Location = new Point(3, 163);
+            addressControl.Name = "addressControl";
+            addressControl.PostIndex = "";
+            addressControl.Size = new Size(712, 204);
+            addressControl.Street = "";
+            addressControl.TabIndex = 6;
             // 
             // textBox_fn_customers
             // 
-            textBox_fn_customers.Location = new Point(115, 121);
+            textBox_fn_customers.Location = new Point(132, 130);
             textBox_fn_customers.Name = "textBox_fn_customers";
-            textBox_fn_customers.Size = new Size(601, 27);
+            textBox_fn_customers.Size = new Size(583, 27);
             textBox_fn_customers.TabIndex = 5;
             // 
             // textBox_id_customers
             // 
-            textBox_id_customers.Location = new Point(115, 73);
+            textBox_id_customers.Location = new Point(132, 82);
             textBox_id_customers.Name = "textBox_id_customers";
             textBox_id_customers.ReadOnly = true;
             textBox_id_customers.Size = new Size(237, 27);
             textBox_id_customers.TabIndex = 4;
             // 
-            // label5
-            // 
-            label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(8, 177);
-            label5.Name = "label5";
-            label5.Size = new Size(88, 27);
-            label5.TabIndex = 3;
-            label5.Text = "Address:";
-            // 
             // label4
             // 
             label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(3, 121);
+            label4.Location = new Point(20, 130);
             label4.Name = "label4";
             label4.Size = new Size(93, 27);
             label4.TabIndex = 2;
@@ -204,7 +197,7 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(3, 73);
+            label3.Location = new Point(20, 82);
             label3.Name = "label3";
             label3.Size = new Size(31, 27);
             label3.TabIndex = 1;
@@ -251,12 +244,11 @@
         private Button remove_btn_customers;
         private Button add_btn_customers;
         private Panel panel2;
-        private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private TextBox textBox_id_customers;
-        private TextBox textBox_adrs_customers;
         private TextBox textBox_fn_customers;
+        private ObjectOrientedPractics.View.Controls.AddressControl addressControl;
     }
 }

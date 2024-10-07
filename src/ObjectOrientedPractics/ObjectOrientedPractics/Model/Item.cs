@@ -5,7 +5,6 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using ObjectOrientedPractices.Services;
-using ObjectOrientedPractics.Model;
 
 namespace ObjectOrientedPractices.Model
 {

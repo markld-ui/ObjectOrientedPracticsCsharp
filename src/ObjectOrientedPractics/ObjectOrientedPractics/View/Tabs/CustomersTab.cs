@@ -43,36 +43,39 @@ namespace ObjectOrientedPractices.View.Tabs
             try
             {
                 ValueValidator.AssertStringOnLength(textBox_fn_customers.Text, 200, 0, "Full Name");
-                ValueValidator.AssertStringOnLength(textBox_adrs_customers.Text, 500, 0, "Address");
 
-                Customer customer = new(textBox_fn_customers.Text, textBox_adrs_customers.Text);
+                Address address = new Address(
+                    Convert.ToInt32(addressControl.PostIndex),
+                    addressControl.Country,
+                    addressControl.City,
+                    addressControl.Street,
+                    addressControl.Building,
+                    addressControl.Apartament
+                );
+
+                Customer customer = new(textBox_fn_customers.Text, address);
                 _customers.Add(customer);
-                listBox_customers.Items.Add($"{customer.FullName} - {customer.Address}");
+                listBox_customers.Items.Add($"{customer.FullName} - {customer.Address.Country}, {customer.Address.City}, {customer.Address.Street}");
 
-                textBox_adrs_customers.BackColor = Color.White;
                 textBox_fn_customers.BackColor = Color.White;
 
-                textBox_adrs_customers.Clear();
                 textBox_fn_customers.Clear();
                 textBox_id_customers.Clear();
+                addressControl.ClearAddressFields();
             }
             catch (StringMaxLengthException)
             {
                 MessageBox.Show("Длина поля превышает допустимое значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_adrs_customers.BackColor = ColorTranslator.FromHtml("#DC143C");
                 textBox_fn_customers.BackColor = ColorTranslator.FromHtml("#DC143C");
 
-                textBox_adrs_customers.Clear();
                 textBox_fn_customers.Clear();
                 textBox_id_customers.Clear();
             }
             catch (StringMinLengthException)
             {
                 MessageBox.Show("Длина поля меньше допустимого значения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_adrs_customers.BackColor = ColorTranslator.FromHtml("#DC143C");
                 textBox_fn_customers.BackColor = ColorTranslator.FromHtml("#DC143C");
 
-                textBox_adrs_customers.Clear();
                 textBox_fn_customers.Clear();
                 textBox_id_customers.Clear();
             }
@@ -92,7 +95,8 @@ namespace ObjectOrientedPractices.View.Tabs
                 _customers.RemoveAt(index);
                 listBox_customers.Items.RemoveAt(index);
                 MessageBox.Show("Элемент успешно удален", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_adrs_customers.Clear();
+
+
                 textBox_fn_customers.Clear();
                 textBox_id_customers.Clear();
             }
@@ -113,11 +117,11 @@ namespace ObjectOrientedPractices.View.Tabs
             if (listBox_customers.SelectedIndex != -1)
             {
                 int index = listBox_customers.SelectedIndex;
-                Customer selectedItem = _customers[index];
+                Customer selectedCustomer = _customers[index];
 
-                textBox_adrs_customers.Text = selectedItem.Address;
-                textBox_fn_customers.Text = selectedItem.FullName;
-                textBox_id_customers.Text = selectedItem.Id.ToString();
+                textBox_fn_customers.Text = selectedCustomer.FullName;
+                textBox_id_customers.Text = selectedCustomer.Id.ToString();
+                addressControl.FillAddressFields(selectedCustomer.Address);
             }
         }
     }
