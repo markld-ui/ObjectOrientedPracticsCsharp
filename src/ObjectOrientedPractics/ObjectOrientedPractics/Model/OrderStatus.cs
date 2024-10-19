@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace ObjectOrientedPractics.Model
 {
-    public class OrderStatus
+    public enum OrderStatus
     {
+        New,
+        Processing,
+        Assembly,
+        Sent,
+        Delivered,
+        Returned,
+        Abandoned
     }
 }

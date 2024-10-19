@@ -20,6 +20,7 @@ namespace ObjectOrientedPractices.Model
         private string _fullname;
         private Address _address;
         private Cart _cart;
+        private List<Order> _orders;
 
         /// <summary>
         /// Уникальный идентификатор клиента.
@@ -86,6 +87,19 @@ namespace ObjectOrientedPractices.Model
         }
 
         /// <summary>
+        /// Заказы клиента.
+        /// </summary>
+        public List<Order> Orders
+        {
+            get => _orders;
+            set
+            {
+                _orders = value;
+            }
+        }
+
+
+        /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Customer"/> с заданными параметрами.
         /// </summary>
         /// <param name="fullname">Полное имя клиента. Передается в свойство <see cref="FullName"/>.</param>
@@ -99,7 +113,7 @@ namespace ObjectOrientedPractices.Model
         {
             _id = IdGenerator.GetNextId();
             FullName = fullname;
-            Cart = new Cart();
+            Cart = new Cart(); 
             Address = new Address(
                 index,
                 country, 
@@ -108,6 +122,7 @@ namespace ObjectOrientedPractices.Model
                 building, 
                 apartament
                 );
+            Orders = new List<Order>();
         }
     }
 }

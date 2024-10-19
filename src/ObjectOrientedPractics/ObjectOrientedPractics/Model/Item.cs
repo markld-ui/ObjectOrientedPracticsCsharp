@@ -69,7 +69,7 @@ namespace ObjectOrientedPractices.Model
             {
                 try
                 {
-                    ValueValidator.AssertStringOnLength(value, 1000, 0, nameof(Name));
+                    ValueValidator.AssertStringOnLength(value, 1000, 0, nameof(Info));
                     _info = value;
                 }
                 catch (StringLengthException)
