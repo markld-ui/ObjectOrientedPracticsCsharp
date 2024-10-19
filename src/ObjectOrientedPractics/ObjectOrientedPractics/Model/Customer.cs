@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using ObjectOrientedPractices.Exceptions;
 using ObjectOrientedPractices.Services;
+using ObjectOrientedPractics.Model;
 
 namespace ObjectOrientedPractices.Model
 {
@@ -18,6 +19,7 @@ namespace ObjectOrientedPractices.Model
         private readonly int _id;
         private string _fullname;
         private Address _address;
+        private Cart _cart;
 
         /// <summary>
         /// Уникальный идентификатор клиента.
@@ -33,7 +35,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Полное имя клиента.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="StringLengthException">
         /// Выбрасывается, если строка <paramref name="FullName"/> пуста или превышает допустимую длину.
         /// </exception>
         public string FullName
@@ -56,7 +58,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Адрес клиента.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="ArgumentNullException">
         /// Выбрасывается, если строка <paramref name="Address"/> пуста или превышает допустимую длину.
         /// </exception>
         public Address Address
@@ -65,6 +67,21 @@ namespace ObjectOrientedPractices.Model
             private set
             {
                 _address = value ?? throw new ArgumentNullException(nameof(Address), "Адресс не может быть null");
+            }
+        }
+
+        /// <summary>
+        /// Корзина клиента.
+        /// </summary>
+        /// <exception cref="NullReferenceException">
+        /// Выбрасывается, если корзина <paramref name="Cart"/> не существует.
+        /// </exception>
+        public Cart Cart
+        {
+            get => _cart;
+            set
+            {
+                _cart = value ?? throw new NullReferenceException(nameof(Cart));
             }
         }
 
@@ -82,6 +99,7 @@ namespace ObjectOrientedPractices.Model
         {
             _id = IdGenerator.GetNextId();
             FullName = fullname;
+            Cart = new Cart();
             Address = new Address(
                 index,
                 country, 
@@ -90,7 +108,6 @@ namespace ObjectOrientedPractices.Model
                 building, 
                 apartament
                 );
-
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ObjectOrientedPractices.Exceptions
     public class StringLengthException : Exception
     {
         /// <summary>
-        /// Инициализирует новый экземпляр класса <see cref="StringMinLengthException"/> с сообщением об ошибке.
+        /// Инициализирует новый экземпляр класса <see cref="StringLengthException"/> с сообщением об ошибке.
         /// </summary>
         /// <param name="propertyName">Имя свойства, для которого возникло исключение.</param>
         /// <param name="minLength">Минимально допустимая длина строки.</param>

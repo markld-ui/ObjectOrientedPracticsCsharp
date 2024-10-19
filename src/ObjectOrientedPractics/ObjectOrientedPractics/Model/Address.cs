@@ -24,6 +24,9 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Почтовый индекс адреса.
         /// </summary>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// Выбрасывается, если почтовый индекс <paramref name="Index"/> равен нулю или меньше его.
+        /// </exception>
         public int Index 
         {
             get
@@ -34,7 +37,7 @@ namespace ObjectOrientedPractices.Model
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("Постовый индекс не может быть равен нулю или быть отрицательным!");
+                    throw new ArgumentOutOfRangeException("Почтовый индекс не может быть равен нулю или быть отрицательным!");
                 }
                 _index = value;
             } 
@@ -43,7 +46,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Страна адреса.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="StringLengthException">
         /// Выбрасывается, если строка <paramref name="Country"/> пуста или превышает допустимую длину.
         /// </exception>
         public string Country 
@@ -69,7 +72,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Город адреса.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="StringLengthException">
         /// Выбрасывается, если строка <paramref name="City"/> пуста или превышает допустимую длину.
         /// </exception>
         public string City 
@@ -95,7 +98,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Улица адреса.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="StringLengthException">
         /// Выбрасывается, если строка <paramref name="Street"/> пуста или превышает допустимую длину.
         /// </exception>
         public string Street 
@@ -121,7 +124,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Здание адреса.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="StringLengthException">
         /// Выбрасывается, если строка <paramref name="Building"/> пуста или превышает допустимую длину.
         /// </exception>
         public string Building 
@@ -147,7 +150,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Квартира адреса.
         /// </summary>
-        /// <exception cref="StringMaxLengthException">
+        /// <exception cref="StringLengthException">
         /// Выбрасывается, если строка <paramref name="Apartment"/> пуста или превышает допустимую длину.
         /// </exception>
         public string Apartament

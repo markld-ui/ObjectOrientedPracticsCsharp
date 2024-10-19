@@ -1,0 +1,3110 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="14.60" multi-file="no" uid="simpbdf831c5a451462793c14b16373c9f7b" creation-date="10/19/2024 15:39:51">
+  <meta>
+    <name>(Project)</name>
+    <authors>Роман Слиньков</authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names />
+    <entity-ids>
+      <counter>
+        <item-type type-id="universal-connector" type="Universal Connector" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="text" type="Text" />
+        <value>3</value>
+      </counter>
+      <counter>
+        <item-type type-id="relationship" type="Association" />
+        <value>16</value>
+      </counter>
+      <counter>
+        <item-type type-id="property" type="Property" />
+        <value>31</value>
+      </counter>
+      <counter>
+        <item-type type-id="usage" type="Usage" />
+        <value>7</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields />
+  </counters>
+  <alias-groups />
+  <management uid="md-6cadd7edc2264452a3af19704e39ef09" name="" task-id-sequence="0">
+    <working-schedule uid="ws-c6bc9d9744094ad9921f00dc18405f81" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+    <persons>
+      <person id="">
+        <first-name>Роман</first-name>
+        <last-name>Слиньков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-deda74629b86443ab2fbe604ef938b47" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Роман</first-name>
+        <last-name>Слиньков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-25c99ac10ad1453b9fd37cc486d8feeb" name="" order-index="-1" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <parameters />
+      <types>
+        <type id="Store" name="Store" />
+        <type id="CSharp.double" tid="s-real64" name="double" />
+        <type id="Class:ef7b9ae4d99a469e9b60bf98c0589439" name="Item" class-ref="ef7b9ae4d99a469e9b60bf98c0589439" />
+        <type id="Class:9686b4e3b52c49b8aa7da02dde954ae8" name="Address" class-ref="9686b4e3b52c49b8aa7da02dde954ae8" />
+        <type id="Class:c42d477e7ae344a2b70c1a31a20d7497" name="StringLengthException" class-ref="c42d477e7ae344a2b70c1a31a20d7497" />
+        <type id="bool" name="bool" />
+        <type id="EventArgs" name="EventArgs" />
+        <type id="Class:48b470077baf44b7be78b362b50fd304" name="Store" class-ref="48b470077baf44b7be78b362b50fd304" />
+        <type id="Class:26d74c5301924646892139bd18e5b767" name="IdGenerator" class-ref="26d74c5301924646892139bd18e5b767" />
+        <type id="CSharp.int" tid="s-integer32" name="int" />
+        <type id="Category" name="Category" />
+        <type id="CSharp.List_Item" tid="array" name="List&lt;Item&gt;" template="{{Name}}&lt;{{?}}&gt;" base-ref="CSharp.List">
+          <template-parameter ref="Item" />
+          <template-parameter ref="Item" />
+        </type>
+        <type id="MouseEventArgs" name="MouseEventArgs" />
+        <type id="Class:0c6ae445de234b699c3446ae08646f9c" name="Customer" class-ref="0c6ae445de234b699c3446ae08646f9c" />
+        <type id="object" name="object" />
+        <type id="CSharp.string" tid="string" name="string" nullable="true" />
+        <type id="CSharp.List_Customer" tid="array" name="List&lt;Customer&gt;" template="{{Name}}&lt;{{?}}&gt;" base-ref="CSharp.List">
+          <template-parameter ref="Customer" />
+          <template-parameter ref="Customer" />
+        </type>
+        <type id="Address" name="Address" />
+        <type id="Class:91c6d8b617ce4fed91adeeb3ef7e8123" name="ValueValidator" class-ref="91c6d8b617ce4fed91adeeb3ef7e8123" />
+      </types>
+    </custom-types>
+  </types>
+  <items>
+    <item id="bff86fa8088f41208d63cd301c585fa2" cid="PROP003" type="property" name="Items" owner="48b470077baf44b7be78b362b50fd304" creation-date="10/19/2024 15:45:04" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tvbce2b1e3a8ae423d8b536e1ff6bb00af" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Items" />
+        <tagged-value id="tvbc6304298ec84563849028632c47fdd6" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvbd8e9754d63e4ba391e3a1dd035b5b2e" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvdb4262e4645b4bf7ab891f2038a8e181" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv7865cdd819484ef682c74d55a836c229" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="702" />
+        <tagged-value id="tv1d0458500ba34863abfb4d83d5d3a465" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="199" />
+      </tagged-values>
+      <documentations>
+        <doc id="1ca3141b3cc342fd9c019b3db5095098">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Возвращает или задает список товаров магазина.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Никогда не возвращает null; при попытке задать null создается пустой список.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="bff86fa8088f41208d63cd301c585fa2_property_c" type="property" creation-date="10/19/2024 15:45:04" ref="" />
+      </stereotype-instances>
+      <structural-feature type="List&lt;Item&gt;" type-id="CSharp.List_Item" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-46e4da88-d8bc-4af2-9b37-cf038df1d62a">
+            <script name="Get">  return _items;
+            </script>
+            <script name="Set">
+                _items = value ?? new List&lt;Item&gt;();
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="48b470077baf44b7be78b362b50fd304" cid="C001" type="class" name="Store" creation-date="10/19/2024 15:45:04" visibility="public">
+      <tagged-values>
+        <tagged-value id="tv0b1c731aad0f4768a5418feb8cb97a5d" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Model" />
+        <tagged-value id="tv127b057c4c0f403ea8203ce9dd83da84" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Store" />
+        <tagged-value id="tv61bed3da179140acb878bf05674f3325" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv94ea7b65fe6f409d8be36c69887ab73f" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv4648c8b251dd4f28b318c95d8f803d1a" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv0ead376d47384815ac707aae1c0a114e" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="388" />
+        <tagged-value id="tv574f9a5e30d447eeb4682ceddb74fe73" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="1258" />
+      </tagged-values>
+      <documentations>
+        <doc id="4488e30fef5b428f95c0ce4f84ed0c0d">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Класс Store представляет магазин, который управляет списками товаров и покупателей.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Класс композирует объекты типа </t>
+                </p>
+                <p>
+                  <t> и </t>
+                </p>
+                <p>
+                  <t>.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <owned-items />
+      <attributes>
+        <attribute id="a4b9f9a14d4cd40ae8df1e63831fc8663568" cid="PROP001" name="_items" creation-date="10/19/2024 15:45:04" property-ref="a1a8b7e6b970431a81cbd3c1864b10f7" />
+        <attribute id="a71e9e306551340dca6673621aa136b60569" cid="PROP002" name="_customers" creation-date="10/19/2024 15:45:04" property-ref="18bdaf55bf1247a6bc895a67806725e6" />
+        <attribute id="a5e1aee1eccfe41e1b664f06f8b58c89c569" cid="PROP003" name="Items" creation-date="10/19/2024 15:45:04" property-ref="bff86fa8088f41208d63cd301c585fa2" />
+        <attribute id="a6ff2339a4c8643a6be2084e19eff2070569" cid="PROP004" name="Customers" creation-date="10/19/2024 15:45:04" property-ref="b8221369e5114bfbafcdc1b7bcde8b1c" />
+      </attributes>
+      <operations>
+        <operation id="o7cf5b1ada58c4aa38a58f9a8ea92d42b569" cid="OP001" name="Store" creation-date="10/19/2024 15:45:04" type="" type-id="" visibility="public">
+          <stereotypes>
+            <stereotype>create</stereotype>
+          </stereotypes>
+          <tagged-values>
+            <tagged-value id="tv722a583d885040b99d10c744c3f6d7f0" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Store" />
+            <tagged-value id="tv93e27d74730c4d2da75ca58445273119" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tvd19023c76ec940eb8981d19c4365b950" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tvaa4b93f211a34fc98cb40c47a5c9d67a" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1514" />
+            <tagged-value id="tv11e8008324954f61bdfc0a9137defc7c" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="125" />
+          </tagged-values>
+          <documentations>
+            <doc id="3cfa65d8127047868bf3bba805b8770a">
+              <text>
+                <default>
+                  <style font-name="Verdana" font-size="12">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </default>
+                <styles />
+                <content>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Конструктор по умолчанию, инициализирует списки товаров и покупателей пустыми коллекциями.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> 
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </doc>
+          </documentations>
+        </operation>
+      </operations>
+    </item>
+    <item id="e988906316f948a59492efa9194b5420" cid="PROP015" type="property" owner="7d0dad2c30594b8b812419ed3e3610eb" creator="" creation-date="10/19/2024 16:08:45" visibility="private">
+      <structural-feature multiplicity="1" type="Store" type-id="Class:48b470077baf44b7be78b362b50fd304" />
+      <property aggregation="composite" />
+    </item>
+    <item id="2d529dd7438c48cc83dd64dce6bdb63f" cid="PROP001" type="property" name="_id" owner="0c6ae445de234b699c3446ae08646f9c" creation-date="10/19/2024 15:44:32" visibility="private">
+      <tagged-values>
+        <tagged-value id="tveefc654c4f95422b8477f93ee8e1fee9" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_id" />
+        <tagged-value id="tv500ffd3953d34558a90c20586340e6d4" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvcb63143ab82b45b29488f9b72cd1f80c" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv772419458e4e41cfa77a7ab3db00d450" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv6c944e0dc17c43b98dd0eb45e87ac32d" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="564" />
+        <tagged-value id="tv8ade690920164f2a8faf1cb82d131854" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="25" />
+      </tagged-values>
+      <structural-feature read-only="true" type="int" type-id="CSharp.int" />
+    </item>
+    <item id="e70d25994f934e329973eb0e1c636b67" cid="PROP006" type="property" name="Id" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tva9dd10f20df947da8ac1f48d8855ceaf" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Id" />
+        <tagged-value id="tvb9ed3885d7344684a4a540f5f9cae3e5" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv963c2bc479dd4b328094e877a86aed62" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvdc01acd2682b4968a5cc2d63e92e8a14" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv5ad76423d5a644d1bb14ce75b442a939" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="876" />
+        <tagged-value id="tv46360d4021fa4308af1e350d00443bc3" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="67" />
+      </tagged-values>
+      <documentations>
+        <doc id="6d690553de704a149e27cf5ed3ffe3c3">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Уникальный идентификатор предмета.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="e70d25994f934e329973eb0e1c636b67_property_c" type="property" creation-date="10/19/2024 15:44:50" ref="" />
+      </stereotype-instances>
+      <structural-feature type="int" type-id="CSharp.int" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-75fa3e4d-d0e0-4ef1-b249-a30fd4e4dfdc">
+            <script name="Get">return _id;</script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="6c301af691c645429b05aa1fa3bb4f48" cid="PROP013" type="property" owner="ac4e4709c30748ecbe45296fe8028b0d" creator="" creation-date="10/19/2024 16:07:51" visibility="private">
+      <structural-feature multiplicity="1" type="Customer" type-id="Class:0c6ae445de234b699c3446ae08646f9c" />
+      <property aggregation="composite" />
+    </item>
+    <item id="0c6ae445de234b699c3446ae08646f9c" cid="C001" type="class" name="Customer" creation-date="10/19/2024 15:44:32" visibility="public">
+      <tagged-values>
+        <tagged-value id="tv39c14d5bdaf342ff8229b4e27b15231d" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Model" />
+        <tagged-value id="tvcfdf74f51d194a21b867e56ca737c80e" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Customer" />
+        <tagged-value id="tvd890cbf897ad4edd8c6a1d2a58a76c51" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv248c718d080846b3b30fc2fe49508aed" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv7eb9a5dcdb7645f38463c2efa567a214" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvf3b78687f3774295a488d1a9341908ac" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="526" />
+        <tagged-value id="tv0f384901f21847cdbbac7c693f1fe7d0" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="2680" />
+      </tagged-values>
+      <documentations>
+        <doc id="173a22fc902249f6b8c9ac722139e0a6">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Класс для представления клиента, который может добавляться в базу данных.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Взаимодействие с объектом осуществляется через свойства. Поле ID является уникальным и автоматически генерируется.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <owned-items />
+      <attributes>
+        <attribute id="ae87607a77b54404f834525624bd495df678" cid="PROP001" name="_id" creation-date="10/19/2024 15:44:32" property-ref="2d529dd7438c48cc83dd64dce6bdb63f" />
+        <attribute id="a5a27d08472f84c3da44e4bfc2c1a4b8b678" cid="PROP002" name="_fullname" creation-date="10/19/2024 15:44:32" property-ref="3946815c34464410b60f6cbe6b096848" />
+        <attribute id="a7024aa263df445278f01309e7b34db3a679" cid="PROP003" name="_address" creation-date="10/19/2024 15:44:32" property-ref="474045452f6a47fca798541ef8a5a6d0" />
+        <attribute id="af40fac1f63c34a239d3041877c8a32c3679" cid="PROP004" name="Id" creation-date="10/19/2024 15:44:32" property-ref="b6a8b8e3e6e24ca3867d63bf326832f4" />
+        <attribute id="a291925b8e9d7465eb9bf5e8ba3da8dad679" cid="PROP005" name="FullName" creation-date="10/19/2024 15:44:32" property-ref="dafd5e42dcd8435b8e13f85fc96295f6" />
+        <attribute id="aab4979eb490a494891b690290cbe7ac6679" cid="PROP006" name="Address" creation-date="10/19/2024 15:44:32" property-ref="3c59b015930043f9bab07d8f05992365" />
+      </attributes>
+      <operations>
+        <operation id="o1e8ec78be220443d862e63d75ecc68da679" cid="OP001" name="Customer" creation-date="10/19/2024 15:44:32" type="" type-id="" visibility="public">
+          <parameters>
+            <parameter id="pe0f4bfa82f4f4e0e830351f10dd43efe" name="fullname" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:44:32" />
+            <parameter id="pd0a4cb4f9a3e45bc93e7297d105f0e59" name="index" type="int" type-id="CSharp.int" creation-date="10/19/2024 15:44:32" />
+            <parameter id="p548c04f2a8b14ee7aff0163f76bd4c02" name="country" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:44:32" />
+            <parameter id="pdbc8b0a0f75c4e929f25573a26550f7c" name="city" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:44:32" />
+            <parameter id="p4e8e3d98972a47b2a63b0aa381b1ced3" name="street" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:44:32" />
+            <parameter id="pc41489bc92d04196a5d110498f479138" name="building" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:44:32" />
+            <parameter id="p46926335d9814dd1a0100c145716ba12" name="apartament" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:44:32" />
+          </parameters>
+          <stereotypes>
+            <stereotype>create</stereotype>
+          </stereotypes>
+          <tagged-values>
+            <tagged-value id="tv58f16904c8084070a9f7c6f1cbf69576" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Customer" />
+            <tagged-value id="tv4ae59885f27a42c4ace0c34e9ace936a" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv7207be4d7dcc499ba7d82d4daa136683" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tvd304da25c0db4cdbab9a9a3f15a9def6" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="2761" />
+            <tagged-value id="tvfaf680419e8741c1938846a9586f4579" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="438" />
+          </tagged-values>
+          <documentations>
+            <doc id="fc3357df07f3446c92714c7711a9cf1c">
+              <text>
+                <default>
+                  <style font-name="Verdana" font-size="12">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </default>
+                <styles />
+                <content>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Инициализирует новый экземпляр класса </t>
+                    </p>
+                    <p>
+                      <t> с заданными параметрами.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Полное имя клиента. Передается в свойство </t>
+                    </p>
+                    <p>
+                      <t>.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Индекс адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Страна адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Город адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Улица адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Здание адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Квартира адреса.
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </doc>
+          </documentations>
+        </operation>
+      </operations>
+    </item>
+    <item id="c961676e16d04fcb8c66e61aa293b232" cid="PROP010" type="property" name="Category" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tvde3e88921bf246fb8b9e9ec9f4c185d3" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Category" />
+        <tagged-value id="tvf6da276d43c04ac4ae6c7cabf229bac0" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv3ef2c357e22349e486e21cb640a448e5" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv3c1e4a0a37ba433d9bc920c9c8ed9fab" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv238ea1b902f04f1689dd82990aec7227" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="3215" />
+        <tagged-value id="tv87776cd7626143a9a985f381f8292fa7" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="72" />
+      </tagged-values>
+      <documentations>
+        <doc id="886dd7e60e17466eb4efe52469d9bf7e">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Категория предмета
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="c961676e16d04fcb8c66e61aa293b232_property_c" type="property" creation-date="10/19/2024 15:44:50" ref="" />
+      </stereotype-instances>
+      <structural-feature type="Category" type-id="Category" />
+    </item>
+    <item id="15cc748945f14e678362777571459484" cid="PROP030" type="property" owner="edbbeaedac2d44bab01fea0e7ebf37c1" creator="" creation-date="10/19/2024 16:30:22" visibility="private">
+      <structural-feature multiplicity="1" />
+    </item>
+    <item id="18bdaf55bf1247a6bc895a67806725e6" cid="PROP002" type="property" name="_customers" owner="48b470077baf44b7be78b362b50fd304" creation-date="10/19/2024 15:45:04" visibility="private">
+      <tagged-values>
+        <tagged-value id="tvddc2fd4c8c304a14b2628673eba00ee1" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_customers" />
+        <tagged-value id="tva59e41fe8cda4d4cbe1ebf6b4e18fa61" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv811f6fbca216487db3655ed85a8c55f2" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvbf06e188d01a472c9d342a9d2aef1d3f" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv35f1c9fbeeba43049a361e3d3616243c" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="459" />
+        <tagged-value id="tv51887251def442de9ec7f936cafff2a0" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="34" />
+      </tagged-values>
+      <structural-feature type="List&lt;Customer&gt;" type-id="CSharp.List_Customer" />
+    </item>
+    <item id="608a3452e2df44fb85f8098beb38993c" cid="PROP001" type="property" name="_id" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv39b0577115de4d4a8aafaffc04a2ef1e" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_id" />
+        <tagged-value id="tv14766c46a3814472b996ece439e2100b" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv8df932ef5e2a4d648b1a2ade679ab41d" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv7524184979244c9099b913669ff2c21e" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvaaa4d38cdbb04826a185b92cb5365bd8" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="614" />
+        <tagged-value id="tv878b16be45634a309d2a1cbc2571090e" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="25" />
+      </tagged-values>
+      <structural-feature read-only="true" type="int" type-id="CSharp.int" />
+    </item>
+    <item id="55a40ca629a44212b72f81cf89bd5e8f" cid="PROP016" type="property" owner="7d0dad2c30594b8b812419ed3e3610eb" creator="" creation-date="10/19/2024 16:08:45" visibility="private">
+      <structural-feature multiplicity="1" type="Item" type-id="Class:ef7b9ae4d99a469e9b60bf98c0589439" />
+    </item>
+    <item id="195c297d2b79490bb7f684bb2b71928d" cid="PROP028" type="property" owner="b676bb5774ee4c53ba820eaa670a0a5b" creator="" creation-date="10/19/2024 16:28:39" visibility="private">
+      <structural-feature type="StringLengthException" type-id="Class:c42d477e7ae344a2b70c1a31a20d7497" />
+    </item>
+    <item id="e56f13e001fa493f8e822beb61182ae9" cid="PROP020" type="property" owner="1732c6c38cdc43478f7891938eacf6d6" creator="" creation-date="10/19/2024 16:27:30" visibility="private">
+      <structural-feature type="ValueValidator" type-id="Class:91c6d8b617ce4fed91adeeb3ef7e8123" />
+    </item>
+    <item id="6afa4047096f467c97b7f922755148c6" cid="PROP002" type="property" name="_country" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="private">
+      <tagged-values>
+        <tagged-value id="tvcebc3cdd89354ab6931d3f97520eeb8b" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_country" />
+        <tagged-value id="tv8f466033167646dc8d1753299b44571b" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvcf9f7a8f6836411eb06feb1d9b2fcd2b" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvf74fa979ce12453c88f4fa0b4f5b004e" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv87fafb8f4d484064a7aa12c42aee2bf6" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="465" />
+        <tagged-value id="tv0f009daf8b3844d8b62514e77aac2e8f" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="24" />
+      </tagged-values>
+      <structural-feature type="string" type-id="CSharp.string" />
+    </item>
+    <item id="030f86c87d2c476c8c37486542a71f89" cid="PROP022" type="property" owner="5b4cd5803f2940d783856c469c05dec4" creator="" creation-date="10/19/2024 16:27:44" visibility="private">
+      <structural-feature type="IdGenerator" type-id="Class:26d74c5301924646892139bd18e5b767" />
+    </item>
+    <item id="3c59b015930043f9bab07d8f05992365" cid="PROP006" type="property" name="Address" owner="0c6ae445de234b699c3446ae08646f9c" creation-date="10/19/2024 15:44:32" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv3e2f1df560fd46b9a10ef838364fe38e" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Address" />
+        <tagged-value id="tv5ab27b76e672450f85a04cb9bc9838f9" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv5b56b8d4d54c4b258c72effa8ac08476" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv51764271fefb4d32af8b0fe8ceac113a" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv084a0ab98979446286ddec687595b9d9" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1894" />
+        <tagged-value id="tv1784dea92a8a48d4816f62d127537175" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="253" />
+      </tagged-values>
+      <documentations>
+        <doc id="a11ca9fdf44e4a778e29f16106a1c221">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Адрес клиента.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="3c59b015930043f9bab07d8f05992365_property_c" type="property" creation-date="10/19/2024 15:44:32" ref="" />
+      </stereotype-instances>
+      <structural-feature type="Address" type-id="Address" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-36766c8a-b00f-47d4-8081-1e966d9f41b3">
+            <script name="Get"> return _address; </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="3946815c34464410b60f6cbe6b096848" cid="PROP002" type="property" name="_fullname" owner="0c6ae445de234b699c3446ae08646f9c" creation-date="10/19/2024 15:44:32" visibility="private">
+      <tagged-values>
+        <tagged-value id="tvb1a818c30c2e4b57b321b67b3c8ee9d8" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_fullname" />
+        <tagged-value id="tvce70a43b0f8544c0ad76e6f3ed3df33d" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvaca827f8e9ed4b2dada35a889a132320" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv2b0402448dc84b3cb7193afdd06dec47" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tva721b15c04d24456b6ff591e849f61d0" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="599" />
+        <tagged-value id="tv4dd965160e1b409e927bce5fbefdee95" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="25" />
+      </tagged-values>
+      <structural-feature type="string" type-id="CSharp.string" />
+    </item>
+    <item id="b8221369e5114bfbafcdc1b7bcde8b1c" cid="PROP004" type="property" name="Customers" owner="48b470077baf44b7be78b362b50fd304" creation-date="10/19/2024 15:45:04" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv406d81596dd44268ba4489cf2fdd97c7" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Customers" />
+        <tagged-value id="tv9f14b92c7993439085ac8bd89a18ac94" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv4dde7659f5a542feb896faacc55e200a" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv3433f374b6d1466aa6b0d76b3bb5d3f5" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv099655ada6274ca089c5ae8e4103be28" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1114" />
+        <tagged-value id="tv8cc3a9fd074b40a4b29c37122906132c" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="237" />
+      </tagged-values>
+      <documentations>
+        <doc id="0ed42e19731a499f9b16c2e4f3536819">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Возвращает или задает список покупателей магазина.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Никогда не возвращает null; при попытке задать null создается пустой список.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="b8221369e5114bfbafcdc1b7bcde8b1c_property_c" type="property" creation-date="10/19/2024 15:45:04" ref="" />
+      </stereotype-instances>
+      <structural-feature type="List&lt;Customer&gt;" type-id="CSharp.List_Customer" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-a23243f1-5c1d-4d22-b06b-bd08cda1b1d6">
+            <script name="Get">
+                return _customers;
+            </script>
+            <script name="Set"> 
+                _customers = value ?? new List&lt;Customer&gt;(); 
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="4faa820d51ab4999a21b17678263812d" cid="PROP024" type="property" owner="a7df1383a3344a08aa9098ebf264ae7a" creator="" creation-date="10/19/2024 16:27:49" visibility="private">
+      <structural-feature type="IdGenerator" type-id="Class:26d74c5301924646892139bd18e5b767" />
+    </item>
+    <item id="a07d8a075779424099ef63566196a3fd" cid="PROP007" type="property" name="Index" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv3101203dcb1a41d884564bba66dfc1ac" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Index" />
+        <tagged-value id="tv2f6da95cc9524bbaa50f2392a75a8454" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tva6f6d7ff967443428957a4859fe536ae" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvd2ab6def8fae45af992279a616907986" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv70aa42af26cc403d99034ffd17d5e31c" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="721" />
+        <tagged-value id="tvd7e00fa9acb2404ebec3431f5092d017" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="406" />
+      </tagged-values>
+      <documentations>
+        <doc id="17a08f4ff6354308871964a733003d43">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Почтовый индекс адреса.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="a07d8a075779424099ef63566196a3fd_property_c" type="property" creation-date="10/19/2024 15:43:46" ref="" />
+      </stereotype-instances>
+      <structural-feature type="int" type-id="CSharp.int" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-30bf6cd4-437d-4059-9f6a-aee2abb4b355">
+            <script name="Get">
+                return _index;
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="dafd5e42dcd8435b8e13f85fc96295f6" cid="PROP005" type="property" name="FullName" owner="0c6ae445de234b699c3446ae08646f9c" creation-date="10/19/2024 15:44:32" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tva18ddf9a81f449b8b90c83ca8a829a9e" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="FullName" />
+        <tagged-value id="tv944b5b55060a4ac4a332273cf4e1b2e6" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv984e8fb6f7b341de9b3fd61e0b1f8f5f" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv62995b0ede494187903660124cc0bd72" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv7c413c3937f945cabc59daee0c8fef02" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1142" />
+        <tagged-value id="tvfe0ef4a9627f436dac332729c460e698" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="492" />
+      </tagged-values>
+      <documentations>
+        <doc id="b968eb9d05c04f9ca70a9b57ed82ef9b">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Полное имя клиента.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="dafd5e42dcd8435b8e13f85fc96295f6_property_c" type="property" creation-date="10/19/2024 15:44:32" ref="" />
+      </stereotype-instances>
+      <structural-feature type="string" type-id="CSharp.string" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-39a76cf5-8bf3-4df6-81af-1f83784c905c">
+            <script name="Get">return _fullname;</script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="91c6d8b617ce4fed91adeeb3ef7e8123" cid="C001" type="class" name="ValueValidator" creation-date="10/19/2024 15:45:58" visibility="public">
+      <stereotypes>
+        <stereotype name="static" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tvcd5ae207b7a24efda318ed8d11fa1c03" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Services" />
+        <tagged-value id="tv0c31d3998870458d930fcb6004d99ba6" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="ValueValidator" />
+        <tagged-value id="tv86a5b9d9c3354794b5ee910bb0556918" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv19c294227d8b4212a2e38cd2e7e48b36" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tva18065f3702040e784f6e1c84db37776" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv6ebb290c41b94738a0d7c4e1dacbd2d0" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="329" />
+        <tagged-value id="tv01502810350d4946a1a843b26c067dca" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="1594" />
+      </tagged-values>
+      <documentations>
+        <doc id="37cdef1f3dbe44ada3d9da2d581c0c51">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Статический класс, предоставляющий методы для валидации данных.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="91c6d8b617ce4fed91adeeb3ef7e8123_static_c" type="static" creation-date="10/19/2024 15:45:58" ref="" />
+      </stereotype-instances>
+      <operations>
+        <operation id="o77ed47133b1e4df385cac74c7f18bea7968" cid="OP001" name="AssertStringOnLength" creation-date="10/19/2024 15:45:58" type="" type-id="" visibility="public" static="true">
+          <parameters>
+            <parameter id="pe8c554b7b91645aa87169eb52c25dd27" name="value" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:45:58" />
+            <parameter id="p1ddc0464508348aeaddf51957fe5a3e3" name="maxLength" type="int" type-id="CSharp.int" creation-date="10/19/2024 15:45:58" />
+            <parameter id="p2a4452ed0f5a4663b8134531244a3111" name="minLenght" type="int" type-id="CSharp.int" creation-date="10/19/2024 15:45:58" />
+            <parameter id="pdb4c425bd07f40519f18bf5faa75488f" name="propertyName" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:45:58" />
+          </parameters>
+          <tagged-values>
+            <tagged-value id="tv4c81d98a62e04c299de3f6673b89c902" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="AssertStringOnLength" />
+            <tagged-value id="tve241eb734479437c953d9a7a1f2393f3" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv008235bcae814e638f31ad8609c98a26" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv2047c0e57c61430a868c4c9b771e3f6e" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="929" />
+            <tagged-value id="tv6112ca7f60c148d58e1e6a97339266e5" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="345" />
+          </tagged-values>
+          <documentations>
+            <doc id="2d7740d2e0904c9eb116e48b15c984b5">
+              <text>
+                <default>
+                  <style font-name="Verdana" font-size="12">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </default>
+                <styles />
+                <content>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Проверяет строку на соответствие установленной максимальной длине.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Строка, подлежащая проверке.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Максимально допустимая длина строки.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Имя свойства, используемое в сообщении об ошибке.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Выбрасывается, если длина строки не совпадает с допустимой или строка пуста.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> 
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </doc>
+          </documentations>
+          <source-codes>
+            <source-code language="CSharp">
+            if (string.IsNullOrEmpty(value) || value.Length &gt; maxLength || value.Length &lt;= minLenght)
+            {
+                throw new StringLengthException(propertyName, maxLength, minLenght);
+            }
+        </source-code>
+          </source-codes>
+        </operation>
+        <operation id="o55b64b3504d64e1ea470200bd238b798968" cid="OP002" name="AssertNumericFieldOnLetter" creation-date="10/19/2024 15:45:58" type="" type-id="" visibility="public" static="true">
+          <parameters>
+            <parameter id="pcfde3c072f8743d8bf378298b44c2f81" name="value" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:45:58" />
+            <parameter id="p0c617e96acc04355bc34a9ff87801f54" name="propertyName" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:45:58" />
+          </parameters>
+          <tagged-values>
+            <tagged-value id="tva6afbb5dc9034f4d8a19aa836e70b2d8" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="AssertNumericFieldOnLetter" />
+            <tagged-value id="tvf5532463e33b42c2aaf66b22860746d2" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv7f6520ee4a914a23a8cce3dfbba821f4" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv8dea894f6ac34707a692aeecddc22352" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1286" />
+            <tagged-value id="tvb0411a3d05cc4000acc224319603785a" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="630" />
+          </tagged-values>
+          <source-codes>
+            <source-code language="CSharp">
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentOutOfRangeException(nameof(value), "Поле является пустым");
+            }
+            for (int i = 0; i &lt; value.Length; i++)
+            {
+                if (((int)value[i] &gt;= 65 &amp;&amp; (int)value[i] &lt;= 90) || ((int)value[i] &gt;= 97 &amp;&amp; (int)value[i] &lt;= 122))
+                {
+                    throw new ArgumentException(nameof(value), "Поле содержит некорректные данные (отличные от цифр)");
+                }
+            }
+        </source-code>
+          </source-codes>
+        </operation>
+      </operations>
+    </item>
+    <item id="d694c22406924875ae316211ff8890e0" cid="PROP005" type="property" name="_category" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="private">
+      <tagged-values>
+        <tagged-value id="tvc9eef3a754814d3095870836edd95338" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_category" />
+        <tagged-value id="tv14b87187776d4b688c1b48ceb7bc3afa" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvc7b21cf41c064eeebb9592b9ac03e5a6" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv94b46e2c613e49f6ac1110365117ceab" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tva76a6530f23643ceaa37d595280105a3" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="742" />
+        <tagged-value id="tv34fa0ffa15d54ccd9a78ff943ebd82c3" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="27" />
+      </tagged-values>
+      <structural-feature type="Category" type-id="Category" />
+    </item>
+    <item id="b6a8b8e3e6e24ca3867d63bf326832f4" cid="PROP004" type="property" name="Id" owner="0c6ae445de234b699c3446ae08646f9c" creation-date="10/19/2024 15:44:32" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv147d1f5f13ae4f3ab8a13e0a227e5c2f" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Id" />
+        <tagged-value id="tv2c737cc1ed3b4632ae640caff1e20b6c" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv218e5d8a4da74480a70d68eca32ab092" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tva8d99613c4f344c092f8dc6ab2260bb5" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv1114bca0f3434a06a452b00f1d3be5a3" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="765" />
+        <tagged-value id="tvb015daa6df524ec690b75fda0a3c2c9f" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="111" />
+      </tagged-values>
+      <documentations>
+        <doc id="e65a1a7344ae49bdbb2de4c44c4b885a">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Уникальный идентификатор клиента.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="b6a8b8e3e6e24ca3867d63bf326832f4_property_c" type="property" creation-date="10/19/2024 15:44:32" ref="" />
+      </stereotype-instances>
+      <structural-feature type="int" type-id="CSharp.int" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-563ad912-1d36-4a48-aa57-963c6b641b13">
+            <script name="Get">
+                return _id;
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="2ce9340e37674085bbc3690e65d26e28" cid="PROP012" type="property" name="Apartament" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv2a4c7e1511c741f386ac70e7655e4b75" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Apartament" />
+        <tagged-value id="tvd53ffc69d8964a0188873a13345a710c" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv0c773ff3174a40b88e014aa3740c828d" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tve47a28f5e55c4d6680edf610d5fd7a06" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv40ffe997c9c84a7e891df4215111c8f4" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="4550" />
+        <tagged-value id="tv2648a0bd62de43e5934c89b43c5a61f8" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="544" />
+      </tagged-values>
+      <documentations>
+        <doc id="4fa73bb5604c489b93f291e8a5e5d292">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Квартира адреса.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="2ce9340e37674085bbc3690e65d26e28_property_c" type="property" creation-date="10/19/2024 15:43:46" ref="" />
+      </stereotype-instances>
+      <structural-feature type="string" type-id="CSharp.string" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-ddd696ce-9e76-4aa2-bedc-272cf40ee643">
+            <script name="Get">
+                return _apartament;
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="a8a310ec929d420aa382cab85a4bc19d" cid="PROP012" type="property" owner="d68c966710eb471f9008b1ed35c26a5a" creator="" creation-date="10/19/2024 16:05:19" visibility="private">
+      <structural-feature multiplicity="1" type="Customer" type-id="Class:0c6ae445de234b699c3446ae08646f9c" />
+    </item>
+    <item id="d4a9cead79e643c7ac615d2c9f5dd969" cid="PROP003" type="property" name="_info" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv84c3f4970f6940b49c9dc4ba1cea64c5" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_info" />
+        <tagged-value id="tv784d702edc944a30b2eb4077931e79b2" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv1a23d117bcec49958137ec8cf027b935" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv6826a68c480047c7869fc4516ff21b53" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvb9a36438223e4da2b988de9e5ee4f249" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="680" />
+        <tagged-value id="tv67d4c8dd66534359a5fd0642594736ec" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="21" />
+      </tagged-values>
+      <structural-feature type="string" type-id="CSharp.string" />
+    </item>
+    <item id="e70c7cdd6b1e41a9bd06eb24633a6228" cid="PROP009" type="property" name="Cost" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tvce94d99cd41248a2924e8d3b562ee4d8" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Cost" />
+        <tagged-value id="tvb7e013677b934785a2fda437203ef796" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvbbde5a6c67314797ba7645b6790d312a" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv0ce359152a2a477db00aa14cd9828339" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvef32d982b01344bebc1c353e9ae5118d" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="2741" />
+        <tagged-value id="tv2c83cefaae1b424b92a3eb9206b7b536" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="383" />
+      </tagged-values>
+      <documentations>
+        <doc id="153267aed5de4f64ad1fef3a53d1bc03">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Стоимость предмета.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если значение стоимости выходит за пределы допустимых значений (от 0 до 100 000).
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="e70c7cdd6b1e41a9bd06eb24633a6228_property_c" type="property" creation-date="10/19/2024 15:44:50" ref="" />
+      </stereotype-instances>
+      <structural-feature type="double" type-id="CSharp.double" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-f0ed732e-2dda-43f2-ab76-6f55d1bc33c3">
+            <script name="Get"> return _cost;</script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="44ac0a20858648ff9f95f28e80605794" cid="PROP010" type="property" name="Street" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tvb05896056add453ebb2de389124dc358" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Street" />
+        <tagged-value id="tve0be5c2958194595b326a9a60ef23fc9" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvfaf44a69c2644132a6395546e5e2942b" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv7d410db15c854192ad2d488fd2f993c6" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv1ac02f790c894add99e86239242def05" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="2948" />
+        <tagged-value id="tva07a10ce6155405593bc8fb8840eb97d" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="527" />
+      </tagged-values>
+      <documentations>
+        <doc id="4d828bbcd3fe4adc8d7b91227fd21bee">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Улица адреса.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="44ac0a20858648ff9f95f28e80605794_property_c" type="property" creation-date="10/19/2024 15:43:46" ref="" />
+      </stereotype-instances>
+      <structural-feature type="string" type-id="CSharp.string" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-7d4e6bb9-33f9-47fe-9e22-214e4a12e555">
+            <script name="Get">
+                return _street;
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="15e2bb445c414417a9b020983955fee4" cid="PROP011" type="property" name="Building" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tvf19c29b472ba4e53b2942bdedf9a2600" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Building" />
+        <tagged-value id="tv58a42e3d2ed14192908a2cd7f6f05a9b" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv2b2cd3e1e1604a60a517465b7762ba2c" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv80ac1456dd974d0ea557cfb9a8339b14" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv946a40c7aaa445cfbedf475104392ae7" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="3736" />
+        <tagged-value id="tveaa18339892144beb95abfa1e5fd732f" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="535" />
+      </tagged-values>
+      <documentations>
+        <doc id="8a8bd8bcd1f34130a968c69f8c74397a">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Здание адреса.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="15e2bb445c414417a9b020983955fee4_property_c" type="property" creation-date="10/19/2024 15:43:46" ref="" />
+      </stereotype-instances>
+      <structural-feature type="string" type-id="CSharp.string" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-13f6123e-62c3-4852-a60e-408c7a45ec42">
+            <script name="Get">
+                return _building;
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="26d74c5301924646892139bd18e5b767" cid="C001" type="class" name="IdGenerator" creation-date="10/19/2024 15:45:45" visibility="public">
+      <stereotypes>
+        <stereotype name="static" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv48fa834dee6e48de992ae2c0c9b7be72" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Services" />
+        <tagged-value id="tvb3a72ff8909a45c2bf0cca5af36fca4a" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="IdGenerator" />
+        <tagged-value id="tv4c4cde7b3ffc4084b1ddd4731bf7d61f" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvdd4cf5b671884b33aec30503d2efe66b" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv97a9b0f52ad7478ab8d813e614ee110d" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv920859b9f7d94e699b79284733e6b310" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="286" />
+        <tagged-value id="tvfd448d7d04c3481589463df329bc3ac6" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="396" />
+      </tagged-values>
+      <documentations>
+        <doc id="daa0527d9c1346448af18cd461bb82fc">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Статический класс, предназначенный для генерации уникальных ID.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="26d74c5301924646892139bd18e5b767_static_c" type="static" creation-date="10/19/2024 15:45:45" ref="" />
+      </stereotype-instances>
+      <owned-items />
+      <attributes>
+        <attribute id="a9a65cac1ce024a2f8dffd2f55cc631d7581" cid="PROP001" name="_currentId" creation-date="10/19/2024 15:45:45" property-ref="af7b758fbb3f4293926d4e31d777fad2" />
+      </attributes>
+      <operations>
+        <operation id="oa036ccc30219484aacb6eb20d8951d6c581" cid="OP001" name="GetNextId" creation-date="10/19/2024 15:45:45" type="int" type-id="CSharp.int" visibility="public" static="true">
+          <tagged-values>
+            <tagged-value id="tv654b5a64a850473a8dea16e115bfe4d1" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="GetNextId" />
+            <tagged-value id="tv686aa5c919854875801917754c2d139a" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv78db4b6ce75844999ce8acc59fa436c8" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv1bb5d462b7f94d2ab81856813325931d" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="590" />
+            <tagged-value id="tv1d444833289d4dab94aec5b1ad3fb363" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="85" />
+          </tagged-values>
+          <documentations>
+            <doc id="47d40189a6024d829e64221adad7aba6">
+              <text>
+                <default>
+                  <style font-name="Verdana" font-size="12">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </default>
+                <styles />
+                <content>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Генерирует новый уникальный идентификатор, инкрементируя текущее значение.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Возвращает новый уникальный идентификатор.
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </doc>
+          </documentations>
+          <source-codes>
+            <source-code language="CSharp">
+            return ++_currentId;
+        </source-code>
+          </source-codes>
+        </operation>
+      </operations>
+    </item>
+    <item id="c42d477e7ae344a2b70c1a31a20d7497" cid="C001" type="class" name="StringLengthException" creation-date="10/19/2024 15:43:25" visibility="public">
+      <tagged-values>
+        <tagged-value id="tv82bb147371824709bcd5f4f8d869732f" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Exceptions" />
+        <tagged-value id="tv1fa7d6f581664c288f6afffc3ccd116f" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="StringLengthException" />
+        <tagged-value id="tvf14cdc72013345ce8a00b68edbebe8e5" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv9300d7f1dc4c45c884f36987572aa4d6" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvedb73b8dc01846a78d05b3b2f06a84f1" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv42705e68e6144b05a59eb0022947acae" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="307" />
+        <tagged-value id="tv1cc5d7e7ddb54239938ca9e73e0f185b" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="606" />
+      </tagged-values>
+      <documentations>
+        <doc id="97faa1fd5445489fa1edcc9c44e07d1e">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Исключение, возникающее при некорректной длине строки (она равна нулю или меньше).
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <operations>
+        <operation id="oad456252f30a49729428b007d3368991860" cid="OP001" name="StringLengthException" creation-date="10/19/2024 15:43:25" type="" type-id="" visibility="public">
+          <parameters>
+            <parameter id="p3bf9e4df506a4e5aa972fff799b614be" name="propertyName" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:43:25" />
+            <parameter id="pe450071e1df44c7f81e21d5f1d2b24c5" name="maxLength" type="int" type-id="CSharp.int" creation-date="10/19/2024 15:43:25" />
+            <parameter id="p7fb1a8658ff64fc2a87e3794157cff8e" name="minLength" type="int" type-id="CSharp.int" creation-date="10/19/2024 15:43:25" />
+          </parameters>
+          <stereotypes>
+            <stereotype>create</stereotype>
+          </stereotypes>
+          <tagged-values>
+            <tagged-value id="tv55ac33eb7abd4d2c9a63ad4931167674" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="StringLengthException" />
+            <tagged-value id="tvfd15de47ec2f4725892248c9d525c394" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tvfd6970daed024b688dfefbf7ae359dca" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tvf7ec9ad934a9410f8eac8cfaaacb602e" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="705" />
+            <tagged-value id="tved3d26a258ed495cbcf33e8a823f3c88" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="201" />
+          </tagged-values>
+          <documentations>
+            <doc id="603b3e23262142a6a8fecf15bcbc4f52">
+              <text>
+                <default>
+                  <style font-name="Verdana" font-size="12">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </default>
+                <styles />
+                <content>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Инициализирует новый экземпляр класса </t>
+                    </p>
+                    <p>
+                      <t> с сообщением об ошибке.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Имя свойства, для которого возникло исключение.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Минимально допустимая длина строки.
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </doc>
+          </documentations>
+        </operation>
+      </operations>
+    </item>
+    <item id="c7edb9fd93ef4959a69951e448015571" cid="PROP027" type="property" owner="b676bb5774ee4c53ba820eaa670a0a5b" creator="" creation-date="10/19/2024 16:28:39" visibility="private">
+      <structural-feature type="ValueValidator" type-id="Class:91c6d8b617ce4fed91adeeb3ef7e8123" />
+    </item>
+    <item id="9e2858a8ee6347f28728e465562d6e0f" cid="PROP008" type="property" name="Country" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv768c2a10e47d4815830c9a47229b2411" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Country" />
+        <tagged-value id="tv71533832692c42d2b712fc2f9c09a6e2" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv63183cd69303464dab39834f3c0027a7" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv0c254d79da764bc8ae7133232b490b39" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv1838c78097404bc58dd4a4ca3154b07a" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1387" />
+        <tagged-value id="tv979899c4e07f4147bddf5d3057ffb618" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="532" />
+      </tagged-values>
+      <documentations>
+        <doc id="07e493effa434e5ebda11b81531530e3">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Страна адреса.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="9e2858a8ee6347f28728e465562d6e0f_property_c" type="property" creation-date="10/19/2024 15:43:46" ref="" />
+      </stereotype-instances>
+      <structural-feature type="string" type-id="CSharp.string" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-956a28c7-ac79-4e6c-9486-3e849fc7e004">
+            <script name="Get">
+                return _country;
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="0f0a4a5433ed46949537256d893f5edd" cid="PROP018" type="property" owner="7ced94f1536d41a38326ea2bf95c9a67" creator="" creation-date="10/19/2024 16:27:24" visibility="private">
+      <structural-feature type="ValueValidator" type-id="Class:91c6d8b617ce4fed91adeeb3ef7e8123" />
+    </item>
+    <item id="982695736c4a435a9a84c276b1883db3" cid="E001" type="enumeration" name="Category" creation-date="10/19/2024 15:44:02" visibility="public">
+      <tagged-values>
+        <tagged-value id="tve56e0dd998234bc382b1fb84ead49992" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Model" />
+        <tagged-value id="tve7f4d07a8c1345a2b6fad7602bab9e97" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Category" />
+        <tagged-value id="tv894b658b0fb04e7c998af24d6fded546" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv3b8e4abaea9b49deb5506d04ed12bfd5" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tve917b5e9ca9648c4b95c96895918ce60" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv7c347802427546999154698ab3b03404" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="252" />
+        <tagged-value id="tv4ae6657a18a143a4a93ab419a94c3eca" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="776" />
+      </tagged-values>
+      <enumeration-items>
+        <enumeration-item id="ac8a9ab102d2c443780dc087d054ea663984" cid="ENI001" name="Unknown" creation-date="10/19/2024 15:44:02">
+          <tagged-values>
+            <tagged-value id="tv150073eb99ff4384a122f4e8723f3660" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Unknown" />
+            <tagged-value id="tv4ea6b5123c234fd8966005ad81766d04" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tve9abec343ede48bd9f346c2f54719c77" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv76aba0d237c54a8ba5bd65af36f1b765" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="371" />
+            <tagged-value id="tve274ba49a218408bb4672f34cf4439fe" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="8" />
+          </tagged-values>
+        </enumeration-item>
+        <enumeration-item id="aa1b4ed75218c4db1a7efa672e19a9b9d984" cid="ENI002" name="Bakery" creation-date="10/19/2024 15:44:02">
+          <tagged-values>
+            <tagged-value id="tvdd198dc3ce5e4b638c400e91a9e6940c" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Bakery" />
+            <tagged-value id="tvd5811177ffdb48d0a270b9323680fb02" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tvf8755069aacc4878b122063fcf54e28c" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tvc9374c61ccbd4d6e9200e46ea71274f1" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="473" />
+            <tagged-value id="tva48af46668c24c4d89440d430d435f67" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="7" />
+          </tagged-values>
+        </enumeration-item>
+        <enumeration-item id="af6c84de0cfba4db285529df9c558ff8e984" cid="ENI003" name="Dairy" creation-date="10/19/2024 15:44:02">
+          <tagged-values>
+            <tagged-value id="tv65b574c1b47840ee8070e6e0fd937cad" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Dairy" />
+            <tagged-value id="tvcc60c23e00ec449aa58d4f9f83f2b93a" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tvf7e244651da3453e838dabfbc41fa134" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv161e0e995db44cdca49414079fd35122" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="569" />
+            <tagged-value id="tvc54bb22399404fbc816cf3035a09b40b" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="6" />
+          </tagged-values>
+        </enumeration-item>
+        <enumeration-item id="a3c459bb61ce241a59f2adea1462281c2984" cid="ENI004" name="Meat" creation-date="10/19/2024 15:44:02">
+          <tagged-values>
+            <tagged-value id="tvce2050b21c3441779569fda3029fa8aa" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Meat" />
+            <tagged-value id="tv522e34b8d384423c924e29c36fa4943f" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv8b89dadab7cc464b9abae9fec02a6138" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tvc7dbe08ee9cd45c58ea5bb5de63dd0f2" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="650" />
+            <tagged-value id="tv43999df71e354f4d87ddca7fdc6f2239" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="5" />
+          </tagged-values>
+        </enumeration-item>
+        <enumeration-item id="a83b5412f2c12412ca79fbe03f6871064984" cid="ENI005" name="Household" creation-date="10/19/2024 15:44:02">
+          <tagged-values>
+            <tagged-value id="tvefe472fb98b1459d8f0f2869ec72869c" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Household" />
+            <tagged-value id="tvb5b0c412046842bbb2ab6793ce8fe2fa" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv3a95aa1704a344e5a4f5d755b9c8f86b" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv94e378536954491fb1e5f2918635e150" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="739" />
+            <tagged-value id="tv2403ef98635a4c5c91b487d5d7969ca4" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="10" />
+          </tagged-values>
+        </enumeration-item>
+        <enumeration-item id="a8fdd8d52ccc34eb19cb62c1d8846e35e984" cid="ENI006" name="Drinks" creation-date="10/19/2024 15:44:02">
+          <tagged-values>
+            <tagged-value id="tvede1b45e17e04e518bb4d455cab2cacb" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Drinks" />
+            <tagged-value id="tv831fa5c6c003416abed9a325b4353f37" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv38025196dcc8408480acfd1c1ba6d2c4" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv5ab7f5b2dc034d5988151e6ce9f3d1b8" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="827" />
+            <tagged-value id="tvf12ad23d965c4d6ca852496eddd8978f" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="7" />
+          </tagged-values>
+        </enumeration-item>
+        <enumeration-item id="a10d222a37a0e4bc6b6a601f27669c8ec984" cid="ENI007" name="Vegetables" creation-date="10/19/2024 15:44:02">
+          <tagged-values>
+            <tagged-value id="tv42377ffc197541bb9d014dd9169be4f3" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Vegetables" />
+            <tagged-value id="tv0fa1d69fbd2d4d7fa2cbfb20c8b9d55e" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tvadafda1d0a3e478698674edcdb4665fd" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv7d6eebeb9ba64533939200c7c6f8cba9" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="910" />
+            <tagged-value id="tvd098b7a5f104401b9c5da43212923bd0" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="11" />
+          </tagged-values>
+        </enumeration-item>
+        <enumeration-item id="ad96ac2c74f2e4eb68299562d0bcf55f5984" cid="ENI008" name="Frozen" creation-date="10/19/2024 15:44:02">
+          <tagged-values>
+            <tagged-value id="tv830126b50a0c4f49a23c90c1aa28417c" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Frozen" />
+            <tagged-value id="tv5a9474ae6acf400fba18c96bcdd8b26f" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv1edf08f7976d4f438b0816efd928e9a0" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv5bb81be15e7c401d91caffacdbb1618e" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1014" />
+            <tagged-value id="tvc7de3407cc6840be8644571b6c34b964" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="7" />
+          </tagged-values>
+        </enumeration-item>
+      </enumeration-items>
+    </item>
+    <item id="b8e138bfd6a84e3789ef22f69cbf92ff" cid="PROP004" type="property" name="_street" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv836a9a448ad34a77887cb601a9806b8d" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_street" />
+        <tagged-value id="tva21716168e91495999875532707d8b70" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv56df7d572c454116a9ed7415c8b4dc18" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv4d1fde40ae5f4033bbe4c8028c560f44" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv4a6e4174303b4d14a56fe7d6d946e63a" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="530" />
+        <tagged-value id="tvff3e493bc3e7412b807051b8a1c4e6bb" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="23" />
+      </tagged-values>
+      <structural-feature type="string" type-id="CSharp.string" />
+    </item>
+    <item id="6c17b79578fd43558a5c84e53fa4a9e7" cid="PROP017" type="property" owner="7ced94f1536d41a38326ea2bf95c9a67" creator="" creation-date="10/19/2024 16:27:24" visibility="private">
+      <structural-feature type="Item" type-id="Class:ef7b9ae4d99a469e9b60bf98c0589439" />
+    </item>
+    <item id="3b86b541bae143238ebad4a393911f8c" cid="PROP002" type="property" name="_name" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv58ff4eeebc50440d88da1166d034b2e9" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_name" />
+        <tagged-value id="tv8fcf7340f79a4631bfeedda7fd2d6dae" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvb4e71ba0ff414f2f80d4ae7ebff41784" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv6892d408083c4890a6f4d91ce12bea79" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv1d378388c49846cc80d19b8f98630198" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="649" />
+        <tagged-value id="tve33462f7aa6549fc82aefd3fcfbb911d" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="21" />
+      </tagged-values>
+      <structural-feature type="string" type-id="CSharp.string" />
+    </item>
+    <item id="488a0051f4d246089004211160774c70" cid="PROP003" type="property" name="_city" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv4c4c3b2051ab46f881ee472f8a9480dc" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_city" />
+        <tagged-value id="tv73b8f7a42e3b4c9ab5e64cd5a83f4c78" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tva9b37fd8dc4e4627b893eabed8f336cc" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv0b7af95fc12345278a1418261e7e88aa" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvb57ae7b029cc4e68b0f5c833e21ed895" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="499" />
+        <tagged-value id="tv7153c14642714bf484f315df30d8fd1b" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="21" />
+      </tagged-values>
+      <structural-feature type="string" type-id="CSharp.string" />
+    </item>
+    <item id="474045452f6a47fca798541ef8a5a6d0" cid="PROP003" type="property" name="_address" owner="0c6ae445de234b699c3446ae08646f9c" creation-date="10/19/2024 15:44:32" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv2278930e07f243079568be38538690e1" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_address" />
+        <tagged-value id="tv14a743cadc1440efb42cfb2fce6945c0" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv48549a2833cf449e9961f8d021c773b1" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvac3b3bb41785494a86aa0603bb67f7a0" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv66f9035ae6cc4e7d9296db3c5e380c8d" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="634" />
+        <tagged-value id="tv587c1230bde24959b740ce1bf828100f" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="25" />
+      </tagged-values>
+      <structural-feature type="Address" type-id="Address" />
+    </item>
+    <item id="1c55ec281a954023b138099b0d3cafa2" cid="PROP005" type="property" name="_building" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv9f1603c1cd514e4399aa299e6841da0a" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_building" />
+        <tagged-value id="tv51c727ef967f4e83981262a8c95ac44a" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvf32374e3bde442ffb51f626a2c97cf41" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tva2b6190dc2d2476b9cd7cca6843a1887" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvd7050bf3be014b1d91b617e50dc0267a" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="563" />
+        <tagged-value id="tv81ceaceeded045c6b2a9e6e2766ec0e6" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="25" />
+      </tagged-values>
+      <structural-feature type="string" type-id="CSharp.string" />
+    </item>
+    <item id="3d221e9e04904a2dbcfbfe47d35ca650" cid="PROP004" type="property" name="_cost" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv4ea0ea1721054f1db2bb98a6232dcafc" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_cost" />
+        <tagged-value id="tvaa990c86cdc44647a7345213d986b619" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv48f5c38ab5ea4bf9907e30f3f66f426d" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvbe03e494886449f9bdd8f1c923b2200a" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv96c7171835b5446f95e7bbad8fe247cf" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="711" />
+        <tagged-value id="tv11bb716c2efe4e4787b07ec5585a9c20" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="21" />
+      </tagged-values>
+      <structural-feature type="double" type-id="CSharp.double" />
+    </item>
+    <item id="f71e95b01d114b82865d1f26ff298255" cid="PROP011" type="property" owner="d68c966710eb471f9008b1ed35c26a5a" creator="" creation-date="10/19/2024 16:05:19" visibility="private">
+      <structural-feature multiplicity="1" type="Store" type-id="Class:48b470077baf44b7be78b362b50fd304" />
+      <property aggregation="composite" />
+    </item>
+    <item id="833a977b9f5c410baea4d1e128032dfb" cid="PROP006" type="property" name="_apartament" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="private">
+      <tagged-values>
+        <tagged-value id="tvf019079b467a4a52a22fdc602b1748dc" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_apartament" />
+        <tagged-value id="tv4b5ba76ebad04af68b01663617a50e68" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tve14f836cef0e4e64a87bd2db7e285776" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv2e386dae86174bd0a617be13ad110d0c" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv41d725268f634aa4ae84268feb49be30" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="598" />
+        <tagged-value id="tv6d77f5a19fb64617a3cf9392c726a65b" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="27" />
+      </tagged-values>
+      <structural-feature type="string" type-id="CSharp.string" />
+    </item>
+    <item id="a1a8b7e6b970431a81cbd3c1864b10f7" cid="PROP001" type="property" name="_items" owner="48b470077baf44b7be78b362b50fd304" creation-date="10/19/2024 15:45:04" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv3f0295e4d0fe450598e7744dad42dcbf" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_items" />
+        <tagged-value id="tvfac1a50ee5d84d2fbd4016528831fd24" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvdb7abf3d37e9442f9c45ecd45ea1cd4c" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv7850c88b829c4bbeb6e522f950e6fdac" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv998c90fa8c7a479f9dfeec6b1eb9514c" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="423" />
+        <tagged-value id="tv2e2ef23d6b12449aa04a32c745ba6595" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="26" />
+      </tagged-values>
+      <structural-feature type="List&lt;Item&gt;" type-id="CSharp.List_Item" />
+    </item>
+    <item id="e679913ebcc843abbb0d083aec7819cc" cid="PROP001" type="property" name="_index" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="private">
+      <tagged-values>
+        <tagged-value id="tv0dac7b9cf1414dc3b9c1d81b7a45f554" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_index" />
+        <tagged-value id="tvd35ae3b1718f459886506129ca867193" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv87385d597156429b944f36c7c3b7dc7e" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv252f0ae0907040458491f78bd39967e8" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvba1d27cc6ae240cebdfaaf404622a33c" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="436" />
+        <tagged-value id="tvdef2a26e6d064e5cae643caa1c0ef3d6" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="19" />
+      </tagged-values>
+      <structural-feature type="int" type-id="CSharp.int" />
+    </item>
+    <item id="36a0764859a84672a8181e40cab54281" cid="PROP019" type="property" owner="1732c6c38cdc43478f7891938eacf6d6" creator="" creation-date="10/19/2024 16:27:30" visibility="private">
+      <structural-feature type="Customer" type-id="Class:0c6ae445de234b699c3446ae08646f9c" />
+    </item>
+    <item id="ef7b9ae4d99a469e9b60bf98c0589439" cid="C001" type="class" name="Item" creation-date="10/19/2024 15:44:50" visibility="public">
+      <tagged-values>
+        <tagged-value id="tvd313751a65a34e1dac769feb3a48a0c2" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Model" />
+        <tagged-value id="tve09a6a78786342279b557daafb0268a5" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Item" />
+        <tagged-value id="tv59abbd6c67574826b31f23ef651d447b" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvbc845ccf132c48449d19ce640752f40e" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv293522a8ed8b4ef9886171dd24a807ec" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv21c03b3568f84d62adc01f7e0524e0bf" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="580" />
+        <tagged-value id="tv91f9f6f4ca5a42749d75e1fa2e31ca34" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="3483" />
+      </tagged-values>
+      <documentations>
+        <doc id="a507e8ac10bb46f7915180cf648b4f8b">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Класс для представления предмета, который можно добавить или удалить из базы данных.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Взаимодействие с объектами осуществляется через свойства. Поле ID является уникальным
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> и автоматически генерируется.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t>    
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <owned-items />
+      <attributes>
+        <attribute id="a6f50ca40736548bc9dd8cea37925ab7f523" cid="PROP001" name="_id" creation-date="10/19/2024 15:44:50" property-ref="608a3452e2df44fb85f8098beb38993c" />
+        <attribute id="acb8d0ffdbacd4a8eb9ccd72ef64d527c523" cid="PROP002" name="_name" creation-date="10/19/2024 15:44:50" property-ref="3b86b541bae143238ebad4a393911f8c" />
+        <attribute id="a47e9010b09204d2eae78e64a3d446b7e523" cid="PROP003" name="_info" creation-date="10/19/2024 15:44:50" property-ref="d4a9cead79e643c7ac615d2c9f5dd969" />
+        <attribute id="aeb0329a6f0e04222b32fde5caa3e6c73523" cid="PROP004" name="_cost" creation-date="10/19/2024 15:44:50" property-ref="3d221e9e04904a2dbcfbfe47d35ca650" />
+        <attribute id="a80c96bc338dc45c3abd8cf1c8a48dd5f523" cid="PROP005" name="_category" creation-date="10/19/2024 15:44:50" property-ref="d694c22406924875ae316211ff8890e0" />
+        <attribute id="acfd2677c9bb24d6eaee39ed2c984c58f523" cid="PROP006" name="Id" creation-date="10/19/2024 15:44:50" property-ref="e70d25994f934e329973eb0e1c636b67" />
+        <attribute id="a89d6b562635041bba385c22f67c701c9523" cid="PROP007" name="Name" creation-date="10/19/2024 15:44:50" property-ref="129eefc44e12455e8b67255d5bec949f" />
+        <attribute id="ae690ba49f4e743378733b6cf9b644718523" cid="PROP008" name="Info" creation-date="10/19/2024 15:44:50" property-ref="ab88dd568f3049038c4a9f2828d0adb0" />
+        <attribute id="aacd8c55189a74311b992abc256ce9c64523" cid="PROP009" name="Cost" creation-date="10/19/2024 15:44:50" property-ref="e70c7cdd6b1e41a9bd06eb24633a6228" />
+        <attribute id="af9b14f33dcd24825a188823c4dec99e7524" cid="PROP010" name="Category" creation-date="10/19/2024 15:44:50" property-ref="c961676e16d04fcb8c66e61aa293b232" />
+      </attributes>
+      <operations>
+        <operation id="o1fc4e3cf60524632b1eeab07959a50cd524" cid="OP001" name="Item" creation-date="10/19/2024 15:44:50" type="" type-id="" visibility="public">
+          <parameters>
+            <parameter id="p8fb0e40743de4f71808a1f4ca68e1eb6" name="name" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:44:50" />
+            <parameter id="pb53a9c4d23054b698e999c513071d1ed" name="info" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:44:50" />
+            <parameter id="p37a8ec9872564d1b803d2cc06b7838ba" name="cost" type="double" type-id="CSharp.double" creation-date="10/19/2024 15:44:50" />
+            <parameter id="pe1c6815e097242e08141655725b832ee" name="category" type="Category" type-id="Category" creation-date="10/19/2024 15:44:50" />
+          </parameters>
+          <stereotypes>
+            <stereotype>create</stereotype>
+          </stereotypes>
+          <tagged-values>
+            <tagged-value id="tvaa48b951638d4bbc81fc37018147dd59" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Item" />
+            <tagged-value id="tvdcb4dfe6d4a44f43bed6e8f4b058aa56" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv7373791c6d0d442b8535459ccc9e99a8" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv315f7c5996e4459fb4737ed860832545" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="3809" />
+            <tagged-value id="tvbce51ccda90c43e8947ab34eb7c4db2c" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="247" />
+          </tagged-values>
+          <documentations>
+            <doc id="1f6b442868e6453cafa4cb3355ede0cb">
+              <text>
+                <default>
+                  <style font-name="Verdana" font-size="12">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </default>
+                <styles />
+                <content>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Инициализирует новый экземпляр класса </t>
+                    </p>
+                    <p>
+                      <t> с заданными параметрами.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Название предмета. Передается в свойство </t>
+                    </p>
+                    <p>
+                      <t>.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Описание предмета. Передается в свойство </t>
+                    </p>
+                    <p>
+                      <t>.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Стоимость предмета. Передается в свойство </t>
+                    </p>
+                    <p>
+                      <t>.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Категория товара.
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </doc>
+          </documentations>
+        </operation>
+      </operations>
+    </item>
+    <item id="af7b758fbb3f4293926d4e31d777fad2" cid="PROP001" type="property" name="_currentId" owner="26d74c5301924646892139bd18e5b767" creation-date="10/19/2024 15:45:45" visibility="private">
+      <tagged-values>
+        <tagged-value id="tve9ae617fe36e4abb947af7d4a1339275" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="_currentId" />
+        <tagged-value id="tv2e85e938b8f34a81876b79edd143f801" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv341c4f672a5242a5b33add51c13fcbf6" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv338406c8ea374367bcf6dc043a31b4ec" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv04772c64e19c405f8f41b74be0c66d07" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="334" />
+        <tagged-value id="tvd0e56e9d45304d2c8b241c3146839076" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="34" />
+      </tagged-values>
+      <feature static="true" />
+      <structural-feature type="int" type-id="CSharp.int" />
+      <property default-value="0" />
+    </item>
+    <item id="48112f74379547949fd87bd7dba7be40" cid="PROP021" type="property" owner="5b4cd5803f2940d783856c469c05dec4" creator="" creation-date="10/19/2024 16:27:44" visibility="private">
+      <structural-feature type="Item" type-id="Class:ef7b9ae4d99a469e9b60bf98c0589439" />
+    </item>
+    <item id="cffe5e4945804f7fbca0ee012b94fa27" cid="PROP023" type="property" owner="a7df1383a3344a08aa9098ebf264ae7a" creator="" creation-date="10/19/2024 16:27:49" visibility="private">
+      <structural-feature type="Customer" type-id="Class:0c6ae445de234b699c3446ae08646f9c" />
+    </item>
+    <item id="ab88dd568f3049038c4a9f2828d0adb0" cid="PROP008" type="property" name="Info" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv76b94ef419f84f8c9a70c839f234f372" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Info" />
+        <tagged-value id="tvca48441d15054448b65515cc775f71b5" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tvbba75886aa4543d7828d2fc77389ceec" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv73fcbb687238410f9c5cc41ee89d70d1" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvd53f41c3c44b405e81e3ad053ec3c353" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1978" />
+        <tagged-value id="tv94b19e96d26f44feb480b8143de27d8c" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="475" />
+      </tagged-values>
+      <documentations>
+        <doc id="c0dbca2cad0b4c4abdd8d525dc6c7621">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Описание предмета.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="ab88dd568f3049038c4a9f2828d0adb0_property_c" type="property" creation-date="10/19/2024 15:44:50" ref="" />
+      </stereotype-instances>
+      <structural-feature type="string" type-id="CSharp.string" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-aaf5d727-f88e-4b05-8258-8effb5c1cd87">
+            <script name="Get">return _info;</script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="129eefc44e12455e8b67255d5bec949f" cid="PROP007" type="property" name="Name" owner="ef7b9ae4d99a469e9b60bf98c0589439" creation-date="10/19/2024 15:44:50" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tvc7e2512061f94541b453a0cf71742ee5" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Name" />
+        <tagged-value id="tvaf71473b7fc146608f854bb745fda984" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv38815c089b494c87b9d462109ea193db" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tva8017aaa447d4806bb1657cd0117699f" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv1eaefa252fce413bac4f9e0334e00406" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="1216" />
+        <tagged-value id="tvf004b21c79b44999b4958f690f798688" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="489" />
+      </tagged-values>
+      <documentations>
+        <doc id="7eb096cf0d674fd8ac549327f139ef8c">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Название предмета.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="129eefc44e12455e8b67255d5bec949f_property_c" type="property" creation-date="10/19/2024 15:44:50" ref="" />
+      </stereotype-instances>
+      <structural-feature type="string" type-id="CSharp.string" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-8a77806f-11c1-4408-868f-f9ea86d9be92">
+            <script name="Get"> return _name;</script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="ac103fb2274345bd8663802d1ef8218a" cid="PROP029" type="property" owner="edbbeaedac2d44bab01fea0e7ebf37c1" creator="" creation-date="10/19/2024 16:30:22" visibility="private">
+      <structural-feature multiplicity="1" type="Item" type-id="Class:ef7b9ae4d99a469e9b60bf98c0589439" />
+      <property aggregation="composite" />
+    </item>
+    <item id="9686b4e3b52c49b8aa7da02dde954ae8" cid="C001" type="class" name="Address" creation-date="10/19/2024 15:43:46" visibility="public">
+      <tagged-values>
+        <tagged-value id="tvf4e1babe4cd249ecbce67a1422872268" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Model" />
+        <tagged-value id="tve567bd456bd3495aa71d190d4eb7b4b2" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Address" />
+        <tagged-value id="tv224de8c544df4a46abdc36f66ded05ef" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv3b812859d7de45cc97584b4f2282241c" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv09389abde28142c6b7623ba720c2bfe6" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tvfb31c7882f874ba6bbb052ce7915227a" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="399" />
+        <tagged-value id="tv20da84a7bb0d40eeb62c6dbe5e83635b" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="5601" />
+      </tagged-values>
+      <documentations>
+        <doc id="0cdc3e6318cc4c97a283c595738d0cb1">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Класс, представляющий адрес.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Взаимодействие с объектами осуществляется через свойства.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <owned-items />
+      <attributes>
+        <attribute id="a32c4c1266a364561904d6875a934bba1649" cid="PROP001" name="_index" creation-date="10/19/2024 15:43:46" property-ref="e679913ebcc843abbb0d083aec7819cc" />
+        <attribute id="a169539c118ae4586acb5351dca16cf99651" cid="PROP002" name="_country" creation-date="10/19/2024 15:43:46" property-ref="6afa4047096f467c97b7f922755148c6" />
+        <attribute id="a9566d916aefd4516b4994b2782b0d996652" cid="PROP003" name="_city" creation-date="10/19/2024 15:43:46" property-ref="488a0051f4d246089004211160774c70" />
+        <attribute id="aee81bba3d0de4d46b35c9c2f4456aac7652" cid="PROP004" name="_street" creation-date="10/19/2024 15:43:46" property-ref="b8e138bfd6a84e3789ef22f69cbf92ff" />
+        <attribute id="a060c9d7cd1b34005a18642765ddd916d652" cid="PROP005" name="_building" creation-date="10/19/2024 15:43:46" property-ref="1c55ec281a954023b138099b0d3cafa2" />
+        <attribute id="aa8137e5eb167452698340b893344a8be652" cid="PROP006" name="_apartament" creation-date="10/19/2024 15:43:46" property-ref="833a977b9f5c410baea4d1e128032dfb" />
+        <attribute id="ad792ad2d4a2b4f5088f3724def785a34652" cid="PROP007" name="Index" creation-date="10/19/2024 15:43:46" property-ref="a07d8a075779424099ef63566196a3fd" />
+        <attribute id="aa470212f6fb3457aa984a5687832aa62653" cid="PROP008" name="Country" creation-date="10/19/2024 15:43:46" property-ref="9e2858a8ee6347f28728e465562d6e0f" />
+        <attribute id="a82d87d80f31c4ef9a61edaf4d813144f653" cid="PROP009" name="City" creation-date="10/19/2024 15:43:46" property-ref="6b4be0d8203b4ad79d085feffd7e1c96" />
+        <attribute id="abc4ff6e8e09642a79ae859f3120946b5653" cid="PROP010" name="Street" creation-date="10/19/2024 15:43:46" property-ref="44ac0a20858648ff9f95f28e80605794" />
+        <attribute id="a4614ce3fb3c743de986be911a8f6e1b3654" cid="PROP011" name="Building" creation-date="10/19/2024 15:43:46" property-ref="15e2bb445c414417a9b020983955fee4" />
+        <attribute id="a78119015db284b65abb59a35c13d213d654" cid="PROP012" name="Apartament" creation-date="10/19/2024 15:43:46" property-ref="2ce9340e37674085bbc3690e65d26e28" />
+      </attributes>
+      <operations>
+        <operation id="o39adb6b2aec349ed867dc1348f92eb1c654" cid="OP001" name="Address" creation-date="10/19/2024 15:43:46" type="" type-id="" visibility="public">
+          <stereotypes>
+            <stereotype>create</stereotype>
+          </stereotypes>
+          <tagged-values>
+            <tagged-value id="tv22e5564b8328471ba1b1c5e1f766284c" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Address" />
+            <tagged-value id="tvd31cd12a78e142c7bc32f06fb793a4c8" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv2b535ff492a342cfa38e68fa41c4dbd9" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv48b41af02dc8461b95ed547fb05205b4" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="5192" />
+            <tagged-value id="tv14e2dc0ea0394385b54dcadf45f3538a" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="40" />
+          </tagged-values>
+          <documentations>
+            <doc id="afd3747bfcea49948a8924b85c0cfbe1">
+              <text>
+                <default>
+                  <style font-name="Verdana" font-size="12">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </default>
+                <styles />
+                <content>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Конструктор по умолчанию.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> 
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </doc>
+          </documentations>
+        </operation>
+        <operation id="o7ef7108d47bf4b95ab0111122fbac4fc654" cid="OP002" name="Address" creation-date="10/19/2024 15:43:46" type="" type-id="" visibility="public">
+          <parameters>
+            <parameter id="p6212b2ea8ab746199c3c59e9ed4ba3c0" name="index" type="int" type-id="CSharp.int" creation-date="10/19/2024 15:43:46" />
+            <parameter id="p1b3902bba04b4c9abeaa0ffe46f72dc2" name="country" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:43:46" />
+            <parameter id="pc0be7b85b659433bad6378ab63a2cbbe" name="city" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:43:46" />
+            <parameter id="p8c86c016e55846d2be469392428653b2" name="street" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:43:46" />
+            <parameter id="pd77db4ff731749c78143760d6e550f7e" name="building" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:43:46" />
+            <parameter id="pdfbbb11fe1f147898bcb0499ade0661a" name="apartament" type="string" type-id="CSharp.string" creation-date="10/19/2024 15:43:46" />
+          </parameters>
+          <stereotypes>
+            <stereotype>create</stereotype>
+          </stereotypes>
+          <tagged-values>
+            <tagged-value id="tvb4c4d2ebace84b4c92f670d166c12be4" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Address" />
+            <tagged-value id="tv1659e7dd401442eeb0e1fcee9cb523eb" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+            <tagged-value id="tv7936fef4673f4aacb23abd1cc50f188b" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+            <tagged-value id="tv7f72cf5f4f034d939aeee1cc32238999" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="5677" />
+            <tagged-value id="tv73a9b09683844385b8da17177fb590b1" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="316" />
+          </tagged-values>
+          <documentations>
+            <doc id="1f95f24709284c1588eb1df7ac6bf4ff">
+              <text>
+                <default>
+                  <style font-name="Verdana" font-size="12">
+                    <text>
+                      <solid-brush color="#FF000000" />
+                    </text>
+                  </style>
+                </default>
+                <styles />
+                <content>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> Конструктор с параметрами.
+</t>
+                    </p>
+                  </paragraph>
+                  <paragraph>
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Индекс адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Страна адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Город адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Улица адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Здание адреса.</t>
+                    </p>
+                    <p>
+                      <t> </t>
+                    </p>
+                    <p>
+                      <t>Квартира адреса.
+</t>
+                    </p>
+                  </paragraph>
+                </content>
+              </text>
+            </doc>
+          </documentations>
+        </operation>
+      </operations>
+    </item>
+    <item id="6b4be0d8203b4ad79d085feffd7e1c96" cid="PROP009" type="property" name="City" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="public">
+      <stereotypes>
+        <stereotype name="property" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tv3a8e27299ffc4aac96ceaf57f67782ea" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="City" />
+        <tagged-value id="tvab733d150fcd403c85f3422f4535d055" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" ref="pc09aca1154264912a4e6c3872256aa1b_425066138" />
+        <tagged-value id="tv1e40fcff7953491199737cbdaf1e6392" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv50ad7f0b86784b03bba508ab30570e16" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tv1d0da75a349343a6a9b95f8f7bf1e13a" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="2175" />
+        <tagged-value id="tvb927e8c7cc4e42848e629c27ddb7b123" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="515" />
+      </tagged-values>
+      <documentations>
+        <doc id="3a23cadb2b2145af983743212b2d088f">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Город адреса.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> </t>
+                </p>
+                <p>
+                  <t> Выбрасывается, если строка </t>
+                </p>
+                <p>
+                  <t> пуста или превышает допустимую длину.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> 
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="6b4be0d8203b4ad79d085feffd7e1c96_property_c" type="property" creation-date="10/19/2024 15:43:46" ref="" />
+      </stereotype-instances>
+      <structural-feature type="string" type-id="CSharp.string" />
+      <property>
+        <source-codes>
+          <source-code language="CSharp" uid="scs-4266ce6d-2962-45cf-9a1f-3b63ed214ccc">
+            <script name="Get">
+                return _city;
+            </script>
+          </source-code>
+        </source-codes>
+      </property>
+    </item>
+    <item id="ac1d38f51b884046a1f125053a3fc3f5" cid="PROP014" type="property" owner="ac4e4709c30748ecbe45296fe8028b0d" creator="" creation-date="10/19/2024 16:07:51" visibility="private">
+      <structural-feature multiplicity="1" type="Address" type-id="Class:9686b4e3b52c49b8aa7da02dde954ae8" />
+    </item>
+  </items>
+  <models>
+    <model id="pc09aca1154264912a4e6c3872256aa1b_425066138" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author>Роман Слиньков</author>
+        </authors>
+        <description />
+        <creation-date>10/19/2024 15:39:58</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="p770ee8e876064e28b2a2d485e5f79e8b_604447061" name="ClassDiagram1" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-461,-225" zoom="0.6">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author>Роман Слиньков</author>
+          </authors>
+          <description />
+          <creation-date>10/19/2024 15:39:58</creation-date>
+          <change-date>10/19/2024 16:40:14</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="edbbeaedac2d44bab01fea0e7ebf37c1" cid="REL015" type="relationship" creator="" creation-date="10/19/2024 16:30:22" from="ef7b9ae4d99a469e9b60bf98c0589439" to="982695736c4a435a9a84c276b1883db3" visibility="package">
+            <owned-items />
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" to="982695736c4a435a9a84c276b1883db3" derived="false">
+              <start-role id="umlar-193f792f-a204-4b94-8d65-63023d03ad2b" name="" navigability="" association-type="composition" visibility="private" property-ref="ac103fb2274345bd8663802d1ef8218a" />
+              <end-role id="umlar-674e0b3c-5dc0-416d-80ed-8e367a045b8f" name="" navigability="" association-type="association" visibility="private" property-ref="15cc748945f14e678362777571459484" />
+            </relation>
+          </item>
+          <item id="7d0dad2c30594b8b812419ed3e3610eb" cid="REL008" type="relationship" creator="" creation-date="10/19/2024 16:08:45" from="48b470077baf44b7be78b362b50fd304" to="ef7b9ae4d99a469e9b60bf98c0589439" visibility="package">
+            <owned-items />
+            <relation from="48b470077baf44b7be78b362b50fd304" to="ef7b9ae4d99a469e9b60bf98c0589439" derived="false">
+              <start-role id="umlar-83ac66ac-9a5f-4e3b-b085-bce47aadeb85" name="" navigability="" association-type="composition" visibility="private" property-ref="e988906316f948a59492efa9194b5420" />
+              <end-role id="umlar-8fd4af82-6fd8-4b79-81e9-02e05c0a70ae" name="" navigability="" association-type="association" visibility="private" property-ref="55a40ca629a44212b72f81cf89bd5e8f" />
+            </relation>
+          </item>
+          <item id="5b4cd5803f2940d783856c469c05dec4" cid="REL011" type="relationship" creator="" creation-date="10/19/2024 16:27:44" from="ef7b9ae4d99a469e9b60bf98c0589439" to="26d74c5301924646892139bd18e5b767" visibility="package">
+            <owned-items />
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" to="26d74c5301924646892139bd18e5b767" derived="false">
+              <start-role id="umlar-292c8b20-8163-4b37-b975-e8e5691966c8" name="" navigability="" association-type="association" visibility="private" property-ref="48112f74379547949fd87bd7dba7be40" />
+              <end-role id="umlar-d9487397-2b52-4aa3-8a17-305dd10a79a2" name="" navigability="yes" association-type="association" visibility="private" property-ref="030f86c87d2c476c8c37486542a71f89" />
+            </relation>
+          </item>
+          <item id="b676bb5774ee4c53ba820eaa670a0a5b" cid="REL014" type="relationship" creator="" creation-date="10/19/2024 16:28:39" from="91c6d8b617ce4fed91adeeb3ef7e8123" to="c42d477e7ae344a2b70c1a31a20d7497" visibility="package">
+            <owned-items />
+            <relation from="91c6d8b617ce4fed91adeeb3ef7e8123" to="c42d477e7ae344a2b70c1a31a20d7497" derived="false">
+              <start-role id="umlar-202692a3-3a97-4170-a260-3fb13d576401" name="" navigability="" association-type="association" visibility="private" property-ref="c7edb9fd93ef4959a69951e448015571" />
+              <end-role id="umlar-9a87c7fa-4558-4b62-a464-4bb5f9bfcf98" name="" navigability="yes" association-type="association" visibility="private" property-ref="195c297d2b79490bb7f684bb2b71928d" />
+            </relation>
+          </item>
+          <item id="1732c6c38cdc43478f7891938eacf6d6" cid="REL010" type="relationship" creator="" creation-date="10/19/2024 16:27:30" from="0c6ae445de234b699c3446ae08646f9c" to="91c6d8b617ce4fed91adeeb3ef7e8123" visibility="package">
+            <owned-items />
+            <relation from="0c6ae445de234b699c3446ae08646f9c" to="91c6d8b617ce4fed91adeeb3ef7e8123" derived="false">
+              <start-role id="umlar-788e5f8e-329c-47bf-90a9-58a312565b6b" name="" navigability="" association-type="association" visibility="private" property-ref="36a0764859a84672a8181e40cab54281" />
+              <end-role id="umlar-87dd39cb-1a53-4131-a9d3-b6830e9f97f1" name="" navigability="yes" association-type="association" visibility="private" property-ref="e56f13e001fa493f8e822beb61182ae9" />
+            </relation>
+          </item>
+          <item id="a7df1383a3344a08aa9098ebf264ae7a" cid="REL012" type="relationship" creator="" creation-date="10/19/2024 16:27:49" from="0c6ae445de234b699c3446ae08646f9c" to="26d74c5301924646892139bd18e5b767" visibility="package">
+            <owned-items />
+            <relation from="0c6ae445de234b699c3446ae08646f9c" to="26d74c5301924646892139bd18e5b767" derived="false">
+              <start-role id="umlar-e27de44f-4ed2-4af4-99d4-94bc27ecf53c" name="" navigability="" association-type="association" visibility="private" property-ref="cffe5e4945804f7fbca0ee012b94fa27" />
+              <end-role id="umlar-f52ae0b5-2a33-4162-bd17-7e43bc0a025f" name="" navigability="yes" association-type="association" visibility="private" property-ref="4faa820d51ab4999a21b17678263812d" />
+            </relation>
+          </item>
+          <item id="d68c966710eb471f9008b1ed35c26a5a" cid="REL006" type="relationship" creator="" creation-date="10/19/2024 16:05:19" from="48b470077baf44b7be78b362b50fd304" to="0c6ae445de234b699c3446ae08646f9c" visibility="package">
+            <owned-items />
+            <relation from="48b470077baf44b7be78b362b50fd304" to="0c6ae445de234b699c3446ae08646f9c" derived="false">
+              <start-role id="umlar-6ca24e00-d109-40b1-8607-07008be635ce" name="" navigability="" association-type="composition" visibility="private" property-ref="f71e95b01d114b82865d1f26ff298255" />
+              <end-role id="umlar-6d49e426-4536-460e-a9e5-e7b100e925fe" name="" navigability="" association-type="association" visibility="private" property-ref="a8a310ec929d420aa382cab85a4bc19d" />
+            </relation>
+          </item>
+          <item id="7ced94f1536d41a38326ea2bf95c9a67" cid="REL009" type="relationship" creator="" creation-date="10/19/2024 16:27:24" from="ef7b9ae4d99a469e9b60bf98c0589439" to="91c6d8b617ce4fed91adeeb3ef7e8123" visibility="package">
+            <owned-items />
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" to="91c6d8b617ce4fed91adeeb3ef7e8123" derived="false">
+              <start-role id="umlar-af05cb2c-6c87-4460-98f0-d179b220c30e" name="" navigability="" association-type="association" visibility="private" property-ref="6c17b79578fd43558a5c84e53fa4a9e7" />
+              <end-role id="umlar-d914ce8f-77f8-4b8a-91e9-e968a02ef3b4" name="" navigability="yes" association-type="association" visibility="private" property-ref="0f0a4a5433ed46949537256d893f5edd" />
+            </relation>
+          </item>
+          <item id="ac4e4709c30748ecbe45296fe8028b0d" cid="REL007" type="relationship" creator="" creation-date="10/19/2024 16:07:51" from="0c6ae445de234b699c3446ae08646f9c" to="9686b4e3b52c49b8aa7da02dde954ae8" visibility="package">
+            <owned-items />
+            <relation from="0c6ae445de234b699c3446ae08646f9c" to="9686b4e3b52c49b8aa7da02dde954ae8" derived="false">
+              <start-role id="umlar-2fb7bf3a-16b6-4bed-a08d-bc2cf1cefa5f" name="" navigability="" association-type="composition" visibility="private" property-ref="6c301af691c645429b05aa1fa3bb4f48" />
+              <end-role id="umlar-f30a2969-5158-4cc7-948c-568d04ad2635" name="" navigability="" association-type="association" visibility="private" property-ref="ac1d38f51b884046a1f125053a3fc3f5" />
+            </relation>
+          </item>
+        </abstract-items>
+        <layer id="1e6faf9aff124152a2da0268cd143f60" name="Default" visible="true" enabled="true" locked="false">
+          <item id="c42d477e7ae344a2b70c1a31a20d7497" iid="c4302760fef14d069c4da236d0fa1f13" creation-date="10/19/2024 15:43:30" order-index="0" type="entity">
+            <layout ax="-249" ay="592.5" awidth="354" aheight="79" x="-249" y="592.5" width="140" height="79" />
+            <classifier />
+            <class />
+          </item>
+          <item id="9686b4e3b52c49b8aa7da02dde954ae8" iid="2c8a9b5a21f5411b8b3fa30cea892a91" creation-date="10/19/2024 15:43:46" order-index="1" type="entity">
+            <layout ax="838" ay="-57.5" awidth="356" aheight="323" x="838" y="-57.5" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+          <item id="982695736c4a435a9a84c276b1883db3" iid="e9ef684c41764925b4eb19a005b19f47" creation-date="10/19/2024 15:44:03" order-index="2" type="entity">
+            <layout ax="-371" ay="-24" awidth="86" aheight="199" x="-371" y="-24" width="140" height="160" />
+          </item>
+          <item id="0c6ae445de234b699c3446ae08646f9c" iid="a06630564a6c467cbf4847eb7b98e9d7" creation-date="10/19/2024 15:44:39" order-index="3" type="entity">
+            <layout ax="349" ay="-57.5" awidth="356" aheight="207" x="349" y="-57.5" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+          <item id="ef7b9ae4d99a469e9b60bf98c0589439" iid="a5fbf62725e840c2afe8510a96001042" creation-date="10/19/2024 15:44:50" order-index="4" type="entity">
+            <layout ax="-134" ay="-57.5" awidth="350" aheight="266" x="-134" y="-57.5" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+          <item id="48b470077baf44b7be78b362b50fd304" iid="d8276ebb49d64c4f81abfd103e38f6f0" creation-date="10/19/2024 15:45:14" order-index="6" type="entity">
+            <layout ax="70" ay="-358" awidth="256" aheight="134" x="70" y="-358" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+          <item id="26d74c5301924646892139bd18e5b767" iid="47842b5458c0456aac240fff49165332" creation-date="10/19/2024 15:45:45" order-index="7" type="entity">
+            <layout ax="237" ay="374" awidth="125" aheight="94" x="237" y="374" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+          <item id="91c6d8b617ce4fed91adeeb3ef7e8123" iid="0d53027e96364e7b80f7188cff8dea92" creation-date="10/19/2024 15:46:01" order-index="9" type="entity">
+            <layout ax="-235" ay="375" awidth="340" aheight="130" x="-235" y="375" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+          <item id="d68c966710eb471f9008b1ed35c26a5a" iid="14c6f0ca0f924926a73661ab9cafd4ae" creation-date="10/19/2024 16:05:19" order-index="15" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="39.780888,-12.445588" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="286" y1="-224" x2="462" y2="-58" start-border-pos="0.5390625" end-border-pos="0.07935393258426966" start-local-pos="216" end-local-pos="113" name-position="0,20">
+              <points>
+                <point x="286" y="-224" />
+                <point x="462" y="-58" />
+              </points>
+            </layout>
+            <relation from="48b470077baf44b7be78b362b50fd304" from-iid="d8276ebb49d64c4f81abfd103e38f6f0" to="0c6ae445de234b699c3446ae08646f9c" to-iid="a06630564a6c467cbf4847eb7b98e9d7" />
+          </item>
+          <item id="ac4e4709c30748ecbe45296fe8028b0d" iid="9e93a4c787f74cff8e9304d5ca3043c0" creation-date="10/19/2024 16:07:51" order-index="16" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="705" y1="69" x2="838" y2="68" start-border-pos="0.4027777777777778" end-border-pos="0.9028637770897833" start-local-pos="126.5" end-local-pos="125.5" name-position="0,20">
+              <points>
+                <point x="705" y="69" />
+                <point x="838" y="68" />
+              </points>
+            </layout>
+            <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="9686b4e3b52c49b8aa7da02dde954ae8" to-iid="2c8a9b5a21f5411b8b3fa30cea892a91" />
+          </item>
+          <item id="7d0dad2c30594b8b812419ed3e3610eb" iid="045667d6b9724f9dbca83c9c470f8f83" creation-date="10/19/2024 16:08:45" order-index="17" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="159" y1="-224" x2="108" y2="-58" start-border-pos="0.6630859375" end-border-pos="0.17285714285714285" start-local-pos="89" end-local-pos="242" name-position="0,20">
+              <points>
+                <point x="159" y="-224" />
+                <point x="108" y="-58" />
+              </points>
+            </layout>
+            <relation from="48b470077baf44b7be78b362b50fd304" from-iid="d8276ebb49d64c4f81abfd103e38f6f0" to="ef7b9ae4d99a469e9b60bf98c0589439" to-iid="a5fbf62725e840c2afe8510a96001042" />
+          </item>
+          <item id="7ced94f1536d41a38326ea2bf95c9a67" iid="02d725662d734396abb9e4e6ef6f9d7c" creation-date="10/19/2024 16:27:24" order-index="18" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-50" y1="208" x2="-116" y2="375" start-border-pos="0.69" end-border-pos="0.0875" start-local-pos="84" end-local-pos="119" name-position="0,20">
+              <points>
+                <point x="-50" y="208" />
+                <point x="-116" y="375" />
+              </points>
+            </layout>
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="91c6d8b617ce4fed91adeeb3ef7e8123" to-iid="0d53027e96364e7b80f7188cff8dea92" />
+          </item>
+          <item id="1732c6c38cdc43478f7891938eacf6d6" iid="1ee1ab5460714317bc0fc2edfe12cc8c" creation-date="10/19/2024 16:27:30" order-index="19" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="413" y1="150" x2="33" y2="375" start-border-pos="0.7050561797752809" end-border-pos="0.19705882352941176" start-local-pos="64" end-local-pos="268" name-position="0,20">
+              <points>
+                <point x="413" y="150" />
+                <point x="223" y="263.5" />
+                <point x="33" y="375" />
+              </points>
+            </layout>
+            <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="91c6d8b617ce4fed91adeeb3ef7e8123" to-iid="0d53027e96364e7b80f7188cff8dea92" />
+          </item>
+          <item id="5b4cd5803f2940d783856c469c05dec4" iid="a0629d658d544ff6859465dffe3b8a82" creation-date="10/19/2024 16:27:44" order-index="20" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="148" y1="208" x2="262" y2="374" start-border-pos="0.5485714301466942" end-border-pos="0.05" start-local-pos="282" end-local-pos="25" name-position="0,20">
+              <points>
+                <point x="148" y="208" />
+                <point x="262" y="374" />
+              </points>
+            </layout>
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="26d74c5301924646892139bd18e5b767" to-iid="47842b5458c0456aac240fff49165332" />
+          </item>
+          <item id="a7df1383a3344a08aa9098ebf264ae7a" iid="5a941a7fcde045e6a069c5f60ab48929" creation-date="10/19/2024 16:27:49" order-index="21" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="464" y1="150" x2="322" y2="374" start-border-pos="0.6692415773868561" end-border-pos="0.17" start-local-pos="115" end-local-pos="85" name-position="0,20">
+              <points>
+                <point x="464" y="150" />
+                <point x="322" y="374" />
+              </points>
+            </layout>
+            <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="26d74c5301924646892139bd18e5b767" to-iid="47842b5458c0456aac240fff49165332" />
+          </item>
+          <item id="b676bb5774ee4c53ba820eaa670a0a5b" iid="aef32ba4caf04dff934904da6c432735" creation-date="10/19/2024 16:28:39" order-index="22" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25.000017,-15.000009" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-65" y1="505" x2="-62" y2="592" start-border-pos="0.625" end-border-pos="0.1320621520280838" start-local-pos="170" end-local-pos="187" name-position="0,20">
+              <points>
+                <point x="-65" y="505" />
+                <point x="-62" y="592" />
+              </points>
+            </layout>
+            <relation from="91c6d8b617ce4fed91adeeb3ef7e8123" from-iid="0d53027e96364e7b80f7188cff8dea92" to="c42d477e7ae344a2b70c1a31a20d7497" to-iid="c4302760fef14d069c4da236d0fa1f13" />
+          </item>
+          <item id="edbbeaedac2d44bab01fea0e7ebf37c1" iid="9eb52c649dce47a9b24dd63b2f346e8c" creation-date="10/19/2024 16:30:22" order-index="23" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-134" y1="76" x2="-285" y2="76" start-border-pos="0.8745300751879699" end-border-pos="0.3756281407035176" start-local-pos="133.5" end-local-pos="100" name-position="0,20">
+              <points>
+                <point x="-134" y="76" />
+                <point x="-285" y="76" />
+              </points>
+            </layout>
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="982695736c4a435a9a84c276b1883db3" to-iid="e9ef684c41764925b4eb19a005b19f47" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>
