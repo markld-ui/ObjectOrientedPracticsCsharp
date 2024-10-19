@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using ObjectOrientedPractices.Exceptions;
 using ObjectOrientedPractices.Services;
 
 namespace ObjectOrientedPractices.Model
@@ -15,8 +16,8 @@ namespace ObjectOrientedPractices.Model
     public class Customer
     {
         private readonly int _id;
-        private string? _fullname;
-        private Address? _address;
+        private string _fullname;
+        private Address _address;
 
         /// <summary>
         /// Уникальный идентификатор клиента.
@@ -35,7 +36,7 @@ namespace ObjectOrientedPractices.Model
         /// <exception cref="Exception">
         /// Выбрасывается, если строка <paramref name="FullName"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? FullName
+        public string FullName
         { 
             get {return _fullname;}
             private set
@@ -45,10 +46,9 @@ namespace ObjectOrientedPractices.Model
                     ValueValidator.AssertStringOnLength(value, 200, 0, nameof(FullName));
                     _fullname = value;
                 }
-                catch (Exception)
+                catch (StringLengthException)
                 {
-
-                    throw new Exception($"Неверные данные для {nameof(FullName)}");
+                    throw new StringLengthException(nameof(FullName), 200, 0);
                 }
             }
         }
@@ -72,12 +72,24 @@ namespace ObjectOrientedPractices.Model
         /// Инициализирует новый экземпляр класса <see cref="Customer"/> с заданными параметрами.
         /// </summary>
         /// <param name="fullname">Полное имя клиента. Передается в свойство <see cref="FullName"/>.</param>
-        /// <param name="address">Адрес клиента. Передается в свойство <see cref="Address"/>.</param>
-        public Customer(string? fullname, Address address)
+        /// <param name="index">Индекс адреса.</param>
+        /// <param name="country">Страна адреса.</param>
+        /// <param name="city">Город адреса.</param>
+        /// <param name="street">Улица адреса.</param>
+        /// <param name="building">Здание адреса.</param>
+        /// <param name="apartament">Квартира адреса.</param>
+        public Customer(string fullname, int index, string country, string city, string street, string building, string apartament)
         {
             _id = IdGenerator.GetNextId();
             FullName = fullname;
-            Address = address;
+            Address = new Address(
+                index,
+                country, 
+                city, 
+                street, 
+                building, 
+                apartament
+                );
 
         }
     }

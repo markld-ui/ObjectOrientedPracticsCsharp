@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using ObjectOrientedPractices.Exceptions;
 using ObjectOrientedPractices.Services;
 
 namespace ObjectOrientedPractices.Model
@@ -16,8 +18,8 @@ namespace ObjectOrientedPractices.Model
     public class Item
     {
         private readonly int _id;
-        private string? _name;
-        private string? _info;
+        private string _name;
+        private string _info;
         private double _cost;
         private Category _category;
 
@@ -32,10 +34,10 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Название предмета.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="StringLengthException">
         /// Выбрасывается, если строка <paramref name="Name"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? Name 
+        public string Name 
         {
             get { return _name;}
             private set
@@ -45,11 +47,10 @@ namespace ObjectOrientedPractices.Model
                     ValueValidator.AssertStringOnLength(value, 200, 0, nameof(Name));
                     _name = value;
                 }
-                
-                catch (Exception)
-                {
 
-                    throw new Exception($"Неверные данные для {nameof(Name)}");
+                catch (StringLengthException)
+                {
+                    throw new StringLengthException(nameof(Name), 200, 0);
                 }
             }
             
@@ -58,10 +59,10 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Описание предмета.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="StringLengthException">
         /// Выбрасывается, если строка <paramref name="Info"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? Info
+        public string Info
         {
             get {return _info;}
             private set
@@ -71,10 +72,9 @@ namespace ObjectOrientedPractices.Model
                     ValueValidator.AssertStringOnLength(value, 1000, 0, nameof(Name));
                     _info = value;
                 }
-                catch (Exception)
+                catch (StringLengthException)
                 {
-
-                    throw new Exception($"Неверные данные для {nameof(Info)}");
+                    throw new StringLengthException(nameof(Info), 1000, 0);
                 }
             }
 
@@ -113,7 +113,7 @@ namespace ObjectOrientedPractices.Model
         /// <param name="info">Описание предмета. Передается в свойство <see cref="Info"/>.</param>
         /// <param name="cost">Стоимость предмета. Передается в свойство <see cref="Cost"/>.</param>
         /// <param name="category">Категория товара.</param>
-        public Item(string? name, string? info, double cost, Category category)
+        public Item(string name, string info, double cost, Category category)
         {
             _id = IdGenerator.GetNextId();
             Name = name;

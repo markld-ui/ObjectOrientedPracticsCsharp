@@ -11,21 +11,37 @@ namespace ObjectOrientedPractices.Model
     /// </summary>
     public enum Category
     {
-        /// <summary>Неизвестная продукция</summary>
+        /// <summary
+        /// >Неизвестная продукция
+        /// </summary>
         Unknown,
-        /// <summary>Хлебобулочная продукция</summary>
+        /// <summary>
+        /// Хлебобулочная продукция
+        /// </summary>
         Bakery,
-        /// <summary> Молочная продукция</summary>
+        /// <summary>
+        /// Молочная продукция
+        /// </summary>
         Dairy,
-        /// <summary>Мясо</summary>
+        /// <summary>
+        /// Мясо
+        /// </summary>
         Meat,
-        /// <summary>Бытовая химия</summary>
+        /// <summary>
+        /// Бытовая химия
+        /// </summary>
         Household,
-        /// <summary>Напитки</summary>
+        /// <summary>
+        /// Напитки
+        /// </summary>
         Drinks,
-        /// <summary>Овощи</summary>
+        /// <summary>
+        /// Овощи
+        /// </summary>
         Vegetables,
-        /// <summary>Замороженная продукция</summary>
+        /// <summary>
+        /// Замороженная продукция
+        /// </summary>
         Frozen,
     }
 }

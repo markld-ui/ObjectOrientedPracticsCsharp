@@ -32,20 +32,20 @@
             splitContainer1 = new SplitContainer();
             panel1 = new Panel();
             panel4 = new Panel();
-            listBox_items = new ListBox();
+            listBoxItems = new ListBox();
             panel3 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            remove_btn_items = new Button();
-            add_btn_items = new Button();
+            removeBtnItems = new Button();
+            addBtnItems = new Button();
             panel5 = new Panel();
             label_category = new Label();
-            comboBox_category_items = new ComboBox();
-            textBox_descr_items = new TextBox();
+            comboBoxCategoryItems = new ComboBox();
+            textBoxDescrItems = new TextBox();
             label6 = new Label();
-            textBox_name_items = new TextBox();
-            textBox_cost_items = new TextBox();
-            textBox_id_items = new TextBox();
+            textBoxNameItems = new TextBox();
+            textBoxCostItems = new TextBox();
+            textBoxIdItems = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -99,22 +99,22 @@
             // 
             // panel4
             // 
-            panel4.Controls.Add(listBox_items);
+            panel4.Controls.Add(listBoxItems);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 42);
             panel4.Name = "panel4";
             panel4.Size = new Size(481, 566);
             panel4.TabIndex = 4;
             // 
-            // listBox_items
+            // listBoxItems
             // 
-            listBox_items.Dock = DockStyle.Fill;
-            listBox_items.FormattingEnabled = true;
-            listBox_items.Location = new Point(0, 0);
-            listBox_items.Name = "listBox_items";
-            listBox_items.Size = new Size(481, 566);
-            listBox_items.TabIndex = 0;
-            listBox_items.MouseClick += listBoxItemsMouseClick;
+            listBoxItems.Dock = DockStyle.Fill;
+            listBoxItems.FormattingEnabled = true;
+            listBoxItems.Location = new Point(0, 0);
+            listBoxItems.Name = "listBoxItems";
+            listBoxItems.Size = new Size(481, 566);
+            listBoxItems.TabIndex = 0;
+            listBoxItems.MouseClick += listBoxItemsMouseClick;
             // 
             // panel3
             // 
@@ -138,45 +138,45 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(remove_btn_items);
-            panel2.Controls.Add(add_btn_items);
+            panel2.Controls.Add(removeBtnItems);
+            panel2.Controls.Add(addBtnItems);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 608);
             panel2.Name = "panel2";
             panel2.Size = new Size(481, 74);
             panel2.TabIndex = 2;
             // 
-            // remove_btn_items
+            // removeBtnItems
             // 
-            remove_btn_items.Dock = DockStyle.Left;
-            remove_btn_items.Location = new Point(130, 0);
-            remove_btn_items.Name = "remove_btn_items";
-            remove_btn_items.Size = new Size(130, 74);
-            remove_btn_items.TabIndex = 1;
-            remove_btn_items.Text = "Remove";
-            remove_btn_items.UseVisualStyleBackColor = true;
-            remove_btn_items.MouseClick += removeBtnItemsMouseClick;
+            removeBtnItems.Dock = DockStyle.Left;
+            removeBtnItems.Location = new Point(130, 0);
+            removeBtnItems.Name = "removeBtnItems";
+            removeBtnItems.Size = new Size(130, 74);
+            removeBtnItems.TabIndex = 1;
+            removeBtnItems.Text = "Remove";
+            removeBtnItems.UseVisualStyleBackColor = true;
+            removeBtnItems.MouseClick += removeBtnItemsMouseClick;
             // 
-            // add_btn_items
+            // addBtnItems
             // 
-            add_btn_items.Dock = DockStyle.Left;
-            add_btn_items.Location = new Point(0, 0);
-            add_btn_items.Name = "add_btn_items";
-            add_btn_items.Size = new Size(130, 74);
-            add_btn_items.TabIndex = 0;
-            add_btn_items.Text = "Add";
-            add_btn_items.UseVisualStyleBackColor = true;
-            add_btn_items.MouseClick += addBtnItemsMouseClick;
+            addBtnItems.Dock = DockStyle.Left;
+            addBtnItems.Location = new Point(0, 0);
+            addBtnItems.Name = "addBtnItems";
+            addBtnItems.Size = new Size(130, 74);
+            addBtnItems.TabIndex = 0;
+            addBtnItems.Text = "Add";
+            addBtnItems.UseVisualStyleBackColor = true;
+            addBtnItems.MouseClick += addBtnItemsMouseClick;
             // 
             // panel5
             // 
             panel5.Controls.Add(label_category);
-            panel5.Controls.Add(comboBox_category_items);
-            panel5.Controls.Add(textBox_descr_items);
+            panel5.Controls.Add(comboBoxCategoryItems);
+            panel5.Controls.Add(textBoxDescrItems);
             panel5.Controls.Add(label6);
-            panel5.Controls.Add(textBox_name_items);
-            panel5.Controls.Add(textBox_cost_items);
-            panel5.Controls.Add(textBox_id_items);
+            panel5.Controls.Add(textBoxNameItems);
+            panel5.Controls.Add(textBoxCostItems);
+            panel5.Controls.Add(textBoxIdItems);
             panel5.Controls.Add(label5);
             panel5.Controls.Add(label4);
             panel5.Controls.Add(label3);
@@ -196,22 +196,24 @@
             label_category.TabIndex = 10;
             label_category.Text = "Category:";
             // 
-            // comboBox_category_items
+            // comboBoxCategoryItems
             // 
-            comboBox_category_items.FormattingEnabled = true;
-            comboBox_category_items.Location = new Point(118, 144);
-            comboBox_category_items.Name = "comboBox_category_items";
-            comboBox_category_items.Size = new Size(153, 28);
-            comboBox_category_items.TabIndex = 9;
-            comboBox_category_items.SelectedIndexChanged += comboBox_category_items_SelectedIndexChanged;
+            comboBoxCategoryItems.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCategoryItems.FormattingEnabled = true;
+            comboBoxCategoryItems.Location = new Point(118, 144);
+            comboBoxCategoryItems.Name = "comboBoxCategoryItems";
+            comboBoxCategoryItems.Size = new Size(153, 28);
+            comboBoxCategoryItems.TabIndex = 9;
+            comboBoxCategoryItems.SelectedIndexChanged += comboBoxCategoryItemsSelectedIndexChanged;
             // 
-            // textBox_descr_items
+            // textBoxDescrItems
             // 
-            textBox_descr_items.Location = new Point(15, 466);
-            textBox_descr_items.Multiline = true;
-            textBox_descr_items.Name = "textBox_descr_items";
-            textBox_descr_items.Size = new Size(582, 167);
-            textBox_descr_items.TabIndex = 8;
+            textBoxDescrItems.Location = new Point(15, 466);
+            textBoxDescrItems.MaxLength = 1000;
+            textBoxDescrItems.Multiline = true;
+            textBoxDescrItems.Name = "textBoxDescrItems";
+            textBoxDescrItems.Size = new Size(582, 167);
+            textBoxDescrItems.TabIndex = 8;
             // 
             // label6
             // 
@@ -222,28 +224,29 @@
             label6.TabIndex = 7;
             label6.Text = "Description:";
             // 
-            // textBox_name_items
+            // textBoxNameItems
             // 
-            textBox_name_items.Location = new Point(15, 236);
-            textBox_name_items.Multiline = true;
-            textBox_name_items.Name = "textBox_name_items";
-            textBox_name_items.Size = new Size(582, 180);
-            textBox_name_items.TabIndex = 6;
+            textBoxNameItems.Location = new Point(15, 236);
+            textBoxNameItems.MaxLength = 200;
+            textBoxNameItems.Multiline = true;
+            textBoxNameItems.Name = "textBoxNameItems";
+            textBoxNameItems.Size = new Size(582, 180);
+            textBoxNameItems.TabIndex = 6;
             // 
-            // textBox_cost_items
+            // textBoxCostItems
             // 
-            textBox_cost_items.Location = new Point(118, 93);
-            textBox_cost_items.Name = "textBox_cost_items";
-            textBox_cost_items.Size = new Size(153, 27);
-            textBox_cost_items.TabIndex = 5;
+            textBoxCostItems.Location = new Point(118, 93);
+            textBoxCostItems.Name = "textBoxCostItems";
+            textBoxCostItems.Size = new Size(153, 27);
+            textBoxCostItems.TabIndex = 5;
             // 
-            // textBox_id_items
+            // textBoxIdItems
             // 
-            textBox_id_items.Location = new Point(118, 53);
-            textBox_id_items.Name = "textBox_id_items";
-            textBox_id_items.ReadOnly = true;
-            textBox_id_items.Size = new Size(153, 27);
-            textBox_id_items.TabIndex = 4;
+            textBoxIdItems.Location = new Point(118, 53);
+            textBoxIdItems.Name = "textBoxIdItems";
+            textBoxIdItems.ReadOnly = true;
+            textBoxIdItems.Size = new Size(153, 27);
+            textBoxIdItems.TabIndex = 4;
             // 
             // label5
             // 
@@ -312,21 +315,21 @@
         private Panel panel2;
         private Label label1;
         private Panel panel3;
-        private Button remove_btn_items;
-        private Button add_btn_items;
+        private Button removeBtnItems;
+        private Button addBtnItems;
         private Panel panel4;
-        private ListBox listBox_items;
+        private ListBox listBoxItems;
         private Panel panel5;
-        private TextBox textBox_descr_items;
+        private TextBox textBoxDescrItems;
         private Label label6;
-        private TextBox textBox_name_items;
-        private TextBox textBox_cost_items;
-        private TextBox textBox_id_items;
+        private TextBox textBoxNameItems;
+        private TextBox textBoxCostItems;
+        private TextBox textBoxIdItems;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label_category;
-        private ComboBox comboBox_category_items;
+        private ComboBox comboBoxCategoryItems;
     }
 }

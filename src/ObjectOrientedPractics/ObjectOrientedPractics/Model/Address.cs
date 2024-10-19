@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ObjectOrientedPractices.Exceptions;
 using ObjectOrientedPractices.Services;
 
 namespace ObjectOrientedPractices.Model
@@ -45,7 +46,7 @@ namespace ObjectOrientedPractices.Model
         /// <exception cref="Exception">
         /// Выбрасывается, если строка <paramref name="Country"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? Country 
+        public string Country 
         {
             get 
             {
@@ -58,9 +59,9 @@ namespace ObjectOrientedPractices.Model
                     ValueValidator.AssertStringOnLength(value, 50, 0, nameof(Country));
                     _country = value;
                 }
-                catch (Exception)
+                catch (StringLengthException)
                 {
-                    throw new Exception($"Неверные данные для {nameof(Country)}");
+                    throw new StringLengthException(nameof(Country), 50, 0);
                 }
             }
         }
@@ -71,7 +72,7 @@ namespace ObjectOrientedPractices.Model
         /// <exception cref="Exception">
         /// Выбрасывается, если строка <paramref name="City"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? City 
+        public string City 
         {
             get
             {
@@ -84,9 +85,9 @@ namespace ObjectOrientedPractices.Model
                     ValueValidator.AssertStringOnLength(value, 50, 0, nameof(City));
                     _city = value;
                 }
-                catch (Exception)
+                catch (StringLengthException)
                 {
-                    throw new Exception($"Неверные данные для {nameof(City)}");
+                    throw new StringLengthException(nameof(City), 50, 0);
                 }
             }
         }
@@ -97,7 +98,7 @@ namespace ObjectOrientedPractices.Model
         /// <exception cref="Exception">
         /// Выбрасывается, если строка <paramref name="Street"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? Street 
+        public string Street 
         {
             get
             {
@@ -110,9 +111,9 @@ namespace ObjectOrientedPractices.Model
                     ValueValidator.AssertStringOnLength(value, 100, 0, nameof(Street));
                     _street = value;
                 }
-                catch (Exception)
+                catch (StringLengthException)
                 {
-                    throw new Exception($"Неверные данные для {nameof(Street)}");
+                    throw new StringLengthException(nameof(Street), 100, 0);
                 }
             }
         }
@@ -123,7 +124,7 @@ namespace ObjectOrientedPractices.Model
         /// <exception cref="Exception">
         /// Выбрасывается, если строка <paramref name="Building"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? Building 
+        public string Building 
         {
             get
             {
@@ -136,9 +137,9 @@ namespace ObjectOrientedPractices.Model
                     ValueValidator.AssertStringOnLength(value, 10, 0, nameof(Building));
                     _building = value;
                 }
-                catch (Exception)
+                catch (StringLengthException)
                 {
-                    throw new Exception($"Неверные данные для {nameof(Building)}");
+                    throw new StringLengthException(nameof(Building), 10, 0);
                 }
             }
         }
@@ -146,10 +147,10 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Квартира адреса.
         /// </summary>
-        /// <exception cref="Exception">
+        /// <exception cref="StringMaxLengthException">
         /// Выбрасывается, если строка <paramref name="Apartment"/> пуста или превышает допустимую длину.
         /// </exception>
-        public string? Apartament
+        public string Apartament
         {
             get
             {
@@ -162,9 +163,9 @@ namespace ObjectOrientedPractices.Model
                     ValueValidator.AssertStringOnLength(value, 10, 0, nameof(Apartament));
                     _apartament = value;
                 }
-                catch (Exception)
+                catch (StringLengthException)
                 {
-                    throw new Exception($"Неверные данные для {nameof(Apartament)}");
+                    throw new StringLengthException(nameof(Apartament), 10, 0);
                 }
             }
         }
@@ -186,7 +187,7 @@ namespace ObjectOrientedPractices.Model
         /// <param name="street">Улица адреса.</param>
         /// <param name="building">Здание адреса.</param>
         /// <param name="apartament">Квартира адреса.</param>
-        public Address(int index, string? country, string? city, string? street, string? building, string? apartament) 
+        public Address(int index, string country, string city, string street, string building, string apartament) 
         {
             Index = index;
             Country = country;

@@ -19,21 +19,29 @@ namespace ObjectOrientedPractices.Services
         /// <param name="value">Строка, подлежащая проверке.</param>
         /// <param name="maxLength">Максимально допустимая длина строки.</param>
         /// <param name="propertyName">Имя свойства, используемое в сообщении об ошибке.</param>
-        /// <exception cref="StringMaxLengthException">
-        /// Выбрасывается, если длина строки превышает допустимую или строка пуста.
+        /// <exception cref="StringLengthException">
+        /// Выбрасывается, если длина строки не совпадает с допустимой или строка пуста.
         /// </exception>
-        /// <exception cref="StringMinLengthException">
-        /// Выбрасывается, если длина строки меньше допустимой или строка пуста.
-        /// </exception>
-        public static void AssertStringOnLength(string? value, int maxLength, int minLenght, string propertyName)
+        public static void AssertStringOnLength(string value, int maxLength, int minLenght, string propertyName)
         {
-            if (string.IsNullOrEmpty(value) || value.Length > maxLength)
+            if (string.IsNullOrEmpty(value) || value.Length > maxLength || value.Length <= minLenght)
             {
-                throw new StringMaxLengthException(propertyName, maxLength);
+                throw new StringLengthException(propertyName, maxLength, minLenght);
             }
-            if (string.IsNullOrEmpty(value) || value.Length <= minLenght)
+        }
+
+        public static void AssertNumericFieldOnLetter(string value, string propertyName)
+        {
+            if (string.IsNullOrEmpty(value))
             {
-                throw new StringMinLengthException(propertyName, minLenght);
+                throw new ArgumentOutOfRangeException(nameof(value), "Поле является пустым");
+            }
+            for (int i = 0; i < value.Length; i++)
+            {
+                if (((int)value[i] >= 65 && (int)value[i] <= 90) || ((int)value[i] >= 97 && (int)value[i] <= 122))
+                {
+                    throw new ArgumentException(nameof(value), "Поле содержит некорректные данные (отличные от цифр)");
+                }
             }
         }
     }

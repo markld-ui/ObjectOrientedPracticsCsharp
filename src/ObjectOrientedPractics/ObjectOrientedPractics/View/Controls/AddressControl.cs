@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ObjectOrientedPractices.Model;
+using ObjectOrientedPractices.Services;
 
 namespace ObjectOrientedPractics.View.Controls
 {
@@ -123,6 +124,38 @@ namespace ObjectOrientedPractics.View.Controls
             Street = string.Empty;
             Building = string.Empty;
             Apartament = string.Empty;
+        }
+
+        /// <summary>
+        /// Устанавливает цвет фона для текстовых полей адреса в зависимости 
+        /// от значения параметра <paramref name="FlagWhite"/>.
+        /// Если <paramref name="FlagWhite"/> равно true, устанавливается красный 
+        /// цвет фона, чтобы визуально выделить поля с ошибками ввода. 
+        /// В противном случае устанавливается белый цвет фона, 
+        /// что указывает на отсутствие ошибок.
+        /// </summary>
+        /// <param name="FlagWhite">Флаг, определяющий цвет фона: 
+        /// true - красный, false - белый.</param>
+        public void ExceptionSetRedColor(bool FlagWhite)
+        {
+            if (FlagWhite)
+            {
+                textBoxPostIndex.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBoxCountry.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBoxCity.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBoxStreet.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBoxBuilding.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBoxApartament.BackColor = ColorTranslator.FromHtml("#DC143C");
+            }
+            else 
+            {
+                textBoxPostIndex.BackColor = Color.White;
+                textBoxCountry.BackColor = Color.White;
+                textBoxCity.BackColor = Color.White;
+                textBoxStreet.BackColor = Color.White;
+                textBoxBuilding.BackColor = Color.White;
+                textBoxApartament.BackColor = Color.White;
+            }
         }
 
         /// <summary>

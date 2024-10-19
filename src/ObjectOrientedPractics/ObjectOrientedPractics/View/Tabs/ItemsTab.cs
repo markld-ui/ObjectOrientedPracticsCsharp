@@ -30,7 +30,7 @@ namespace ObjectOrientedPractices.View.Tabs
         public ItemsTab()
         {
             InitializeComponent();
-            comboBox_category_items.DataSource = Enum.GetValues(typeof(Category));
+            comboBoxCategoryItems.DataSource = Enum.GetValues(typeof(Category));
         }
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         private void UpdateItemsListBox()
         {
-            listBox_items.Items.Clear();
+            listBoxItems.Items.Clear();
             foreach (var item in _items)
             {
-                listBox_items.Items.Add(item.Name);
+                listBoxItems.Items.Add(item.Name);
             }
         }
 
@@ -72,71 +72,59 @@ namespace ObjectOrientedPractices.View.Tabs
 
             try
             {
-                ValueValidator.AssertStringOnLength(textBox_name_items.Text, 200, 0, "Name");
-                ValueValidator.AssertStringOnLength(textBox_descr_items.Text, 1000, 0, "Info");
+                ValueValidator.AssertStringOnLength(textBoxNameItems.Text, 200, 0, "Name");
+                ValueValidator.AssertStringOnLength(textBoxDescrItems.Text, 1000, 0, "Info");
 
-                if (!double.TryParse(textBox_cost_items.Text, out double cost))
+                if (!double.TryParse(textBoxCostItems.Text, out double cost))
                 {
-                    MessageBox.Show("Неверный формат стоимости. Введите корректное число.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox_cost_items.BackColor = Color.Red;
-                    textBox_cost_items.Clear();
+                    MessageBox.Show("Неверный формат стоимости или поле пусто. Введите корректное число.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBoxCostItems.BackColor = ColorTranslator.FromHtml("#DC143C");
+                    textBoxCostItems.Clear();
                     return;
                 }
-                if (cost < 0)
+                if (cost <= 0)
                 {
-                    MessageBox.Show("Цена не может быть отрицательной. Введите корректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox_cost_items.BackColor = Color.Red;
-                    textBox_cost_items.Clear();
+                    MessageBox.Show("Цена не может быть отрицательной или равна нулю. Введите корректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBoxCostItems.BackColor = ColorTranslator.FromHtml("#DC143C");
+                    textBoxCostItems.Clear();
                     return;
                 }
 
-                Category category = (Category)comboBox_category_items.SelectedItem;
+                Category category = (Category)comboBoxCategoryItems.SelectedItem;
 
-                Item item = new(textBox_name_items.Text, textBox_descr_items.Text, cost, category);
+                Item item = new(textBoxNameItems.Text, textBoxDescrItems.Text, cost, category);
 
                 _items.Add(item);
-                listBox_items.Items.Add($"{item.Name} - {item.Cost}");
+                listBoxItems.Items.Add($"{item.Name} - {item.Cost}");
 
-                textBox_cost_items.BackColor = Color.White;
-                textBox_descr_items.BackColor = Color.White;
-                textBox_name_items.BackColor = Color.White;
+                textBoxCostItems.BackColor = Color.White;
+                textBoxDescrItems.BackColor = Color.White;
+                textBoxNameItems.BackColor = Color.White;
 
-                textBox_cost_items.Clear();
-                textBox_descr_items.Clear();
-                textBox_id_items.Clear();
-                textBox_name_items.Clear();
-                comboBox_category_items.SelectedItem = Category.Unknown;
+                textBoxCostItems.Clear();
+                textBoxDescrItems.Clear();
+                textBoxIdItems.Clear();
+                textBoxNameItems.Clear();
+                comboBoxCategoryItems.SelectedItem = Category.Unknown;
 
             }
-            catch (StringMaxLengthException)
+            catch (StringLengthException)
             {
-                MessageBox.Show("Длина поля превышает допустимое значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_cost_items.BackColor = ColorTranslator.FromHtml("#DC143C");
-                textBox_descr_items.BackColor = ColorTranslator.FromHtml("#DC143C");
-                textBox_name_items.BackColor = ColorTranslator.FromHtml("#DC143C");
+                MessageBox.Show("Длина поля меньше или превышает допустимое значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCostItems.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBoxDescrItems.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBoxNameItems.BackColor = ColorTranslator.FromHtml("#DC143C");
 
-                textBox_cost_items.Clear();
-                textBox_descr_items.Clear();
-                textBox_id_items.Clear();
-                textBox_name_items.Clear();
-            }
-            catch (StringMinLengthException)
-            {
-                MessageBox.Show("Длина поля меньше допустимого значения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_cost_items.BackColor = ColorTranslator.FromHtml("#DC143C");
-                textBox_descr_items.BackColor = ColorTranslator.FromHtml("#DC143C");
-                textBox_name_items.BackColor = ColorTranslator.FromHtml("#DC143C");
-
-                textBox_cost_items.Clear();
-                textBox_descr_items.Clear();
-                textBox_id_items.Clear();
-                textBox_name_items.Clear();
+                textBoxCostItems.Clear();
+                textBoxDescrItems.Clear();
+                textBoxIdItems.Clear();
+                textBoxNameItems.Clear();
             }
             catch (ArgumentOutOfRangeException)
             {
                 MessageBox.Show("Цена слишком высока", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox_cost_items.BackColor = ColorTranslator.FromHtml("#DC143C");
-                textBox_cost_items.Clear();
+                textBoxCostItems.BackColor = ColorTranslator.FromHtml("#DC143C");
+                textBoxCostItems.Clear();
             }
         }
        
@@ -148,17 +136,17 @@ namespace ObjectOrientedPractices.View.Tabs
         /// <param name="e">Аргументы события клика мышью.</param>
         private void removeBtnItemsMouseClick(object sender, MouseEventArgs e)
         {
-            if (listBox_items.SelectedIndex != -1)
+            if (listBoxItems.SelectedIndex != -1)
             {
-                int index = listBox_items.SelectedIndex;
+                int index = listBoxItems.SelectedIndex;
                 _items.RemoveAt(index);
-                listBox_items.Items.RemoveAt(index);
+                listBoxItems.Items.RemoveAt(index);
                 MessageBox.Show("Элемент успешно удален", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_cost_items.Clear();
-                textBox_descr_items.Clear();
-                textBox_id_items.Clear();
-                textBox_name_items.Clear();
-                comboBox_category_items.SelectedItem = Category.Unknown;
+                textBoxCostItems.Clear();
+                textBoxDescrItems.Clear();
+                textBoxIdItems.Clear();
+                textBoxNameItems.Clear();
+                comboBoxCategoryItems.SelectedItem = Category.Unknown;
             }
             else
             {
@@ -174,16 +162,16 @@ namespace ObjectOrientedPractices.View.Tabs
         /// <param name="e">Аргументы события клика мышью.</param>
         private void listBoxItemsMouseClick(object sender, MouseEventArgs e)
         {
-            if (listBox_items.SelectedIndex != -1)
+            if (listBoxItems.SelectedIndex != -1)
             {
-                int index = listBox_items.SelectedIndex;
+                int index = listBoxItems.SelectedIndex;
                 Item selectedItem = _items[index];
 
-                textBox_name_items.Text = selectedItem.Name;
-                textBox_descr_items.Text = selectedItem.Info;
-                textBox_cost_items.Text = selectedItem.Cost.ToString();
-                textBox_id_items.Text = selectedItem.Id.ToString();
-                comboBox_category_items.SelectedItem = selectedItem.Category;
+                textBoxNameItems.Text = selectedItem.Name;
+                textBoxDescrItems.Text = selectedItem.Info;
+                textBoxCostItems.Text = selectedItem.Cost.ToString();
+                textBoxIdItems.Text = selectedItem.Id.ToString();
+                comboBoxCategoryItems.SelectedItem = selectedItem.Category;
             }
             else
             {
@@ -196,24 +184,24 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         private void ClearFields()
         {
-            textBox_name_items.Clear();
-            textBox_descr_items.Clear();
-            textBox_cost_items.Clear();
-            textBox_id_items.Clear();
-            comboBox_category_items.SelectedItem = Category.Unknown;
+            textBoxNameItems.Clear();
+            textBoxDescrItems.Clear();
+            textBoxCostItems.Clear();
+            textBoxIdItems.Clear();
+            comboBoxCategoryItems.SelectedItem = Category.Unknown;
         }
 
         /// <summary>
         /// Обрабатывает событие изменения выбранного элемента в комбобоксе.
         /// </summary>
-        private void comboBox_category_items_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxCategoryItemsSelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox_items.SelectedIndex != -1)
+            if (listBoxItems.SelectedIndex != -1)
             {
-                int index = listBox_items.SelectedIndex;
+                int index = listBoxItems.SelectedIndex;
                 Item selectedItem = _items[index];
 
-                selectedItem.Category = (Category)comboBox_category_items.SelectedItem;
+                selectedItem.Category = (Category)comboBoxCategoryItems.SelectedItem;
             }
         }
     }
