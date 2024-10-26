@@ -139,11 +139,13 @@
             // 
             // textBoxAmount
             // 
+            textBoxAmount.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
             textBoxAmount.Location = new Point(449, 396);
             textBoxAmount.Name = "textBoxAmount";
             textBoxAmount.ReadOnly = true;
-            textBoxAmount.Size = new Size(125, 27);
+            textBoxAmount.Size = new Size(125, 30);
             textBoxAmount.TabIndex = 11;
+            textBoxAmount.TextAlign = HorizontalAlignment.Right;
             // 
             // listBoxCartOrder
             // 
@@ -171,6 +173,7 @@
             buttonCreateOrder.TabIndex = 8;
             buttonCreateOrder.Text = "Create Order";
             buttonCreateOrder.UseVisualStyleBackColor = true;
+            buttonCreateOrder.Click += buttonCreateOrderClick;
             // 
             // buttonRemoveItem
             // 

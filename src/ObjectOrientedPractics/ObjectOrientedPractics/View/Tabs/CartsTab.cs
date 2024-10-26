@@ -93,7 +93,7 @@ namespace ObjectOrientedPractics.View.Tabs
 
             CurrentCustomer[comboIndex].Cart.Items.Add((Item)listBoxCartItems.SelectedItem);
             listBoxCartOrder.Items.Add($"{((Item)listBoxCartItems.SelectedItem).Name} - {((Item)listBoxCartItems.SelectedItem).Cost}");
-            textBoxAmount.Text = CurrentCustomer[comboIndex].Cart.Amount.ToString();
+            textBoxAmount.Text = $"{CurrentCustomer[comboIndex].Cart.Amount.ToString()}.0";
         }
 
         private void buttonRemoveItemClick(object sender, EventArgs e)
@@ -114,7 +114,7 @@ namespace ObjectOrientedPractics.View.Tabs
             int choiceItem = listBoxCartOrder.SelectedIndex;
             CurrentCustomer[comboIndex].Cart.Items.RemoveAt(choiceItem);
             listBoxCartOrder.Items.RemoveAt(choiceItem);
-            textBoxAmount.Text = CurrentCustomer[comboIndex].Cart.Amount.ToString();
+            textBoxAmount.Text = $"{CurrentCustomer[comboIndex].Cart.Amount.ToString()}.0";
         }
 
         private void comboBoxCustomerInCartSelectedIndexChanged(object sender, EventArgs e)
@@ -123,6 +123,20 @@ namespace ObjectOrientedPractics.View.Tabs
             {
                 int comboIndex = comboBoxCustomerInCart.SelectedIndex;
                 textBoxAmount.Text = CurrentCustomer[comboIndex].Cart.Amount.ToString();
+            }
+        }
+
+        private void buttonCreateOrderClick(object sender, EventArgs e)
+        {
+            if (listBoxCartOrder.Items.Count > 0)
+            {
+                int comboIndex = comboBoxCustomerInCart.SelectedIndex;
+                List<Item> orderlist = new List<Item>();
+                Order order = new Order(CurrentCustomer[comboIndex].Address, orderlist, Convert.ToDouble(CurrentCustomer[comboIndex].Cart.Amount));
+                orderlist.AddRange(CurrentCustomer[comboIndex].Cart.Items);
+
+                MessageBox.Show("Order has been created!");
+
             }
         }
     }

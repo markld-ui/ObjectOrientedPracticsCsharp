@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ObjectOrientedPractices.Model;
 using ObjectOrientedPractices.Services;
 
-namespace ObjectOrientedPractics.Model
+namespace ObjectOrientedPractices.Model
 {
     public class Order
     {
@@ -16,6 +16,7 @@ namespace ObjectOrientedPractics.Model
         private Address _address;
         private List<Item> _items;
         private OrderStatus _status;
+        private double _amount;
 
         /// <summary>
         /// Уникальный идентификатор заказа.
@@ -85,13 +86,14 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         /// <param name="address">Адрес доставки.</param>
         /// <param name="items">Список товаров в заказе.</param>
-        public Order(Address address, List<Item> items)
+        public Order(Address address, List<Item> items, double amount)
         {
             _id = IdGenerator.GetNextId();
             _date = DateTime.Now;
             Address = address;
             Items = items; 
-            Status = OrderStatus.New; 
+            Status = OrderStatus.New;
+            _amount = amount;
         }
     }
 }
