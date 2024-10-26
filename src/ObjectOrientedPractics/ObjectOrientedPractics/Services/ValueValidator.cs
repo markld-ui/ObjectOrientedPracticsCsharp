@@ -34,13 +34,13 @@ namespace ObjectOrientedPractices.Services
         {
             if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentOutOfRangeException(nameof(value), "Поле является пустым");
+                throw new ArgumentException(nameof(value), "Поле является пустым");
             }
             for (int i = 0; i < value.Length; i++)
             {
                 if (((int)value[i] >= 65 && (int)value[i] <= 90) || ((int)value[i] >= 97 && (int)value[i] <= 122))
                 {
-                    throw new ArgumentException(nameof(value), "Поле содержит некорректные данные (отличные от цифр)");
+                    throw new NumericFieldException(nameof(value), "Поле содержит некорректные данные (отличные от цифр)");
                 }
             }
         }

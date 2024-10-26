@@ -35,9 +35,9 @@
             buttonAddToCart = new Button();
             panel1 = new Panel();
             label1 = new Label();
+            buttonClearCart = new Button();
             buttonCreateOrder = new Button();
             buttonRemoveItem = new Button();
-            buttonClearCart = new Button();
             labelAmount = new Label();
             label4 = new Label();
             textBoxCart = new TextBox();
@@ -67,9 +67,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(buttonClearCart);
             splitContainer1.Panel2.Controls.Add(buttonCreateOrder);
             splitContainer1.Panel2.Controls.Add(buttonRemoveItem);
-            splitContainer1.Panel2.Controls.Add(buttonClearCart);
             splitContainer1.Panel2.Controls.Add(labelAmount);
             splitContainer1.Panel2.Controls.Add(label4);
             splitContainer1.Panel2.Controls.Add(textBoxCart);
@@ -136,6 +136,16 @@
             label1.TabIndex = 0;
             label1.Text = "Items";
             // 
+            // buttonClearCart
+            // 
+            buttonClearCart.Location = new Point(445, 445);
+            buttonClearCart.Name = "buttonClearCart";
+            buttonClearCart.Size = new Size(129, 55);
+            buttonClearCart.TabIndex = 9;
+            buttonClearCart.Text = "Clear Cart";
+            buttonClearCart.UseVisualStyleBackColor = true;
+            buttonClearCart.MouseClick += buttonClearCartMouseClick;
+            // 
             // buttonCreateOrder
             // 
             buttonCreateOrder.Location = new Point(14, 445);
@@ -153,15 +163,6 @@
             buttonRemoveItem.TabIndex = 7;
             buttonRemoveItem.Text = "Remove Item";
             buttonRemoveItem.UseVisualStyleBackColor = true;
-            // 
-            // buttonClearCart
-            // 
-            buttonClearCart.Location = new Point(445, 445);
-            buttonClearCart.Name = "buttonClearCart";
-            buttonClearCart.Size = new Size(129, 55);
-            buttonClearCart.TabIndex = 6;
-            buttonClearCart.Text = "Clear Cart";
-            buttonClearCart.UseVisualStyleBackColor = true;
             // 
             // labelAmount
             // 
@@ -251,8 +252,8 @@
         private TextBox textBoxCart;
         private Label label3;
         private ComboBox comboBoxCustomerInCart;
-        private Button buttonClearCart;
         private Button buttonCreateOrder;
         private Button buttonRemoveItem;
+        private Button buttonClearCart;
     }
 }

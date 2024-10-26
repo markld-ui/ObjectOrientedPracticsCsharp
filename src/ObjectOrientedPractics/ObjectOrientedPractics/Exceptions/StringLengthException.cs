@@ -19,4 +19,10 @@ namespace ObjectOrientedPractices.Exceptions
         public StringLengthException(string propertyName, int maxLength, int minLength)
             : base($"{propertyName} должен быть больше {minLength} или меньше {maxLength} символов или поле пусто.") { }
     }
+
+    public class NumericFieldException : Exception
+    {
+        public NumericFieldException(string propertyName, string message)
+            : base($"{propertyName} {message}") { }
+    }
 }

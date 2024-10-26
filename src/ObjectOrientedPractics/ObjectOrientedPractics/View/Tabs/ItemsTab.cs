@@ -49,6 +49,13 @@ namespace ObjectOrientedPractices.View.Tabs
             }
         }
 
+        public void RefreshData()
+        {
+            listBoxItems.DataSource = null;
+            listBoxItems.DataSource = _items;
+
+        }
+
         /// <summary>
         /// Метод обновновления списка предметов
         /// </summary>

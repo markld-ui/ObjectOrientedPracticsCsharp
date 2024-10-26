@@ -63,6 +63,12 @@ namespace ObjectOrientedPractices.View.Tabs
             }
         }
 
+        public void RefreshData()
+        {
+            listBoxCustomers.DataSource = null;
+            listBoxCustomers.DataSource = _customers;
+        }
+
         /// <summary>
         /// Обрабатывает событие клика по кнопке "Добавить". Выполняет проверку 
         /// введённых данных, создаёт нового клиента и добавляет его в список.
@@ -100,7 +106,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 addressControl.ClearAddressFields();
                 addressControl.ExceptionSetRedColor(false);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (ArgumentException)
             {
                 MessageBox.Show("Поле является пустым", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxFullNameCustomers.BackColor = ColorTranslator.FromHtml("#DC143C");
@@ -110,7 +116,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBoxIdCustomers.Clear();
                 addressControl.ClearAddressFields();
             }
-            catch (ArgumentException)
+            catch (NumericFieldException)
             {
                 MessageBox.Show("Поле содержит некорректные данные (отличные от цифр)", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxFullNameCustomers.BackColor = ColorTranslator.FromHtml("#DC143C");
