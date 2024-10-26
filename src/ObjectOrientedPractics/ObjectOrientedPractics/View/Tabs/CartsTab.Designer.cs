@@ -35,11 +35,11 @@
             buttonAddToCart = new Button();
             panel1 = new Panel();
             label1 = new Label();
+            textBoxAmount = new TextBox();
             listBoxCartOrder = new ListBox();
             buttonClearCart = new Button();
             buttonCreateOrder = new Button();
             buttonRemoveItem = new Button();
-            labelAmount = new Label();
             label4 = new Label();
             label3 = new Label();
             comboBoxCustomerInCart = new ComboBox();
@@ -67,11 +67,11 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(textBoxAmount);
             splitContainer1.Panel2.Controls.Add(listBoxCartOrder);
             splitContainer1.Panel2.Controls.Add(buttonClearCart);
             splitContainer1.Panel2.Controls.Add(buttonCreateOrder);
             splitContainer1.Panel2.Controls.Add(buttonRemoveItem);
-            splitContainer1.Panel2.Controls.Add(labelAmount);
             splitContainer1.Panel2.Controls.Add(label4);
             splitContainer1.Panel2.Controls.Add(label3);
             splitContainer1.Panel2.Controls.Add(comboBoxCustomerInCart);
@@ -137,6 +137,14 @@
             label1.TabIndex = 0;
             label1.Text = "Items";
             // 
+            // textBoxAmount
+            // 
+            textBoxAmount.Location = new Point(449, 396);
+            textBoxAmount.Name = "textBoxAmount";
+            textBoxAmount.ReadOnly = true;
+            textBoxAmount.Size = new Size(125, 27);
+            textBoxAmount.TabIndex = 11;
+            // 
             // listBoxCartOrder
             // 
             listBoxCartOrder.FormattingEnabled = true;
@@ -174,16 +182,6 @@
             buttonRemoveItem.UseVisualStyleBackColor = true;
             buttonRemoveItem.Click += buttonRemoveItemClick;
             // 
-            // labelAmount
-            // 
-            labelAmount.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold | FontStyle.Italic);
-            labelAmount.Location = new Point(416, 403);
-            labelAmount.Name = "labelAmount";
-            labelAmount.RightToLeft = RightToLeft.Yes;
-            labelAmount.Size = new Size(158, 39);
-            labelAmount.TabIndex = 5;
-            labelAmount.Text = "0.0";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -211,6 +209,7 @@
             comboBoxCustomerInCart.Name = "comboBoxCustomerInCart";
             comboBoxCustomerInCart.Size = new Size(464, 28);
             comboBoxCustomerInCart.TabIndex = 1;
+            comboBoxCustomerInCart.SelectedIndexChanged += comboBoxCustomerInCartSelectedIndexChanged;
             // 
             // label2
             // 
@@ -250,7 +249,6 @@
         private Panel panel2;
         private Button buttonAddToCart;
         private Label label2;
-        private Label labelAmount;
         private Label label4;
         private Label label3;
         private ComboBox comboBoxCustomerInCart;
@@ -258,5 +256,6 @@
         private Button buttonRemoveItem;
         private Button buttonClearCart;
         private ListBox listBoxCartOrder;
+        private TextBox textBoxAmount;
     }
 }

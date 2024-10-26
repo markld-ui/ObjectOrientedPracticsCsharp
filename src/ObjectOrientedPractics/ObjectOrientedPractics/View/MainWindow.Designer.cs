@@ -55,6 +55,7 @@ namespace ObjectOrientedPractices
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1074, 623);
             tabControl1.TabIndex = 0;
+            tabControl1.SelectedIndexChanged += tabControl1SelectedIndexChanged;
             // 
             // tabPage1
             // 
@@ -82,7 +83,7 @@ namespace ObjectOrientedPractices
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(947, 684);
+            tabPage2.Size = new Size(1066, 590);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Customers";
             tabPage2.UseVisualStyleBackColor = true;
@@ -92,7 +93,7 @@ namespace ObjectOrientedPractices
             customersTab1.Dock = DockStyle.Fill;
             customersTab1.Location = new Point(3, 3);
             customersTab1.Name = "customersTab1";
-            customersTab1.Size = new Size(941, 678);
+            customersTab1.Size = new Size(1060, 584);
             customersTab1.TabIndex = 0;
             // 
             // tabPage3
@@ -101,17 +102,19 @@ namespace ObjectOrientedPractices
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(947, 684);
+            tabPage3.Size = new Size(1066, 590);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Cart";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // cartsTab1
             // 
+            cartsTab1.Customers = null;
             cartsTab1.Dock = DockStyle.Fill;
+            cartsTab1.Items = null;
             cartsTab1.Location = new Point(3, 3);
             cartsTab1.Name = "cartsTab1";
-            cartsTab1.Size = new Size(941, 678);
+            cartsTab1.Size = new Size(1060, 584);
             cartsTab1.TabIndex = 0;
             // 
             // MainWindow

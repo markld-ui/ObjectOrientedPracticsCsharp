@@ -16,7 +16,7 @@ namespace ObjectOrientedPractics.View.Tabs
     public partial class CartsTab : UserControl
     {
 
-        private Customer CurrentCustomer { get; set; }
+        public List<Customer> CurrentCustomer = new List<Customer>();
 
         public List<Customer> Customers { get; set; }
         public List<Item> Items { get; set; }
@@ -52,11 +52,12 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private void UpdateCartItemsListBox()
         {
+            int comboIndex = comboBoxCustomerInCart.SelectedIndex;
             listBoxCartOrder.Items.Clear();
 
-            if (CurrentCustomer != null && CurrentCustomer.Cart != null)
+            if (CurrentCustomer != null && CurrentCustomer[comboIndex].Cart != null)
             {
-                foreach (var item in CurrentCustomer.Cart.Items)
+                foreach (var item in CurrentCustomer[comboIndex].Cart.Items)
                 {
                     listBoxCartOrder.Items.Add(item);
                 }
@@ -67,15 +68,6 @@ namespace ObjectOrientedPractics.View.Tabs
         {
             InitializeComponent();
 
-            comboBoxCustomerInCart.SelectedIndexChanged += comboBoxCustomers_SelectedIndexChanged;
-            buttonAddToCart.Click += buttonAddToCartClick;
-            buttonRemoveItem.Click += buttonRemoveItemClick;
-        }
-
-        private void comboBoxCustomers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CurrentCustomer = comboBoxCustomerInCart.SelectedItem as Customer;
-            UpdateCartItemsListBox();
         }
 
         private void buttonClearCartMouseClick(object sender, MouseEventArgs e)
@@ -85,7 +77,9 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private void buttonAddToCartClick(object sender, EventArgs e)
         {
-            if (CurrentCustomer == null)
+            int comboIndex = comboBoxCustomerInCart.SelectedIndex;
+            int choiceItem = listBoxCartItems.SelectedIndex;
+            if (comboIndex == -1)
             {
                 MessageBox.Show("Пожалуйста, выберите покупателя.");
                 return;
@@ -97,12 +91,9 @@ namespace ObjectOrientedPractics.View.Tabs
                 return;
             }
 
-            // Получаем выбранный товар и добавляем его в корзину покупателя
-            var selectedItem = listBoxCartItems.SelectedItem as Item;
-            CurrentCustomer.Cart.AddItem(selectedItem);
-
-            // Обновляем список товаров в корзине
-            UpdateCartItemsListBox();
+            CurrentCustomer[comboIndex].Cart.Items.Add((Item)listBoxCartItems.SelectedItem);
+            listBoxCartOrder.Items.Add($"{((Item)listBoxCartItems.SelectedItem).Name} - {((Item)listBoxCartItems.SelectedItem).Cost}");
+            textBoxAmount.Text = CurrentCustomer[comboIndex].Cart.Amount.ToString();
         }
 
         private void buttonRemoveItemClick(object sender, EventArgs e)
@@ -113,18 +104,26 @@ namespace ObjectOrientedPractics.View.Tabs
                 return;
             }
 
-            if (listBoxCartItems.SelectedItem == null)
+            if (listBoxCartOrder.SelectedItem == null)
             {
                 MessageBox.Show("Пожалуйста, выберите товар для удаления.");
                 return;
             }
 
-            // Получаем выбранный товар и удаляем его из корзины покупателя
-            var selectedItem = listBoxCartItems.SelectedItem as Item;
-            CurrentCustomer.Cart.RemoveItem(selectedItem);
+            int comboIndex = comboBoxCustomerInCart.SelectedIndex;
+            int choiceItem = listBoxCartOrder.SelectedIndex;
+            CurrentCustomer[comboIndex].Cart.Items.RemoveAt(choiceItem);
+            listBoxCartOrder.Items.RemoveAt(choiceItem);
+            textBoxAmount.Text = CurrentCustomer[comboIndex].Cart.Amount.ToString();
+        }
 
-            // Обновляем список товаров в корзине
-            UpdateCartItemsListBox();
+        private void comboBoxCustomerInCartSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCustomerInCart.SelectedItem != null)
+            {
+                int comboIndex = comboBoxCustomerInCart.SelectedIndex;
+                textBoxAmount.Text = CurrentCustomer[comboIndex].Cart.Amount.ToString();
+            }
         }
     }
 }

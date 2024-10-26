@@ -197,7 +197,7 @@ namespace ObjectOrientedPractices.View.Tabs
             textBoxDescrItems.Clear();
             textBoxCostItems.Clear();
             textBoxIdItems.Clear();
-            comboBoxCategoryItems.SelectedItem = Category.Unknown;
+            comboBoxCategoryItems.SelectedItem = null;
         }
 
         /// <summary>

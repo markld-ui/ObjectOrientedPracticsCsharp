@@ -47,21 +47,5 @@ namespace ObjectOrientedPractics.Model
                 return sum;
             }
         }
-
-        public void AddItem(Item item)
-        {
-            if (item != null)
-            {
-                Items.Add(item);
-            }
-        }
-
-        public void RemoveItem(Item item)
-        {
-            if (item != null && Items.Contains(item))
-            {
-                Items.Remove(item);
-            }
-        }
     }
 }
