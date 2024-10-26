@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ObjectOrientedPractices.Model;
+using ObjectOrientedPractices.View.Tabs;
 using ObjectOrientedPractics.View.Controls;
 
 namespace ObjectOrientedPractics.View.Tabs
@@ -15,21 +16,30 @@ namespace ObjectOrientedPractics.View.Tabs
     public partial class CartsTab : UserControl
     {
 
-        private List<Item> _items;
-
-        private List<Customer> _customers;
-
         private List<Customer> _currentCustomer = new List<Customer>();
-
         public List<Customer> Customers { get; set; }
         public List<Item> Items { get; set; }
 
         public void RefreshData()
         {
             listBoxCartItems.DataSource = null;
-            listBoxCartItems.DataSource = _items;
+            listBoxCartItems.DataSource = Items;
+            listBoxCartItems.DisplayMember = "Name";
+
             comboBoxCustomerInCart.DataSource = null;
-            comboBoxCustomerInCart.DataSource = _customers;
+            comboBoxCustomerInCart.DataSource = Customers;
+            comboBoxCustomerInCart.DisplayMember = "FullName";
+
+            UpdateListBoxCartItems();
+        }
+
+        private void UpdateListBoxCartItems()
+        {
+            listBoxCartItems.Items.Clear(); // Очищаем текущий список
+            foreach (var item in Items)
+            {
+                listBoxCartItems.Items.Add(item); // Добавляем товары в ListBox
+            }
         }
 
         public CartsTab()
@@ -38,6 +48,11 @@ namespace ObjectOrientedPractics.View.Tabs
         }
 
         private void buttonClearCartMouseClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Hi");
+        }
+
+        private void buttonAddToCartClick(object sender, EventArgs e)
         {
         }
     }

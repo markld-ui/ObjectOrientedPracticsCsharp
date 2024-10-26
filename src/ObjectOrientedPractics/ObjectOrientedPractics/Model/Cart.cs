@@ -40,7 +40,7 @@ namespace ObjectOrientedPractics.Model
                 {
                     return 0.0;
                 }
-                foreach (Item item in _items)
+                foreach (var item in _items)
                 {
                     sum += item.Cost;
                 }

@@ -35,12 +35,12 @@
             buttonAddToCart = new Button();
             panel1 = new Panel();
             label1 = new Label();
+            listBoxCartOrder = new ListBox();
             buttonClearCart = new Button();
             buttonCreateOrder = new Button();
             buttonRemoveItem = new Button();
             labelAmount = new Label();
             label4 = new Label();
-            textBoxCart = new TextBox();
             label3 = new Label();
             comboBoxCustomerInCart = new ComboBox();
             label2 = new Label();
@@ -67,12 +67,12 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(listBoxCartOrder);
             splitContainer1.Panel2.Controls.Add(buttonClearCart);
             splitContainer1.Panel2.Controls.Add(buttonCreateOrder);
             splitContainer1.Panel2.Controls.Add(buttonRemoveItem);
             splitContainer1.Panel2.Controls.Add(labelAmount);
             splitContainer1.Panel2.Controls.Add(label4);
-            splitContainer1.Panel2.Controls.Add(textBoxCart);
             splitContainer1.Panel2.Controls.Add(label3);
             splitContainer1.Panel2.Controls.Add(comboBoxCustomerInCart);
             splitContainer1.Panel2.Controls.Add(label2);
@@ -115,6 +115,7 @@
             buttonAddToCart.TabIndex = 0;
             buttonAddToCart.Text = "Add To Cart";
             buttonAddToCart.UseVisualStyleBackColor = true;
+            buttonAddToCart.Click += buttonAddToCartClick;
             // 
             // panel1
             // 
@@ -135,6 +136,14 @@
             label1.Size = new Size(86, 38);
             label1.TabIndex = 0;
             label1.Text = "Items";
+            // 
+            // listBoxCartOrder
+            // 
+            listBoxCartOrder.FormattingEnabled = true;
+            listBoxCartOrder.Location = new Point(14, 140);
+            listBoxCartOrder.Name = "listBoxCartOrder";
+            listBoxCartOrder.Size = new Size(560, 224);
+            listBoxCartOrder.TabIndex = 10;
             // 
             // buttonClearCart
             // 
@@ -184,14 +193,6 @@
             label4.TabIndex = 4;
             label4.Text = "Amount:";
             // 
-            // textBoxCart
-            // 
-            textBoxCart.Location = new Point(14, 140);
-            textBoxCart.Multiline = true;
-            textBoxCart.Name = "textBoxCart";
-            textBoxCart.Size = new Size(560, 214);
-            textBoxCart.TabIndex = 3;
-            // 
             // label3
             // 
             label3.Font = new Font("Segoe UI", 10F);
@@ -203,6 +204,7 @@
             // 
             // comboBoxCustomerInCart
             // 
+            comboBoxCustomerInCart.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCustomerInCart.FormattingEnabled = true;
             comboBoxCustomerInCart.Location = new Point(110, 42);
             comboBoxCustomerInCart.Name = "comboBoxCustomerInCart";
@@ -249,11 +251,11 @@
         private Label label2;
         private Label labelAmount;
         private Label label4;
-        private TextBox textBoxCart;
         private Label label3;
         private ComboBox comboBoxCustomerInCart;
         private Button buttonCreateOrder;
         private Button buttonRemoveItem;
         private Button buttonClearCart;
+        private ListBox listBoxCartOrder;
     }
 }

@@ -31,6 +31,8 @@ namespace ObjectOrientedPractices.View.Tabs
         {
             InitializeComponent();
             comboBoxCategoryItems.DataSource = Enum.GetValues(typeof(Category));
+            comboBoxCategoryItems.SelectedItem = null;
+
         }
 
         /// <summary>

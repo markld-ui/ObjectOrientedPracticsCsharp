@@ -12,8 +12,19 @@ namespace ObjectOrientedPractices.Model
     /// </summary>
     public class Store
     {
-        private List<Item> _items;
-        private List<Customer> _customers;
+        private List<Item> _items = new List<Item>();
+        private List<Customer> _customers = new List<Customer>();
+
+        /// <summary>
+        /// Конструктор по умолчанию, инициализирует списки товаров и покупателей пустыми коллекциями.
+        /// </summary>
+        public Store()
+        {
+            _items.Add(new Item("Ковер", "Синтетика", 100, Category.Household));
+            _items.Add(new Item("Шапка", "Шерсть", 300, Category.Household));
+            _items.Add(new Item("Арбуз", "Свежий", 500, Category.Vegetables));
+            _customers.Add(new Customer("Слиньков Роман Викторович", 1, "Россия", "Екатеринбург", "Ленина 54", "1", "194"));
+        }
 
         /// <summary>
         /// Возвращает или задает список товаров магазина.
@@ -42,15 +53,6 @@ namespace ObjectOrientedPractices.Model
             { 
                 _customers = value ?? new List<Customer>(); 
             }
-        }
-
-        /// <summary>
-        /// Конструктор по умолчанию, инициализирует списки товаров и покупателей пустыми коллекциями.
-        /// </summary>
-        public Store() 
-        {
-            _items = new List<Item>();
-            _customers = new List<Customer>();
         }
     }
 }
