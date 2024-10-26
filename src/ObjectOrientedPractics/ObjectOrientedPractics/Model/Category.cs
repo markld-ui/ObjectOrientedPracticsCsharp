@@ -11,10 +11,6 @@ namespace ObjectOrientedPractices.Model
     /// </summary>
     public enum Category
     {
-        /// <summary
-        /// >Неизвестная продукция
-        /// </summary>
-        Unknown,
         /// <summary>
         /// Хлебобулочная продукция
         /// </summary>

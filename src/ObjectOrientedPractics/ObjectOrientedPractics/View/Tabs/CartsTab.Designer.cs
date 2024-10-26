@@ -172,6 +172,7 @@
             buttonRemoveItem.TabIndex = 7;
             buttonRemoveItem.Text = "Remove Item";
             buttonRemoveItem.UseVisualStyleBackColor = true;
+            buttonRemoveItem.Click += buttonRemoveItemClick;
             // 
             // labelAmount
             // 

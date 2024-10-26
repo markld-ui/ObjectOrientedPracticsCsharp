@@ -114,7 +114,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBoxDescrItems.Clear();
                 textBoxIdItems.Clear();
                 textBoxNameItems.Clear();
-                comboBoxCategoryItems.SelectedItem = Category.Unknown;
+                comboBoxCategoryItems.SelectedItem = null;
 
             }
             catch (StringLengthException)
@@ -155,7 +155,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBoxDescrItems.Clear();
                 textBoxIdItems.Clear();
                 textBoxNameItems.Clear();
-                comboBoxCategoryItems.SelectedItem = Category.Unknown;
+                comboBoxCategoryItems.SelectedItem = null;
             }
             else
             {

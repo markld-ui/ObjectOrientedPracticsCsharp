@@ -16,7 +16,8 @@ namespace ObjectOrientedPractics.View.Tabs
     public partial class CartsTab : UserControl
     {
 
-        private List<Customer> _currentCustomer = new List<Customer>();
+        private Customer CurrentCustomer { get; set; }
+
         public List<Customer> Customers { get; set; }
         public List<Item> Items { get; set; }
 
@@ -29,22 +30,52 @@ namespace ObjectOrientedPractics.View.Tabs
             comboBoxCustomerInCart.DataSource = null;
             comboBoxCustomerInCart.DataSource = Customers;
             comboBoxCustomerInCart.DisplayMember = "FullName";
-
-            UpdateListBoxCartItems();
         }
 
-        private void UpdateListBoxCartItems()
+        public void InitializeItemsListBox()
         {
-            listBoxCartItems.Items.Clear(); // Очищаем текущий список
+            listBoxCartItems.Items.Clear();
             foreach (var item in Items)
             {
-                listBoxCartItems.Items.Add(item); // Добавляем товары в ListBox
+                listBoxCartItems.Items.Add($"{item.Name} - {item.Cost}");
+            }
+        }
+
+        public void InitializeCustomersComboBox()
+        {
+            comboBoxCustomerInCart.Items.Clear();
+            foreach (var customer in Customers)
+            {
+                comboBoxCustomerInCart.Items.Add($"{customer.FullName} - {customer.Address.City}");
+            }
+        }
+
+        private void UpdateCartItemsListBox()
+        {
+            listBoxCartOrder.Items.Clear();
+
+            if (CurrentCustomer != null && CurrentCustomer.Cart != null)
+            {
+                foreach (var item in CurrentCustomer.Cart.Items)
+                {
+                    listBoxCartOrder.Items.Add(item);
+                }
             }
         }
 
         public CartsTab()
         {
             InitializeComponent();
+
+            comboBoxCustomerInCart.SelectedIndexChanged += comboBoxCustomers_SelectedIndexChanged;
+            buttonAddToCart.Click += buttonAddToCartClick;
+            buttonRemoveItem.Click += buttonRemoveItemClick;
+        }
+
+        private void comboBoxCustomers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CurrentCustomer = comboBoxCustomerInCart.SelectedItem as Customer;
+            UpdateCartItemsListBox();
         }
 
         private void buttonClearCartMouseClick(object sender, MouseEventArgs e)
@@ -54,6 +85,46 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private void buttonAddToCartClick(object sender, EventArgs e)
         {
+            if (CurrentCustomer == null)
+            {
+                MessageBox.Show("Пожалуйста, выберите покупателя.");
+                return;
+            }
+
+            if (listBoxCartItems.SelectedItem == null)
+            {
+                MessageBox.Show("Пожалуйста, выберите товар.");
+                return;
+            }
+
+            // Получаем выбранный товар и добавляем его в корзину покупателя
+            var selectedItem = listBoxCartItems.SelectedItem as Item;
+            CurrentCustomer.Cart.AddItem(selectedItem);
+
+            // Обновляем список товаров в корзине
+            UpdateCartItemsListBox();
+        }
+
+        private void buttonRemoveItemClick(object sender, EventArgs e)
+        {
+            if (CurrentCustomer == null)
+            {
+                MessageBox.Show("Пожалуйста, выберите покупателя.");
+                return;
+            }
+
+            if (listBoxCartItems.SelectedItem == null)
+            {
+                MessageBox.Show("Пожалуйста, выберите товар для удаления.");
+                return;
+            }
+
+            // Получаем выбранный товар и удаляем его из корзины покупателя
+            var selectedItem = listBoxCartItems.SelectedItem as Item;
+            CurrentCustomer.Cart.RemoveItem(selectedItem);
+
+            // Обновляем список товаров в корзине
+            UpdateCartItemsListBox();
         }
     }
 }
