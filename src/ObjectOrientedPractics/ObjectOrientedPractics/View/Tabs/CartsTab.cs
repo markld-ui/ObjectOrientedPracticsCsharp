@@ -72,7 +72,24 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private void buttonClearCartMouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("Hi");
+            if (comboBoxCustomerInCart.SelectedIndex != -1)
+            {
+                int comboIndex = comboBoxCustomerInCart.SelectedIndex;
+
+                listBoxCartOrder.Items.Clear();
+                CurrentCustomer[comboIndex].Cart.Items.Clear();
+                textBoxAmount.Text = CurrentCustomer[comboIndex].Cart.Amount.ToString();
+                MessageBox.Show("Корзина очищена");
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, выберите покупателя!");
+            }
+
+            if (listBoxCartOrder.Items.Count == 0)
+            {
+                MessageBox.Show("Корзина покупателя уже пуста!");
+            }
         }
 
         private void buttonAddToCartClick(object sender, EventArgs e)
@@ -134,9 +151,17 @@ namespace ObjectOrientedPractics.View.Tabs
                 List<Item> orderlist = new List<Item>();
                 Order order = new Order(CurrentCustomer[comboIndex].Address, orderlist, Convert.ToDouble(CurrentCustomer[comboIndex].Cart.Amount));
                 orderlist.AddRange(CurrentCustomer[comboIndex].Cart.Items);
+                CurrentCustomer[comboIndex].Orders.Add(order);
 
+                listBoxCartOrder.Items.Clear();
+                CurrentCustomer[comboIndex].Cart.Items.Clear();
+                textBoxAmount.Text = "0";
                 MessageBox.Show("Order has been created!");
 
+            }
+            else
+            {
+                MessageBox.Show("Корзина пользователя пуста! Заказ нечем наполнить!");
             }
         }
     }
