@@ -105,6 +105,11 @@ namespace ObjectOrientedPractices.Model
         /// </summary>
         public Category Category { get => _category; set => _category = value; }
 
+        public override string ToString()
+        {
+            return $"{Name} - {Cost}";
+        }
+
 
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Item"/> с заданными параметрами.

@@ -156,7 +156,7 @@ namespace ObjectOrientedPractics.View.Tabs
                 listBoxCartOrder.Items.Clear();
                 CurrentCustomer[comboIndex].Cart.Items.Clear();
                 textBoxAmount.Text = "0";
-                MessageBox.Show("Order has been created!");
+                MessageBox.Show("Заказ был создан!");
 
             }
             else
