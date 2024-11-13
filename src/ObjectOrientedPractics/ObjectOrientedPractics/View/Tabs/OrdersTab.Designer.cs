@@ -41,6 +41,13 @@
             label7 = new Label();
             textBoxAmountInOrder = new TextBox();
             dataGridViewOrder = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Created = new DataGridViewTextBoxColumn();
+            OrderStatus = new DataGridViewTextBoxColumn();
+            Customer = new DataGridViewTextBoxColumn();
+            Address = new DataGridViewTextBoxColumn();
+            Price = new DataGridViewTextBoxColumn();
+            Total = new DataGridViewTextBoxColumn();
             addressControlInOrder = new Controls.AddressControl();
             dataPanelOrder = new Panel();
             comboBoxTimeOrder = new ComboBox();
@@ -50,13 +57,6 @@
             splitContainer1 = new SplitContainer();
             textBoxTotalOrder = new TextBox();
             label10 = new Label();
-            Id = new DataGridViewTextBoxColumn();
-            Created = new DataGridViewTextBoxColumn();
-            OrderStatus = new DataGridViewTextBoxColumn();
-            Customer = new DataGridViewTextBoxColumn();
-            Address = new DataGridViewTextBoxColumn();
-            Price = new DataGridViewTextBoxColumn();
-            Total = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrder).BeginInit();
             dataPanelOrder.SuspendLayout();
             panel1.SuspendLayout();
@@ -80,7 +80,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label2.Location = new Point(3, 3);
+            label2.Location = new Point(5, 3);
             label2.Name = "label2";
             label2.Size = new Size(142, 20);
             label2.TabIndex = 1;
@@ -89,7 +89,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(4, 32);
+            label3.Location = new Point(5, 32);
             label3.Name = "label3";
             label3.Size = new Size(27, 20);
             label3.TabIndex = 2;
@@ -98,7 +98,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(4, 58);
+            label4.Location = new Point(5, 58);
             label4.Name = "label4";
             label4.Size = new Size(64, 20);
             label4.TabIndex = 3;
@@ -143,7 +143,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label6.Location = new Point(4, 351);
+            label6.Location = new Point(5, 351);
             label6.Name = "label6";
             label6.Size = new Size(119, 24);
             label6.TabIndex = 9;
@@ -153,9 +153,9 @@
             // 
             listBoxItemsInOrder.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             listBoxItemsInOrder.FormattingEnabled = true;
-            listBoxItemsInOrder.Location = new Point(0, 378);
+            listBoxItemsInOrder.Location = new Point(5, 378);
             listBoxItemsInOrder.Name = "listBoxItemsInOrder";
-            listBoxItemsInOrder.Size = new Size(556, 184);
+            listBoxItemsInOrder.Size = new Size(551, 184);
             listBoxItemsInOrder.TabIndex = 10;
             // 
             // label7
@@ -172,11 +172,13 @@
             // textBoxAmountInOrder
             // 
             textBoxAmountInOrder.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            textBoxAmountInOrder.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
             textBoxAmountInOrder.Location = new Point(456, 591);
             textBoxAmountInOrder.Name = "textBoxAmountInOrder";
             textBoxAmountInOrder.ReadOnly = true;
-            textBoxAmountInOrder.Size = new Size(100, 27);
+            textBoxAmountInOrder.Size = new Size(100, 30);
             textBoxAmountInOrder.TabIndex = 12;
+            textBoxAmountInOrder.TextAlign = HorizontalAlignment.Right;
             // 
             // dataGridViewOrder
             // 
@@ -191,119 +193,9 @@
             dataGridViewOrder.RowHeadersVisible = false;
             dataGridViewOrder.RowHeadersWidth = 51;
             dataGridViewOrder.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewOrder.Size = new Size(535, 538);
+            dataGridViewOrder.Size = new Size(534, 538);
             dataGridViewOrder.TabIndex = 13;
             dataGridViewOrder.CellClick += dataGridViewOrderCellClick;
-            // 
-            // addressControlInOrder
-            // 
-            addressControlInOrder.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            addressControlInOrder.Apartament = "";
-            addressControlInOrder.Building = "";
-            addressControlInOrder.City = "";
-            addressControlInOrder.Country = "";
-            addressControlInOrder.Location = new Point(4, 122);
-            addressControlInOrder.Name = "addressControlInOrder";
-            addressControlInOrder.PostIndex = "";
-            addressControlInOrder.Size = new Size(552, 210);
-            addressControlInOrder.Street = "";
-            addressControlInOrder.TabIndex = 8;
-            // 
-            // dataPanelOrder
-            // 
-            dataPanelOrder.Controls.Add(comboBoxTimeOrder);
-            dataPanelOrder.Controls.Add(label8);
-            dataPanelOrder.Controls.Add(label9);
-            dataPanelOrder.Location = new Point(215, 3);
-            dataPanelOrder.Name = "dataPanelOrder";
-            dataPanelOrder.Size = new Size(233, 100);
-            dataPanelOrder.TabIndex = 14;
-            // 
-            // comboBoxTimeOrder
-            // 
-            comboBoxTimeOrder.FormattingEnabled = true;
-            comboBoxTimeOrder.Location = new Point(112, 26);
-            comboBoxTimeOrder.Name = "comboBoxTimeOrder";
-            comboBoxTimeOrder.Size = new Size(121, 28);
-            comboBoxTimeOrder.TabIndex = 9;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(3, 29);
-            label8.Name = "label8";
-            label8.Size = new Size(103, 20);
-            label8.TabIndex = 8;
-            label8.Text = "Delivery Time:";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label9.Location = new Point(3, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(141, 20);
-            label9.TabIndex = 7;
-            label9.Text = "Priority Options";
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(splitContainer1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1104, 682);
-            panel1.TabIndex = 15;
-            // 
-            // splitContainer1
-            // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 0);
-            splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            splitContainer1.Panel1.Controls.Add(label1);
-            splitContainer1.Panel1.Controls.Add(dataGridViewOrder);
-            // 
-            // splitContainer1.Panel2
-            // 
-            splitContainer1.Panel2.Controls.Add(textBoxTotalOrder);
-            splitContainer1.Panel2.Controls.Add(label10);
-            splitContainer1.Panel2.Controls.Add(label2);
-            splitContainer1.Panel2.Controls.Add(textBoxAmountInOrder);
-            splitContainer1.Panel2.Controls.Add(label7);
-            splitContainer1.Panel2.Controls.Add(label6);
-            splitContainer1.Panel2.Controls.Add(dataPanelOrder);
-            splitContainer1.Panel2.Controls.Add(label3);
-            splitContainer1.Panel2.Controls.Add(label4);
-            splitContainer1.Panel2.Controls.Add(listBoxItemsInOrder);
-            splitContainer1.Panel2.Controls.Add(label5);
-            splitContainer1.Panel2.Controls.Add(addressControlInOrder);
-            splitContainer1.Panel2.Controls.Add(textBoxIdOrder);
-            splitContainer1.Panel2.Controls.Add(textBoxCreatedOrder);
-            splitContainer1.Panel2.Controls.Add(comboBoxStatusOrder);
-            splitContainer1.Size = new Size(1104, 682);
-            splitContainer1.SplitterDistance = 537;
-            splitContainer1.TabIndex = 0;
-            // 
-            // textBoxTotalOrder
-            // 
-            textBoxTotalOrder.Location = new Point(314, 591);
-            textBoxTotalOrder.Name = "textBoxTotalOrder";
-            textBoxTotalOrder.ReadOnly = true;
-            textBoxTotalOrder.Size = new Size(100, 27);
-            textBoxTotalOrder.TabIndex = 16;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label10.Location = new Point(357, 568);
-            label10.Name = "label10";
-            label10.Size = new Size(57, 20);
-            label10.TabIndex = 15;
-            label10.Text = "Total:";
             // 
             // Id
             // 
@@ -367,6 +259,120 @@
             Total.ReadOnly = true;
             Total.SortMode = DataGridViewColumnSortMode.NotSortable;
             Total.Width = 125;
+            // 
+            // addressControlInOrder
+            // 
+            addressControlInOrder.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            addressControlInOrder.Apartament = "";
+            addressControlInOrder.Building = "";
+            addressControlInOrder.City = "";
+            addressControlInOrder.Country = "";
+            addressControlInOrder.Location = new Point(5, 122);
+            addressControlInOrder.Name = "addressControlInOrder";
+            addressControlInOrder.PostIndex = "";
+            addressControlInOrder.Size = new Size(551, 210);
+            addressControlInOrder.Street = "";
+            addressControlInOrder.TabIndex = 8;
+            // 
+            // dataPanelOrder
+            // 
+            dataPanelOrder.Controls.Add(comboBoxTimeOrder);
+            dataPanelOrder.Controls.Add(label8);
+            dataPanelOrder.Controls.Add(label9);
+            dataPanelOrder.Location = new Point(263, 3);
+            dataPanelOrder.Name = "dataPanelOrder";
+            dataPanelOrder.Size = new Size(237, 59);
+            dataPanelOrder.TabIndex = 14;
+            // 
+            // comboBoxTimeOrder
+            // 
+            comboBoxTimeOrder.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxTimeOrder.FormattingEnabled = true;
+            comboBoxTimeOrder.Location = new Point(112, 26);
+            comboBoxTimeOrder.Name = "comboBoxTimeOrder";
+            comboBoxTimeOrder.Size = new Size(121, 28);
+            comboBoxTimeOrder.TabIndex = 9;
+            comboBoxTimeOrder.SelectedIndexChanged += comboBoxTimeOrderSelectedIndexChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(3, 29);
+            label8.Name = "label8";
+            label8.Size = new Size(103, 20);
+            label8.TabIndex = 8;
+            label8.Text = "Delivery Time:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label9.Location = new Point(3, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(141, 20);
+            label9.TabIndex = 7;
+            label9.Text = "Priority Options";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(splitContainer1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1104, 682);
+            panel1.TabIndex = 15;
+            // 
+            // splitContainer1
+            // 
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 0);
+            splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(label1);
+            splitContainer1.Panel1.Controls.Add(dataGridViewOrder);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(textBoxTotalOrder);
+            splitContainer1.Panel2.Controls.Add(label10);
+            splitContainer1.Panel2.Controls.Add(label2);
+            splitContainer1.Panel2.Controls.Add(textBoxAmountInOrder);
+            splitContainer1.Panel2.Controls.Add(label7);
+            splitContainer1.Panel2.Controls.Add(label6);
+            splitContainer1.Panel2.Controls.Add(dataPanelOrder);
+            splitContainer1.Panel2.Controls.Add(label3);
+            splitContainer1.Panel2.Controls.Add(label4);
+            splitContainer1.Panel2.Controls.Add(listBoxItemsInOrder);
+            splitContainer1.Panel2.Controls.Add(label5);
+            splitContainer1.Panel2.Controls.Add(addressControlInOrder);
+            splitContainer1.Panel2.Controls.Add(textBoxIdOrder);
+            splitContainer1.Panel2.Controls.Add(textBoxCreatedOrder);
+            splitContainer1.Panel2.Controls.Add(comboBoxStatusOrder);
+            splitContainer1.Size = new Size(1104, 682);
+            splitContainer1.SplitterDistance = 537;
+            splitContainer1.TabIndex = 0;
+            // 
+            // textBoxTotalOrder
+            // 
+            textBoxTotalOrder.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            textBoxTotalOrder.Location = new Point(314, 591);
+            textBoxTotalOrder.Name = "textBoxTotalOrder";
+            textBoxTotalOrder.ReadOnly = true;
+            textBoxTotalOrder.Size = new Size(100, 28);
+            textBoxTotalOrder.TabIndex = 16;
+            textBoxTotalOrder.TextAlign = HorizontalAlignment.Right;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label10.Location = new Point(357, 568);
+            label10.Name = "label10";
+            label10.Size = new Size(57, 20);
+            label10.TabIndex = 15;
+            label10.Text = "Total:";
             // 
             // OrdersTab
             // 

@@ -37,6 +37,7 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            checkBoxIsPriority = new CheckBox();
             addressControl = new ObjectOrientedPractics.View.Controls.AddressControl();
             textBoxFullNameCustomers = new TextBox();
             textBoxIdCustomers = new TextBox();
@@ -145,6 +146,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(checkBoxIsPriority);
             panel2.Controls.Add(addressControl);
             panel2.Controls.Add(textBoxFullNameCustomers);
             panel2.Controls.Add(textBoxIdCustomers);
@@ -157,13 +159,24 @@
             panel2.Size = new Size(719, 682);
             panel2.TabIndex = 2;
             // 
+            // checkBoxIsPriority
+            // 
+            checkBoxIsPriority.AutoSize = true;
+            checkBoxIsPriority.Font = new Font("Segoe UI", 10F);
+            checkBoxIsPriority.Location = new Point(132, 163);
+            checkBoxIsPriority.Name = "checkBoxIsPriority";
+            checkBoxIsPriority.Size = new Size(103, 27);
+            checkBoxIsPriority.TabIndex = 7;
+            checkBoxIsPriority.Text = "Is Priority";
+            checkBoxIsPriority.UseVisualStyleBackColor = true;
+            // 
             // addressControl
             // 
             addressControl.Apartament = "";
             addressControl.Building = "";
             addressControl.City = "";
             addressControl.Country = "";
-            addressControl.Location = new Point(3, 163);
+            addressControl.Location = new Point(0, 196);
             addressControl.Name = "addressControl";
             addressControl.PostIndex = "";
             addressControl.Size = new Size(712, 204);
@@ -250,5 +263,6 @@
         private TextBox textBoxIdCustomers;
         private TextBox textBoxFullNameCustomers;
         private ObjectOrientedPractics.View.Controls.AddressControl addressControl;
+        private CheckBox checkBoxIsPriority;
     }
 }

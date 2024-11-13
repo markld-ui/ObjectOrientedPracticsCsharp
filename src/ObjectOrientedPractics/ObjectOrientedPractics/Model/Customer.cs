@@ -21,6 +21,8 @@ namespace ObjectOrientedPractices.Model
         private Address _address;
         private Cart _cart;
         private List<Order> _orders;
+        private string _time;
+        private bool _isPriority = false;
 
         /// <summary>
         /// Уникальный идентификатор клиента.
@@ -95,6 +97,30 @@ namespace ObjectOrientedPractices.Model
             set
             {
                 _orders = value;
+            }
+        }
+
+        public string Time
+        {
+            get 
+            {
+                return _time;
+            }
+            set
+            {
+                _time = value;
+            }
+        }
+
+        public bool IsPriority
+        {
+            get
+            {
+                return _isPriority;
+            }
+            set
+            {
+                _isPriority = value;
             }
         }
 

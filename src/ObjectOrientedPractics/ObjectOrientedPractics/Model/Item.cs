@@ -105,6 +105,11 @@ namespace ObjectOrientedPractices.Model
         /// </summary>
         public Category Category { get => _category; set => _category = value; }
 
+        /// <summary>
+        /// Переопределяет метод ToString для представления объекта в виде строки.
+        /// Возвращает строку, содержащую имя и стоимость объекта.
+        /// </summary>
+        /// <returns>Строка в формате "Имя - Стоимость".</returns>
         public override string ToString()
         {
             return $"{Name} - {Cost}";

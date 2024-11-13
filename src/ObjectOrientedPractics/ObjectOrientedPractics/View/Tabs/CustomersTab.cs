@@ -96,6 +96,16 @@ namespace ObjectOrientedPractices.View.Tabs
                     addressControl.Building,
                     addressControl.Apartament
                     );
+
+                if (checkBoxIsPriority.Checked == true )
+                {
+                    customer.IsPriority = true;
+                }
+                else
+                {
+                    customer.IsPriority = false;
+                }
+
                 _customers.Add(customer);
                 listBoxCustomers.Items.Add($"{customer.FullName} - {customer.Address.Country}, {customer.Address.City}, {customer.Address.Street}");
 
@@ -179,6 +189,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBoxFullNameCustomers.Text = selectedCustomer.FullName;
                 textBoxIdCustomers.Text = selectedCustomer.Id.ToString();
                 addressControl.FillAddressFields(selectedCustomer.Address);
+                checkBoxIsPriority.Checked = selectedCustomer.IsPriority;
             }
         }
     }

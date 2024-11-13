@@ -12,11 +12,25 @@ using ObjectOrientedPractics.View.Controls;
 
 namespace ObjectOrientedPractics.View.Tabs
 {
+    /// <summary>
+    /// Представляет вкладку для управления заказами клиентов.
+    /// Этот класс отвечает за отображение, обновление и редактирование информации о заказах.
+    /// </summary>
     public partial class OrdersTab : UserControl
     {
+        /// <summary>
+        /// Список клиентов, чьи заказы будут отображаться.
+        /// </summary>
         private List<Customer> _customers = new List<Customer>();
 
+        /// <summary>
+        /// Экземпляр приоритетного заказа.
+        /// </summary>
+        private PriorityOrder _priorityOrder = new PriorityOrder();
 
+        /// <summary>
+        /// Свойство, представляющее список клиентов.
+        /// </summary>
         public List<Customer> Customers
         {
             get
@@ -29,16 +43,43 @@ namespace ObjectOrientedPractics.View.Tabs
             }
         }
 
+        /// <summary>
+        /// Свойство, представляющее приоритетный заказ.
+        /// </summary>
+        public PriorityOrder PriorityOrder
+        {
+            get
+            {
+                return _priorityOrder;
+            }
+            set
+            {
+                _priorityOrder = value;
+            }
+        }
+
+        /// <summary>
+        /// Конструктор для инициализации компонентов вкладки заказов.
+        /// Устанавливает источник данных для комбобокса статуса заказа и скрывает панель данных заказа по умолчанию.
+        /// </summary>
         public OrdersTab()
         {
             InitializeComponent();
             comboBoxStatusOrder.DataSource = Enum.GetValues(typeof(OrderStatus));
             comboBoxStatusOrder.Text = null;
             dataPanelOrder.Visible = false;
+
+            comboBoxTimeOrder.DataSource = PriorityOrder.PriorityTimeData;
+            comboBoxTimeOrder.Text = null;
         }
 
+        /// <summary>
+        /// Обновляет данные заказов в таблице.
+        /// Заполняет таблицу данными о заказах для каждого клиента.
+        /// </summary>
         public void UpdateOrders()
         {
+            comboBoxTimeOrder.DataSource = PriorityOrder.PriorityTimeData;
             dataGridViewOrder.Rows.Clear();
             for (int i = 0; i < _customers.Count; i++)
             {
@@ -51,11 +92,16 @@ namespace ObjectOrientedPractics.View.Tabs
                             _customers[i].Orders[j].Status, _customers[i].FullName,
                             $"{address.Index}, {address.Country}, {address.City}, {address.Street}, {address.Building}, {address.Apartament}",
                             _customers[i].Orders[j].TotalPrice);
+
+                        comboBoxTimeOrder.Text = _customers[i].Time;
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Очищает и обновляет элементы управления на вкладке заказов.
+        /// </summary>
         public void RefreshData()
         {
             addressControlInOrder.PostIndex = null;
@@ -71,8 +117,13 @@ namespace ObjectOrientedPractics.View.Tabs
             textBoxAmountInOrder.Text = null;
 
             listBoxItemsInOrder.DataSource = null;
+            comboBoxTimeOrder.DataSource = null;
         }
 
+        /// <summary>
+        /// Обработчик события клика по ячейке в таблице заказов.
+        /// Заполняет элементы управления данными выбранного заказа.
+        /// </summary>
         private void dataGridViewOrderCellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -101,6 +152,15 @@ namespace ObjectOrientedPractics.View.Tabs
                 {
                     if (_customers[j].Id == id)
                     {
+                        if (_customers[j].IsPriority == true)
+                        {
+                            dataPanelOrder.Visible = true;
+                            comboBoxTimeOrder.Text = _customers[j].Time;
+                        }
+                        else
+                        {
+                            dataPanelOrder.Visible = false;
+                        }
                         if (_customers[j].Orders.Count > 1)
                         {
                             for (int k = 0; k < _customers[j].Orders.Count; k++)
@@ -125,7 +185,10 @@ namespace ObjectOrientedPractics.View.Tabs
             }
         }
 
-
+        /// <summary>
+        /// Обработчик изменения выбранного статуса заказа.
+        /// Обновляет статус заказа в модели и обновляет таблицу заказов.
+        /// </summary>
         private void comboBoxStatusOrderSelectedIndexChanged(object sender, EventArgs e)
         {
             if (dataGridViewOrder.RowCount > 0 && comboBoxStatusOrder.SelectedItem != null)
@@ -148,6 +211,18 @@ namespace ObjectOrientedPractics.View.Tabs
                     }
                 }
             }
+        }
+
+        private void comboBoxTimeOrderSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxTimeOrder.SelectedItem != null)
+            {
+                foreach (var time in Customers)
+                {
+                    time.Time = comboBoxTimeOrder.SelectedItem.ToString();
+                }
+            }
+            UpdateOrders();
         }
     }
 }

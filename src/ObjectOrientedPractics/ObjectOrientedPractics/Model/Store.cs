@@ -25,6 +25,7 @@ namespace ObjectOrientedPractices.Model
             _items.Add(new Item("Арбуз", "Свежий", 500, Category.Vegetables));
             _customers.Add(new Customer("Слиньков Роман Викторович", 1, "Россия", "Екатеринбург", "Ленина", "1", "194"));
             _customers.Add(new Customer("Слиньков Виктор Владимирович", 2, "Россия", "Екатеринбург", "Молодогвардейцев", "29", "1"));
+            _customers[1].IsPriority = true;
         }
 
         /// <summary>
