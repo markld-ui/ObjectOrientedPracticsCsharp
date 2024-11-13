@@ -7,6 +7,8 @@ using System.Xml.Linq;
 using ObjectOrientedPractices.Exceptions;
 using ObjectOrientedPractices.Services;
 using ObjectOrientedPractics.Model;
+using ObjectOrientedPractices.Model.Discounts;
+using ObjectOrientedPractices.Model.Orders;
 
 namespace ObjectOrientedPractices.Model
 {
@@ -23,6 +25,7 @@ namespace ObjectOrientedPractices.Model
         private List<Order> _orders;
         private string _time;
         private bool _isPriority = false;
+        private List<IDiscount> _discounts;
 
         /// <summary>
         /// Уникальный идентификатор клиента.
@@ -100,6 +103,9 @@ namespace ObjectOrientedPractices.Model
             }
         }
 
+        /// <summary>
+        /// Получает или задает время, связанное с клиентом.
+        /// </summary>
         public string Time
         {
             get 
@@ -112,6 +118,9 @@ namespace ObjectOrientedPractices.Model
             }
         }
 
+        /// <summary>
+        /// Получает или задает статус приоритета клиента.
+        /// </summary>
         public bool IsPriority
         {
             get
@@ -124,6 +133,21 @@ namespace ObjectOrientedPractices.Model
             }
         }
 
+        /// <summary>
+        /// Получает или устанавливает список скидок.
+        /// </summary>
+        /// <value>Список объектов, реализующих интерфейс <see cref="IDiscount"/>.</value>
+        public List<IDiscount> Discounts
+        {
+            get
+            {
+                return _discounts;
+            }
+            set
+            {
+                _discounts = value;
+            }
+        }
 
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Customer"/> с заданными параметрами.
@@ -149,6 +173,9 @@ namespace ObjectOrientedPractices.Model
                 apartament
                 );
             Orders = new List<Order>();
+            Discounts = new List<IDiscount>();
+            PointsDiscount pointsDiscount = new PointsDiscount();
+            Discounts.Add(pointsDiscount);
         }
     }
 }

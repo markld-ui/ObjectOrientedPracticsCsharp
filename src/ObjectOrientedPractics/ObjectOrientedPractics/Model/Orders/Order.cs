@@ -4,10 +4,12 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using ObjectOrientedPractices.Model;
 using ObjectOrientedPractices.Services;
+using ObjectOrientedPractices.Model.Enums;
+using ObjectOrientedPractices.Model.Discounts;
+using ObjectOrientedPractices.Model;
 
-namespace ObjectOrientedPractices.Model
+namespace ObjectOrientedPractices.Model.Orders
 {
     public class Order
     {
@@ -55,7 +57,7 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Общая стоимость заказа.
         /// </summary>
-        public double TotalPrice
+        public double Amount
         {
             get
             {
@@ -81,6 +83,22 @@ namespace ObjectOrientedPractices.Model
             set { _status = value; }
         }
 
+        public double DiscountAmount { get; set; }
+
+        public double Total
+        {
+            get
+            {
+                double sumTotal = 0.0;
+                foreach (Item item in _items)
+                {
+                    sumTotal += item.Cost;
+                }
+                sumTotal -= DiscountAmount;
+                return sumTotal;
+            }
+        }
+
         /// <summary>
         /// Конструктор класса <see cref="Order"/>.
         /// </summary>
@@ -91,7 +109,7 @@ namespace ObjectOrientedPractices.Model
             _id = IdGenerator.GetNextId();
             _date = DateTime.Now;
             Address = address;
-            Items = items; 
+            Items = items;
             Status = OrderStatus.New;
             _amount = amount;
         }

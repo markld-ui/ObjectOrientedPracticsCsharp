@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ObjectOrientedPractices.Model;
+using ObjectOrientedPractices.Model.Enums;
+using ObjectOrientedPractices.Model.Orders;
 using ObjectOrientedPractics.View.Controls;
 
 namespace ObjectOrientedPractics.View.Tabs
@@ -91,7 +93,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         dataGridViewOrder.Rows.Add(_customers[i].Id, _customers[i].Orders[j].Date,
                             _customers[i].Orders[j].Status, _customers[i].FullName,
                             $"{address.Index}, {address.Country}, {address.City}, {address.Street}, {address.Building}, {address.Apartament}",
-                            _customers[i].Orders[j].TotalPrice);
+                            _customers[i].Orders[j].Amount);
 
                         comboBoxTimeOrder.Text = _customers[i].Time;
                     }
@@ -213,6 +215,9 @@ namespace ObjectOrientedPractics.View.Tabs
             }
         }
 
+        /// <summary>
+        /// Обрабатывает изменение выбранного элемента в комбобоксе времени заказа.
+        /// </summary>
         private void comboBoxTimeOrderSelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxTimeOrder.SelectedItem != null)

@@ -3,6 +3,10 @@ using ObjectOrientedPractices.View.Tabs;
 
 namespace ObjectOrientedPractices
 {
+    /// <summary>
+    /// Основное окно приложения, представляющее главный интерфейс пользователя.
+    /// Этот класс управляет загрузкой данных и взаимодействием с различными вкладками.
+    /// </summary>
     public partial class MainWindow : Form
     {
 
@@ -67,6 +71,10 @@ namespace ObjectOrientedPractices
             UpdatePrirityOrder();
         }
 
+        /// <summary>
+        /// Обновляет список приоритетных заказов на основе текущих клиентов в корзине.
+        /// Если у клиента есть приоритет, он добавляется в список приоритетных заказов.
+        /// </summary>
         private void UpdatePrirityOrder()
         {
             if (priorityOrdersTab1.Customers.Count > 0)

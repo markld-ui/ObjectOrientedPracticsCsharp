@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ObjectOrientedPractices.Model;
 using ObjectOrientedPractices.Services;
 using ObjectOrientedPractices.Exceptions;
+using ObjectOrientedPractices.Model.Enums;
 
 namespace ObjectOrientedPractices.View.Tabs
 {
@@ -49,13 +50,6 @@ namespace ObjectOrientedPractices.View.Tabs
                 _items = value;
                 UpdateItemsListBox();
             }
-        }
-
-        public void RefreshData()
-        {
-            listBoxItems.DataSource = null;
-            listBoxItems.DataSource = _items;
-
         }
 
         /// <summary>

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ObjectOrientedPractices.Model;
 
-namespace ObjectOrientedPractices.Model
+namespace ObjectOrientedPractices.Model.Orders
 {
 
     /// <summary>
@@ -54,6 +55,9 @@ namespace ObjectOrientedPractices.Model
             set { _priorityOrderTime = value; }
         }
 
+        /// <summary>
+        /// Получает список строк, содержащий данные о времени приоритетной доставки.
+        /// </summary>
         public List<string> PriorityTimeData
         {
             get
@@ -69,7 +73,7 @@ namespace ObjectOrientedPractices.Model
         /// <param name="address">Адрес для доставки заказа.</param>
         /// <param name="items">Список товаров в заказе.</param>
         /// <param name="x">Сумма заказа.</param>
-        public PriorityOrder(Address address, List<Item> items, double x) : base(address, items, x) 
+        public PriorityOrder(Address address, List<Item> items, double x) : base(address, items, x)
         {
             PriorityOrderDate = DateTime.Today;
             PriorityOrderTime = null;

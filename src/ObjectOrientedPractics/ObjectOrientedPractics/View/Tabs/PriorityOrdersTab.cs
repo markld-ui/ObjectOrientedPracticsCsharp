@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ObjectOrientedPractices.Model;
+using ObjectOrientedPractices.Model.Enums;
+using ObjectOrientedPractices.Model.Orders;
 
 namespace ObjectOrientedPractics.View.Tabs
 {
@@ -143,7 +145,7 @@ namespace ObjectOrientedPractics.View.Tabs
                             addressControlInPriority.Building = address.Building.ToString();
                             addressControlInPriority.Apartament = address.Apartament.ToString();
 
-                            textBoxAmountPriority.Text = order.TotalPrice.ToString();
+                            textBoxAmountPriority.Text = order.Amount.ToString();
 
                             listBoxItemsInPriority.DataSource = null;
                             listBoxItemsInPriority.DataSource = order.Items;

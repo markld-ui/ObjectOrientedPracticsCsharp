@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ObjectOrientedPractices.Exceptions;
 using ObjectOrientedPractices.Services;
+using ObjectOrientedPractices.Model.Enums;
 
 namespace ObjectOrientedPractices.Model
 {
