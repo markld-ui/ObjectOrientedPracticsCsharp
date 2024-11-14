@@ -10,9 +10,11 @@ using System.Windows.Forms;
 using ObjectOrientedPractices.Model;
 using ObjectOrientedPractices.Services;
 using ObjectOrientedPractices.Exceptions;
+using ObjectOrientedPractices.Model.Discounts;
 using System.Diagnostics.Metrics;
 using System.IO;
 using System.Net;
+using System.Reflection;
 
 namespace ObjectOrientedPractices.View.Tabs
 {
@@ -26,6 +28,8 @@ namespace ObjectOrientedPractices.View.Tabs
         /// Список всех добавленных клиентов.
         /// </summary>
         private List<Customer> _customers = new();
+
+        public PercentDiscount newDiscount { get; set; }
 
         /// <summary>
         /// Конструктор по умолчанию, инициализирующий вкладку CustomersTab.
@@ -97,7 +101,7 @@ namespace ObjectOrientedPractices.View.Tabs
                     addressControl.Apartament
                     );
 
-                if (checkBoxIsPriority.Checked == true )
+                if (checkBoxIsPriority.Checked == true)
                 {
                     customer.IsPriority = true;
                 }
@@ -190,6 +194,77 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBoxIdCustomers.Text = selectedCustomer.Id.ToString();
                 addressControl.FillAddressFields(selectedCustomer.Address);
                 checkBoxIsPriority.Checked = selectedCustomer.IsPriority;
+                listBoxDiscounts.DataSource = null;
+                listBoxDiscounts.DataSource = Customers[index].Discounts;
+                listBoxDiscounts.DisplayMember = "Info";
+            }
+        }
+
+        private void buttonAddDiscountClick(object sender, EventArgs e)
+        {
+            if (listBoxCustomers.SelectedIndex != -1)
+            {
+                DiscountsTab discountTab = new DiscountsTab();
+                discountTab.CustomersTabForm = this;
+                int index = listBoxCustomers.SelectedIndex;
+
+                if (!discountTab.Visible)
+                {
+                    discountTab.ShowDialog();
+                }
+                if (newDiscount != null)
+                {
+                    for (int i = 0; i < Customers[index].Discounts.Count; i++)
+                    {
+                        if (newDiscount.Info == Customers[index].Discounts[i].Info)
+                        {
+                            newDiscount = null;
+                            continue;
+                        }
+                    }
+
+                    if (newDiscount == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        Customers[index].Discounts.Add(newDiscount);
+                        listBoxDiscounts.DataSource = null;
+                        listBoxDiscounts.DataSource = Customers[index].Discounts;
+                        listBoxDiscounts.DisplayMember = "Info";
+                        newDiscount = null;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+                discountTab.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Выберите покупателя!");
+            }
+        }
+
+        private void buttonRemoveDiscountClick(object sender, EventArgs e)
+        {
+            int indexDiscount = listBoxDiscounts.SelectedIndex;
+            int indexCustomer = listBoxCustomers.SelectedIndex;
+
+            if (indexDiscount == 0)
+            {
+                MessageBox.Show("Накопительную скидку удалить нельзя!");
+                return;
+            }
+
+            if (indexDiscount > 0)
+            {
+                Customers[indexCustomer].Discounts.RemoveAt(indexDiscount);
+                listBoxDiscounts.DataSource = null;
+                listBoxDiscounts.DataSource = Customers[indexCustomer].Discounts;
+                listBoxDiscounts.DisplayMember = "Info";
             }
         }
     }

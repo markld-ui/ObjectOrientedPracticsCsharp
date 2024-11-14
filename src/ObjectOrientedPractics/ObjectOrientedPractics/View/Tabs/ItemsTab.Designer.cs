@@ -65,7 +65,7 @@
             // 
             splitter1.Location = new Point(0, 0);
             splitter1.Name = "splitter1";
-            splitter1.Size = new Size(4, 682);
+            splitter1.Size = new Size(4, 815);
             splitter1.TabIndex = 0;
             splitter1.TabStop = false;
             // 
@@ -82,7 +82,7 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(panel5);
-            splitContainer1.Size = new Size(1100, 682);
+            splitContainer1.Size = new Size(1100, 815);
             splitContainer1.SplitterDistance = 481;
             splitContainer1.TabIndex = 1;
             // 
@@ -94,7 +94,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(481, 682);
+            panel1.Size = new Size(481, 815);
             panel1.TabIndex = 0;
             // 
             // panel4
@@ -103,7 +103,7 @@
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 42);
             panel4.Name = "panel4";
-            panel4.Size = new Size(481, 566);
+            panel4.Size = new Size(481, 699);
             panel4.TabIndex = 4;
             // 
             // listBoxItems
@@ -112,7 +112,7 @@
             listBoxItems.FormattingEnabled = true;
             listBoxItems.Location = new Point(0, 0);
             listBoxItems.Name = "listBoxItems";
-            listBoxItems.Size = new Size(481, 566);
+            listBoxItems.Size = new Size(481, 699);
             listBoxItems.TabIndex = 0;
             listBoxItems.MouseClick += listBoxItemsMouseClick;
             // 
@@ -141,7 +141,7 @@
             panel2.Controls.Add(removeBtnItems);
             panel2.Controls.Add(addBtnItems);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 608);
+            panel2.Location = new Point(0, 741);
             panel2.Name = "panel2";
             panel2.Size = new Size(481, 74);
             panel2.TabIndex = 2;
@@ -184,7 +184,7 @@
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(615, 682);
+            panel5.Size = new Size(615, 815);
             panel5.TabIndex = 0;
             // 
             // label_category
@@ -292,7 +292,7 @@
             Controls.Add(splitContainer1);
             Controls.Add(splitter1);
             Name = "ItemsTab";
-            Size = new Size(1104, 682);
+            Size = new Size(1104, 815);
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();

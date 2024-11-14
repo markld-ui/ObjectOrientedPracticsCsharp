@@ -49,6 +49,35 @@ namespace ObjectOrientedPractics.View.Tabs
             comboBoxCustomerInCart.DisplayMember = "FullName";
         }
 
+        private void RefreshDiscount()
+        {
+            checkedListBoxDiscounts.Items.Clear();
+            int indexCustomer = comboBoxCustomerInCart.SelectedIndex;
+
+            foreach (var discount in CurrentCustomer[indexCustomer].Discounts)
+            {
+                checkedListBoxDiscounts.Items.Add(discount.Info);
+            }
+
+            for (int i = 0; i < checkedListBoxDiscounts.Items.Count; i++)
+            {
+                checkedListBoxDiscounts.SetItemChecked(i, true);
+            }
+
+            double sum = 0;
+            for (int i = 0; i < checkedListBoxDiscounts.Items.Count; i++)
+            {
+                CheckState state = checkedListBoxDiscounts.GetItemCheckState(i);
+
+                if (state == CheckState.Checked)
+                {
+                    sum += CurrentCustomer[indexCustomer].Discounts[i].Calculate(CurrentCustomer[indexCustomer].Cart.Items);
+                }
+            }
+            textBoxDiscountAmount.Text = sum.ToString();
+            textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
+        }
+
         /// <summary>
         /// Инициализирует список товаров в ListBox.
         /// </summary>
@@ -102,6 +131,24 @@ namespace ObjectOrientedPractics.View.Tabs
                 MessageBox.Show("Пожалуйста, выберите покупателя!");
             }
 
+            if (checkedListBoxDiscounts.Items.Count > 0)
+            {
+                int comboIndex = comboBoxCustomerInCart.SelectedIndex;
+                double sum = 0.0;
+
+                for (int i = 0; i < checkedListBoxDiscounts.Items.Count; i++)
+                {
+                    CheckState state = checkedListBoxDiscounts.GetItemCheckState(i);
+
+                    if (state == CheckState.Checked)
+                    {
+                        sum += CurrentCustomer[comboIndex].Discounts[i].Calculate(CurrentCustomer[comboIndex].Cart.Items);
+                    }
+                }
+                textBoxDiscountAmount.Text = sum.ToString();
+                textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
+            }
+
             if (listBoxCartOrder.Items.Count == 0)
             {
                 MessageBox.Show("Корзина покупателя уже пуста!");
@@ -131,6 +178,23 @@ namespace ObjectOrientedPractics.View.Tabs
             CurrentCustomer[comboIndex].Cart.Items.Add((Item)listBoxCartItems.SelectedItem);
             listBoxCartOrder.Items.Add($"{((Item)listBoxCartItems.SelectedItem).Name} - {((Item)listBoxCartItems.SelectedItem).Cost}");
             textBoxAmount.Text = $"{CurrentCustomer[comboIndex].Cart.Amount.ToString()}.0";
+
+            if (checkedListBoxDiscounts.Items.Count > 0)
+            {
+                double sum = 0.0;
+
+                for (int i = 0; i < checkedListBoxDiscounts.Items.Count; i++)
+                {
+                    CheckState state = checkedListBoxDiscounts.GetItemCheckState(i);
+
+                    if (state == CheckState.Checked)
+                    {
+                        sum += CurrentCustomer[comboIndex].Discounts[i].Calculate(CurrentCustomer[comboIndex].Cart.Items);
+                    }
+                }
+                textBoxDiscountAmount.Text = sum.ToString();
+                textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
+            }
         }
 
         /// <summary>
@@ -156,6 +220,23 @@ namespace ObjectOrientedPractics.View.Tabs
             CurrentCustomer[comboIndex].Cart.Items.RemoveAt(choiceItem);
             listBoxCartOrder.Items.RemoveAt(choiceItem);
             textBoxAmount.Text = $"{CurrentCustomer[comboIndex].Cart.Amount.ToString()}.0";
+
+            if (checkedListBoxDiscounts.Items.Count > 0)
+            {
+                double sum = 0.0;
+
+                for (int i = 0; i < checkedListBoxDiscounts.Items.Count; i++)
+                {
+                    CheckState state = checkedListBoxDiscounts.GetItemCheckState(i);
+
+                    if (state == CheckState.Checked)
+                    {
+                        sum += CurrentCustomer[comboIndex].Discounts[i].Calculate(CurrentCustomer[comboIndex].Cart.Items);
+                    }
+                }
+                textBoxDiscountAmount.Text = sum.ToString();
+                textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
+            }
         }
 
         /// <summary>
@@ -166,8 +247,34 @@ namespace ObjectOrientedPractics.View.Tabs
         {
             if (comboBoxCustomerInCart.SelectedItem != null)
             {
+                listBoxCartOrder.Items.Clear();
+                checkedListBoxDiscounts.Items.Clear();
+
+                if (!CurrentCustomer.Contains((Customer)comboBoxCustomerInCart.SelectedItem))
+                {
+                    CurrentCustomer.Add((Customer)comboBoxCustomerInCart.SelectedItem);
+                }
+
                 int comboIndex = comboBoxCustomerInCart.SelectedIndex;
                 textBoxAmount.Text = CurrentCustomer[comboIndex].Cart.Amount.ToString();
+
+                if (CurrentCustomer[comboIndex].Cart.Items.Count == 0)
+                {
+                    listBoxCartOrder.Items.Clear();
+                }
+                else
+                {
+                    foreach (var item in CurrentCustomer[comboIndex].Cart.Items)
+                    {
+                        listBoxCartOrder.Items.Add(item);
+                    }
+                }
+                RefreshDiscount();
+            }
+            else
+            {
+                listBoxCartOrder.Items.Clear();
+                checkedListBoxDiscounts.Items.Clear();
             }
         }
 
@@ -185,7 +292,26 @@ namespace ObjectOrientedPractics.View.Tabs
                 {
                     PriorityOrder priorityOrder = new PriorityOrder(CurrentCustomer[comboIndex].Address, orderlist, Convert.ToDouble(CurrentCustomer[comboIndex].Cart.Amount));
                     orderlist.AddRange(CurrentCustomer[comboIndex].Cart.Items);
+                    priorityOrder.DiscountAmount = Convert.ToDouble(textBoxDiscountAmount.Text);
                     CurrentCustomer[comboIndex].Orders.Add(priorityOrder);
+
+                    if (textBoxDiscountAmount.Text != "0")
+                    {
+                        for (int i = 0; i < CurrentCustomer[comboIndex].Discounts.Count; i++)
+                        {
+                            CheckState state = checkedListBoxDiscounts.GetItemCheckState(i);
+
+                            if (state == CheckState.Checked)
+                            {
+                                CurrentCustomer[comboIndex].Discounts[i].Apply(CurrentCustomer[comboIndex].Cart.Items);
+                            }
+                        }
+                    }
+
+                    for (int i = 0; i < CurrentCustomer[comboIndex].Discounts.Count; i++)
+                    {
+                        CurrentCustomer[comboIndex].Discounts[i].Update(CurrentCustomer[comboIndex].Cart.Items);
+                    }
 
                     listBoxCartOrder.Items.Clear();
                     CurrentCustomer[comboIndex].Cart.Items.Clear();
@@ -196,7 +322,26 @@ namespace ObjectOrientedPractics.View.Tabs
                 {
                     Order order = new Order(CurrentCustomer[comboIndex].Address, orderlist, Convert.ToDouble(CurrentCustomer[comboIndex].Cart.Amount));
                     orderlist.AddRange(CurrentCustomer[comboIndex].Cart.Items);
+                    order.DiscountAmount = Convert.ToDouble(textBoxDiscountAmount.Text);
                     CurrentCustomer[comboIndex].Orders.Add(order);
+
+                    if (textBoxDiscountAmount.Text != "0")
+                    {
+                        for (int i = 0; i < CurrentCustomer[comboIndex].Discounts.Count; i++)
+                        {
+                            CheckState state = checkedListBoxDiscounts.GetItemCheckState(i);
+
+                            if (state == CheckState.Checked)
+                            {
+                                CurrentCustomer[comboIndex].Discounts[i].Apply(CurrentCustomer[comboIndex].Cart.Items);
+                            }
+                        }
+                    }
+
+                    for (int i = 0; i < CurrentCustomer[comboIndex].Discounts.Count; i++)
+                    {
+                        CurrentCustomer[comboIndex].Discounts[i].Update(CurrentCustomer[comboIndex].Cart.Items);
+                    }
 
                     listBoxCartOrder.Items.Clear();
                     CurrentCustomer[comboIndex].Cart.Items.Clear();
@@ -204,10 +349,34 @@ namespace ObjectOrientedPractics.View.Tabs
                     MessageBox.Show("Заказ был создан!");
                 }
 
+                RefreshDiscount();
             }
             else
             {
                 MessageBox.Show("Корзина пользователя пуста! Заказ нечем наполнить!");
+            }
+        }
+
+        private void checkedListBoxDiscountsItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            int indexCustomer = comboBoxCustomerInCart.SelectedIndex;
+
+            if (checkedListBoxDiscounts.Items.Count > 0 && indexCustomer >= 0)
+            {
+                double sum = 0.0;
+
+                for (int i = 0; i < checkedListBoxDiscounts.Items.Count; i++)
+                {
+                    CheckState state = (i == e.Index) ? e.NewValue : checkedListBoxDiscounts.GetItemCheckState(i);
+
+                    if (state == CheckState.Checked)
+                    {
+                        sum += CurrentCustomer[indexCustomer].Discounts[i].Calculate(CurrentCustomer[indexCustomer].Cart.Items);
+                    }
+                }
+
+                textBoxDiscountAmount.Text = sum.ToString();
+                textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
             }
         }
     }

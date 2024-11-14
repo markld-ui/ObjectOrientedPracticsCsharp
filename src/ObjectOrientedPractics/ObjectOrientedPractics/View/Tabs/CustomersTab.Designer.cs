@@ -37,6 +37,10 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            buttonRemoveDiscount = new Button();
+            buttonAddDiscount = new Button();
+            Discounts = new Label();
+            listBoxDiscounts = new ListBox();
             checkBoxIsPriority = new CheckBox();
             addressControl = new ObjectOrientedPractics.View.Controls.AddressControl();
             textBoxFullNameCustomers = new TextBox();
@@ -69,7 +73,7 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(panel2);
-            splitContainer1.Size = new Size(1104, 682);
+            splitContainer1.Size = new Size(1104, 815);
             splitContainer1.SplitterDistance = 381;
             splitContainer1.TabIndex = 0;
             // 
@@ -79,7 +83,7 @@
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 45);
             panel4.Name = "panel4";
-            panel4.Size = new Size(381, 563);
+            panel4.Size = new Size(381, 696);
             panel4.TabIndex = 2;
             // 
             // listBoxCustomers
@@ -88,7 +92,7 @@
             listBoxCustomers.FormattingEnabled = true;
             listBoxCustomers.Location = new Point(0, 0);
             listBoxCustomers.Name = "listBoxCustomers";
-            listBoxCustomers.Size = new Size(381, 563);
+            listBoxCustomers.Size = new Size(381, 696);
             listBoxCustomers.TabIndex = 0;
             listBoxCustomers.MouseClick += listBoxCustomersMouseClick;
             // 
@@ -97,7 +101,7 @@
             panel3.Controls.Add(removeBtnCustomers);
             panel3.Controls.Add(addBtnCustomers);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 608);
+            panel3.Location = new Point(0, 741);
             panel3.Name = "panel3";
             panel3.Size = new Size(381, 74);
             panel3.TabIndex = 1;
@@ -146,6 +150,10 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(buttonRemoveDiscount);
+            panel2.Controls.Add(buttonAddDiscount);
+            panel2.Controls.Add(Discounts);
+            panel2.Controls.Add(listBoxDiscounts);
             panel2.Controls.Add(checkBoxIsPriority);
             panel2.Controls.Add(addressControl);
             panel2.Controls.Add(textBoxFullNameCustomers);
@@ -156,8 +164,46 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(719, 682);
+            panel2.Size = new Size(719, 815);
             panel2.TabIndex = 2;
+            // 
+            // buttonRemoveDiscount
+            // 
+            buttonRemoveDiscount.Location = new Point(531, 550);
+            buttonRemoveDiscount.Name = "buttonRemoveDiscount";
+            buttonRemoveDiscount.Size = new Size(121, 41);
+            buttonRemoveDiscount.TabIndex = 11;
+            buttonRemoveDiscount.Text = "Remove";
+            buttonRemoveDiscount.UseVisualStyleBackColor = true;
+            buttonRemoveDiscount.Click += buttonRemoveDiscountClick;
+            // 
+            // buttonAddDiscount
+            // 
+            buttonAddDiscount.Location = new Point(531, 447);
+            buttonAddDiscount.Name = "buttonAddDiscount";
+            buttonAddDiscount.Size = new Size(121, 41);
+            buttonAddDiscount.TabIndex = 10;
+            buttonAddDiscount.Text = "Add";
+            buttonAddDiscount.UseVisualStyleBackColor = true;
+            buttonAddDiscount.Click += buttonAddDiscountClick;
+            // 
+            // Discounts
+            // 
+            Discounts.AutoSize = true;
+            Discounts.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            Discounts.Location = new Point(20, 421);
+            Discounts.Name = "Discounts";
+            Discounts.Size = new Size(88, 23);
+            Discounts.TabIndex = 9;
+            Discounts.Text = "Discounts:";
+            // 
+            // listBoxDiscounts
+            // 
+            listBoxDiscounts.FormattingEnabled = true;
+            listBoxDiscounts.Location = new Point(3, 447);
+            listBoxDiscounts.Name = "listBoxDiscounts";
+            listBoxDiscounts.Size = new Size(495, 144);
+            listBoxDiscounts.TabIndex = 8;
             // 
             // checkBoxIsPriority
             // 
@@ -232,7 +278,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainer1);
             Name = "CustomersTab";
-            Size = new Size(1104, 682);
+            Size = new Size(1104, 815);
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
@@ -264,5 +310,9 @@
         private TextBox textBoxFullNameCustomers;
         private ObjectOrientedPractics.View.Controls.AddressControl addressControl;
         private CheckBox checkBoxIsPriority;
+        private Button buttonRemoveDiscount;
+        private Button buttonAddDiscount;
+        private Label Discounts;
+        private ListBox listBoxDiscounts;
     }
 }

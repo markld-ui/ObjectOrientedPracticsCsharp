@@ -93,7 +93,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         dataGridViewOrder.Rows.Add(_customers[i].Id, _customers[i].Orders[j].Date,
                             _customers[i].Orders[j].Status, _customers[i].FullName,
                             $"{address.Index}, {address.Country}, {address.City}, {address.Street}, {address.Building}, {address.Apartament}",
-                            _customers[i].Orders[j].Amount);
+                            _customers[i].Orders[j].Amount, _customers[i].Orders[j].Total);
 
                         comboBoxTimeOrder.Text = _customers[i].Time;
                     }
@@ -136,6 +136,7 @@ namespace ObjectOrientedPractics.View.Tabs
                 textBoxCreatedOrder.Text = row.Cells["Created"].Value.ToString();
                 textBoxAmountInOrder.Text = row.Cells["Price"].Value.ToString();
                 comboBoxStatusOrder.Text = row.Cells["OrderStatus"].Value.ToString();
+                textBoxTotalOrder.Text = row.Cells[6].Value.ToString();
 
                 string address = row.Cells[4].Value.ToString();
                 var individualStrings = address.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
