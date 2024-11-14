@@ -22,8 +22,7 @@ namespace ObjectOrientedPractices
         public MainWindow()
         {
             InitializeComponent();
-
-            this.Load += MainWindow_Load;
+            Load += MainWindow_Load;
         }
 
         /// <summary>

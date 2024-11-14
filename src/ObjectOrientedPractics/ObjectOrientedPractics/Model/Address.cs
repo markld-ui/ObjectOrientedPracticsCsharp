@@ -39,6 +39,7 @@ namespace ObjectOrientedPractices.Model
                 {
                     throw new ArgumentOutOfRangeException("Почтовый индекс не может быть равен нулю или быть отрицательным!");
                 }
+
                 _index = value;
             } 
         }

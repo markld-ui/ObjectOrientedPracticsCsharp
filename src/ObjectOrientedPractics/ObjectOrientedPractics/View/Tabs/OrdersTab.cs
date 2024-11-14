@@ -164,6 +164,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         {
                             dataPanelOrder.Visible = false;
                         }
+
                         if (_customers[j].Orders.Count > 1)
                         {
                             for (int k = 0; k < _customers[j].Orders.Count; k++)
@@ -175,8 +176,10 @@ namespace ObjectOrientedPractics.View.Tabs
                                     break;
                                 }
                             }
+
                             break;
                         }
+
                         if (_customers[j].Orders.Count == 1)
                         {
                             listBoxItemsInOrder.DataSource = null;
@@ -228,6 +231,7 @@ namespace ObjectOrientedPractics.View.Tabs
                     time.Time = comboBoxTimeOrder.SelectedItem.ToString();
                 }
             }
+
             UpdateOrders();
         }
     }

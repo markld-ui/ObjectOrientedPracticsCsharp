@@ -42,7 +42,7 @@ namespace ObjectOrientedPractices.Model.Orders
         public List<Item> Items
         {
             get { return _items; }
-            private set { _items = value ?? new List<Item>(); } // Если null, создаем новый список
+            private set { _items = value ?? new List<Item>(); }
         }
 
         /// <summary>
@@ -62,14 +62,17 @@ namespace ObjectOrientedPractices.Model.Orders
             get
             {
                 double sum = 0.0;
+
                 if (_items == null || _items.Count == 0)
                 {
                     return 0.0;
                 }
+
                 foreach (Item item in _items)
                 {
                     sum += item.Cost;
                 }
+
                 return sum;
             }
         }
@@ -83,17 +86,25 @@ namespace ObjectOrientedPractices.Model.Orders
             set { _status = value; }
         }
 
+        /// <summary>
+        /// Сумма скидки, применяемая к заказу.
+        /// </summary>
         public double DiscountAmount { get; set; }
 
+        /// <summary>
+        /// Общая стоимость заказа с учетом скидок.
+        /// </summary>
         public double Total
         {
             get
             {
                 double sumTotal = 0.0;
+
                 foreach (Item item in _items)
                 {
                     sumTotal += item.Cost;
                 }
+
                 sumTotal -= DiscountAmount;
                 return sumTotal;
             }

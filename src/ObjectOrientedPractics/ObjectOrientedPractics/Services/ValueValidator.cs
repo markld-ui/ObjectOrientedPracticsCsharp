@@ -36,6 +36,7 @@ namespace ObjectOrientedPractices.Services
             {
                 throw new ArgumentException(nameof(value), "Поле является пустым");
             }
+
             for (int i = 0; i < value.Length; i++)
             {
                 if (((int)value[i] >= 65 && (int)value[i] <= 90) || ((int)value[i] >= 97 && (int)value[i] <= 122))

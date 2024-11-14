@@ -35,24 +35,24 @@
             buttonAddToCart = new Button();
             panel1 = new Panel();
             label1 = new Label();
-            panel4 = new Panel();
-            buttonCreateOrder = new Button();
-            buttonRemoveItem = new Button();
-            buttonClearCart = new Button();
+            panel6 = new Panel();
             textBoxTotalPrice = new TextBox();
             textBoxDiscountAmount = new TextBox();
             label7 = new Label();
             checkedListBoxDiscounts = new CheckedListBox();
             label6 = new Label();
             label5 = new Label();
-            textBoxAmount = new TextBox();
-            listBoxCartOrder = new ListBox();
-            label4 = new Label();
-            label3 = new Label();
-            comboBoxCustomerInCart = new ComboBox();
-            label2 = new Label();
             panel5 = new Panel();
-            panel6 = new Panel();
+            label2 = new Label();
+            comboBoxCustomerInCart = new ComboBox();
+            listBoxCartOrder = new ListBox();
+            label3 = new Label();
+            label4 = new Label();
+            textBoxAmount = new TextBox();
+            panel4 = new Panel();
+            buttonCreateOrder = new Button();
+            buttonRemoveItem = new Button();
+            buttonClearCart = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -60,9 +60,9 @@
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
             panel6.SuspendLayout();
+            panel5.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -143,45 +143,19 @@
             label1.TabIndex = 0;
             label1.Text = "Items";
             // 
-            // panel4
+            // panel6
             // 
-            panel4.Controls.Add(buttonCreateOrder);
-            panel4.Controls.Add(buttonRemoveItem);
-            panel4.Controls.Add(buttonClearCart);
-            panel4.Location = new Point(0, 349);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(610, 56);
-            panel4.TabIndex = 18;
-            // 
-            // buttonCreateOrder
-            // 
-            buttonCreateOrder.Location = new Point(0, 0);
-            buttonCreateOrder.Name = "buttonCreateOrder";
-            buttonCreateOrder.Size = new Size(129, 55);
-            buttonCreateOrder.TabIndex = 8;
-            buttonCreateOrder.Text = "Create Order";
-            buttonCreateOrder.UseVisualStyleBackColor = true;
-            buttonCreateOrder.Click += buttonCreateOrderClick;
-            // 
-            // buttonRemoveItem
-            // 
-            buttonRemoveItem.Location = new Point(277, 0);
-            buttonRemoveItem.Name = "buttonRemoveItem";
-            buttonRemoveItem.Size = new Size(129, 55);
-            buttonRemoveItem.TabIndex = 7;
-            buttonRemoveItem.Text = "Remove Item";
-            buttonRemoveItem.UseVisualStyleBackColor = true;
-            buttonRemoveItem.Click += buttonRemoveItemClick;
-            // 
-            // buttonClearCart
-            // 
-            buttonClearCart.Location = new Point(431, 0);
-            buttonClearCart.Name = "buttonClearCart";
-            buttonClearCart.Size = new Size(129, 55);
-            buttonClearCart.TabIndex = 9;
-            buttonClearCart.Text = "Clear Cart";
-            buttonClearCart.UseVisualStyleBackColor = true;
-            buttonClearCart.MouseClick += buttonClearCartMouseClick;
+            panel6.Controls.Add(textBoxTotalPrice);
+            panel6.Controls.Add(textBoxDiscountAmount);
+            panel6.Controls.Add(label7);
+            panel6.Controls.Add(checkedListBoxDiscounts);
+            panel6.Controls.Add(label6);
+            panel6.Controls.Add(label5);
+            panel6.Dock = DockStyle.Bottom;
+            panel6.Location = new Point(0, 404);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(610, 320);
+            panel6.TabIndex = 20;
             // 
             // textBoxTotalPrice
             // 
@@ -248,63 +222,6 @@
             label5.TabIndex = 12;
             label5.Text = "Discounts:";
             // 
-            // textBoxAmount
-            // 
-            textBoxAmount.BorderStyle = BorderStyle.None;
-            textBoxAmount.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            textBoxAmount.Location = new Point(446, 320);
-            textBoxAmount.Name = "textBoxAmount";
-            textBoxAmount.ReadOnly = true;
-            textBoxAmount.Size = new Size(125, 23);
-            textBoxAmount.TabIndex = 11;
-            textBoxAmount.TextAlign = HorizontalAlignment.Right;
-            // 
-            // listBoxCartOrder
-            // 
-            listBoxCartOrder.FormattingEnabled = true;
-            listBoxCartOrder.Location = new Point(11, 64);
-            listBoxCartOrder.Name = "listBoxCartOrder";
-            listBoxCartOrder.Size = new Size(560, 224);
-            listBoxCartOrder.TabIndex = 10;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            label4.Location = new Point(496, 294);
-            label4.Name = "label4";
-            label4.Size = new Size(75, 23);
-            label4.TabIndex = 4;
-            label4.Text = "Amount:";
-            // 
-            // label3
-            // 
-            label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(11, 33);
-            label3.Name = "label3";
-            label3.Size = new Size(48, 28);
-            label3.TabIndex = 2;
-            label3.Text = "Cart:";
-            // 
-            // comboBoxCustomerInCart
-            // 
-            comboBoxCustomerInCart.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxCustomerInCart.FormattingEnabled = true;
-            comboBoxCustomerInCart.Location = new Point(132, 3);
-            comboBoxCustomerInCart.Name = "comboBoxCustomerInCart";
-            comboBoxCustomerInCart.Size = new Size(464, 28);
-            comboBoxCustomerInCart.TabIndex = 1;
-            comboBoxCustomerInCart.SelectedIndexChanged += comboBoxCustomerInCartSelectedIndexChanged;
-            // 
-            // label2
-            // 
-            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            label2.Location = new Point(3, 4);
-            label2.Name = "label2";
-            label2.Size = new Size(90, 28);
-            label2.TabIndex = 0;
-            label2.Text = "Customer:";
-            // 
             // panel5
             // 
             panel5.Controls.Add(label2);
@@ -319,19 +236,102 @@
             panel5.Size = new Size(610, 350);
             panel5.TabIndex = 19;
             // 
-            // panel6
+            // label2
             // 
-            panel6.Controls.Add(textBoxTotalPrice);
-            panel6.Controls.Add(textBoxDiscountAmount);
-            panel6.Controls.Add(label7);
-            panel6.Controls.Add(checkedListBoxDiscounts);
-            panel6.Controls.Add(label6);
-            panel6.Controls.Add(label5);
-            panel6.Dock = DockStyle.Bottom;
-            panel6.Location = new Point(0, 404);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(610, 320);
-            panel6.TabIndex = 20;
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label2.Location = new Point(3, 4);
+            label2.Name = "label2";
+            label2.Size = new Size(90, 28);
+            label2.TabIndex = 0;
+            label2.Text = "Customer:";
+            // 
+            // comboBoxCustomerInCart
+            // 
+            comboBoxCustomerInCart.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCustomerInCart.FormattingEnabled = true;
+            comboBoxCustomerInCart.Location = new Point(132, 3);
+            comboBoxCustomerInCart.Name = "comboBoxCustomerInCart";
+            comboBoxCustomerInCart.Size = new Size(464, 28);
+            comboBoxCustomerInCart.TabIndex = 1;
+            comboBoxCustomerInCart.SelectedIndexChanged += comboBoxCustomerInCartSelectedIndexChanged;
+            // 
+            // listBoxCartOrder
+            // 
+            listBoxCartOrder.FormattingEnabled = true;
+            listBoxCartOrder.Location = new Point(11, 64);
+            listBoxCartOrder.Name = "listBoxCartOrder";
+            listBoxCartOrder.Size = new Size(560, 224);
+            listBoxCartOrder.TabIndex = 10;
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe UI", 10F);
+            label3.Location = new Point(11, 33);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 28);
+            label3.TabIndex = 2;
+            label3.Text = "Cart:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label4.Location = new Point(496, 294);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 23);
+            label4.TabIndex = 4;
+            label4.Text = "Amount:";
+            // 
+            // textBoxAmount
+            // 
+            textBoxAmount.BorderStyle = BorderStyle.None;
+            textBoxAmount.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            textBoxAmount.Location = new Point(446, 320);
+            textBoxAmount.Name = "textBoxAmount";
+            textBoxAmount.ReadOnly = true;
+            textBoxAmount.Size = new Size(125, 23);
+            textBoxAmount.TabIndex = 11;
+            textBoxAmount.TextAlign = HorizontalAlignment.Right;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(buttonCreateOrder);
+            panel4.Controls.Add(buttonRemoveItem);
+            panel4.Controls.Add(buttonClearCart);
+            panel4.Location = new Point(0, 349);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(610, 56);
+            panel4.TabIndex = 18;
+            // 
+            // buttonCreateOrder
+            // 
+            buttonCreateOrder.Location = new Point(0, 0);
+            buttonCreateOrder.Name = "buttonCreateOrder";
+            buttonCreateOrder.Size = new Size(129, 55);
+            buttonCreateOrder.TabIndex = 8;
+            buttonCreateOrder.Text = "Create Order";
+            buttonCreateOrder.UseVisualStyleBackColor = true;
+            buttonCreateOrder.Click += buttonCreateOrderClick;
+            // 
+            // buttonRemoveItem
+            // 
+            buttonRemoveItem.Location = new Point(277, 0);
+            buttonRemoveItem.Name = "buttonRemoveItem";
+            buttonRemoveItem.Size = new Size(129, 55);
+            buttonRemoveItem.TabIndex = 7;
+            buttonRemoveItem.Text = "Remove Item";
+            buttonRemoveItem.UseVisualStyleBackColor = true;
+            buttonRemoveItem.Click += buttonRemoveItemClick;
+            // 
+            // buttonClearCart
+            // 
+            buttonClearCart.Location = new Point(431, 0);
+            buttonClearCart.Name = "buttonClearCart";
+            buttonClearCart.Size = new Size(129, 55);
+            buttonClearCart.TabIndex = 9;
+            buttonClearCart.Text = "Clear Cart";
+            buttonClearCart.UseVisualStyleBackColor = true;
+            buttonClearCart.MouseClick += buttonClearCartMouseClick;
             // 
             // CartsTab
             // 
@@ -348,11 +348,11 @@
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 

@@ -174,6 +174,7 @@ namespace ObjectOrientedPractics.View.Tabs
                     time.Time = comboBoxTimePriority.SelectedItem.ToString();
                 }
             }
+
             RefreshDataPriority();
         }
 
@@ -218,6 +219,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         textBoxAmountPriority.Text = customer.Cart.Amount.ToString();
                     }
                 }
+
                 RefreshDataPriority();
             }
             else
@@ -243,6 +245,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         order.Items.RemoveAt(indexItem);
                     }
                 }
+
                 RefreshDataPriority();
             }
             else
@@ -263,6 +266,7 @@ namespace ObjectOrientedPractics.View.Tabs
                 Customers.Clear();
                 RefreshDataPriority();
             }
+
             OrderClear();
         }
     }

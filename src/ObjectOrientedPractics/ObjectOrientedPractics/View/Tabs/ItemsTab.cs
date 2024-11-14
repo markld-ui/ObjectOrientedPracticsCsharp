@@ -85,6 +85,7 @@ namespace ObjectOrientedPractices.View.Tabs
                     textBoxCostItems.Clear();
                     return;
                 }
+
                 if (cost <= 0)
                 {
                     MessageBox.Show("Цена не может быть отрицательной или равна нулю. Введите корректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);

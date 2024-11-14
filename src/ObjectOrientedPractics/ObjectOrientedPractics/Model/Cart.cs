@@ -20,7 +20,10 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         public List<Item> Items 
         {
-            get { return _items; }
+            get 
+            { 
+                return _items; 
+            }
             set 
             { 
                 _items = value; 
@@ -36,14 +39,17 @@ namespace ObjectOrientedPractics.Model
             get 
             {
                 double sum = 0.0;
+
                 if (_items.Count == 0 || _items == null)
                 {
                     return 0.0;
                 }
+
                 foreach (var item in _items)
                 {
                     sum += item.Cost;
                 }
+
                 return sum;
             }
         }

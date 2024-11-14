@@ -49,6 +49,9 @@ namespace ObjectOrientedPractics.View.Tabs
             comboBoxCustomerInCart.DisplayMember = "FullName";
         }
 
+        /// <summary>
+        /// Обновляет список скидок и соответствующие суммы.
+        /// </summary>
         private void RefreshDiscount()
         {
             checkedListBoxDiscounts.Items.Clear();
@@ -74,6 +77,7 @@ namespace ObjectOrientedPractics.View.Tabs
                     sum += CurrentCustomer[indexCustomer].Discounts[i].Calculate(CurrentCustomer[indexCustomer].Cart.Items);
                 }
             }
+
             textBoxDiscountAmount.Text = sum.ToString();
             textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
         }
@@ -145,6 +149,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         sum += CurrentCustomer[comboIndex].Discounts[i].Calculate(CurrentCustomer[comboIndex].Cart.Items);
                     }
                 }
+
                 textBoxDiscountAmount.Text = sum.ToString();
                 textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
             }
@@ -192,6 +197,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         sum += CurrentCustomer[comboIndex].Discounts[i].Calculate(CurrentCustomer[comboIndex].Cart.Items);
                     }
                 }
+
                 textBoxDiscountAmount.Text = sum.ToString();
                 textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
             }
@@ -234,6 +240,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         sum += CurrentCustomer[comboIndex].Discounts[i].Calculate(CurrentCustomer[comboIndex].Cart.Items);
                     }
                 }
+
                 textBoxDiscountAmount.Text = sum.ToString();
                 textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
             }
@@ -269,6 +276,7 @@ namespace ObjectOrientedPractics.View.Tabs
                         listBoxCartOrder.Items.Add(item);
                     }
                 }
+
                 RefreshDiscount();
             }
             else
@@ -357,6 +365,9 @@ namespace ObjectOrientedPractics.View.Tabs
             }
         }
 
+        /// <summary>
+        /// Обрабатывает событие изменения состояния элемента в списке скидок.
+        /// </summary>
         private void checkedListBoxDiscountsItemCheck(object sender, ItemCheckEventArgs e)
         {
             int indexCustomer = comboBoxCustomerInCart.SelectedIndex;

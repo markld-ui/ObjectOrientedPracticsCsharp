@@ -46,7 +46,10 @@ namespace ObjectOrientedPractices.Model
         /// </exception>
         public string FullName
         { 
-            get {return _fullname;}
+            get 
+            {
+                return _fullname;
+            }
             private set
             {
                 try
@@ -69,7 +72,10 @@ namespace ObjectOrientedPractices.Model
         /// </exception>
         public Address Address
         {
-            get { return _address; }
+            get 
+            { 
+                return _address;
+            }
             private set
             {
                 _address = value ?? throw new ArgumentNullException(nameof(Address), "Адресс не может быть null");
@@ -172,6 +178,7 @@ namespace ObjectOrientedPractices.Model
                 building, 
                 apartament
                 );
+
             Orders = new List<Order>();
             Discounts = new List<IDiscount>();
             PointsDiscount pointsDiscount = new PointsDiscount();

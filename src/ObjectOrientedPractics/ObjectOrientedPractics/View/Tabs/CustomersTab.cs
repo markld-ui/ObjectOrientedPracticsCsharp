@@ -29,6 +29,9 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         private List<Customer> _customers = new();
 
+        /// <summary>
+        /// Новый объект скидки, который будет добавлен клиенту.
+        /// </summary>
         public PercentDiscount newDiscount { get; set; }
 
         /// <summary>
@@ -65,12 +68,6 @@ namespace ObjectOrientedPractices.View.Tabs
             {
                 listBoxCustomers.Items.Add($"{customer.FullName} - {customer.Address.Country}, {customer.Address.City}, {customer.Address.Street}");
             }
-        }
-
-        public void RefreshData()
-        {
-            listBoxCustomers.DataSource = null;
-            listBoxCustomers.DataSource = _customers;
         }
 
         /// <summary>
@@ -167,7 +164,6 @@ namespace ObjectOrientedPractices.View.Tabs
                 listBoxCustomers.Items.RemoveAt(index);
                 MessageBox.Show("Элемент успешно удален", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
                 textBoxFullNameCustomers.Clear();
                 textBoxIdCustomers.Clear();
             }
@@ -200,6 +196,10 @@ namespace ObjectOrientedPractices.View.Tabs
             }
         }
 
+        /// <summary>
+        /// Обрабатывает событие клика по кнопке "Add". Открывает вкладку
+        /// для добавления новой скидки клиенту.
+        /// </summary>
         private void buttonAddDiscountClick(object sender, EventArgs e)
         {
             if (listBoxCustomers.SelectedIndex != -1)
@@ -212,6 +212,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 {
                     discountTab.ShowDialog();
                 }
+
                 if (newDiscount != null)
                 {
                     for (int i = 0; i < Customers[index].Discounts.Count; i++)
@@ -240,6 +241,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 {
                     return;
                 }
+
                 discountTab.Dispose();
             }
             else
@@ -248,6 +250,10 @@ namespace ObjectOrientedPractices.View.Tabs
             }
         }
 
+        /// <summary>
+        /// Обрабатывает событие клика по кнопке "Remove". Удаляет выбранную
+        /// скидку из списка скидок клиента.
+        /// </summary>
         private void buttonRemoveDiscountClick(object sender, EventArgs e)
         {
             int indexDiscount = listBoxDiscounts.SelectedIndex;

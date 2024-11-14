@@ -36,7 +36,8 @@ namespace ObjectOrientedPractices.Model
         /// </summary>
         public List<Item> Items {
             get
-            {  return _items;
+            { 
+                return _items;
             }
             set
             {
