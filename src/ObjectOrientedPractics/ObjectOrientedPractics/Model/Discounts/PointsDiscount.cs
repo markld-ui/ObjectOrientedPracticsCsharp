@@ -10,7 +10,7 @@ namespace ObjectOrientedPractices.Model.Discounts
     /// <summary>
     /// Представляет систему накопительных баллов для скидок.
     /// </summary>
-    public class PointsDiscount : IDiscount
+    public class PointsDiscount : IDiscount, IComparable<PointsDiscount>
     {
         private int _points;
 
@@ -73,6 +73,21 @@ namespace ObjectOrientedPractices.Model.Discounts
         {
             double totalCost = items.Sum(item => item.Cost);
             Points += (int)Math.Ceiling(totalCost * 0.1);
+        }
+
+        /// <summary>
+        /// Сравнивает текущий объект с другим объектом <see cref="PointsDiscount"/>.
+        /// </summary>
+        /// <param name="other">Другой объект <see cref="PointsDiscount"/> для сравнения.</param>
+        /// <returns>Целое число, указывающее, является ли текущий объект меньше, равным или больше другого объекта.</returns>
+        public int CompareTo(PointsDiscount other)
+        {
+            if (other == null)
+            { 
+                return 1; 
+            } 
+
+            return Points.CompareTo(other.Points);
         }
 
         /// <summary>

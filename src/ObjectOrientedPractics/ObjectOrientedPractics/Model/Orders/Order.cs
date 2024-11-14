@@ -11,7 +11,7 @@ using ObjectOrientedPractices.Model;
 
 namespace ObjectOrientedPractices.Model.Orders
 {
-    public class Order
+    public class Order : IEquatable<Order>
     {
         private readonly int _id;
         private readonly DateTime _date;
@@ -108,6 +108,38 @@ namespace ObjectOrientedPractices.Model.Orders
                 sumTotal -= DiscountAmount;
                 return sumTotal;
             }
+        }
+
+        /// <summary>
+        /// Определяет равенство между текущим объектом и другим объектом <see cref="Order"/>.
+        /// </summary>
+        /// <param name="obj">Другой объект для сравнения.</param>
+        /// <returns>true, если объекты равны; в противном случае - false.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            { 
+                return false;
+            }
+
+            if (object.ReferenceEquals(this, obj))
+            {  
+                return true; 
+            }
+
+            var order = (Order)obj;
+
+            return (Id == order.Id);
+        }
+
+        /// <summary>
+        /// Определяет равенство между текущим объектом и другим объектом <see cref="Order"/>.
+        /// </summary>
+        /// <param name="other">Другой объект <see cref="Order"/> для сравнения.</param>
+        /// <returns>true, если объекты равны; в противном случае - false.</returns>
+        public bool Equals(Order other)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

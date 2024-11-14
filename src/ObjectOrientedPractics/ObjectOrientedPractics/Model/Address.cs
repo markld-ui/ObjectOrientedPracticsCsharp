@@ -12,7 +12,7 @@ namespace ObjectOrientedPractices.Model
     /// Класс, представляющий адрес.
     /// Взаимодействие с объектами осуществляется через свойства.
     /// </summary>
-    public class Address
+    public class Address : ICloneable, IEquatable<Address>
     {
         private int _index;
         private string _country;
@@ -172,6 +172,47 @@ namespace ObjectOrientedPractices.Model
                     throw new StringLengthException(nameof(Apartament), 10, 0);
                 }
             }
+        }
+
+        /// <summary>
+        /// Создает глубокую копию текущего объекта <see cref="Address"/>.
+        /// </summary>
+        /// <returns>Копия текущего объекта <see cref="Address"/>.</returns>
+        public object Clone()
+        {
+            return new Address(Index, Country, City, Street, Building, Apartament);
+        }
+
+        /// <summary>
+        /// Определяет равенство между текущим объектом и другим объектом <see cref="Address"/>.
+        /// </summary>
+        /// <param name="obj">Другой объект для сравнения.</param>
+        /// <returns>true, если объекты равны; в противном случае - false.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false; 
+            }
+
+            if (object.ReferenceEquals(this, obj))
+            {  
+                return true; 
+            }
+
+            var address = (Address)obj;
+
+            return (Index == address.Index);
+        }
+
+        /// <summary>
+        /// Определяет равенство между текущим объектом и другим объектом <see cref="Address"/>.
+        /// </summary>
+        /// <param name="other">Другой объект <see cref="Address"/> для сравнения.</param>
+        /// <returns>true, если объекты равны; в противном случае - false.</returns>
+        public bool Equals(Address other)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

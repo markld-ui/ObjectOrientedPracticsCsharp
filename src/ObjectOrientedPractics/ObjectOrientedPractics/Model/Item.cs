@@ -16,7 +16,7 @@ namespace ObjectOrientedPractices.Model
     /// Взаимодействие с объектами осуществляется через свойства. Поле ID является уникальным
     /// и автоматически генерируется.
     /// </summary>    
-    public class Item
+    public class Item : ICloneable, IEquatable<Item>, IComparable<Item>
     {
         private readonly int _id;
         private string _name;
@@ -132,6 +132,62 @@ namespace ObjectOrientedPractices.Model
             return $"{Name} - {Cost}";
         }
 
+        /// <summary>
+        /// Создаёт глубокую копию текущего объекта <see cref="Item"/>.
+        /// </summary>
+        /// <returns>Копия текущего объекта <see cref="Item"/>.</returns>
+        public object Clone()
+        {
+            return new Item(Name, Info, Cost, Category);
+        }
+
+        /// <summary>
+        /// Определяет равенство между текущим объектом и другим объектом <see cref="Item"/>.
+        /// </summary>
+        /// <param name="other">Другой объект <see cref="Item"/> для сравнения.</param>
+        /// <returns>true, если объекты равны; в противном случае - false.</returns>
+        public bool Equals(Item other)
+        {
+            if (other == null)
+            {
+                return false;
+            }
+
+            if (object.ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            return (Name == other.Name);
+        }
+
+        /// <summary>
+        /// Сравнивает текущий объект с другим объектом <see cref="Item"/> по имени и стоимости.
+        /// </summary>
+        /// <param name="other">Другой объект <see cref="Item"/> для сравнения.</param>
+        /// <returns>0, если имена равны; 1, если текущее имя больше; -1, если меньше.</returns>
+        public int CompareTo(Item other)
+        {
+
+            if (Name == other.Name)
+            {
+                return 0;
+            }
+
+            if (Cost > other.Cost)
+            {
+                return 1;
+            }
+
+            if (Cost < other.Cost)
+            {
+                return -1;
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+        }
 
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Item"/> с заданными параметрами.

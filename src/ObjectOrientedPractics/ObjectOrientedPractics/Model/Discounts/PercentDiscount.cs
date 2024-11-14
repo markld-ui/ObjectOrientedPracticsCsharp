@@ -10,7 +10,7 @@ namespace ObjectOrientedPractices.Model.Discounts
     /// <summary>
     /// Представляет систему процентной скидки для определенной категории товаров.
     /// </summary>
-    public class PercentDiscount : IDiscount
+    public class PercentDiscount : IDiscount, IComparable<PercentDiscount>
     {
         private Category _category;
         private double _currentDiscount;
@@ -93,6 +93,21 @@ namespace ObjectOrientedPractices.Model.Discounts
         {
             _totalSpentInCategory += items.Where(item => item.Category == _category).Sum(item => item.Cost);
             _totalSpentInCategory = 0;
+        }
+
+        /// <summary>
+        /// Сравнивает текущий объект <see cref="PercentDiscount"/> с другим объектом <see cref="PercentDiscount"/>.
+        /// </summary>
+        /// <param name="other">Другой объект <see cref="PercentDiscount"/> для сравнения.</param>
+        /// <returns>Целое число, указывающее, является ли текущий объект меньше, равным или больше другого объекта.</returns>
+        public int CompareTo(PercentDiscount other)
+        {
+            if (other == null) 
+            { 
+                return 1; 
+            }
+
+            return CurrentDiscount.CompareTo(other.CurrentDiscount);
         }
 
         /// <summary>
