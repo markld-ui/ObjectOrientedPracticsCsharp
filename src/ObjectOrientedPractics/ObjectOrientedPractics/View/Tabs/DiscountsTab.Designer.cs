@@ -99,11 +99,12 @@
             Controls.Add(comboBoxCategoryDiscount);
             Controls.Add(label2);
             Controls.Add(label1);
-            Cursor = Cursors.IBeam;
+            Cursor = Cursors.Default;
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "DiscountsTab";
+            Text = "Add Discount";
             ResumeLayout(false);
             PerformLayout();
         }
