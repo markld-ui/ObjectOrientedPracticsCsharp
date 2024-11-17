@@ -135,7 +135,7 @@
             listBoxItems.Name = "listBoxItems";
             listBoxItems.Size = new Size(481, 624);
             listBoxItems.TabIndex = 0;
-            listBoxItems.MouseClick += listBoxItemsMouseClick;
+            listBoxItems.MouseClick += ListBoxItemsMouseClick;
             // 
             // panel7
             // 
@@ -155,7 +155,7 @@
             comboBoxOrderBy.Name = "comboBoxOrderBy";
             comboBoxOrderBy.Size = new Size(323, 28);
             comboBoxOrderBy.TabIndex = 3;
-            comboBoxOrderBy.SelectedIndexChanged += comboBoxOrderBySelectedIndexChanged;
+            comboBoxOrderBy.SelectedIndexChanged += ComboBoxOrderBySelectedIndexChanged;
             // 
             // label8
             // 
@@ -183,7 +183,7 @@
             textBoxFindItem.Name = "textBoxFindItem";
             textBoxFindItem.Size = new Size(340, 27);
             textBoxFindItem.TabIndex = 1;
-            textBoxFindItem.TextChanged += textBoxFindItemTextChanged;
+            textBoxFindItem.TextChanged += TextBoxFindItemTextChanged;
             // 
             // label7
             // 
@@ -234,7 +234,7 @@
             removeBtnItems.TabIndex = 1;
             removeBtnItems.Text = "Remove";
             removeBtnItems.UseVisualStyleBackColor = true;
-            removeBtnItems.MouseClick += removeBtnItemsMouseClick;
+            removeBtnItems.MouseClick += RemoveBtnItemsMouseClick;
             // 
             // addBtnItems
             // 
@@ -245,7 +245,7 @@
             addBtnItems.TabIndex = 0;
             addBtnItems.Text = "Add";
             addBtnItems.UseVisualStyleBackColor = true;
-            addBtnItems.MouseClick += addBtnItemsMouseClick;
+            addBtnItems.MouseClick += AddBtnItemsMouseClick;
             // 
             // panel5
             // 
@@ -283,7 +283,6 @@
             comboBoxCategoryItems.Name = "comboBoxCategoryItems";
             comboBoxCategoryItems.Size = new Size(153, 28);
             comboBoxCategoryItems.TabIndex = 9;
-            comboBoxCategoryItems.SelectedIndexChanged += comboBoxCategoryItemsSelectedIndexChanged;
             // 
             // textBoxDescrItems
             // 

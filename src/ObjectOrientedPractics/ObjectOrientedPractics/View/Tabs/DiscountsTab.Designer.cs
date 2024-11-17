@@ -75,7 +75,7 @@
             buttonOk.TabIndex = 3;
             buttonOk.Text = "Ok";
             buttonOk.UseVisualStyleBackColor = true;
-            buttonOk.Click += buttonOkClick;
+            buttonOk.Click += ButtonOkClick;
             // 
             // buttonCancel
             // 
@@ -86,7 +86,7 @@
             buttonCancel.TabIndex = 4;
             buttonCancel.Text = "Cancel";
             buttonCancel.UseVisualStyleBackColor = true;
-            buttonCancel.Click += buttonCancelClick;
+            buttonCancel.Click += ButtonCancelClick;
             // 
             // DiscountsTab
             // 

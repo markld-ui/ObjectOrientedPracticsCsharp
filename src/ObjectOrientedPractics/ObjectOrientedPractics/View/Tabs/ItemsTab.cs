@@ -21,6 +21,8 @@ namespace ObjectOrientedPractices.View.Tabs
     /// </summary>
     public partial class ItemsTab : UserControl
     {
+        public event EventHandler ItemsChanged;
+
         /// <summary>
         /// Список всех добавленных элементов.
         /// </summary>
@@ -55,9 +57,13 @@ namespace ObjectOrientedPractices.View.Tabs
             set
             {
                 _items = value;
-                //UpdateItemsListBox();
             }
         }
+
+        /// <summary>
+        /// Событие срабатывает при изменении данных во вкладке товаров.
+        /// </summary>
+        protected virtual void OnItemsChanged() => ItemsChanged?.Invoke(this, EventArgs.Empty);
 
         /// <summary>
         /// Обновляет список элементов в ListBox с учётом фильтра и сортировки.
@@ -85,6 +91,7 @@ namespace ObjectOrientedPractices.View.Tabs
             _displayedItems = filteredItems;
             listBoxItems.DataSource = null;
             listBoxItems.DataSource = _displayedItems;
+            OnItemsChanged();
         }
 
         /// <summary>
@@ -93,7 +100,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void addBtnItemsMouseClick(object sender, MouseEventArgs e)
+        private void AddBtnItemsMouseClick(object sender, MouseEventArgs e)
         {
 
             try
@@ -123,8 +130,7 @@ namespace ObjectOrientedPractices.View.Tabs
 
                 _items.Add(item);
                 _displayedItems.Add(item);
-
-                //listBoxItems.Items.Add($"{item.Name}");
+                OnItemsChanged();
 
                 textBoxCostItems.BackColor = Color.White;
                 textBoxDescrItems.BackColor = Color.White;
@@ -164,7 +170,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void removeBtnItemsMouseClick(object sender, MouseEventArgs e)
+        private void RemoveBtnItemsMouseClick(object sender, MouseEventArgs e)
         {
             if (listBoxItems.SelectedIndex != -1)
             {
@@ -183,6 +189,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 }
 
                 UpdateDisplayedItems();
+                OnItemsChanged();
 
                 MessageBox.Show("Элемент успешно удален", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBoxCostItems.Clear();
@@ -203,7 +210,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void listBoxItemsMouseClick(object sender, MouseEventArgs e)
+        private void ListBoxItemsMouseClick(object sender, MouseEventArgs e)
         {
             if (listBoxItems.SelectedIndex != -1)
             {
@@ -253,26 +260,12 @@ namespace ObjectOrientedPractices.View.Tabs
         }
 
         /// <summary>
-        /// Обрабатывает событие изменения выбранного элемента в комбобоксе.
-        /// </summary>
-        private void comboBoxCategoryItemsSelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*if (listBoxItems.SelectedIndex != -1)
-            {
-                int index = listBoxItems.SelectedIndex;
-                Item selectedItem = _items[index];
-
-                selectedItem.Category = (Category)comboBoxCategoryItems.SelectedItem;
-            }*/
-        }
-
-        /// <summary>
         /// Обрабатывает событие изменения текста в текстовом поле.
         /// Фильтрует и сортирует элементы в зависимости от введенного текста и выбранного параметра сортировки.
         /// </summary>
         /// <param name="sender">Объект, вызвавший событие.</param>
         /// <param name="e">Аргументы события.</param>
-        private void textBoxFindItemTextChanged(object sender, EventArgs e)
+        private void TextBoxFindItemTextChanged(object sender, EventArgs e)
         {
             string name = textBoxFindItem.Text;
 
@@ -358,6 +351,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 listBoxItems.DataSource = null;
                 listBoxItems.DataSource = _displayedItems;
             }
+
             UpdateDisplayedItems();
         }
 
@@ -367,7 +361,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         /// <param name="sender">Объект, вызвавший событие.</param>
         /// <param name="e">Аргументы события.</param>
-        private void comboBoxOrderBySelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxOrderBySelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxOrderBy.SelectedIndex != null)
             {
@@ -460,6 +454,7 @@ namespace ObjectOrientedPractices.View.Tabs
                     listBoxItems.DataSource = _displayedItems;
                 }
             }
+
             UpdateDisplayedItems();
         }
 

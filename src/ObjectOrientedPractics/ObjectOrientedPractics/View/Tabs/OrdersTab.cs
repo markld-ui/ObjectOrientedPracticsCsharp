@@ -20,6 +20,8 @@ namespace ObjectOrientedPractics.View.Tabs
     /// </summary>
     public partial class OrdersTab : UserControl
     {
+        public event EventHandler OrdersChanged;
+
         /// <summary>
         /// Список клиентов, чьи заказы будут отображаться.
         /// </summary>
@@ -61,6 +63,11 @@ namespace ObjectOrientedPractics.View.Tabs
         }
 
         /// <summary>
+        /// Событие срабатывает при изменении данных во вкладке заказов.
+        /// </summary>
+        protected virtual void OnOrdersChanged() => OrdersChanged?.Invoke(this, EventArgs.Empty);
+
+        /// <summary>
         /// Конструктор для инициализации компонентов вкладки заказов.
         /// Устанавливает источник данных для комбобокса статуса заказа и скрывает панель данных заказа по умолчанию.
         /// </summary>
@@ -99,6 +106,8 @@ namespace ObjectOrientedPractics.View.Tabs
                     }
                 }
             }
+
+            OnOrdersChanged();
         }
 
         /// <summary>
@@ -126,7 +135,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обработчик события клика по ячейке в таблице заказов.
         /// Заполняет элементы управления данными выбранного заказа.
         /// </summary>
-        private void dataGridViewOrderCellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridViewOrderCellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -195,7 +204,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обработчик изменения выбранного статуса заказа.
         /// Обновляет статус заказа в модели и обновляет таблицу заказов.
         /// </summary>
-        private void comboBoxStatusOrderSelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxStatusOrderSelectedIndexChanged(object sender, EventArgs e)
         {
             if (dataGridViewOrder.RowCount > 0 && comboBoxStatusOrder.SelectedItem != null)
             {
@@ -217,12 +226,14 @@ namespace ObjectOrientedPractics.View.Tabs
                     }
                 }
             }
+
+            OnOrdersChanged();
         }
 
         /// <summary>
         /// Обрабатывает изменение выбранного элемента в комбобоксе времени заказа.
         /// </summary>
-        private void comboBoxTimeOrderSelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxTimeOrderSelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxTimeOrder.SelectedItem != null)
             {

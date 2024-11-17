@@ -65,7 +65,7 @@ namespace ObjectOrientedPractices
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1074, 791);
             tabControl1.TabIndex = 0;
-            tabControl1.SelectedIndexChanged += tabControl1SelectedIndexChanged;
+            tabControl1.SelectedIndexChanged += TabControl1SelectedIndexChanged;
             // 
             // tabPage1
             // 
@@ -86,7 +86,7 @@ namespace ObjectOrientedPractices
             itemsTab1.Name = "itemsTab1";
             itemsTab1.Size = new Size(1060, 752);
             itemsTab1.TabIndex = 0;
-            itemsTab1.Load += itemsTab1Load;
+            itemsTab1.Load += ItemsTab1Load;
             // 
             // tabPage2
             // 

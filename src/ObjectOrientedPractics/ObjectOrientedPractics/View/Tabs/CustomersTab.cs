@@ -24,6 +24,8 @@ namespace ObjectOrientedPractices.View.Tabs
     /// </summary>
     public partial class CustomersTab : UserControl
     {
+        public event EventHandler CustomersChanged;
+
         /// <summary>
         /// Список всех добавленных клиентов.
         /// </summary>
@@ -59,6 +61,11 @@ namespace ObjectOrientedPractices.View.Tabs
         }
 
         /// <summary>
+        /// Событие срабатывает при изменении данных во вкладке покупателя.
+        /// </summary>
+        protected virtual void OnCustomersChanged() => CustomersChanged?.Invoke(this, EventArgs.Empty);
+
+        /// <summary>
         /// Метод обновновления списка пользователей
         /// </summary>
         private void UpdateCustomersListBox()
@@ -76,7 +83,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void addBtnCustomersMouseClick(object sender, MouseEventArgs e)
+        private void AddBtnCustomersMouseClick(object sender, MouseEventArgs e)
         {
             try
             {
@@ -116,6 +123,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBoxIdCustomers.Clear();
                 addressControl.ClearAddressFields();
                 addressControl.ExceptionSetRedColor(false);
+                OnCustomersChanged();
             }
             catch (ArgumentException)
             {
@@ -155,7 +163,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void removeBtnCustomersMouseClick(object sender, MouseEventArgs e)
+        private void RemoveBtnCustomersMouseClick(object sender, MouseEventArgs e)
         {
             if (listBoxCustomers.SelectedIndex != -1)
             {
@@ -166,6 +174,7 @@ namespace ObjectOrientedPractices.View.Tabs
 
                 textBoxFullNameCustomers.Clear();
                 textBoxIdCustomers.Clear();
+                OnCustomersChanged();
             }
             else
             {
@@ -179,7 +188,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         /// <param name="sender">Источник события.</param>
         /// <param name="e">Аргументы события клика мышью.</param>
-        private void listBoxCustomersMouseClick(object sender, MouseEventArgs e)
+        private void ListBoxCustomersMouseClick(object sender, MouseEventArgs e)
         {
             if (listBoxCustomers.SelectedIndex != -1)
             {
@@ -200,7 +209,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// Обрабатывает событие клика по кнопке "Add". Открывает вкладку
         /// для добавления новой скидки клиенту.
         /// </summary>
-        private void buttonAddDiscountClick(object sender, EventArgs e)
+        private void ButtonAddDiscountClick(object sender, EventArgs e)
         {
             if (listBoxCustomers.SelectedIndex != -1)
             {
@@ -254,7 +263,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// Обрабатывает событие клика по кнопке "Remove". Удаляет выбранную
         /// скидку из списка скидок клиента.
         /// </summary>
-        private void buttonRemoveDiscountClick(object sender, EventArgs e)
+        private void ButtonRemoveDiscountClick(object sender, EventArgs e)
         {
             int indexDiscount = listBoxDiscounts.SelectedIndex;
             int indexCustomer = listBoxCustomers.SelectedIndex;

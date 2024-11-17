@@ -100,12 +100,15 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Заказы клиента.
         /// </summary>
+        /// /// <exception cref="NullReferenceException">
+        /// Выбрасывается, если заказов <paramref name="Orders"/> не существует.
+        /// </exception>
         public List<Order> Orders
         {
             get => _orders;
             set
             {
-                _orders = value;
+                _orders = value ?? throw new NullReferenceException(nameof(Orders));
             }
         }
 

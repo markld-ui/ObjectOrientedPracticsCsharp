@@ -121,7 +121,7 @@
             buttonAddToCart.TabIndex = 0;
             buttonAddToCart.Text = "Add To Cart";
             buttonAddToCart.UseVisualStyleBackColor = true;
-            buttonAddToCart.Click += buttonAddToCartClick;
+            buttonAddToCart.Click += ButtonAddToCartClick;
             // 
             // panel1
             // 
@@ -200,7 +200,7 @@
             checkedListBoxDiscounts.Name = "checkedListBoxDiscounts";
             checkedListBoxDiscounts.Size = new Size(312, 242);
             checkedListBoxDiscounts.TabIndex = 14;
-            checkedListBoxDiscounts.ItemCheck += checkedListBoxDiscountsItemCheck;
+            checkedListBoxDiscounts.ItemCheck += CheckedListBoxDiscountsItemCheck;
             // 
             // label6
             // 
@@ -253,7 +253,7 @@
             comboBoxCustomerInCart.Name = "comboBoxCustomerInCart";
             comboBoxCustomerInCart.Size = new Size(464, 28);
             comboBoxCustomerInCart.TabIndex = 1;
-            comboBoxCustomerInCart.SelectedIndexChanged += comboBoxCustomerInCartSelectedIndexChanged;
+            comboBoxCustomerInCart.SelectedIndexChanged += ComboBoxCustomerInCartSelectedIndexChanged;
             // 
             // listBoxCartOrder
             // 
@@ -311,7 +311,7 @@
             buttonCreateOrder.TabIndex = 8;
             buttonCreateOrder.Text = "Create Order";
             buttonCreateOrder.UseVisualStyleBackColor = true;
-            buttonCreateOrder.Click += buttonCreateOrderClick;
+            buttonCreateOrder.Click += ButtonCreateOrderClick;
             // 
             // buttonRemoveItem
             // 
@@ -321,7 +321,7 @@
             buttonRemoveItem.TabIndex = 7;
             buttonRemoveItem.Text = "Remove Item";
             buttonRemoveItem.UseVisualStyleBackColor = true;
-            buttonRemoveItem.Click += buttonRemoveItemClick;
+            buttonRemoveItem.Click += ButtonRemoveItemClick;
             // 
             // buttonClearCart
             // 
@@ -331,7 +331,7 @@
             buttonClearCart.TabIndex = 9;
             buttonClearCart.Text = "Clear Cart";
             buttonClearCart.UseVisualStyleBackColor = true;
-            buttonClearCart.MouseClick += buttonClearCartMouseClick;
+            buttonClearCart.MouseClick += ButtonClearCartMouseClick;
             // 
             // CartsTab
             // 

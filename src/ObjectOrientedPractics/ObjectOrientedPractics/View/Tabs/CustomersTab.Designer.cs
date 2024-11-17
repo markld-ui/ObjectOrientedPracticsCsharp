@@ -94,7 +94,7 @@
             listBoxCustomers.Name = "listBoxCustomers";
             listBoxCustomers.Size = new Size(381, 696);
             listBoxCustomers.TabIndex = 0;
-            listBoxCustomers.MouseClick += listBoxCustomersMouseClick;
+            listBoxCustomers.MouseClick += ListBoxCustomersMouseClick;
             // 
             // panel3
             // 
@@ -115,7 +115,7 @@
             removeBtnCustomers.TabIndex = 1;
             removeBtnCustomers.Text = "Remove";
             removeBtnCustomers.UseVisualStyleBackColor = true;
-            removeBtnCustomers.MouseClick += removeBtnCustomersMouseClick;
+            removeBtnCustomers.MouseClick += RemoveBtnCustomersMouseClick;
             // 
             // addBtnCustomers
             // 
@@ -126,7 +126,7 @@
             addBtnCustomers.TabIndex = 0;
             addBtnCustomers.Text = "Add";
             addBtnCustomers.UseVisualStyleBackColor = true;
-            addBtnCustomers.MouseClick += addBtnCustomersMouseClick;
+            addBtnCustomers.MouseClick += AddBtnCustomersMouseClick;
             // 
             // panel1
             // 
@@ -175,7 +175,7 @@
             buttonRemoveDiscount.TabIndex = 11;
             buttonRemoveDiscount.Text = "Remove";
             buttonRemoveDiscount.UseVisualStyleBackColor = true;
-            buttonRemoveDiscount.Click += buttonRemoveDiscountClick;
+            buttonRemoveDiscount.Click += ButtonRemoveDiscountClick;
             // 
             // buttonAddDiscount
             // 
@@ -185,7 +185,7 @@
             buttonAddDiscount.TabIndex = 10;
             buttonAddDiscount.Text = "Add";
             buttonAddDiscount.UseVisualStyleBackColor = true;
-            buttonAddDiscount.Click += buttonAddDiscountClick;
+            buttonAddDiscount.Click += ButtonAddDiscountClick;
             // 
             // Discounts
             // 

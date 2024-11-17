@@ -20,6 +20,8 @@ namespace ObjectOrientedPractics.View.Tabs
     /// </summary>
     public partial class CartsTab : UserControl
     {
+        public event EventHandler CartsChanged;
+
         /// <summary>
         /// Список текущих покупателей, для которых отображаются корзины.
         /// </summary>
@@ -34,6 +36,11 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Список всех доступных товаров.
         /// </summary>
         public List<Item> Items { get; set; }
+
+        /// <summary>
+        /// Событие срабатывает при изменении данных во вкладке корзины.
+        /// </summary>
+        protected virtual void OnCartsChanged() => CartsChanged?.Invoke(this, EventArgs.Empty);
 
         /// <summary>
         /// Обновляет данные в элементах управления, связанных с корзиной.
@@ -119,7 +126,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обрабатывает событие клика по кнопке "Очистить корзину". 
         /// Очищает корзину выбранного покупателя.
         /// </summary>
-        private void buttonClearCartMouseClick(object sender, MouseEventArgs e)
+        private void ButtonClearCartMouseClick(object sender, MouseEventArgs e)
         {
             if (comboBoxCustomerInCart.SelectedIndex != -1)
             {
@@ -164,7 +171,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обрабатывает событие клика по кнопке "Добавить в корзину". 
         /// Добавляет выбранный товар в корзину выбранного покупателя.
         /// </summary>
-        private void buttonAddToCartClick(object sender, EventArgs e)
+        private void ButtonAddToCartClick(object sender, EventArgs e)
         {
             int comboIndex = comboBoxCustomerInCart.SelectedIndex;
             int choiceItem = listBoxCartItems.SelectedIndex;
@@ -201,13 +208,15 @@ namespace ObjectOrientedPractics.View.Tabs
                 textBoxDiscountAmount.Text = sum.ToString();
                 textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
             }
+
+            OnCartsChanged();
         }
 
         /// <summary>
         /// Обрабатывает событие клика по кнопке "Удалить товар". 
         /// Удаляет выбранный товар из корзины выбранного покупателя.
         /// </summary>
-        private void buttonRemoveItemClick(object sender, EventArgs e)
+        private void ButtonRemoveItemClick(object sender, EventArgs e)
         {
             if (CurrentCustomer == null)
             {
@@ -244,13 +253,15 @@ namespace ObjectOrientedPractics.View.Tabs
                 textBoxDiscountAmount.Text = sum.ToString();
                 textBoxTotalPrice.Text = (Convert.ToDouble(textBoxAmount.Text) - sum).ToString();
             }
+
+            OnCartsChanged();
         }
 
         /// <summary>
         /// Обрабатывает событие изменения выбранного покупателя в ComboBox. 
         /// Обновляет сумму корзины выбранного покупателя.
         /// </summary>
-        private void comboBoxCustomerInCartSelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxCustomerInCartSelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxCustomerInCart.SelectedItem != null)
             {
@@ -284,13 +295,15 @@ namespace ObjectOrientedPractics.View.Tabs
                 listBoxCartOrder.Items.Clear();
                 checkedListBoxDiscounts.Items.Clear();
             }
+
+            OnCartsChanged();
         }
 
         /// <summary>
         /// Обрабатывает событие клика по кнопке "Создать заказ". 
         /// Создает новый заказ на основе товаров в корзине выбранного покупателя.
         /// </summary>
-        private void buttonCreateOrderClick(object sender, EventArgs e)
+        private void ButtonCreateOrderClick(object sender, EventArgs e)
         {
             if (listBoxCartOrder.Items.Count > 0)
             {
@@ -363,12 +376,14 @@ namespace ObjectOrientedPractics.View.Tabs
             {
                 MessageBox.Show("Корзина пользователя пуста! Заказ нечем наполнить!");
             }
+
+            OnCartsChanged();
         }
 
         /// <summary>
         /// Обрабатывает событие изменения состояния элемента в списке скидок.
         /// </summary>
-        private void checkedListBoxDiscountsItemCheck(object sender, ItemCheckEventArgs e)
+        private void CheckedListBoxDiscountsItemCheck(object sender, ItemCheckEventArgs e)
         {
             int indexCustomer = comboBoxCustomerInCart.SelectedIndex;
 

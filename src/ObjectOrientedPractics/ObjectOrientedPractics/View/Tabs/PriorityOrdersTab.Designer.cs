@@ -112,7 +112,7 @@
             comboBoxTimePriority.Name = "comboBoxTimePriority";
             comboBoxTimePriority.Size = new Size(121, 28);
             comboBoxTimePriority.TabIndex = 6;
-            comboBoxTimePriority.SelectedIndexChanged += comboBoxTimePrioritySelectedIndexChanged;
+            comboBoxTimePriority.SelectedIndexChanged += ComboBoxTimePrioritySelectedIndexChanged;
             // 
             // comboBoxStatusPriority
             // 
@@ -122,7 +122,7 @@
             comboBoxStatusPriority.Name = "comboBoxStatusPriority";
             comboBoxStatusPriority.Size = new Size(121, 28);
             comboBoxStatusPriority.TabIndex = 7;
-            comboBoxStatusPriority.SelectedIndexChanged += comboBoxStatusPrioritySelectedIndexChanged;
+            comboBoxStatusPriority.SelectedIndexChanged += ComboBoxStatusPrioritySelectedIndexChanged;
             // 
             // textBoxIdPriority
             // 
@@ -184,7 +184,7 @@
             buttonClearOrderPriority.TabIndex = 15;
             buttonClearOrderPriority.Text = "Clear Order";
             buttonClearOrderPriority.UseVisualStyleBackColor = true;
-            buttonClearOrderPriority.Click += buttonClearOrderPriorityClick;
+            buttonClearOrderPriority.Click += ButtonClearOrderPriorityClick;
             // 
             // buttonRemoveItemPriority
             // 
@@ -194,7 +194,7 @@
             buttonRemoveItemPriority.TabIndex = 16;
             buttonRemoveItemPriority.Text = "Remove Item";
             buttonRemoveItemPriority.UseVisualStyleBackColor = true;
-            buttonRemoveItemPriority.Click += buttonRemoveItemPriorityClick;
+            buttonRemoveItemPriority.Click += ButtonRemoveItemPriorityClick;
             // 
             // buttonAddItemPriority
             // 
@@ -204,7 +204,7 @@
             buttonAddItemPriority.TabIndex = 17;
             buttonAddItemPriority.Text = "Add Item";
             buttonAddItemPriority.UseVisualStyleBackColor = true;
-            buttonAddItemPriority.Click += buttonAddItemPriorityClick;
+            buttonAddItemPriority.Click += ButtonAddItemPriorityClick;
             // 
             // addressControlInPriority
             // 

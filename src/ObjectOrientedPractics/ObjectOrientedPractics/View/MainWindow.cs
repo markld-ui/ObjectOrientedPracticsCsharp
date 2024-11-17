@@ -35,13 +35,17 @@ namespace ObjectOrientedPractices
 
             cartsTab1.InitializeItemsListBox();
             cartsTab1.InitializeCustomersComboBox();
+
+            itemsTab1.ItemsChanged += DataChanged;
+            cartsTab1.CartsChanged += DataChanged;
+            customersTab1.CustomersChanged += DataChanged;
         }
 
         /// <summary>
         /// Обработчик события изменения выбранного индекса вкладки.
         /// Обновляет данные на вкладках корзины и заказов.
         /// </summary>
-        private void tabControl1SelectedIndexChanged(object sender, EventArgs e)
+        private void TabControl1SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (var time in priorityOrdersTab1.Customers)
             {
@@ -54,13 +58,7 @@ namespace ObjectOrientedPractices
                 }
             }
 
-            cartsTab1.RefreshData();
-            ordersTab1.RefreshData();
-            ordersTab1.UpdateOrders();
-            itemsTab1.StartedRefreshData();
-
-            priorityOrdersTab1.RefreshDataPriority();
-            UpdatePrirityOrder();
+            RefreshData();
         }
 
         /// <summary>
@@ -85,7 +83,34 @@ namespace ObjectOrientedPractices
             }
         }
 
-        private void itemsTab1Load(object sender, EventArgs e)
+        /// <summary>
+        /// Обновляет данные во всех вкладках приложения.
+        /// </summary>
+        private void RefreshData()
+        {
+            cartsTab1.RefreshData();
+            ordersTab1.RefreshData();
+            ordersTab1.UpdateOrders();
+            itemsTab1.StartedRefreshData();
+
+            priorityOrdersTab1.RefreshDataPriority();
+            UpdatePrirityOrder();
+        }
+
+        /// <summary>
+        /// Обработчик события изменения данных.
+        /// Вызывается при изменении элементов, клиентов или корзин.
+        /// </summary>
+        private void DataChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        /// <summary>
+        /// Обработчик события загрузки данных на вкладке элементов.
+        /// Инициирует обновление данных для вкладки.
+        /// </summary>
+        private void ItemsTab1Load(object sender, EventArgs e)
         {
             itemsTab1.StartedRefreshData();
         }

@@ -37,7 +37,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// Обрабатывает событие клика по кнопке "ОК". Проверяет, выбрана ли категория скидки,
         /// и если да, создаёт новую скидку и передаёт её в форму управления клиентами.
         /// </summary>
-        private void buttonOkClick(object sender, EventArgs e)
+        private void ButtonOkClick(object sender, EventArgs e)
         {
             if (comboBoxCategoryDiscount.SelectedItem != null)
             {
@@ -54,7 +54,7 @@ namespace ObjectOrientedPractices.View.Tabs
         /// <summary>
         /// Обрабатывает событие клика по кнопке "Отмена". Закрывает текущую форму без изменений.
         /// </summary>
-        private void buttonCancelClick(object sender, EventArgs e)
+        private void ButtonCancelClick(object sender, EventArgs e)
         {
             Close();
         }

@@ -21,6 +21,8 @@ namespace ObjectOrientedPractices.Model
         private string _building;
         private string _apartament;
 
+        public event EventHandler<EventArgs> AddressChanged;
+
         /// <summary>
         /// Почтовый индекс адреса.
         /// </summary>
@@ -41,6 +43,7 @@ namespace ObjectOrientedPractices.Model
                 }
 
                 _index = value;
+                OnAddressChanged();
             } 
         }
 
@@ -62,6 +65,7 @@ namespace ObjectOrientedPractices.Model
                 {
                     ValueValidator.AssertStringOnLength(value, 50, 0, nameof(Country));
                     _country = value;
+                    OnAddressChanged();
                 }
                 catch (StringLengthException)
                 {
@@ -88,6 +92,7 @@ namespace ObjectOrientedPractices.Model
                 {
                     ValueValidator.AssertStringOnLength(value, 50, 0, nameof(City));
                     _city = value;
+                    OnAddressChanged();
                 }
                 catch (StringLengthException)
                 {
@@ -114,6 +119,7 @@ namespace ObjectOrientedPractices.Model
                 {
                     ValueValidator.AssertStringOnLength(value, 100, 0, nameof(Street));
                     _street = value;
+                    OnAddressChanged();
                 }
                 catch (StringLengthException)
                 {
@@ -140,6 +146,7 @@ namespace ObjectOrientedPractices.Model
                 {
                     ValueValidator.AssertStringOnLength(value, 10, 0, nameof(Building));
                     _building = value;
+                    OnAddressChanged();
                 }
                 catch (StringLengthException)
                 {
@@ -166,12 +173,21 @@ namespace ObjectOrientedPractices.Model
                 {
                     ValueValidator.AssertStringOnLength(value, 10, 0, nameof(Apartament));
                     _apartament = value;
+                    OnAddressChanged();
                 }
                 catch (StringLengthException)
                 {
                     throw new StringLengthException(nameof(Apartament), 10, 0);
                 }
             }
+        }
+
+        /// <summary>
+        /// Метод для вызова события при изменении адреса.
+        /// </summary>
+        protected virtual void OnAddressChanged()
+        {
+            AddressChanged?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>

@@ -24,6 +24,10 @@ namespace ObjectOrientedPractices.Model
         private double _cost;
         private Category _category;
 
+        public event EventHandler<EventArgs> NameChanged;
+        public event EventHandler<EventArgs> CostChanged;
+        public event EventHandler<EventArgs> InfoChanged;
+
         /// <summary>
         /// Уникальный идентификатор предмета.
         /// </summary>
@@ -53,6 +57,7 @@ namespace ObjectOrientedPractices.Model
                 {
                     ValueValidator.AssertStringOnLength(value, 200, 0, nameof(Name));
                     _name = value;
+                    OnNameChanged();
                 }
 
                 catch (StringLengthException)
@@ -81,6 +86,7 @@ namespace ObjectOrientedPractices.Model
                 {
                     ValueValidator.AssertStringOnLength(value, 1000, 0, nameof(Info));
                     _info = value;
+                    OnInfoChanged();
                 }
                 catch (StringLengthException)
                 {
@@ -108,7 +114,8 @@ namespace ObjectOrientedPractices.Model
                     { 
                         throw new ArgumentOutOfRangeException("Цена превосходит или меньше допустимой величины");
                     }
-                _cost = value; 
+                _cost = value;
+                OnCostChanged();
             }
 
         }
@@ -120,6 +127,30 @@ namespace ObjectOrientedPractices.Model
         { 
             get => _category; 
             set => _category = value; 
+        }
+
+        /// <summary>
+        /// Событие срабатывает при изменении имени товара.
+        /// </summary>
+        protected virtual void OnNameChanged()
+        {
+            NameChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// Событие срабатывает при изменении цены товара.
+        /// </summary>
+        protected virtual void OnCostChanged()
+        {
+            CostChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// Событие срабатывает при изменении информации о товаре.
+        /// </summary>
+        protected virtual void OnInfoChanged()
+        {
+            InfoChanged?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>

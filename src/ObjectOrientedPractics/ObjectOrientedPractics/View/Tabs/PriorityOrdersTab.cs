@@ -165,7 +165,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обработчик изменения выбранного времени приоритетного заказа.
         /// Обновляет время у всех клиентов и обновляет данные на вкладке.
         /// </summary>
-        private void comboBoxTimePrioritySelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxTimePrioritySelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxTimePriority.SelectedItem != null)
             {
@@ -182,7 +182,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обработчик изменения выбранного статуса заказа.
         /// Обновляет статус у всех заказов и обновляет данные на вкладке.
         /// </summary>
-        private void comboBoxStatusPrioritySelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxStatusPrioritySelectedIndexChanged(object sender, EventArgs e)
         {
             if (Customers.Count > 0 && comboBoxStatusPriority.SelectedItem != null)
             {
@@ -205,7 +205,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обработчик нажатия кнопки добавления товара в приоритетный заказ.
         /// Добавляет случайный товар из списка товаров в заказы клиентов.
         /// </summary>
-        private void buttonAddItemPriorityClick(object sender, EventArgs e)
+        private void ButtonAddItemPriorityClick(object sender, EventArgs e)
         {
             if (Items.Count != 0)
             {
@@ -233,7 +233,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обработчик нажатия кнопки удаления товара из приоритетного заказа.
         /// Удаляет выбранный товар из заказов клиентов.
         /// </summary>
-        private void buttonRemoveItemPriorityClick(object sender, EventArgs e)
+        private void ButtonRemoveItemPriorityClick(object sender, EventArgs e)
         {
             int indexItem = listBoxItemsInPriority.SelectedIndex;
             if (indexItem != -1)
@@ -259,7 +259,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// Обработчик нажатия кнопки очистки заказов.
         /// Очищает все заказы и элементы управления на вкладке.
         /// </summary>
-        private void buttonClearOrderPriorityClick(object sender, EventArgs e)
+        private void ButtonClearOrderPriorityClick(object sender, EventArgs e)
         {
             if (Customers.Count != 0)
             {

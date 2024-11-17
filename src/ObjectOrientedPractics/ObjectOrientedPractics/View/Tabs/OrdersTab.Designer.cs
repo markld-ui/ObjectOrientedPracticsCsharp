@@ -137,7 +137,7 @@
             comboBoxStatusOrder.Name = "comboBoxStatusOrder";
             comboBoxStatusOrder.Size = new Size(121, 28);
             comboBoxStatusOrder.TabIndex = 7;
-            comboBoxStatusOrder.SelectedIndexChanged += comboBoxStatusOrderSelectedIndexChanged;
+            comboBoxStatusOrder.SelectedIndexChanged += ComboBoxStatusOrderSelectedIndexChanged;
             // 
             // label6
             // 
@@ -195,7 +195,7 @@
             dataGridViewOrder.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewOrder.Size = new Size(534, 671);
             dataGridViewOrder.TabIndex = 13;
-            dataGridViewOrder.CellClick += dataGridViewOrderCellClick;
+            dataGridViewOrder.CellClick += DataGridViewOrderCellClick;
             // 
             // Id
             // 
@@ -292,7 +292,7 @@
             comboBoxTimeOrder.Name = "comboBoxTimeOrder";
             comboBoxTimeOrder.Size = new Size(121, 28);
             comboBoxTimeOrder.TabIndex = 9;
-            comboBoxTimeOrder.SelectedIndexChanged += comboBoxTimeOrderSelectedIndexChanged;
+            comboBoxTimeOrder.SelectedIndexChanged += ComboBoxTimeOrderSelectedIndexChanged;
             // 
             // label8
             // 
