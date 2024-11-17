@@ -32,7 +32,14 @@
             splitContainer1 = new SplitContainer();
             panel1 = new Panel();
             panel4 = new Panel();
+            panel8 = new Panel();
             listBoxItems = new ListBox();
+            panel7 = new Panel();
+            comboBoxOrderBy = new ComboBox();
+            label8 = new Label();
+            panel6 = new Panel();
+            textBoxFindItem = new TextBox();
+            label7 = new Label();
             panel3 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
@@ -56,6 +63,9 @@
             splitContainer1.SuspendLayout();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
+            panel8.SuspendLayout();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
@@ -99,12 +109,23 @@
             // 
             // panel4
             // 
-            panel4.Controls.Add(listBoxItems);
+            panel4.Controls.Add(panel8);
+            panel4.Controls.Add(panel7);
+            panel4.Controls.Add(panel6);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 42);
             panel4.Name = "panel4";
             panel4.Size = new Size(481, 699);
             panel4.TabIndex = 4;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(listBoxItems);
+            panel8.Dock = DockStyle.Fill;
+            panel8.Location = new Point(0, 38);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(481, 624);
+            panel8.TabIndex = 3;
             // 
             // listBoxItems
             // 
@@ -112,9 +133,67 @@
             listBoxItems.FormattingEnabled = true;
             listBoxItems.Location = new Point(0, 0);
             listBoxItems.Name = "listBoxItems";
-            listBoxItems.Size = new Size(481, 699);
+            listBoxItems.Size = new Size(481, 624);
             listBoxItems.TabIndex = 0;
             listBoxItems.MouseClick += listBoxItemsMouseClick;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(comboBoxOrderBy);
+            panel7.Controls.Add(label8);
+            panel7.Dock = DockStyle.Bottom;
+            panel7.Location = new Point(0, 662);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(481, 37);
+            panel7.TabIndex = 2;
+            // 
+            // comboBoxOrderBy
+            // 
+            comboBoxOrderBy.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxOrderBy.FormattingEnabled = true;
+            comboBoxOrderBy.Location = new Point(104, 6);
+            comboBoxOrderBy.Name = "comboBoxOrderBy";
+            comboBoxOrderBy.Size = new Size(323, 28);
+            comboBoxOrderBy.TabIndex = 3;
+            comboBoxOrderBy.SelectedIndexChanged += comboBoxOrderBySelectedIndexChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label8.Location = new Point(3, 6);
+            label8.Name = "label8";
+            label8.Size = new Size(95, 28);
+            label8.TabIndex = 2;
+            label8.Text = "Order by:";
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(textBoxFindItem);
+            panel6.Controls.Add(label7);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(481, 38);
+            panel6.TabIndex = 1;
+            // 
+            // textBoxFindItem
+            // 
+            textBoxFindItem.Location = new Point(87, 6);
+            textBoxFindItem.Name = "textBoxFindItem";
+            textBoxFindItem.Size = new Size(340, 27);
+            textBoxFindItem.TabIndex = 1;
+            textBoxFindItem.TextChanged += textBoxFindItemTextChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label7.Location = new Point(3, 6);
+            label7.Name = "label7";
+            label7.Size = new Size(56, 28);
+            label7.TabIndex = 0;
+            label7.Text = "Find:";
             // 
             // panel3
             // 
@@ -299,6 +378,11 @@
             splitContainer1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel2.ResumeLayout(false);
@@ -331,5 +415,12 @@
         private Label label2;
         private Label label_category;
         private ComboBox comboBoxCategoryItems;
+        private Panel panel7;
+        private Panel panel6;
+        private TextBox textBoxFindItem;
+        private Label label7;
+        private Label label8;
+        private ComboBox comboBoxOrderBy;
+        private Panel panel8;
     }
 }

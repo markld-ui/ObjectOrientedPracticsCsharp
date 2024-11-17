@@ -22,15 +22,7 @@ namespace ObjectOrientedPractices
         public MainWindow()
         {
             InitializeComponent();
-            Load += MainWindow_Load;
-        }
 
-        /// <summary>
-        /// Обработчик события загрузки окна. 
-        /// Здесь инициализируются данные для различных вкладок.
-        /// </summary>
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
             itemsTab1.Items = _store.Items;
             customersTab1.Customers = _store.Customers;
 
@@ -65,6 +57,7 @@ namespace ObjectOrientedPractices
             cartsTab1.RefreshData();
             ordersTab1.RefreshData();
             ordersTab1.UpdateOrders();
+            itemsTab1.StartedRefreshData();
 
             priorityOrdersTab1.RefreshDataPriority();
             UpdatePrirityOrder();
@@ -90,6 +83,11 @@ namespace ObjectOrientedPractices
                     }
                 }
             }
+        }
+
+        private void itemsTab1Load(object sender, EventArgs e)
+        {
+            itemsTab1.StartedRefreshData();
         }
     }
 }

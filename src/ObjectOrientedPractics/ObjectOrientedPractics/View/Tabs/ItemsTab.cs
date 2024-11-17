@@ -11,6 +11,7 @@ using ObjectOrientedPractices.Model;
 using ObjectOrientedPractices.Services;
 using ObjectOrientedPractices.Exceptions;
 using ObjectOrientedPractices.Model.Enums;
+using System.Xml.Linq;
 
 namespace ObjectOrientedPractices.View.Tabs
 {
@@ -26,6 +27,11 @@ namespace ObjectOrientedPractices.View.Tabs
         private List<Item> _items = new();
 
         /// <summary>
+        /// Список всех отображаемых элементов.
+        /// </summary>
+        private List<Item> _displayedItems = new();
+
+        /// <summary>
         /// Конструктор по умолчанию, инициализирующий вкладку ItemsTab.
         /// </summary>
         public ItemsTab()
@@ -33,6 +39,7 @@ namespace ObjectOrientedPractices.View.Tabs
             InitializeComponent();
             comboBoxCategoryItems.DataSource = Enum.GetValues(typeof(Category));
             comboBoxCategoryItems.SelectedItem = null;
+            comboBoxOrderBy.DataSource = DataTools.ComboBoxSorted;
 
         }
 
@@ -42,26 +49,42 @@ namespace ObjectOrientedPractices.View.Tabs
         public List<Item> Items
         {
             get
-            { 
-                return _items; 
+            {
+                return _items;
             }
             set
             {
                 _items = value;
-                UpdateItemsListBox();
+                //UpdateItemsListBox();
             }
         }
 
         /// <summary>
-        /// Метод обновновления списка предметов
+        /// Обновляет список элементов в ListBox с учётом фильтра и сортировки.
         /// </summary>
-        private void UpdateItemsListBox()
+        private void UpdateDisplayedItems()
         {
-            listBoxItems.Items.Clear();
-            foreach (var item in _items)
+
+            var filteredItems = DataTools.FilterItems(Items, item =>
+                            item.Name.ToLower().Contains(textBoxFindItem.Text.ToLower()))
+                            .OrderBy(item => item.Name, StringComparer.CurrentCulture)
+                            .ToList();
+
+            switch (comboBoxOrderBy.SelectedItem)
             {
-                listBoxItems.Items.Add(item.Name);
+                case "Name":
+                    break;
+                case "Cost (Ascending)":
+                    filteredItems = filteredItems.OrderBy(item => item.Cost).ToList();
+                    break;
+                case "Cost (Descending)":
+                    filteredItems = filteredItems.OrderByDescending(item => item.Cost).ToList();
+                    break;
             }
+
+            _displayedItems = filteredItems;
+            listBoxItems.DataSource = null;
+            listBoxItems.DataSource = _displayedItems;
         }
 
         /// <summary>
@@ -99,7 +122,9 @@ namespace ObjectOrientedPractices.View.Tabs
                 Item item = new(textBoxNameItems.Text, textBoxDescrItems.Text, cost, category);
 
                 _items.Add(item);
-                listBoxItems.Items.Add($"{item.Name} - {item.Cost}");
+                _displayedItems.Add(item);
+
+                //listBoxItems.Items.Add($"{item.Name}");
 
                 textBoxCostItems.BackColor = Color.White;
                 textBoxDescrItems.BackColor = Color.White;
@@ -110,6 +135,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBoxIdItems.Clear();
                 textBoxNameItems.Clear();
                 comboBoxCategoryItems.SelectedItem = null;
+                UpdateDisplayedItems();
 
             }
             catch (StringLengthException)
@@ -131,7 +157,7 @@ namespace ObjectOrientedPractices.View.Tabs
                 textBoxCostItems.Clear();
             }
         }
-       
+
         /// <summary>
         /// Обрабатывает событие клика по кнопке "Удалить". Удаляет выбранный элемент
         /// из списка и обновляет интерфейс.
@@ -143,8 +169,21 @@ namespace ObjectOrientedPractices.View.Tabs
             if (listBoxItems.SelectedIndex != -1)
             {
                 int index = listBoxItems.SelectedIndex;
-                _items.RemoveAt(index);
-                listBoxItems.Items.RemoveAt(index);
+
+                if (textBoxFindItem.TextLength > 0)
+                {
+                    _displayedItems.RemoveAt(index);
+                    int indexOfFind = Items.IndexOf((Item)listBoxItems.SelectedItem);
+                    _items.RemoveAt(indexOfFind);
+                }
+                else 
+                {
+                    int indexOfFind = Items.IndexOf((Item)listBoxItems.SelectedItem);
+                    _items.RemoveAt(indexOfFind);
+                }
+
+                UpdateDisplayedItems();
+
                 MessageBox.Show("Элемент успешно удален", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBoxCostItems.Clear();
                 textBoxDescrItems.Clear();
@@ -169,13 +208,31 @@ namespace ObjectOrientedPractices.View.Tabs
             if (listBoxItems.SelectedIndex != -1)
             {
                 int index = listBoxItems.SelectedIndex;
-                Item selectedItem = _items[index];
+                if (textBoxFindItem.TextLength > 0)
+                {
+                    int indexOfFind = _items.IndexOf((Item)listBoxItems.SelectedItem);
 
-                textBoxNameItems.Text = selectedItem.Name;
-                textBoxDescrItems.Text = selectedItem.Info;
-                textBoxCostItems.Text = selectedItem.Cost.ToString();
-                textBoxIdItems.Text = selectedItem.Id.ToString();
-                comboBoxCategoryItems.SelectedItem = selectedItem.Category;
+                    Item selectedItem = _items[indexOfFind];
+
+                    textBoxNameItems.Text = selectedItem.Name;
+                    textBoxDescrItems.Text = selectedItem.Info;
+                    textBoxCostItems.Text = selectedItem.Cost.ToString();
+                    textBoxIdItems.Text = selectedItem.Id.ToString();
+                    comboBoxCategoryItems.SelectedItem = selectedItem.Category;
+
+                }
+                else
+                {
+                    int indexOfFind = _items.IndexOf((Item)listBoxItems.SelectedItem);
+
+                    Item selectedItem = _items[indexOfFind];
+
+                    textBoxNameItems.Text = selectedItem.Name;
+                    textBoxDescrItems.Text = selectedItem.Info;
+                    textBoxCostItems.Text = selectedItem.Cost.ToString();
+                    textBoxIdItems.Text = selectedItem.Id.ToString();
+                    comboBoxCategoryItems.SelectedItem = selectedItem.Category;
+                }
             }
             else
             {
@@ -200,13 +257,224 @@ namespace ObjectOrientedPractices.View.Tabs
         /// </summary>
         private void comboBoxCategoryItemsSelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxItems.SelectedIndex != -1)
+            /*if (listBoxItems.SelectedIndex != -1)
             {
                 int index = listBoxItems.SelectedIndex;
                 Item selectedItem = _items[index];
 
                 selectedItem.Category = (Category)comboBoxCategoryItems.SelectedItem;
+            }*/
+        }
+
+        /// <summary>
+        /// Обрабатывает событие изменения текста в текстовом поле.
+        /// Фильтрует и сортирует элементы в зависимости от введенного текста и выбранного параметра сортировки.
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие.</param>
+        /// <param name="e">Аргументы события.</param>
+        private void textBoxFindItemTextChanged(object sender, EventArgs e)
+        {
+            string name = textBoxFindItem.Text;
+
+            if (textBoxFindItem.TextLength > 0 && comboBoxOrderBy.Text == DataTools.ComboBoxSorted[0])
+            {
+                List<Item> newItems = new List<Item>(Items);
+
+                var filtredItems = DataTools.FilterItems(Items, item =>
+                item.Name.ToLower().Contains(textBoxFindItem.Text.ToLower()))
+                .OrderBy(item => item.Name, StringComparer.CurrentCulture)
+                .ToList();
+
+                _displayedItems.Clear();
+                _displayedItems.AddRange(filtredItems);
+                listBoxItems.DataSource = null;
+                listBoxItems.DataSource = _displayedItems;
+
             }
+
+            if (textBoxFindItem.TextLength > 0 && comboBoxOrderBy.Text == DataTools.ComboBoxSorted[1])
+            {
+                List<Item> newItems = new List<Item>(Items);
+
+                var filtredItems = DataTools.FilterItems(newItems, item =>
+                item.Name.ToLower().Contains(name));
+
+                filtredItems = filtredItems.OrderBy(item => item.Cost).ToList();
+                _displayedItems.Clear();
+                _displayedItems.AddRange(filtredItems);
+                listBoxItems.DataSource = null;
+                listBoxItems.DataSource = _displayedItems;
+
+            }
+
+            if (textBoxFindItem.TextLength > 0 && comboBoxOrderBy.Text == DataTools.ComboBoxSorted[2])
+            {
+                List<Item> newItems = new List<Item>(Items);
+
+                var filtredItems = DataTools.FilterItems(newItems, item =>
+                item.Name.ToLower().Contains(name));
+                filtredItems = filtredItems.OrderByDescending(item => item.Cost).ToList();
+
+                _displayedItems.Clear();
+                _displayedItems.AddRange(filtredItems);
+                listBoxItems.DataSource = null;
+                listBoxItems.DataSource = _displayedItems;
+
+            }
+
+            if (textBoxFindItem.TextLength == 0 && comboBoxOrderBy.Text == DataTools.ComboBoxSorted[0])
+            {
+                var filtredItems = DataTools.FilterItems(Items, item =>
+                item.Name.ToLower().Contains(textBoxFindItem.Text.ToLower()))
+                .OrderBy(item => item.Name, StringComparer.CurrentCulture)
+                .ToList();
+
+                _displayedItems.Clear();
+                _displayedItems.AddRange(filtredItems);
+                listBoxItems.DataSource = null;
+                listBoxItems.DataSource = _displayedItems;
+            }
+
+            if (textBoxFindItem.TextLength == 0 && comboBoxOrderBy.Text == DataTools.ComboBoxSorted[1])
+            {
+                var filtredItems = DataTools.FilterItems(Items, item =>
+                item.Name.ToLower().Contains(name));
+                filtredItems = filtredItems.OrderBy(item => item.Cost).ToList();
+
+                _displayedItems.Clear();
+                _displayedItems.AddRange(filtredItems);
+                listBoxItems.DataSource = null;
+                listBoxItems.DataSource = _displayedItems;
+            }
+
+            if (textBoxFindItem.TextLength == 0 && comboBoxOrderBy.Text == DataTools.ComboBoxSorted[2])
+            {
+                var filtredItems = DataTools.FilterItems(Items, item =>
+                item.Name.ToLower().Contains(name));
+                filtredItems = filtredItems.OrderByDescending(item => item.Cost).ToList();
+
+                _displayedItems.Clear();
+                _displayedItems.AddRange(filtredItems);
+                listBoxItems.DataSource = null;
+                listBoxItems.DataSource = _displayedItems;
+            }
+            UpdateDisplayedItems();
+        }
+
+        /// <summary>
+        /// Обрабатывает событие изменения выбранного элемента в комбобоксе сортировки.
+        /// Обновляет отображение элементов в зависимости от выбранного критерия сортировки.
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие.</param>
+        /// <param name="e">Аргументы события.</param>
+        private void comboBoxOrderBySelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxOrderBy.SelectedIndex != null)
+            {
+                _displayedItems.Clear();
+
+                if (comboBoxOrderBy.Text == DataTools.ComboBoxSorted[0])
+                {
+                    if (textBoxFindItem.TextLength > 0)
+                    {
+                        List<Item> newItems = new List<Item>();
+                        foreach (var item in listBoxItems.Items)
+                        {
+                            newItems.Add((Item)item);
+                        }
+
+                        _displayedItems = DataTools.FilterItems(newItems, item =>
+                            item.Name.ToLower().Contains(textBoxFindItem.Text.ToLower()))
+                            .OrderBy(item => item.Name, StringComparer.CurrentCulture)
+                            .ToList();
+                    }
+                    else
+                    {
+                        _displayedItems = DataTools.FilterItems(Items, item =>
+                            item.Name.ToLower().Contains(textBoxFindItem.Text.ToLower()))
+                            .OrderBy(item => item.Name, StringComparer.CurrentCulture)
+                            .ToList();
+                    }
+
+                    listBoxItems.DataSource = null;
+                    listBoxItems.DataSource = _displayedItems;
+                }
+
+                if (comboBoxOrderBy.Text == DataTools.ComboBoxSorted[1])
+                {
+                    if (textBoxFindItem.TextLength > 0)
+                    {
+                        List<Item> newItems = new List<Item>();
+                        foreach (var item in listBoxItems.Items)
+                        {
+                            newItems.Add((Item)item);
+                        }
+
+                        var filtredItems = DataTools.FilterItems(newItems, item =>
+                            item.Name.ToLower().Contains(textBoxFindItem.Text));
+
+                        filtredItems = filtredItems.OrderBy(item => item.Cost).ToList();
+
+                        _displayedItems.AddRange(filtredItems);
+                    }
+                    else
+                    {
+                        var filtredItems = DataTools.FilterItems(Items, item =>
+                            item.Name.ToLower().Contains(textBoxFindItem.Text));
+
+                        filtredItems = filtredItems.OrderBy(item => item.Cost).ToList();
+
+                        _displayedItems.AddRange(filtredItems);
+                    }
+
+                    listBoxItems.DataSource = null;
+                    listBoxItems.DataSource = _displayedItems;
+                }
+
+                if (comboBoxOrderBy.Text == DataTools.ComboBoxSorted[2])
+                {
+                    if (textBoxFindItem.TextLength > 0)
+                    {
+                        List<Item> newItems = new List<Item>();
+                        foreach (var item in listBoxItems.Items)
+                        {
+                            newItems.Add((Item)item);
+                        }
+
+                        var filtredItems = DataTools.FilterItems(newItems, item =>
+                            item.Name.ToLower().Contains(textBoxFindItem.Text));
+                        filtredItems = filtredItems.OrderByDescending(item => item.Cost).ToList();
+
+                        _displayedItems.AddRange(filtredItems);
+                    }
+                    else
+                    {
+                        var filtredItems = DataTools.FilterItems(Items, item =>
+                            item.Name.ToLower().Contains(textBoxFindItem.Text));
+                        filtredItems = filtredItems.OrderByDescending(item => item.Cost).ToList();
+
+                        _displayedItems.AddRange(filtredItems);
+                    }
+
+                    listBoxItems.DataSource = null;
+                    listBoxItems.DataSource = _displayedItems;
+                }
+            }
+            UpdateDisplayedItems();
+        }
+
+        /// <summary>
+        /// Обновляет данные в списке элементов, применяя фильтрацию и сортировку 
+        /// в начале работы программы.
+        /// </summary>
+        public void StartedRefreshData()
+        {
+            _displayedItems = DataTools.FilterItems(Items, item =>
+                item.Name.ToLower().Contains(textBoxFindItem.Text.ToLower()))
+                .OrderBy(item => item.Name, StringComparer.CurrentCulture)
+                .ToList();
+            listBoxItems.DataSource = null;
+            listBoxItems.DataSource = _displayedItems;
         }
     }
 }

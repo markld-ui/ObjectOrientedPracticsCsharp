@@ -86,6 +86,7 @@ namespace ObjectOrientedPractices
             itemsTab1.Name = "itemsTab1";
             itemsTab1.Size = new Size(1060, 752);
             itemsTab1.TabIndex = 0;
+            itemsTab1.Load += itemsTab1Load;
             // 
             // tabPage2
             // 
@@ -93,7 +94,7 @@ namespace ObjectOrientedPractices
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1066, 723);
+            tabPage2.Size = new Size(1066, 758);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Customers";
             tabPage2.UseVisualStyleBackColor = true;
@@ -104,7 +105,7 @@ namespace ObjectOrientedPractices
             customersTab1.Location = new Point(3, 3);
             customersTab1.Name = "customersTab1";
             customersTab1.newDiscount = null;
-            customersTab1.Size = new Size(1060, 717);
+            customersTab1.Size = new Size(1060, 752);
             customersTab1.TabIndex = 0;
             // 
             // tabPage3
@@ -113,7 +114,7 @@ namespace ObjectOrientedPractices
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(1066, 723);
+            tabPage3.Size = new Size(1066, 758);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Cart";
             tabPage3.UseVisualStyleBackColor = true;
@@ -125,7 +126,7 @@ namespace ObjectOrientedPractices
             cartsTab1.Items = null;
             cartsTab1.Location = new Point(3, 3);
             cartsTab1.Name = "cartsTab1";
-            cartsTab1.Size = new Size(1060, 717);
+            cartsTab1.Size = new Size(1060, 752);
             cartsTab1.TabIndex = 0;
             // 
             // tabPage4
@@ -134,7 +135,7 @@ namespace ObjectOrientedPractices
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(1066, 723);
+            tabPage4.Size = new Size(1066, 758);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Orders";
             tabPage4.UseVisualStyleBackColor = true;
@@ -149,7 +150,7 @@ namespace ObjectOrientedPractices
             priorityOrder1.PriorityOrderTime = null;
             priorityOrder1.Status = Model.Enums.OrderStatus.New;
             ordersTab1.PriorityOrder = priorityOrder1;
-            ordersTab1.Size = new Size(1060, 717);
+            ordersTab1.Size = new Size(1060, 752);
             ordersTab1.TabIndex = 0;
             // 
             // tabPage5
@@ -158,7 +159,7 @@ namespace ObjectOrientedPractices
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(1066, 723);
+            tabPage5.Size = new Size(1066, 758);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Priority Orders";
             tabPage5.UseVisualStyleBackColor = true;
@@ -173,7 +174,7 @@ namespace ObjectOrientedPractices
             priorityOrder2.PriorityOrderTime = null;
             priorityOrder2.Status = Model.Enums.OrderStatus.New;
             priorityOrdersTab1.PriorityOrder = priorityOrder2;
-            priorityOrdersTab1.Size = new Size(1060, 717);
+            priorityOrdersTab1.Size = new Size(1060, 752);
             priorityOrdersTab1.TabIndex = 0;
             // 
             // MainWindow
