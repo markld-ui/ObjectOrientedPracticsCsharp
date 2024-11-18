@@ -8,10 +8,6 @@
   <counters models="1">
     <entity-names>
       <counter>
-        <item-type type="Unknown" />
-        <value>3</value>
-      </counter>
-      <counter>
         <item-type type-id="class" type="Class" />
         <value>2</value>
       </counter>
@@ -31,7 +27,7 @@
       </counter>
       <counter>
         <item-type type-id="property" type="Property" />
-        <value>75</value>
+        <value>78</value>
       </counter>
       <counter>
         <item-type type-id="usage" type="Usage" />
@@ -43,7 +39,7 @@
       </counter>
       <counter>
         <item-type type-id="abstraction" type="Abstraction" />
-        <value>7</value>
+        <value>16</value>
       </counter>
       <counter>
         <item-type type-id="generalization" type="Generalization" />
@@ -56,7 +52,12 @@
         <value>1</value>
       </counter>
     </diagrams>
-    <fields />
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>15</value>
+      </counter>
+    </fields>
   </counters>
   <alias-groups />
   <management uid="md-6cadd7edc2264452a3af19704e39ef09" name="" task-id-sequence="0">
@@ -90,6 +91,16 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-192b2ecbc38d452eaba324358406c86b" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Роман</first-name>
+        <last-name>Слиньков</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
       </person>
     </persons>
     <teams />
@@ -109,44 +120,44 @@
       <types>
         <type id="Class:a82a0f5db9244cabafbd30836cb5e322" name="Cart" class-ref="a82a0f5db9244cabafbd30836cb5e322" />
         <type id="Store" name="Store" />
+        <type id="PercentDiscount" name="PercentDiscount" />
         <type id="CSharp.double" tid="s-real64" name="double" />
-        <type id="Class:9686b4e3b52c49b8aa7da02dde954ae8" name="Address" class-ref="9686b4e3b52c49b8aa7da02dde954ae8" />
         <type id="Class:ef7b9ae4d99a469e9b60bf98c0589439" name="Item" class-ref="ef7b9ae4d99a469e9b60bf98c0589439" />
-        <type id="CSharp.bool" tid="boolean" name="bool">
-          <parameter ref="nullable" value="" />
-        </type>
+        <type id="Class:9686b4e3b52c49b8aa7da02dde954ae8" name="Address" class-ref="9686b4e3b52c49b8aa7da02dde954ae8" />
+        <type id="CSharp.bool" tid="boolean" name="bool" />
         <type id=": Cart" name=": Cart" />
         <type id="Class:195fd0af34c445f4bf905afebcf416ed" name="Order" class-ref="195fd0af34c445f4bf905afebcf416ed" />
         <type id="Class:c42d477e7ae344a2b70c1a31a20d7497" name="StringLengthException" class-ref="c42d477e7ae344a2b70c1a31a20d7497" />
-        <type id="Class:26d74c5301924646892139bd18e5b767" name="IdGenerator" class-ref="26d74c5301924646892139bd18e5b767" />
-        <type id="Class:48b470077baf44b7be78b362b50fd304" name="Store" class-ref="48b470077baf44b7be78b362b50fd304" />
-        <type id="EventArgs" name="EventArgs" />
+        <type id="PointsDiscount" name="PointsDiscount" />
         <type id="bool" name="bool" />
+        <type id="EventArgs" name="EventArgs" />
+        <type id="Class:48b470077baf44b7be78b362b50fd304" name="Store" class-ref="48b470077baf44b7be78b362b50fd304" />
+        <type id="Class:26d74c5301924646892139bd18e5b767" name="IdGenerator" class-ref="26d74c5301924646892139bd18e5b767" />
+        <type id="CSharp.int" tid="s-integer32" name="int" />
+        <type id="Category" name="Category" />
         <type id="CSharp.List_Item" tid="array" name="List&lt;Item&gt;" template="{{Name}}&lt;{{?}}&gt;" base-ref="CSharp.List">
           <template-parameter ref="Item" />
           <template-parameter ref="Item" />
         </type>
-        <type id="Category" name="Category" />
-        <type id="CSharp.int" tid="s-integer32" name="int" />
-        <type id="private  _discounts;" name="private  _discounts;" />
         <type id="MouseEventArgs" name="MouseEventArgs" />
+        <type id="private  _discounts;" name="private  _discounts;" />
         <type id="Class:0c6ae445de234b699c3446ae08646f9c" name="Customer" class-ref="0c6ae445de234b699c3446ae08646f9c" />
-        <type id="List&lt;IDiscount&gt;" name="List&lt;IDiscount&gt;" />
-        <type id="OrderStatus" name="OrderStatus" />
         <type id="object" name="object" />
+        <type id="OrderStatus" name="OrderStatus" />
+        <type id="List&lt;IDiscount&gt;" name="List&lt;IDiscount&gt;" />
         <type id="CSharp.object" tid="object" name="object" nullable="true" />
+        <type id="CSharp.string" tid="string" name="string" nullable="true" />
         <type id="CSharp.List_Customer" tid="array" name="List&lt;Customer&gt;" template="{{Name}}&lt;{{?}}&gt;" base-ref="CSharp.List">
           <template-parameter ref="Customer" />
           <template-parameter ref="Customer" />
         </type>
-        <type id="CSharp.string" tid="string" name="string" nullable="true" />
         <type id="Address" name="Address" />
         <type id="List&lt;Order&gt;" name="List&lt;Order&gt;" />
+        <type id="Class:91c6d8b617ce4fed91adeeb3ef7e8123" name="ValueValidator" class-ref="91c6d8b617ce4fed91adeeb3ef7e8123" />
         <type id="CSharp.List_CSharp.string" tid="array" name="List&lt;string&gt;" template="{{Name}}&lt;{{?}}&gt;" base-ref="CSharp.List">
           <template-parameter ref="CSharp.string" />
           <template-parameter ref="CSharp.string" />
         </type>
-        <type id="Class:91c6d8b617ce4fed91adeeb3ef7e8123" name="ValueValidator" class-ref="91c6d8b617ce4fed91adeeb3ef7e8123" />
       </types>
     </custom-types>
   </types>
@@ -174,7 +185,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -184,7 +199,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -225,7 +244,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -235,7 +258,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -289,7 +316,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -299,7 +330,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -354,7 +389,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -364,7 +403,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -411,7 +454,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -424,7 +471,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -484,7 +535,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -497,7 +552,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> 
 </t>
@@ -548,7 +607,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -561,7 +624,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -586,6 +653,64 @@
     </source-code>
           </source-codes>
         </operation>
+      </operations>
+    </item>
+    <item id="a50ce09513eb4391b314c2bad11bee42" cid="I001" type="uml-interface-classifier" name="IComparable&lt;&gt;" creation-date="11/16/2024 01:33:16" visibility="public">
+      <stereotypes>
+        <stereotype name="interface" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tve2843caef76c4773a14ce4f3bac62509" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Model" />
+        <tagged-value id="tv0fdeb62852324f43b321ae4ca935c427" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="IDiscount" />
+        <tagged-value id="tv4a698420bb7b4f1a9874a790a13fde51" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvf4f47fa34e184645911a646e357c02c2" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv91813d89dd4d4fb79f292ede9c6ea4f1" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tve89932b5bb5245bc85df2d299a8cf5af" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="280" />
+        <tagged-value id="tv98ec4ea3d7fb47b598cb5a73f68c496b" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="1108" />
+      </tagged-values>
+      <documentations>
+        <doc id="4312d59e8b7b40a19187e31d993b8c7e">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Определяет контракт для классов, реализующих систему скидок.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t>
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="4f703269632c4e53a410a9008da12260_interface_c" type="interface" creation-date="11/16/2024 01:33:16" ref="" />
+      </stereotype-instances>
+      <operations>
+        <operation id="obf3499884429438298f3e523a723e06d359" cid="OP007" name="CompareTo" creation-date="11/18/2024 17:32:21" type="" type-id="" visibility="public" />
       </operations>
     </item>
     <item id="64bdee5dbdb947d2bc73c18156943508" cid="PROP001" type="property" name="Info" owner="4f703269632c4e53a410a9008da12260" creation-date="11/16/2024 01:33:16" visibility="undefined">
@@ -613,7 +738,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -623,7 +752,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -1026,7 +1159,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -1036,7 +1173,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -1094,7 +1235,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -1104,7 +1249,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -1153,7 +1302,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -1163,7 +1316,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -1255,7 +1412,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -1265,7 +1426,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -1509,7 +1674,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -1519,7 +1688,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -1684,7 +1857,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -1694,7 +1871,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -1743,7 +1924,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -1753,7 +1938,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -1796,17 +1985,6 @@
               </style>
             </default>
             <styles />
-            <definition>
-              <sections>
-                <section name="">
-                  <default-page>
-                    <page size="210,297" header-offset="15" footer-offset="15" unit="mm">
-                      <margins left="20" right="20" top="20" bottom="20" />
-                    </page>
-                  </default-page>
-                </section>
-              </sections>
-            </definition>
             <content>
               <paragraph>
                 <style numbering-type="None">
@@ -2035,6 +2213,12 @@
             </doc>
           </documentations>
         </operation>
+        <operation id="ocbbf5bb5b5af4aa78c4f8a5a8c8119a9906" cid="OP013" name="Clone" creation-date="11/18/2024 17:35:44" type="object" type-id="object" visibility="public" />
+        <operation id="o0158c7a129f94cf68d197f26f1b69f7e559" cid="OP014" name="Equals" creation-date="11/18/2024 17:36:01" type="bool" type-id="CSharp.bool" visibility="public">
+          <parameters>
+            <parameter id="pa132e6442f7d4523b5e7c0a65f206bcc" name="object obj" type="" type-id="" creation-date="11/18/2024 17:36:18" />
+          </parameters>
+        </operation>
       </operations>
     </item>
     <item id="b8d4c8d863374943b52aac4e05c44491" cid="PROP063" type="property" name="IsPriority" owner="0c6ae445de234b699c3446ae08646f9c" creator="" creation-date="11/16/2024 01:30:42" visibility="public">
@@ -2079,7 +2263,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -2089,7 +2277,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -2362,6 +2554,17 @@
             </doc>
           </documentations>
         </operation>
+        <operation id="o39ba4237bb5c40cd945a3c69dbe061b1570" cid="OP010" name="Clone" creation-date="11/18/2024 17:34:45" type="object" type-id="object" visibility="public" />
+        <operation id="ocfccafe01f9c44c7b972dc155205487c42" cid="OP011" name="Equals" creation-date="11/18/2024 17:34:50" type="bool" type-id="CSharp.bool" visibility="public">
+          <parameters>
+            <parameter id="p1da7f0ad83ca4516980f1e6685541bfa" name="Item other" type="" type-id="" creation-date="11/18/2024 17:35:02" />
+          </parameters>
+        </operation>
+        <operation id="o28c1e5115cd8426382c83109da9a5bef775" cid="OP012" name="CompareTo" creation-date="11/18/2024 17:35:08" type="int" type-id="CSharp.int" visibility="public">
+          <parameters>
+            <parameter id="pce8fe12fad4f4db4b50062c77c29082d" name="Item other" type="" type-id="" creation-date="11/18/2024 17:35:12" />
+          </parameters>
+        </operation>
       </operations>
     </item>
     <item id="8c95642f88244d34a4d22aba6d8f33a3" cid="PROP002" type="property" name="_priorityOrderTime" owner="aef704dad392437f8aec719e2a4862e8" creation-date="11/16/2024 01:22:32" visibility="protected">
@@ -2386,7 +2589,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -2396,7 +2603,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -2433,7 +2644,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -2443,7 +2658,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -2493,7 +2712,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -2503,14 +2726,22 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> Приоритетные заказы имеют дополнительную информацию о дате и времени выполнения.
 </t>
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -2559,7 +2790,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -2569,14 +2804,22 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> Инициализирует дату приоритетного заказа текущей датой.
 </t>
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -2629,7 +2872,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -2639,7 +2886,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> 
 </t>
@@ -2775,17 +3026,6 @@
               </style>
             </default>
             <styles />
-            <definition>
-              <sections>
-                <section name="">
-                  <default-page>
-                    <page size="224,316.8" header-offset="15" footer-offset="15" unit="mm">
-                      <margins left="20" right="20" top="20" bottom="20" />
-                    </page>
-                  </default-page>
-                </section>
-              </sections>
-            </definition>
             <content>
               <paragraph>
                 <style numbering-type="None">
@@ -2929,7 +3169,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -2939,14 +3183,22 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> Позволяет управлять элементами корзины и вычислять общую стоимость.
 </t>
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -3278,7 +3530,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -3288,14 +3544,22 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> Если корзина пуста, возвращает 0.
 </t>
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -3356,7 +3620,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -3366,7 +3634,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -3664,7 +3936,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -3674,7 +3950,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -3697,6 +3977,64 @@
           </source-code>
         </source-codes>
       </property>
+    </item>
+    <item id="5b40bbc00e1f4edcad6bc1d668016c1e" cid="I001" type="uml-interface-classifier" name="IEquatable&lt;&gt;" creation-date="11/16/2024 01:33:16" visibility="public">
+      <stereotypes>
+        <stereotype name="interface" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tve2843caef76c4773a14ce4f3bac62509" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Model" />
+        <tagged-value id="tv0fdeb62852324f43b321ae4ca935c427" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="IDiscount" />
+        <tagged-value id="tv4a698420bb7b4f1a9874a790a13fde51" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvf4f47fa34e184645911a646e357c02c2" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv91813d89dd4d4fb79f292ede9c6ea4f1" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tve89932b5bb5245bc85df2d299a8cf5af" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="280" />
+        <tagged-value id="tv98ec4ea3d7fb47b598cb5a73f68c496b" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="1108" />
+      </tagged-values>
+      <documentations>
+        <doc id="4312d59e8b7b40a19187e31d993b8c7e">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Определяет контракт для классов, реализующих систему скидок.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t>
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="4f703269632c4e53a410a9008da12260_interface_c" type="interface" creation-date="11/16/2024 01:33:16" ref="" />
+      </stereotype-instances>
+      <operations>
+        <operation id="oe15b87916d0641afaced05171913dddb336" cid="OP008" name="Equals" creation-date="11/18/2024 17:32:32" type="" type-id="" visibility="public" />
+      </operations>
     </item>
     <item id="b8221369e5114bfbafcdc1b7bcde8b1c" cid="PROP004" type="property" name="Customers" owner="48b470077baf44b7be78b362b50fd304" creation-date="10/19/2024 15:45:04" visibility="public">
       <stereotypes>
@@ -4267,7 +4605,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -4280,7 +4622,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -4322,7 +4668,7 @@
         </operation>
         <operation id="o0d173df2edb5459a86a82e0105c63fa1973" cid="OP002" name="Equals" creation-date="11/16/2024 01:10:54" type="bool" type-id="CSharp.bool" visibility="public">
           <parameters>
-            <parameter id="pbbf67f17db1b49cc92316f6b8cb85fe6" name="other" type="Order" type-id="Order" creation-date="11/16/2024 01:10:54" />
+            <parameter id="pbbf67f17db1b49cc92316f6b8cb85fe6" name="other" type="Order" type-id="Class:195fd0af34c445f4bf905afebcf416ed" creation-date="11/16/2024 01:10:54" />
           </parameters>
           <tagged-values>
             <tagged-value id="tvea8f89e11c9143d1bc8b366a60e12380" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="Equals" />
@@ -4344,7 +4690,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -4357,7 +4707,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -4417,7 +4771,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -4430,7 +4788,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -4477,7 +4839,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -4490,7 +4856,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> 
 </t>
@@ -4528,7 +4898,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -4538,7 +4912,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -4661,7 +5039,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -4671,7 +5053,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -4995,6 +5381,64 @@
     <item id="09f9a1407b614e2f8ee86f62fce80aed" cid="PROP047" type="property" name="1" owner="4f38fbbb432147339d4cb1d092e2a0cd" creator="" creation-date="11/16/2024 01:12:11" visibility="undefined">
       <structural-feature type="Order" type-id="Class:195fd0af34c445f4bf905afebcf416ed" />
       <property aggregation="composite" />
+    </item>
+    <item id="776accb67e4c45169436faa078dbcea5" cid="I001" type="uml-interface-classifier" name="ICloneable" creation-date="11/16/2024 01:33:16" visibility="public">
+      <stereotypes>
+        <stereotype name="interface" />
+      </stereotypes>
+      <tagged-values>
+        <tagged-value id="tve2843caef76c4773a14ce4f3bac62509" name="namespace" type="text" multiple="false" hidden="false" value="ObjectOrientedPractices.Model" />
+        <tagged-value id="tv0fdeb62852324f43b321ae4ca935c427" name="ReverseEngineered" type="text" multiple="false" hidden="true" value="IDiscount" />
+        <tagged-value id="tv4a698420bb7b4f1a9874a790a13fde51" name="SourceCodeGroup" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tvf4f47fa34e184645911a646e357c02c2" name="SourceCodePath" type="reference" multiple="false" hidden="true" value="" />
+        <tagged-value id="tv91813d89dd4d4fb79f292ede9c6ea4f1" name="SourceCodeLanguage" type="text" multiple="false" hidden="true" value="CSharp" />
+        <tagged-value id="tve89932b5bb5245bc85df2d299a8cf5af" name="SourceCodePosition" type="text" multiple="false" hidden="true" value="280" />
+        <tagged-value id="tv98ec4ea3d7fb47b598cb5a73f68c496b" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="1108" />
+      </tagged-values>
+      <documentations>
+        <doc id="4312d59e8b7b40a19187e31d993b8c7e">
+          <text>
+            <default>
+              <style font-name="Verdana" font-size="12">
+                <text>
+                  <solid-brush color="#FF000000" />
+                </text>
+              </style>
+            </default>
+            <styles />
+            <content>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t> Определяет контракт для классов, реализующих систему скидок.
+</t>
+                </p>
+              </paragraph>
+              <paragraph>
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
+                <p>
+                  <t>
+</t>
+                </p>
+              </paragraph>
+            </content>
+          </text>
+        </doc>
+      </documentations>
+      <stereotype-instances>
+        <stereotype id="4f703269632c4e53a410a9008da12260_interface_c" type="interface" creation-date="11/16/2024 01:33:16" ref="" />
+      </stereotype-instances>
+      <operations>
+        <operation id="o9e31096f0f544d7294fadba3d58a10f3292" cid="OP009" name="Clone" creation-date="11/18/2024 17:33:10" type="" type-id="" visibility="public" />
+      </operations>
     </item>
     <item id="9975934ce69d48f6a489f7f96072c27b" cid="PROP005" type="property" name="_status" owner="195fd0af34c445f4bf905afebcf416ed" creation-date="11/16/2024 01:10:54" visibility="private">
       <tagged-values>
@@ -5324,7 +5768,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -5334,7 +5782,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -5667,7 +6119,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -5677,7 +6133,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -5726,7 +6186,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -5736,7 +6200,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -5777,7 +6245,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -5787,7 +6259,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> 
 </t>
@@ -5831,7 +6307,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -5841,7 +6321,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -5894,7 +6378,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -5904,7 +6392,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -5959,7 +6451,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -5969,7 +6465,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6016,7 +6516,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6032,7 +6536,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6096,7 +6604,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6109,7 +6621,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6159,7 +6675,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -6169,7 +6689,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -6203,10 +6727,6 @@
       </tagged-values>
       <structural-feature type="Address" type-id="Address" />
     </item>
-    <item id="f2cfedd282a0427594166cb60020aa27" cid="PROP073" type="property" owner="757b856a8bf6469b8748409835263d18" creator="" creation-date="11/16/2024 01:47:31" visibility="undefined">
-      <structural-feature multiplicity="1" type="Order" type-id="Class:195fd0af34c445f4bf905afebcf416ed" />
-      <property aggregation="shared" />
-    </item>
     <item id="e85c50cd44064d148b9717971c532e13" cid="PROP004" type="property" name="PriorityOrderDate" owner="aef704dad392437f8aec719e2a4862e8" creation-date="11/16/2024 01:22:32" visibility="public">
       <stereotypes>
         <stereotype name="property" />
@@ -6232,7 +6752,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -6242,7 +6766,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -6264,6 +6792,10 @@
           </source-code>
         </source-codes>
       </property>
+    </item>
+    <item id="f2cfedd282a0427594166cb60020aa27" cid="PROP073" type="property" owner="757b856a8bf6469b8748409835263d18" creator="" creation-date="11/16/2024 01:47:31" visibility="undefined">
+      <structural-feature multiplicity="1" type="Order" type-id="Class:195fd0af34c445f4bf905afebcf416ed" />
+      <property aggregation="shared" />
     </item>
     <item id="811bd865b283444993e865b8b9a4e93d" cid="PROP001" type="property" name="_category" owner="3d5fae1f722a419092c25938557f1f65" creation-date="11/16/2024 01:32:39" visibility="private">
       <tagged-values>
@@ -6301,7 +6833,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -6311,7 +6847,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -6343,7 +6883,6 @@
         <tagged-value id="tv878b16be45634a309d2a1cbc2571090e" name="SourceCodeLength" type="text" multiple="false" hidden="true" value="25" />
       </tagged-values>
       <structural-feature read-only="true" type="int" type-id="CSharp.int" />
-      <property />
     </item>
     <item id="15e2bb445c414417a9b020983955fee4" cid="PROP011" type="property" name="Building" owner="9686b4e3b52c49b8aa7da02dde954ae8" creation-date="10/19/2024 15:43:46" visibility="public">
       <stereotypes>
@@ -6565,7 +7104,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -6575,7 +7118,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -6636,7 +7183,11 @@
             <styles />
             <content>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> </t>
                 </p>
@@ -6646,7 +7197,11 @@
                 </p>
               </paragraph>
               <paragraph>
-                <style />
+                <style numbering-type="None">
+                  <numbering name="" multi-level="false">
+                    <numbering-level type="None" level="0" format="{0}." />
+                  </numbering>
+                </style>
                 <p>
                   <t> 
 </t>
@@ -6688,7 +7243,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6698,7 +7257,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6745,7 +7308,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6755,7 +7322,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6802,7 +7373,11 @@
                 <styles />
                 <content>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6812,7 +7387,11 @@
                     </p>
                   </paragraph>
                   <paragraph>
-                    <style />
+                    <style numbering-type="None">
+                      <numbering name="" multi-level="false">
+                        <numbering-level type="None" level="0" format="{0}." />
+                      </numbering>
+                    </style>
                     <p>
                       <t> </t>
                     </p>
@@ -6985,7 +7564,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-class" id="p770ee8e876064e28b2a2d485e5f79e8b_604447061" name="ClassDiagram1" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-665,-256" zoom="0.3">
+      <diagram type="uml-class" id="p770ee8e876064e28b2a2d485e5f79e8b_604447061" name="ClassDiagram1" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-529,-310" zoom="0.4">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -6997,97 +7576,104 @@
           </authors>
           <description />
           <creation-date>10/19/2024 15:39:58</creation-date>
-          <change-date>11/16/2024 01:47:31</change-date>
+          <change-date>11/18/2024 17:47:24</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
         <abstract-items>
-          <item id="7edec29d707246498ba3e65b88be084a" cid="REL025" type="relationship" creator="" creation-date="11/16/2024 01:25:25" from="195fd0af34c445f4bf905afebcf416ed" to="ef7b9ae4d99a469e9b60bf98c0589439" visibility="package">
+          <item id="6aafc6e561254b7a83fd9c91baac9288" cid="ABS007" type="abstraction" creator="" creation-date="11/18/2024 17:38:16" from="195fd0af34c445f4bf905afebcf416ed" to="5b40bbc00e1f4edcad6bc1d668016c1e" visibility="package" />
+          <item id="ac4e4709c30748ecbe45296fe8028b0d" cid="REL007" type="relationship" creator="" creation-date="10/19/2024 16:07:51" from="0c6ae445de234b699c3446ae08646f9c" to="9686b4e3b52c49b8aa7da02dde954ae8" visibility="package">
             <owned-items />
-            <relation from="195fd0af34c445f4bf905afebcf416ed" to="ef7b9ae4d99a469e9b60bf98c0589439" derived="false">
-              <start-role id="umlar-ae2c6c0e-8504-4b09-ab57-245b187b7150" name="" navigability="" association-type="aggregation" visibility="undefined" property-ref="20145d57659f46f79d0df1a5782f5176" />
-              <end-role id="umlar-31d9f35a-6db1-4ac7-a69d-8e14e188c044" name="" navigability="" association-type="association" visibility="undefined" property-ref="fc92bce55d9d4f51aed3f5ba88c460e4" />
+            <relation from="0c6ae445de234b699c3446ae08646f9c" to="9686b4e3b52c49b8aa7da02dde954ae8" derived="false">
+              <start-role id="umlar-9eb9e10d-33c5-47f0-9d15-c027e07b57b4" name="" navigability="" association-type="composition" visibility="private" property-ref="6c301af691c645429b05aa1fa3bb4f48" />
+              <end-role id="umlar-de96c424-3506-44be-b869-1a8391aa6162" name="" navigability="" association-type="association" visibility="private" property-ref="ac1d38f51b884046a1f125053a3fc3f5" />
             </relation>
           </item>
+          <item id="93d3d026cf5d46d3b065086852950524" cid="ABS002" type="abstraction" creator="" creation-date="11/16/2024 01:12:54" to="26d74c5301924646892139bd18e5b767" visibility="package" />
+          <item id="82cb7d9c2e0a41d086f8fc86d39b1fb1" cid="ABS015" type="abstraction" creator="" creation-date="11/18/2024 17:42:48" from="ef7b9ae4d99a469e9b60bf98c0589439" to="a50ce09513eb4391b314c2bad11bee42" visibility="package" />
+          <item id="4f38fbbb432147339d4cb1d092e2a0cd" cid="REL021" type="relationship" creator="" creation-date="11/16/2024 01:12:11" from="195fd0af34c445f4bf905afebcf416ed" to="78ab73ad17124513ad11c2c3ed74149e" visibility="package">
+            <owned-items />
+            <relation from="195fd0af34c445f4bf905afebcf416ed" to="78ab73ad17124513ad11c2c3ed74149e" derived="false">
+              <start-role id="umlar-1c3f8a90-e5cd-452e-ae0d-5140cae71d3f" name="" navigability="" association-type="composition" visibility="undefined" property-ref="09f9a1407b614e2f8ee86f62fce80aed" />
+              <end-role id="umlar-90e40456-3ecd-41e9-be0c-3572b90ba4aa" name="" navigability="" association-type="association" visibility="undefined" property-ref="96943bbc60b6469c9561e690f88c3cd4" />
+            </relation>
+          </item>
+          <item id="63fe9af4c3ef4e0082702583ec659ae2" cid="ABS004" type="abstraction" creator="" creation-date="11/16/2024 01:14:30" from="0c6ae445de234b699c3446ae08646f9c" to="91c6d8b617ce4fed91adeeb3ef7e8123" visibility="package" />
           <item id="883db1a27fa64052af8bf1b11f630c52" cid="ABS005" type="abstraction" creator="" creation-date="11/16/2024 01:14:45" from="ef7b9ae4d99a469e9b60bf98c0589439" to="91c6d8b617ce4fed91adeeb3ef7e8123" visibility="package" />
-          <item id="93d3d026cf5d46d3b065086852950524" cid="ABS002" type="abstraction" creator="" creation-date="11/16/2024 01:12:54" from="ef7b9ae4d99a469e9b60bf98c0589439" to="26d74c5301924646892139bd18e5b767" visibility="package" />
+          <item id="7bf9bdfb736b464db04dccda31b2fe3e" cid="REL016" type="relationship" creator="" creation-date="11/16/2024 01:08:16" from="0c6ae445de234b699c3446ae08646f9c" to="a82a0f5db9244cabafbd30836cb5e322" visibility="package">
+            <owned-items />
+            <relation from="0c6ae445de234b699c3446ae08646f9c" to="a82a0f5db9244cabafbd30836cb5e322" derived="false">
+              <start-role id="umlar-d0b1db61-5d0d-4cd3-b412-3a631d9a883d" name="" navigability="" association-type="composition" visibility="private" property-ref="67999d1d935143cfba25144ea90884d0" />
+              <end-role id="umlar-73ba3bec-16f9-47ce-814e-2f95914f936a" name="" navigability="" association-type="association" visibility="private" property-ref="e404ea19b3c144579b1cecea1985dd4a" />
+            </relation>
+          </item>
+          <item id="c68c62df50e6495b83c6286ad9862237" cid="ABS013" type="abstraction" creator="" creation-date="11/18/2024 17:42:17" from="ef7b9ae4d99a469e9b60bf98c0589439" to="776accb67e4c45169436faa078dbcea5" visibility="package" />
+          <item id="d68c966710eb471f9008b1ed35c26a5a" cid="REL006" type="relationship" creator="" creation-date="10/19/2024 16:05:19" from="48b470077baf44b7be78b362b50fd304" to="0c6ae445de234b699c3446ae08646f9c" visibility="package">
+            <owned-items />
+            <relation from="48b470077baf44b7be78b362b50fd304" to="0c6ae445de234b699c3446ae08646f9c" derived="false">
+              <start-role id="umlar-34e26d9c-c2a1-4d9d-8d0e-1255d63f34bf" name="" navigability="" association-type="composition" visibility="private" property-ref="f71e95b01d114b82865d1f26ff298255" />
+              <end-role id="umlar-68e666fe-64fa-4468-8791-0e2dfbf0a3f6" name="" navigability="" association-type="association" visibility="private" property-ref="a8a310ec929d420aa382cab85a4bc19d" />
+            </relation>
+          </item>
           <item id="edbbeaedac2d44bab01fea0e7ebf37c1" cid="REL015" type="relationship" creator="" creation-date="10/19/2024 16:30:22" from="ef7b9ae4d99a469e9b60bf98c0589439" to="982695736c4a435a9a84c276b1883db3" visibility="package">
             <owned-items />
             <relation from="ef7b9ae4d99a469e9b60bf98c0589439" to="982695736c4a435a9a84c276b1883db3" derived="false">
-              <start-role id="umlar-98a5b742-b60e-44bb-a328-27d3f317eb41" name="" navigability="" association-type="composition" visibility="private" property-ref="ac103fb2274345bd8663802d1ef8218a" />
-              <end-role id="umlar-64840c66-ce88-4906-b093-d524f9a1b254" name="" navigability="" association-type="association" visibility="private" property-ref="15cc748945f14e678362777571459484" />
+              <start-role id="umlar-94151d25-7aff-4767-83bd-5fba7babcf0c" name="" navigability="" association-type="composition" visibility="private" property-ref="ac103fb2274345bd8663802d1ef8218a" />
+              <end-role id="umlar-6ca8a16a-d9fc-4d5c-a55b-c00faaeb5603" name="" navigability="" association-type="association" visibility="private" property-ref="15cc748945f14e678362777571459484" />
             </relation>
           </item>
           <item id="7d0dad2c30594b8b812419ed3e3610eb" cid="REL008" type="relationship" creator="" creation-date="10/19/2024 16:08:45" from="48b470077baf44b7be78b362b50fd304" to="ef7b9ae4d99a469e9b60bf98c0589439" visibility="package">
             <owned-items />
             <relation from="48b470077baf44b7be78b362b50fd304" to="ef7b9ae4d99a469e9b60bf98c0589439" derived="false">
-              <start-role id="umlar-87376a5c-d392-4dc9-96ce-83241b525a56" name="" navigability="" association-type="composition" visibility="private" property-ref="e988906316f948a59492efa9194b5420" />
-              <end-role id="umlar-01b08663-693b-417c-8329-d1ea00b02df2" name="" navigability="" association-type="association" visibility="private" property-ref="55a40ca629a44212b72f81cf89bd5e8f" />
-            </relation>
-          </item>
-          <item id="7bf9bdfb736b464db04dccda31b2fe3e" cid="REL016" type="relationship" creator="" creation-date="11/16/2024 01:08:16" from="0c6ae445de234b699c3446ae08646f9c" to="a82a0f5db9244cabafbd30836cb5e322" visibility="package">
-            <owned-items />
-            <relation from="0c6ae445de234b699c3446ae08646f9c" to="a82a0f5db9244cabafbd30836cb5e322" derived="false">
-              <start-role id="umlar-a3becc9d-9319-4473-9364-aa3259cc4d14" name="" navigability="" association-type="composition" visibility="private" property-ref="67999d1d935143cfba25144ea90884d0" />
-              <end-role id="umlar-389f6d8b-d98c-4727-b855-e2d23924d552" name="" navigability="" association-type="association" visibility="private" property-ref="e404ea19b3c144579b1cecea1985dd4a" />
-            </relation>
-          </item>
-          <item id="9098a301a22242c18128f133ba13fa37" cid="GNR003" type="generalization" creator="" creation-date="11/16/2024 01:37:15" from="3d5fae1f722a419092c25938557f1f65" to="4f703269632c4e53a410a9008da12260" visibility="package" />
-          <item id="f8dc26c23b084b4a956c0df937c62ee4" cid="ABS001" type="abstraction" creator="" creation-date="11/16/2024 01:12:45" from="0c6ae445de234b699c3446ae08646f9c" to="26d74c5301924646892139bd18e5b767" visibility="package" />
-          <item id="ebdf5278a41d4b1bad719e1c5e4d468e" cid="REL027" type="relationship" creator="" creation-date="11/16/2024 01:45:37" from="a82a0f5db9244cabafbd30836cb5e322" to="ef7b9ae4d99a469e9b60bf98c0589439" visibility="package">
-            <owned-items />
-            <relation from="a82a0f5db9244cabafbd30836cb5e322" to="ef7b9ae4d99a469e9b60bf98c0589439" derived="false">
-              <start-role id="umlar-a4f51bbc-e63b-4db7-986d-3af14f12dbbe" name="" navigability="" association-type="aggregation" visibility="undefined" property-ref="26a717a9e0e6451ebddc1184bd0ad69b" />
-              <end-role id="umlar-590d99c8-cf20-4821-982d-769b8fd07dd9" name="" navigability="" association-type="association" visibility="undefined" property-ref="ba8697a377a94bf8a8f73ee07112bb01" />
-            </relation>
-          </item>
-          <item id="e62b3239c5984f1c86158279e0ec0045" cid="REL026" type="relationship" creator="" creation-date="11/16/2024 01:34:42" from="0c6ae445de234b699c3446ae08646f9c" to="4f703269632c4e53a410a9008da12260" visibility="package">
-            <owned-items />
-            <relation from="0c6ae445de234b699c3446ae08646f9c" to="4f703269632c4e53a410a9008da12260" derived="false">
-              <start-role id="umlar-15a9a5c1-01dc-4f56-b764-a6fed9dbc008" name="" navigability="" association-type="composition" visibility="undefined" property-ref="1c56922b8129422d8702e644dc984c2b" />
-              <end-role id="umlar-a0841c61-9dfb-4271-8fd5-113b34c88ada" name="" navigability="" association-type="association" visibility="undefined" property-ref="98446512445d41b79de32c05b6edf758" />
+              <start-role id="umlar-39f83969-17c6-4291-bbc7-43b1a9db6e39" name="" navigability="" association-type="composition" visibility="private" property-ref="e988906316f948a59492efa9194b5420" />
+              <end-role id="umlar-f7fc7313-883a-4a0e-861e-ddb1080622cb" name="" navigability="" association-type="association" visibility="private" property-ref="55a40ca629a44212b72f81cf89bd5e8f" />
             </relation>
           </item>
           <item id="2fcc378e563a42f496d9cc2382734e03" cid="REL024" type="relationship" creator="" creation-date="11/16/2024 01:15:19" from="0c6ae445de234b699c3446ae08646f9c" to="195fd0af34c445f4bf905afebcf416ed" visibility="package">
             <owned-items />
             <relation from="0c6ae445de234b699c3446ae08646f9c" to="195fd0af34c445f4bf905afebcf416ed" derived="false">
-              <start-role id="umlar-07406918-ba0f-48b9-96d0-c30977274412" name="" navigability="" association-type="composition" visibility="undefined" property-ref="e00735e6526a4833aa49aa4aad7ecfcc" />
-              <end-role id="umlar-8701d5ec-09b6-4f44-a7c2-a0b8def0cfb2" name="" navigability="" association-type="association" visibility="undefined" property-ref="6988baed83ba4f9d97fd846b754330bf" />
+              <start-role id="umlar-e2a22bf3-9243-40dd-abce-f491103f66d4" name="" navigability="" association-type="composition" visibility="undefined" property-ref="e00735e6526a4833aa49aa4aad7ecfcc" />
+              <end-role id="umlar-37cf84b4-7619-42c2-8405-cff9da4c4b45" name="" navigability="" association-type="association" visibility="undefined" property-ref="6988baed83ba4f9d97fd846b754330bf" />
             </relation>
           </item>
-          <item id="0fdf5070304c41a481894804f1eadfaa" cid="GNR004" type="generalization" creator="" creation-date="11/16/2024 01:37:21" from="b192265f771647f095676b898d4bfc49" to="4f703269632c4e53a410a9008da12260" visibility="package" />
           <item id="3e20cc2cf2d441c4a65e61a157561244" cid="ABS006" type="abstraction" creator="" creation-date="11/16/2024 01:15:00" from="91c6d8b617ce4fed91adeeb3ef7e8123" to="c42d477e7ae344a2b70c1a31a20d7497" visibility="package" />
-          <item id="d68c966710eb471f9008b1ed35c26a5a" cid="REL006" type="relationship" creator="" creation-date="10/19/2024 16:05:19" from="48b470077baf44b7be78b362b50fd304" to="0c6ae445de234b699c3446ae08646f9c" visibility="package">
-            <owned-items />
-            <relation from="48b470077baf44b7be78b362b50fd304" to="0c6ae445de234b699c3446ae08646f9c" derived="false">
-              <start-role id="umlar-dcd7cc75-2d20-4658-9214-aea28e8bba4a" name="" navigability="" association-type="composition" visibility="private" property-ref="f71e95b01d114b82865d1f26ff298255" />
-              <end-role id="umlar-dd435d82-1561-4f68-b15e-8a6ed2615a48" name="" navigability="" association-type="association" visibility="private" property-ref="a8a310ec929d420aa382cab85a4bc19d" />
-            </relation>
-          </item>
-          <item id="4f38fbbb432147339d4cb1d092e2a0cd" cid="REL021" type="relationship" creator="" creation-date="11/16/2024 01:12:11" from="195fd0af34c445f4bf905afebcf416ed" to="78ab73ad17124513ad11c2c3ed74149e" visibility="package">
-            <owned-items />
-            <relation from="195fd0af34c445f4bf905afebcf416ed" to="78ab73ad17124513ad11c2c3ed74149e" derived="false">
-              <start-role id="umlar-a7a75964-ddcc-498a-8882-3298d1324528" name="" navigability="" association-type="composition" visibility="undefined" property-ref="09f9a1407b614e2f8ee86f62fce80aed" />
-              <end-role id="umlar-b347aef4-4c5b-4d4b-8024-5e776d6abf15" name="" navigability="" association-type="association" visibility="undefined" property-ref="96943bbc60b6469c9561e690f88c3cd4" />
-            </relation>
-          </item>
           <item id="41187be13b0e4d4fb44a4a4c86e02d79" cid="GNR001" type="generalization" creator="" creation-date="11/16/2024 01:24:50" from="aef704dad392437f8aec719e2a4862e8" to="195fd0af34c445f4bf905afebcf416ed" visibility="package" />
+          <item id="e62b3239c5984f1c86158279e0ec0045" cid="REL026" type="relationship" creator="" creation-date="11/16/2024 01:34:42" from="0c6ae445de234b699c3446ae08646f9c" to="4f703269632c4e53a410a9008da12260" visibility="package">
+            <owned-items />
+            <relation from="0c6ae445de234b699c3446ae08646f9c" to="4f703269632c4e53a410a9008da12260" derived="false">
+              <start-role id="umlar-eb02b07a-8d95-46b2-9f30-565716900f92" name="" navigability="" association-type="composition" visibility="undefined" property-ref="1c56922b8129422d8702e644dc984c2b" />
+              <end-role id="umlar-ce95f579-7730-4704-9b1d-fb9a931db921" name="" navigability="" association-type="association" visibility="undefined" property-ref="98446512445d41b79de32c05b6edf758" />
+            </relation>
+          </item>
+          <item id="7edec29d707246498ba3e65b88be084a" cid="REL025" type="relationship" creator="" creation-date="11/16/2024 01:25:25" from="195fd0af34c445f4bf905afebcf416ed" to="ef7b9ae4d99a469e9b60bf98c0589439" visibility="package">
+            <owned-items />
+            <relation from="195fd0af34c445f4bf905afebcf416ed" to="ef7b9ae4d99a469e9b60bf98c0589439" derived="false">
+              <start-role id="umlar-92c3c218-2838-4560-a88f-ef1d2176624f" name="" navigability="" association-type="aggregation" visibility="undefined" property-ref="20145d57659f46f79d0df1a5782f5176" />
+              <end-role id="umlar-ddb69d5b-7469-42ea-bfc4-f8456b417f97" name="" navigability="" association-type="association" visibility="undefined" property-ref="fc92bce55d9d4f51aed3f5ba88c460e4" />
+            </relation>
+          </item>
+          <item id="5406494c84624b969a59ee2d73488e65" cid="ABS012" type="abstraction" creator="" creation-date="11/18/2024 17:42:06" from="ef7b9ae4d99a469e9b60bf98c0589439" to="5b40bbc00e1f4edcad6bc1d668016c1e" visibility="package" />
           <item id="757b856a8bf6469b8748409835263d18" cid="REL030" type="relationship" creator="" creation-date="11/16/2024 01:47:31" from="195fd0af34c445f4bf905afebcf416ed" to="9686b4e3b52c49b8aa7da02dde954ae8" visibility="package">
             <owned-items />
             <relation from="195fd0af34c445f4bf905afebcf416ed" to="9686b4e3b52c49b8aa7da02dde954ae8" derived="false">
-              <start-role id="umlar-459a9804-1cf5-4f6f-b3c5-0baee4ff8f0a" name="" navigability="" association-type="aggregation" visibility="undefined" property-ref="f2cfedd282a0427594166cb60020aa27" />
-              <end-role id="umlar-43285724-ef71-4655-b682-4f53dbfa1557" name="" navigability="" association-type="association" visibility="undefined" property-ref="09f29fccb5ae4d08bf2ba5ccebed294a" />
+              <start-role id="umlar-8ed03705-4e17-4865-b259-ed1b545eb739" name="" navigability="" association-type="aggregation" visibility="undefined" attribute-ref="aaece546250494da4bc90cd49c082a4fa970" property-ref="f2cfedd282a0427594166cb60020aa27" />
+              <end-role id="umlar-121bad8d-cb77-4cca-bead-2d71a937b1c1" name="" navigability="" association-type="association" visibility="undefined" property-ref="09f29fccb5ae4d08bf2ba5ccebed294a" />
             </relation>
           </item>
-          <item id="ac4e4709c30748ecbe45296fe8028b0d" cid="REL007" type="relationship" creator="" creation-date="10/19/2024 16:07:51" from="0c6ae445de234b699c3446ae08646f9c" to="9686b4e3b52c49b8aa7da02dde954ae8" visibility="package">
+          <item id="0fdf5070304c41a481894804f1eadfaa" cid="GNR004" type="generalization" creator="" creation-date="11/16/2024 01:37:21" from="b192265f771647f095676b898d4bfc49" to="4f703269632c4e53a410a9008da12260" visibility="package" />
+          <item id="9098a301a22242c18128f133ba13fa37" cid="GNR003" type="generalization" creator="" creation-date="11/16/2024 01:37:15" from="3d5fae1f722a419092c25938557f1f65" to="4f703269632c4e53a410a9008da12260" visibility="package" />
+          <item id="966dffb523024770b183a014aa2448ad" cid="ABS010" type="abstraction" creator="" creation-date="11/18/2024 17:39:32" from="becd40d7115a4c2b813b74bab44ab65b" to="5b40bbc00e1f4edcad6bc1d668016c1e" visibility="package" />
+          <item id="ebdf5278a41d4b1bad719e1c5e4d468e" cid="REL027" type="relationship" creator="" creation-date="11/16/2024 01:45:37" from="a82a0f5db9244cabafbd30836cb5e322" to="ef7b9ae4d99a469e9b60bf98c0589439" visibility="package">
             <owned-items />
-            <relation from="0c6ae445de234b699c3446ae08646f9c" to="9686b4e3b52c49b8aa7da02dde954ae8" derived="false">
-              <start-role id="umlar-b6c98596-ecab-458a-99ce-9ead89b9cd5b" name="" navigability="" association-type="composition" visibility="private" property-ref="6c301af691c645429b05aa1fa3bb4f48" />
-              <end-role id="umlar-5a686352-ebfe-480b-a28b-e5aa49316cf4" name="" navigability="" association-type="association" visibility="private" property-ref="ac1d38f51b884046a1f125053a3fc3f5" />
+            <relation from="a82a0f5db9244cabafbd30836cb5e322" to="ef7b9ae4d99a469e9b60bf98c0589439" derived="false">
+              <start-role id="umlar-0a21d883-dd37-44b7-b40e-8442f0908802" name="" navigability="" association-type="aggregation" visibility="undefined" property-ref="26a717a9e0e6451ebddc1184bd0ad69b" />
+              <end-role id="umlar-6a439d5c-e470-4162-bf1d-628ebe38f6d1" name="" navigability="" association-type="association" visibility="undefined" property-ref="ba8697a377a94bf8a8f73ee07112bb01" />
             </relation>
           </item>
-          <item id="63fe9af4c3ef4e0082702583ec659ae2" cid="ABS004" type="abstraction" creator="" creation-date="11/16/2024 01:14:30" from="0c6ae445de234b699c3446ae08646f9c" to="91c6d8b617ce4fed91adeeb3ef7e8123" visibility="package" />
           <item id="d86f8476979b455898db44336ec74789" cid="ABS003" type="abstraction" creator="" creation-date="11/16/2024 01:13:01" from="195fd0af34c445f4bf905afebcf416ed" to="26d74c5301924646892139bd18e5b767" visibility="package" />
+          <item id="4e6fb7d89d2d42ff979ac04adcbb4f01" cid="ABS011" type="abstraction" creator="" creation-date="11/18/2024 17:40:54" from="a82a0f5db9244cabafbd30836cb5e322" to="776accb67e4c45169436faa078dbcea5" visibility="package" />
+          <item id="f8dc26c23b084b4a956c0df937c62ee4" cid="ABS001" type="abstraction" creator="" creation-date="11/16/2024 01:12:45" from="0c6ae445de234b699c3446ae08646f9c" to="26d74c5301924646892139bd18e5b767" visibility="package" />
+          <item id="becd40d7115a4c2b813b74bab44ab65b" cid="ABS009" type="abstraction" creator="" creation-date="11/18/2024 17:38:45" from="9686b4e3b52c49b8aa7da02dde954ae8" to="a50ce09513eb4391b314c2bad11bee42" visibility="package" />
         </abstract-items>
         <layer id="1e6faf9aff124152a2da0268cd143f60" name="Default" visible="true" enabled="true" locked="false">
           <item id="c42d477e7ae344a2b70c1a31a20d7497" iid="c4302760fef14d069c4da236d0fa1f13" creation-date="10/19/2024 15:43:30" order-index="0" type="entity">
@@ -7096,12 +7682,12 @@
             <class />
           </item>
           <item id="9686b4e3b52c49b8aa7da02dde954ae8" iid="2c8a9b5a21f5411b8b3fa30cea892a91" creation-date="10/19/2024 15:43:46" order-index="1" type="entity">
-            <layout ax="881" ay="-346.05994" awidth="356" aheight="323" x="881" y="-346.05994" width="140" height="160" />
+            <layout ax="880" ay="-361.05994" awidth="356" aheight="361" x="880" y="-361.05994" width="140" height="160" />
             <classifier />
             <class />
           </item>
           <item id="982695736c4a435a9a84c276b1883db3" iid="e9ef684c41764925b4eb19a005b19f47" creation-date="10/19/2024 15:44:03" order-index="2" type="entity">
-            <layout ax="-350.3357" ay="-22.037354" awidth="86" aheight="170" x="-350.3357" y="-22.037354" width="140" height="170" />
+            <layout ax="270.00647" ay="-30.037354" awidth="86" aheight="170" x="270.00647" y="-30.037354" width="140" height="170" />
           </item>
           <item id="0c6ae445de234b699c3446ae08646f9c" iid="a06630564a6c467cbf4847eb7b98e9d7" creation-date="10/19/2024 15:44:39" order-index="3" type="entity">
             <layout ax="411.68332" ay="-290.05994" awidth="356.00003" aheight="397" x="411.68332" y="-290.05994" width="140" height="160" />
@@ -7109,7 +7695,7 @@
             <class />
           </item>
           <item id="ef7b9ae4d99a469e9b60bf98c0589439" iid="a5fbf62725e840c2afe8510a96001042" creation-date="10/19/2024 15:44:50" order-index="4" type="entity">
-            <layout ax="-161.99353" ay="-79.53735" awidth="350" aheight="285" x="-161.99353" y="-79.53735" width="140" height="160" />
+            <layout ax="-161.99353" ay="-106.53735" awidth="350" aheight="323" x="-161.99353" y="-106.53735" width="140" height="160" />
             <classifier />
             <class />
           </item>
@@ -7129,51 +7715,54 @@
             <class />
           </item>
           <item id="d68c966710eb471f9008b1ed35c26a5a" iid="14c6f0ca0f924926a73661ab9cafd4ae" creation-date="10/19/2024 16:05:19" order-index="15" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="39.780888,-12.445588" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="385" y1="-378" x2="525" y2="-290" start-border-pos="0.5390625" end-border-pos="0.07935393258426966" start-local-pos="216" end-local-pos="113" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="39.780888,-12.445588" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="425" y1="-423" x2="532" y2="-290" start-border-pos="0.4161609262228012" end-border-pos="0.0844920426607132" start-local-pos="89.062256" end-local-pos="120.31668" name-position="0,20">
               <points>
-                <point x="385" y="-378" />
-                <point x="525" y="-290" />
+                <point x="425" y="-423" />
+                <point x="532.39197" y="-423.23608" />
+                <point x="532" y="-290" />
               </points>
             </layout>
             <relation from="48b470077baf44b7be78b362b50fd304" from-iid="d8276ebb49d64c4f81abfd103e38f6f0" to="0c6ae445de234b699c3446ae08646f9c" to-iid="a06630564a6c467cbf4847eb7b98e9d7" />
           </item>
           <item id="ac4e4709c30748ecbe45296fe8028b0d" iid="9e93a4c787f74cff8e9304d5ca3043c0" creation-date="10/19/2024 16:07:51" order-index="16" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="768" y1="-221" x2="881" y2="-221" start-border-pos="0.29348862543702126" end-border-pos="0.9028637770897833" start-local-pos="69.05994" end-local-pos="125.5" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="768" y1="-221" x2="880" y2="-221" start-border-pos="0.29348862543702126" end-border-pos="0.9028637770897833" start-local-pos="69.05994" end-local-pos="125.5" name-position="0,20">
               <points>
                 <point x="768" y="-221" />
-                <point x="881" y="-221" />
+                <point x="880" y="-221" />
               </points>
             </layout>
             <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="9686b4e3b52c49b8aa7da02dde954ae8" to-iid="2c8a9b5a21f5411b8b3fa30cea892a91" />
           </item>
           <item id="7d0dad2c30594b8b812419ed3e3610eb" iid="045667d6b9724f9dbca83c9c470f8f83" creation-date="10/19/2024 16:08:45" order-index="17" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="258" y1="-378" x2="80" y2="-80" start-border-pos="0.6630859375" end-border-pos="0.17285714285714285" start-local-pos="89" end-local-pos="242" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="188" y1="-378" x2="79" y2="-107" start-border-pos="0.7313646078109741" end-border-pos="0.17213822901248932" start-local-pos="19.076172" end-local-pos="240.99353" name-position="0,20">
               <points>
-                <point x="258" y="-378" />
-                <point x="80" y="-80" />
+                <point x="188" y="-378" />
+                <point x="188" y="-266" />
+                <point x="79" y="-266" />
+                <point x="79" y="-107" />
               </points>
             </layout>
             <relation from="48b470077baf44b7be78b362b50fd304" from-iid="d8276ebb49d64c4f81abfd103e38f6f0" to="ef7b9ae4d99a469e9b60bf98c0589439" to-iid="a5fbf62725e840c2afe8510a96001042" />
           </item>
           <item id="edbbeaedac2d44bab01fea0e7ebf37c1" iid="9eb52c649dce47a9b24dd63b2f346e8c" creation-date="10/19/2024 16:30:22" order-index="23" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-162" y1="63" x2="-264" y2="63" start-border-pos="0.8745300751879699" end-border-pos="0.3756281407035176" start-local-pos="133.5" end-local-pos="100" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="188" y1="56" x2="270" y2="55" start-border-pos="0.8745300751879699" end-border-pos="0.3756281407035176" start-local-pos="133.5" end-local-pos="100" name-position="0,20">
               <points>
-                <point x="-162" y="63" />
-                <point x="-264" y="63" />
+                <point x="188" y="56" />
+                <point x="270" y="55" />
               </points>
             </layout>
             <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="982695736c4a435a9a84c276b1883db3" to-iid="e9ef684c41764925b4eb19a005b19f47" />
           </item>
           <item id="a82a0f5db9244cabafbd30836cb5e322" iid="9bf4f0e7017149a39945c040727a90ee" creation-date="11/16/2024 01:03:54" order-index="24" type="entity">
-            <layout ax="477.68335" ay="367.84702" awidth="246" aheight="115" x="477.68335" y="367.84702" width="140" height="160" />
+            <layout ax="532.39197" ay="367.84705" awidth="246" aheight="115" x="532.39197" y="367.84705" width="140" height="160" />
             <classifier />
             <class />
           </item>
           <item id="7bf9bdfb736b464db04dccda31b2fe3e" iid="1e5e9b2bf30d48a3a859afe903a51c94" creation-date="11/16/2024 01:08:16" order-index="25" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-to-fields="false" auto-path="" x1="594" y1="107" x2="600" y2="368" start-border-pos="0.6218192178259674" end-border-pos="0.12408931080887957" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="711" y1="107" x2="712" y2="368" start-border-pos="0.5398057177662849" end-border-pos="0.18252848088741302" start-local-pos="299.31668" end-local-pos="179.60803" name-position="0,20">
               <points>
-                <point x="594" y="107" />
-                <point x="600" y="368" />
+                <point x="711" y="107" />
+                <point x="712" y="368" />
               </points>
             </layout>
             <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="a82a0f5db9244cabafbd30836cb5e322" to-iid="9bf4f0e7017149a39945c040727a90ee" />
@@ -7196,22 +7785,24 @@
             <relation from="195fd0af34c445f4bf905afebcf416ed" from-iid="91014e222d4f42219df8726914323668" to="78ab73ad17124513ad11c2c3ed74149e" to-iid="33b90b20bf3b40538d2d941418dddf4e" />
           </item>
           <item id="f8dc26c23b084b4a956c0df937c62ee4" iid="855d1ebb0069492cb43b71c76f1b0b07" creation-date="11/16/2024 01:12:45" order-index="30" type="relation">
-            <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="454" y1="107" x2="283" y2="355" start-border-pos="0.7201951084612636" end-border-pos="0.19049310302734376" name-position="0,20">
+            <layout line-style="oblique" lock-start-point="true" lock-to-fields="false" auto-path="" x1="444" y1="107" x2="313" y2="401" start-border-pos="0.7273057103157043" end-border-pos="0.3715271645403923" start-local-pos="32.31668" name-position="7,47">
               <points>
-                <point x="454" y="107" />
-                <point x="283" y="355" />
+                <point x="444" y="107" />
+                <point x="445" y="399" />
+                <point x="313" y="401" />
               </points>
             </layout>
             <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="26d74c5301924646892139bd18e5b767" to-iid="47842b5458c0456aac240fff49165332" />
           </item>
           <item id="93d3d026cf5d46d3b065086852950524" iid="87091f28abf34e9a8833ce7de53b4dc9" creation-date="11/16/2024 01:12:54" order-index="31" type="relation">
-            <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="113" y1="205" x2="218" y2="355" start-border-pos="0.5537951823643276" end-border-pos="0.05999295043945312" name-position="0,20">
+            <layout line-style="oblique" lock-start-point="true" lock-to-fields="false" auto-path="" x1="189" y1="133" x2="251" y2="355" start-border-pos="0.4373134672641754" end-border-pos="0.125987060546875" start-local-pos="213.53735" name-position="0,20">
               <points>
-                <point x="113" y="205" />
-                <point x="218" y="355" />
+                <point x="189" y="133" />
+                <point x="250.50647" y="133" />
+                <point x="251" y="355" />
               </points>
             </layout>
-            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="26d74c5301924646892139bd18e5b767" to-iid="47842b5458c0456aac240fff49165332" />
+            <relation to="26d74c5301924646892139bd18e5b767" to-iid="47842b5458c0456aac240fff49165332" />
           </item>
           <item id="d86f8476979b455898db44336ec74789" iid="e2a87c02e9474e3889523d52662ecf13" creation-date="11/16/2024 01:13:01" order-index="32" type="relation">
             <layout line-style="oblique" lock-start-point="true" lock-to-fields="false" auto-path="" x1="251" y1="571" x2="251" y2="449" start-border-pos="0.10057210922241211" end-border-pos="0.624012939453125" start-local-pos="138.07617" name-position="0,20">
@@ -7223,20 +7814,21 @@
             <relation from="195fd0af34c445f4bf905afebcf416ed" from-iid="91014e222d4f42219df8726914323668" to="26d74c5301924646892139bd18e5b767" to-iid="47842b5458c0456aac240fff49165332" />
           </item>
           <item id="63fe9af4c3ef4e0082702583ec659ae2" iid="b5c0489187c44ea28e1a25f8d43e013f" creation-date="11/16/2024 01:14:30" order-index="34" type="relation">
-            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="412" y1="107" x2="-20" y2="432" start-border-pos="0.75" end-border-pos="0.21176470588235294" start-local-pos="282.5" end-local-pos="288" name-position="0,20">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="412" y1="107" x2="-17" y2="432" start-border-pos="0.75" end-border-pos="0.2142174243927002" start-local-pos="282.5" end-local-pos="291.3357" name-position="0,20">
               <points>
                 <point x="412" y="107" />
-                <point x="219" y="254.5" />
-                <point x="-20" y="432" />
+                <point x="411.68332" y="259" />
+                <point x="-18.335693" y="259.5" />
+                <point x="-17" y="432" />
               </points>
             </layout>
             <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="91c6d8b617ce4fed91adeeb3ef7e8123" to-iid="0d53027e96364e7b80f7188cff8dea92" />
           </item>
           <item id="883db1a27fa64052af8bf1b11f630c52" iid="f140994a3ce948208da193e875a9a485" creation-date="11/16/2024 01:14:45" order-index="35" type="relation">
-            <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="-36" y1="205" x2="-115" y2="432" start-border-pos="0.6602942848205566" end-border-pos="0.141875659718233" name-position="0,20">
+            <layout line-style="oblique" lock-start-point="true" lock-to-fields="false" auto-path="" x1="-138" y1="216" x2="-138" y2="432" start-border-pos="0.7331015467643738" end-border-pos="0.12524683335248163" start-local-pos="23.99353" name-position="0,20">
               <points>
-                <point x="-36" y="205" />
-                <point x="-115" y="432" />
+                <point x="-138" y="216" />
+                <point x="-138" y="432" />
               </points>
             </layout>
             <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="91c6d8b617ce4fed91adeeb3ef7e8123" to-iid="0d53027e96364e7b80f7188cff8dea92" />
@@ -7250,19 +7842,27 @@
             </layout>
             <relation from="91c6d8b617ce4fed91adeeb3ef7e8123" from-iid="0d53027e96364e7b80f7188cff8dea92" to="c42d477e7ae344a2b70c1a31a20d7497" to-iid="c4302760fef14d069c4da236d0fa1f13" />
           </item>
+          <item id="7edec29d707246498ba3e65b88be084a" iid="d0f32159a09041dda5302b92f18abbd2" creation-date="11/16/2024 01:25:25" order-index="40" type="relation">
+            <layout start-role-position="25.934418,15.356181" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="113" y1="639" x2="63" y2="216" start-border-pos="0.9572713822126389" end-border-pos="0.5892903357744217" start-local-pos="68.194885" end-local-pos="224.99353" name-position="-2,31">
+              <points>
+                <point x="113" y="639" />
+                <point x="61" y="639.241" />
+                <point x="63" y="216" />
+              </points>
+            </layout>
+            <relation from="195fd0af34c445f4bf905afebcf416ed" from-iid="91014e222d4f42219df8726914323668" to="ef7b9ae4d99a469e9b60bf98c0589439" to-iid="a5fbf62725e840c2afe8510a96001042" />
+          </item>
           <item id="2fcc378e563a42f496d9cc2382734e03" iid="f5b495c0b4d14eb8b8fde54f3fe40e16" creation-date="11/16/2024 01:15:19" order-index="37" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="521" y1="107" x2="303" y2="571" start-border-pos="0.6732326745986938" end-border-pos="0.1389445662498474" start-local-pos="109.31668" end-local-pos="190.07617" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="521" y1="107" x2="455" y2="605" start-border-pos="0.6732326745986938" end-border-pos="0.27142536640167236" start-local-pos="109.31668" end-local-pos="34.194885" name-position="0,26">
               <points>
                 <point x="521" y="107" />
-                <point x="303" y="571" />
+                <point x="521" y="202" />
+                <point x="521" y="236" />
+                <point x="518" y="605" />
+                <point x="455" y="605" />
               </points>
             </layout>
             <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="195fd0af34c445f4bf905afebcf416ed" to-iid="91014e222d4f42219df8726914323668" />
-          </item>
-          <item id="aef704dad392437f8aec719e2a4862e8" iid="625339cb9b394003a19e2a5bc4336d46" creation-date="11/16/2024 01:22:33" order-index="38" type="entity">
-            <layout ax="110.95038" ay="1040.8071" awidth="342" aheight="348" x="109.5" y="1044" width="140" height="160" />
-            <classifier />
-            <class />
           </item>
           <item id="41187be13b0e4d4fb44a4a4c86e02d79" iid="911edbc272424bb2ae1c0d381998cff7" creation-date="11/16/2024 01:24:50" order-index="39" type="relation">
             <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="283" y1="1041" x2="283" y2="970" start-border-pos="0.1256079199718453" end-border-pos="0.625598104376542" name-position="0,20">
@@ -7273,19 +7873,66 @@
             </layout>
             <relation from="aef704dad392437f8aec719e2a4862e8" from-iid="625339cb9b394003a19e2a5bc4336d46" to="195fd0af34c445f4bf905afebcf416ed" to-iid="91014e222d4f42219df8726914323668" />
           </item>
-          <item id="7edec29d707246498ba3e65b88be084a" iid="d0f32159a09041dda5302b92f18abbd2" creation-date="11/16/2024 01:25:25" order-index="40" type="relation">
-            <layout start-role-position="25.934418,15.356181" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="163" y1="571" x2="76" y2="205" start-border-pos="0.03654970760233918" end-border-pos="0.58" start-local-pos="50" end-local-pos="238" name-position="0,20">
+          <item id="aef704dad392437f8aec719e2a4862e8" iid="625339cb9b394003a19e2a5bc4336d46" creation-date="11/16/2024 01:22:33" order-index="38" type="entity">
+            <layout ax="110.95038" ay="1040.8071" awidth="342" aheight="348" x="109.5" y="1044" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+          <item id="ebdf5278a41d4b1bad719e1c5e4d468e" iid="c7801febda1d4d90a55c5eb49aa9ee26" creation-date="11/16/2024 01:45:37" order-index="48" type="relation">
+            <layout start-role-position="24.305101,19.767334" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="598" y1="368" x2="188" y2="171" start-border-pos="0.06637871265411377" end-border-pos="0.46494504694353067" start-local-pos="65.31665" end-local-pos="244.53735" name-position="0,20">
               <points>
-                <point x="163" y="571" />
-                <point x="76" y="205" />
+                <point x="598" y="368" />
+                <point x="597" y="167" />
+                <point x="188" y="171" />
               </points>
             </layout>
-            <relation from="195fd0af34c445f4bf905afebcf416ed" from-iid="91014e222d4f42219df8726914323668" to="ef7b9ae4d99a469e9b60bf98c0589439" to-iid="a5fbf62725e840c2afe8510a96001042" />
+            <relation from="a82a0f5db9244cabafbd30836cb5e322" from-iid="9bf4f0e7017149a39945c040727a90ee" to="ef7b9ae4d99a469e9b60bf98c0589439" to-iid="a5fbf62725e840c2afe8510a96001042" />
+          </item>
+          <item id="757b856a8bf6469b8748409835263d18" iid="1a0018ea4d8244249cfb05148cca6ce6" creation-date="11/16/2024 01:47:31" order-index="49" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="455" y1="640" x2="976" y2="0" start-border-pos="0.29319292679429054" end-border-pos="0.6825842708349228" start-local-pos="69.194885" end-local-pos="96" name-position="0,20">
+              <points>
+                <point x="455" y="640" />
+                <point x="807" y="638.741" />
+                <point x="804" y="55" />
+                <point x="977" y="55" />
+                <point x="976" y="0" />
+              </points>
+            </layout>
+            <relation from="195fd0af34c445f4bf905afebcf416ed" from-iid="91014e222d4f42219df8726914323668" from-field="aaece546250494da4bc90cd49c082a4fa970" to="9686b4e3b52c49b8aa7da02dde954ae8" to-iid="2c8a9b5a21f5411b8b3fa30cea892a91" />
+          </item>
+          <item id="e62b3239c5984f1c86158279e0ec0045" iid="945752ba327e4480abfacacee2b76362" creation-date="11/16/2024 01:34:42" order-index="45" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-to-fields="false" auto-path="" x1="768" y1="9" x2="1022" y2="149" start-border-pos="0.438324898481369" end-border-pos="0.8749308268229167" start-local-pos="299.05994" name-position="0,20">
+              <points>
+                <point x="768" y="9" />
+                <point x="861" y="9" />
+                <point x="862" y="148.96265" />
+                <point x="1022" y="149" />
+              </points>
+            </layout>
+            <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="4f703269632c4e53a410a9008da12260" to-iid="3575cccbd69949bf865a0be4f221d23e" />
           </item>
           <item id="3d5fae1f722a419092c25938557f1f65" iid="193158f1921c4bf3a79de67757322476" creation-date="11/16/2024 01:32:40" order-index="41" type="entity">
             <layout ax="977" ay="282.84702" awidth="321" aheight="285.00003" x="977" y="282.84702" width="140" height="160" />
             <classifier />
             <class />
+          </item>
+          <item id="0fdf5070304c41a481894804f1eadfaa" iid="fd7ec63d346d400096ebfb79a3ee7079" creation-date="11/16/2024 01:37:21" order-index="47" type="relation">
+            <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="1351" y1="149" x2="1253" y2="149" start-border-pos="0.8749511079638417" end-border-pos="0.3750691731770833" name-position="0,20">
+              <points>
+                <point x="1351" y="149" />
+                <point x="1253" y="149" />
+              </points>
+            </layout>
+            <relation from="b192265f771647f095676b898d4bfc49" from-iid="74299d6a25f243f2be93821f709e6b70" to="4f703269632c4e53a410a9008da12260" to-iid="3575cccbd69949bf865a0be4f221d23e" />
+          </item>
+          <item id="9098a301a22242c18128f133ba13fa37" iid="9fbc1b4fa5774767923a7cebd65017f3" creation-date="11/16/2024 01:37:15" order-index="46" type="relation">
+            <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="1138" y1="283" x2="1138" y2="216" start-border-pos="0.12538940809968846" end-border-pos="0.6244588744588745" name-position="0,20">
+              <points>
+                <point x="1138" y="283" />
+                <point x="1138" y="216" />
+              </points>
+            </layout>
+            <relation from="3d5fae1f722a419092c25938557f1f65" from-iid="193158f1921c4bf3a79de67757322476" to="4f703269632c4e53a410a9008da12260" to-iid="3575cccbd69949bf865a0be4f221d23e" />
           </item>
           <item id="b192265f771647f095676b898d4bfc49" iid="74299d6a25f243f2be93821f709e6b70" creation-date="11/16/2024 01:32:55" order-index="43" type="entity">
             <layout ax="1351" ay="53.462646" awidth="255" aheight="191" x="1351" y="53.462646" width="140" height="160" />
@@ -7297,51 +7944,99 @@
             <classifier />
             <class />
           </item>
-          <item id="e62b3239c5984f1c86158279e0ec0045" iid="945752ba327e4480abfacacee2b76362" creation-date="11/16/2024 01:34:42" order-index="45" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-to-fields="false" auto-path="" x1="768" y1="-14" x2="1022" y2="98" start-border-pos="0.42374129499536317" end-border-pos="0.9694023132324219" name-position="0,20">
+          <item id="82cb7d9c2e0a41d086f8fc86d39b1fb1" iid="c96047aa0f09482385aae1f18e6f61ff" creation-date="11/18/2024 17:42:48" order-index="56" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-162" y1="40" x2="-587" y2="41" start-border-pos="0.8865809887647629" end-border-pos="0.31673583984375" start-local-pos="146.53735" end-local-pos="36.037354" name-position="0,20">
               <points>
-                <point x="768" y="-14" />
-                <point x="1022" y="98" />
+                <point x="-162" y="40" />
+                <point x="-587" y="41" />
               </points>
             </layout>
-            <relation from="0c6ae445de234b699c3446ae08646f9c" from-iid="a06630564a6c467cbf4847eb7b98e9d7" to="4f703269632c4e53a410a9008da12260" to-iid="3575cccbd69949bf865a0be4f221d23e" />
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="a50ce09513eb4391b314c2bad11bee42" to-iid="e0fd93b9326940688f557eeffdb372ac" />
           </item>
-          <item id="9098a301a22242c18128f133ba13fa37" iid="9fbc1b4fa5774767923a7cebd65017f3" creation-date="11/16/2024 01:37:15" order-index="46" type="relation">
-            <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="1138" y1="283" x2="1138" y2="216" start-border-pos="0.12538940809968846" end-border-pos="0.6244588744588745" name-position="0,20">
+          <item id="4e6fb7d89d2d42ff979ac04adcbb4f01" iid="bf9c620dfb084e90a3ae982e7151a9ba" creation-date="11/18/2024 17:40:54" order-index="53" type="relation">
+            <layout line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="620" y1="483" x2="-587" y2="-96" start-border-pos="0.6609674543142319" end-border-pos="0.4315506546585648" start-local-pos="87.60803" end-local-pos="98.03735" name-position="0,20">
               <points>
-                <point x="1138" y="283" />
-                <point x="1138" y="216" />
+                <point x="620" y="483" />
+                <point x="620" y="532" />
+                <point x="166" y="530" />
+                <point x="167" y="314" />
+                <point x="-507" y="317" />
+                <point x="-507" y="-96" />
+                <point x="-587" y="-96" />
               </points>
             </layout>
-            <relation from="3d5fae1f722a419092c25938557f1f65" from-iid="193158f1921c4bf3a79de67757322476" to="4f703269632c4e53a410a9008da12260" to-iid="3575cccbd69949bf865a0be4f221d23e" />
+            <relation from="a82a0f5db9244cabafbd30836cb5e322" from-iid="9bf4f0e7017149a39945c040727a90ee" to="776accb67e4c45169436faa078dbcea5" to-iid="f9e1e23e573c4bb385ed6b113f10bd7c" />
           </item>
-          <item id="0fdf5070304c41a481894804f1eadfaa" iid="fd7ec63d346d400096ebfb79a3ee7079" creation-date="11/16/2024 01:37:21" order-index="47" type="relation">
-            <layout line-style="oblique" lock-to-fields="false" auto-path="" x1="1351" y1="149" x2="1253" y2="149" start-border-pos="0.8749511079638417" end-border-pos="0.3750691731770833" name-position="0,20">
+          <item id="6aafc6e561254b7a83fd9c91baac9288" iid="ee11222200c44ef184f2616638f9ba81" creation-date="11/18/2024 17:38:16" order-index="50" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="113" y1="900" x2="-587" y2="-290" start-border-pos="0.7937375405677279" end-border-pos="0.4129672580295139" start-local-pos="329.1949" end-local-pos="88.062256" name-position="0,20">
               <points>
-                <point x="1351" y="149" />
-                <point x="1253" y="149" />
+                <point x="113" y="900" />
+                <point x="-460" y="899" />
+                <point x="-458" y="-290.05994" />
+                <point x="-587" y="-290" />
               </points>
             </layout>
-            <relation from="b192265f771647f095676b898d4bfc49" from-iid="74299d6a25f243f2be93821f709e6b70" to="4f703269632c4e53a410a9008da12260" to-iid="3575cccbd69949bf865a0be4f221d23e" />
+            <relation from="195fd0af34c445f4bf905afebcf416ed" from-iid="91014e222d4f42219df8726914323668" to="5b40bbc00e1f4edcad6bc1d668016c1e" to-iid="1710a03c82354ad18854a10a7abfc396" />
           </item>
-          <item id="ebdf5278a41d4b1bad719e1c5e4d468e" iid="c7801febda1d4d90a55c5eb49aa9ee26" creation-date="11/16/2024 01:45:37" order-index="48" type="relation">
-            <layout start-role-position="23.15087,15.761958" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="478" y1="368" x2="188" y2="165" start-border-pos="0.00011518524914253049" end-border-pos="0.46494504694353067" start-local-pos="0.113342285" end-local-pos="244.53735" name-position="0,20">
+          <item id="966dffb523024770b183a014aa2448ad" iid="cc69f6aeeecb41158b2e4dfe4c1c0c38" creation-date="11/18/2024 17:39:32" order-index="52" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-298" y1="-552" x2="-587" y2="-326" start-border-pos="0.615641576593019" end-border-pos="0.3464115858078003" start-local-pos="299" end-local-pos="52.062256" name-position="0,20">
               <points>
-                <point x="478" y="368" />
-                <point x="188" y="165" />
+                <point x="-298" y="-552" />
+                <point x="-432" y="-551" />
+                <point x="-432" y="-327" />
+                <point x="-587" y="-326" />
               </points>
             </layout>
-            <relation from="a82a0f5db9244cabafbd30836cb5e322" from-iid="9bf4f0e7017149a39945c040727a90ee" to="ef7b9ae4d99a469e9b60bf98c0589439" to-iid="a5fbf62725e840c2afe8510a96001042" to-field="o1fc4e3cf60524632b1eeab07959a50cd524" />
+            <relation from="becd40d7115a4c2b813b74bab44ab65b" from-iid="36e92061e1334ff0929c812c610fb169" to="5b40bbc00e1f4edcad6bc1d668016c1e" to-iid="1710a03c82354ad18854a10a7abfc396" />
           </item>
-          <item id="757b856a8bf6469b8748409835263d18" iid="1a0018ea4d8244249cfb05148cca6ce6" creation-date="11/16/2024 01:47:31" order-index="49" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="455" y1="640" x2="969" y2="-23" start-border-pos="0.29319292679429054" end-border-pos="0.6882022470235825" start-local-pos="69.194885" end-local-pos="88" name-position="0,20">
+          <item id="becd40d7115a4c2b813b74bab44ab65b" iid="36e92061e1334ff0929c812c610fb169" creation-date="11/18/2024 17:38:45" order-index="51" type="relation">
+            <layout line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="977" y1="-361" x2="-587" y2="72" start-border-pos="0.06811797618865967" end-border-pos="0.37414324725115744" start-local-pos="97" end-local-pos="67.03735" name-position="0,20">
               <points>
-                <point x="455" y="640" />
-                <point x="820" y="639.741" />
-                <point x="969" y="-23" />
+                <point x="977" y="-361" />
+                <point x="977" y="-550" />
+                <point x="-303" y="-552" />
+                <point x="-304" y="-122" />
+                <point x="-421" y="-123" />
+                <point x="-420" y="72" />
+                <point x="-587" y="72" />
               </points>
             </layout>
-            <relation from="195fd0af34c445f4bf905afebcf416ed" from-iid="91014e222d4f42219df8726914323668" from-field="aaece546250494da4bc90cd49c082a4fa970" to="9686b4e3b52c49b8aa7da02dde954ae8" to-iid="2c8a9b5a21f5411b8b3fa30cea892a91" />
+            <relation from="9686b4e3b52c49b8aa7da02dde954ae8" from-iid="2c8a9b5a21f5411b8b3fa30cea892a91" to="a50ce09513eb4391b314c2bad11bee42" to-iid="e0fd93b9326940688f557eeffdb372ac" />
+          </item>
+          <item id="c68c62df50e6495b83c6286ad9862237" iid="c3a11f2eb1194d0ab83c5f6c8d0fc80a" creation-date="11/18/2024 17:42:17" order-index="55" type="relation">
+            <layout line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-125" y1="-107" x2="-587" y2="-154" start-border-pos="0.026423949748277664" end-border-pos="0.3241432472511574" start-local-pos="36.99353" end-local-pos="40.037354" name-position="0,20">
+              <points>
+                <point x="-125" y="-107" />
+                <point x="-125" y="-152" />
+                <point x="-587" y="-154" />
+              </points>
+            </layout>
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="776accb67e4c45169436faa078dbcea5" to-iid="f9e1e23e573c4bb385ed6b113f10bd7c" />
+          </item>
+          <item id="5406494c84624b969a59ee2d73488e65" iid="5365f8680c784819a5f0e5123795a303" creation-date="11/18/2024 17:42:06" order-index="54" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-95" y1="-107" x2="-587" y2="-271" start-border-pos="0.047852521623883926" end-border-pos="0.4482634367766204" start-local-pos="66.99353" end-local-pos="107.062256" name-position="0,20">
+              <points>
+                <point x="-95" y="-107" />
+                <point x="-96" y="-269" />
+                <point x="-587" y="-271" />
+              </points>
+            </layout>
+            <relation from="ef7b9ae4d99a469e9b60bf98c0589439" from-iid="a5fbf62725e840c2afe8510a96001042" to="5b40bbc00e1f4edcad6bc1d668016c1e" to-iid="1710a03c82354ad18854a10a7abfc396" />
+          </item>
+          <item id="a50ce09513eb4391b314c2bad11bee42" iid="e0fd93b9326940688f557eeffdb372ac" creation-date="11/16/2024 01:33:17" order-index="0" type="entity">
+            <layout ax="-818" ay="4.9626465" awidth="231" aheight="135" x="-818" y="4.9626465" width="140" height="135" />
+            <classifier />
+            <class />
+          </item>
+          <item id="5b40bbc00e1f4edcad6bc1d668016c1e" iid="1710a03c82354ad18854a10a7abfc396" creation-date="11/16/2024 01:33:17" order-index="0" type="entity">
+            <layout ax="-818" ay="-378.06226" awidth="231" aheight="135" x="-818" y="-378.06226" width="140" height="135" />
+            <classifier />
+            <class />
+          </item>
+          <item id="776accb67e4c45169436faa078dbcea5" iid="f9e1e23e573c4bb385ed6b113f10bd7c" creation-date="11/16/2024 01:33:17" order-index="0" type="entity">
+            <layout ax="-818" ay="-194.03735" awidth="231" aheight="135" x="-818" y="-194.03735" width="140" height="135" />
+            <classifier />
+            <class />
           </item>
         </layer>
       </diagram>
