@@ -202,33 +202,12 @@ namespace ObjectOrientedPractices.Model
         /// <summary>
         /// Определяет равенство между текущим объектом и другим объектом <see cref="Address"/>.
         /// </summary>
-        /// <param name="obj">Другой объект для сравнения.</param>
-        /// <returns>true, если объекты равны; в противном случае - false.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null)
-            {
-                return false; 
-            }
-
-            if (object.ReferenceEquals(this, obj))
-            {  
-                return true; 
-            }
-
-            var address = (Address)obj;
-
-            return (Index == address.Index);
-        }
-
-        /// <summary>
-        /// Определяет равенство между текущим объектом и другим объектом <see cref="Address"/>.
-        /// </summary>
         /// <param name="other">Другой объект <see cref="Address"/> для сравнения.</param>
         /// <returns>true, если объекты равны; в противном случае - false.</returns>
         public bool Equals(Address other)
         {
-            throw new NotImplementedException();
+            if (other == null) return false;
+            return Index == other.Index;
         }
 
         /// <summary>

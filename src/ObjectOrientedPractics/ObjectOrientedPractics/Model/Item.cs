@@ -200,24 +200,8 @@ namespace ObjectOrientedPractices.Model
         public int CompareTo(Item other)
         {
 
-            if (Name == other.Name)
-            {
-                return 0;
-            }
-
-            if (Cost > other.Cost)
-            {
-                return 1;
-            }
-
-            if (Cost < other.Cost)
-            {
-                return -1;
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
+            if (other == null) return 1;
+            return Cost.CompareTo(other.Cost);
         }
 
         /// <summary>

@@ -60,7 +60,9 @@ namespace ObjectOrientedPractics.Model
         /// <returns>Копия текущего объекта <see cref="Cart"/> с теми же элементами.</returns>
         public object Clone()
         {
-            return new Cart();
+            var clonedCart = new Cart();
+            clonedCart.Items = _items.Select(item => (Item)item.Clone()).ToList();
+            return clonedCart;
         }
     }
 }

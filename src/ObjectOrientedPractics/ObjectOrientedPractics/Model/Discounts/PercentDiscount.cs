@@ -10,7 +10,7 @@ namespace ObjectOrientedPractices.Model.Discounts
     /// <summary>
     /// Представляет систему процентной скидки для определенной категории товаров.
     /// </summary>
-    public class PercentDiscount : IDiscount, IComparable<PercentDiscount>
+    public class PercentDiscount : IDiscount, IComparable<PercentDiscount>, ICloneable
     {
         private Category _category;
         private double _currentDiscount;
@@ -108,6 +108,18 @@ namespace ObjectOrientedPractices.Model.Discounts
             }
 
             return CurrentDiscount.CompareTo(other.CurrentDiscount);
+        }
+
+        /// <summary>
+        /// Создает глубокую копию текущего объекта <see cref="PercentDiscount"/>.
+        /// </summary>
+        /// <returns>Копия текущего объекта <see cref="PercentDiscount"/>.</returns>
+        public object Clone()
+        {
+            return new PercentDiscount(this._category, this._currentDiscount)
+            {
+                _totalSpentInCategory = this._totalSpentInCategory
+            };
         }
 
         /// <summary>

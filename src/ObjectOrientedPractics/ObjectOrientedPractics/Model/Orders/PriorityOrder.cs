@@ -27,7 +27,7 @@ namespace ObjectOrientedPractices.Model.Orders
         /// <summary>
         /// Список доступных временных интервалов для приоритетных заказов.
         /// </summary>
-        private List<string> _priorityTimeData = new List<string>()
+        private readonly List<string> _priorityTimeData = new List<string>()
         {
             "9:00 - 11:00",
             "11:00 - 13:00",

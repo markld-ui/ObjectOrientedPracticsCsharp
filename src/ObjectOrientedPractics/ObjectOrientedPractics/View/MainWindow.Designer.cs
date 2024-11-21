@@ -1,4 +1,5 @@
 ﻿using ObjectOrientedPractices.View.Tabs;
+using ObjectOrientedPractics.View.Tabs;
 
 namespace ObjectOrientedPractices
 {
@@ -39,17 +40,20 @@ namespace ObjectOrientedPractices
             tabPage2 = new TabPage();
             customersTab1 = new CustomersTab();
             tabPage3 = new TabPage();
-            cartsTab1 = new ObjectOrientedPractics.View.Tabs.CartsTab();
+            cartsTab1 = new CartsTab();
             tabPage4 = new TabPage();
-            ordersTab1 = new ObjectOrientedPractics.View.Tabs.OrdersTab();
+            ordersTab1 = new OrdersTab();
             tabPage5 = new TabPage();
-            priorityOrdersTab1 = new ObjectOrientedPractics.View.Tabs.PriorityOrdersTab();
+            priorityOrdersTab1 = new PriorityOrdersTab();
+            InterfaceEx = new TabPage();
+            interfaceEx1 = new InterfaceEx();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage4.SuspendLayout();
             tabPage5.SuspendLayout();
+            InterfaceEx.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -60,6 +64,7 @@ namespace ObjectOrientedPractices
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Controls.Add(tabPage5);
+            tabControl1.Controls.Add(InterfaceEx);
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -177,6 +182,25 @@ namespace ObjectOrientedPractices
             priorityOrdersTab1.Size = new Size(1060, 752);
             priorityOrdersTab1.TabIndex = 0;
             // 
+            // InterfaceEx
+            // 
+            InterfaceEx.Controls.Add(interfaceEx1);
+            InterfaceEx.Location = new Point(4, 29);
+            InterfaceEx.Name = "InterfaceEx";
+            InterfaceEx.Padding = new Padding(3);
+            InterfaceEx.Size = new Size(1066, 758);
+            InterfaceEx.TabIndex = 5;
+            InterfaceEx.Text = "InterfaceEx";
+            InterfaceEx.UseVisualStyleBackColor = true;
+            // 
+            // interfaceEx1
+            // 
+            interfaceEx1.Dock = DockStyle.Fill;
+            interfaceEx1.Location = new Point(3, 3);
+            interfaceEx1.Name = "interfaceEx1";
+            interfaceEx1.Size = new Size(1060, 752);
+            interfaceEx1.TabIndex = 0;
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -191,6 +215,7 @@ namespace ObjectOrientedPractices
             tabPage3.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
             tabPage5.ResumeLayout(false);
+            InterfaceEx.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -207,5 +232,7 @@ namespace ObjectOrientedPractices
         private ObjectOrientedPractics.View.Tabs.OrdersTab ordersTab1;
         private TabPage tabPage5;
         private ObjectOrientedPractics.View.Tabs.PriorityOrdersTab priorityOrdersTab1;
+        private TabPage InterfaceEx;
+        private InterfaceEx interfaceEx1;
     }
 }

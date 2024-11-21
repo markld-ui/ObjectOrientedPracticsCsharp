@@ -10,7 +10,7 @@ namespace ObjectOrientedPractices.Model.Discounts
     /// <summary>
     /// Представляет систему накопительных баллов для скидок.
     /// </summary>
-    public class PointsDiscount : IDiscount, IComparable<PointsDiscount>
+    public class PointsDiscount : IDiscount, IComparable<PointsDiscount>, ICloneable
     {
         private int _points;
 
@@ -88,6 +88,18 @@ namespace ObjectOrientedPractices.Model.Discounts
             } 
 
             return Points.CompareTo(other.Points);
+        }
+
+        /// <summary>
+        /// Создает глубокую копию текущего объекта <see cref="PointsDiscount"/>.
+        /// </summary>
+        /// <returns>Копия текущего объекта <see cref="PointsDiscount"/>.</returns>
+        public object Clone()
+        {
+            return new PointsDiscount
+            {
+                Points = this.Points
+            };
         }
 
         /// <summary>

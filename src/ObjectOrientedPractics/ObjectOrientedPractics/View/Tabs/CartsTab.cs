@@ -295,8 +295,6 @@ namespace ObjectOrientedPractics.View.Tabs
                 listBoxCartOrder.Items.Clear();
                 checkedListBoxDiscounts.Items.Clear();
             }
-
-            OnCartsChanged();
         }
 
         /// <summary>
